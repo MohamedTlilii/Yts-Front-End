@@ -1,0 +1,514 @@
+.navbar {
+  // border: 2px solid yellow!important;
+  display: flex;
+  justify-content: space-around;
+  gap: 10px;
+  align-items: center !important;
+  // background-color: black;
+  height: 9vh;
+  position:fixed;
+  width: 100%;
+  z-index: 1000;
+  border-bottom: 1px solid;
+  border-color: rgba(2, 2, 2, 0.147);
+  width: 100%;
+
+
+  
+
+  .navbar-logo {
+    // border: 2px solid rgb(0, 255, 85);
+    display: flex;
+    align-items: center;
+    margin-right: 30px;
+    gap: 20px;
+    height: 40px;
+
+    #Image {
+      // border: 2px solid rgb(0, 255, 85);
+
+      cursor: pointer;
+      width: 141px;
+
+    }
+
+    .navbar-slogan {
+      // border: 2px solid rgb(255, 123, 0);
+      font-size: 19.2px;
+      // color: rgba(255, 255, 255, 0.463);
+
+    }
+  }
+
+  .navbar-search {
+    // border: 2px solid rgb(8, 0, 255);
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    position: relative;
+
+    input {
+      border: 1px solid rgb(232, 221, 221);
+      border-radius: 50px;
+      height: 34px;
+      padding: 10px 20px 10px 40px;
+      /* Adjust padding to make space for the icon */
+      // border: 1px solid #ccc;
+      // border-radius: 4px;
+      // background-color: black;
+      // color: black;
+    }
+
+    .fa-search {
+      // border: 2px solid red;
+      position: absolute;
+      top: 50%;
+      left: 15px;
+      transform: translateY(-50%);
+      // color: #aaa;
+    }
+
+    .fa-search-x {
+      display: none;
+      font-size: 20px;
+      // position: absolute;
+
+      // left: -15px;
+
+    }
+
+
+    .navbar-list {
+      // border: 2px solid rgb(255, 0, 191);
+      display: flex;
+      // justify-content: left;
+      gap: 10px;
+      list-style: none;
+      align-items: center !important;
+
+      // .ListItem {
+      //   border: 2px solid rgb(0, 132, 255);
+
+      //   // cursor: pointer;
+      //   // color: rgba(255, 255, 255, 0.463);
+      //   // font-size: .85em;
+      //   // font-weight: 700;
+      // }
+
+      // .ListItem:hover {
+      //   color: rgb(106, 192, 69)!important;
+
+      // }
+
+      #four-K {
+        color: rgb(106, 192, 69)!important;
+        font-size: .85em;
+        font-weight: 700;
+
+      }
+
+      .icon {
+        display: none;
+      }
+
+      #log-regis {
+        // color: white;
+        font-size: .85em;
+        font-weight: 700;
+      }
+
+      #log-regis:hover {
+        color: rgb(106, 192, 69);
+      }
+    }
+  }
+
+}
+
+@media screen and (max-width: 1450px) {
+  .navbar {
+    // border: 2px solid yellow!important;
+    display: flex;
+    justify-content: center;
+    gap: 0px;
+
+
+    .navbar-logo {
+      // border: 2px solid rgb(0, 255, 85);
+      margin-right: 150px;
+
+      #Image {}
+
+      .navbar-slogan {
+        // border: 2px solid rgb(255, 123, 0);
+        display: none !important;
+
+      }
+    }
+
+    .navbar-search {
+      // border: 2px solid rgb(8, 0, 255);
+
+
+      input {
+        // border: 5px solid red;
+        padding: 10px 10px 10px 30px;
+        width: 180px;
+
+      }
+
+      .fa-search {
+        display: block !important;
+        position: absolute;
+        top: 50%;
+        // left: -10px;
+        transform: translateY(-50%);
+        // color: #aaa;
+      }
+
+
+      .navbar-list {
+        // border: 2px solid rgb(255, 0, 191);
+        gap: 20px;
+
+        .ListItem {}
+
+        .ListItem:hover {}
+
+        #four-K {}
+
+        .icon {}
+
+        #log-regis {}
+
+        #log-regis:hover {}
+      }
+    }
+
+  }
+}
+
+@media screen and (max-width: 1000px) {
+  .navbar {
+    // border: 2px solid yellow;
+
+
+
+    .navbar-logo {
+      // border: 2px solid rgb(0, 255, 85);
+      margin-right: 120px;
+
+      #Image {
+        // border: 2px solid rgb(0, 255, 85);
+        // width: 130px;
+
+      }
+
+      .navbar-slogan {
+        // border: 2px solid rgb(255, 123, 0);
+        display: none;
+
+      }
+    }
+
+    .navbar-search {
+      // border: 2px solid rgb(8, 0, 255);
+
+      gap: 2px;
+
+      input {
+        // border: 5px solid red;
+        width: 160px;
+
+      }
+
+      .fa-search {}
+
+
+      .navbar-list {
+        // border: 2px solid rgb(255, 0, 191);
+        gap: 15px;
+
+        .ListItem {}
+
+        .ListItem:hover {}
+
+        #four-K {}
+
+        #log-regis {}
+
+        .icon {}
+
+        #log-regis:hover {}
+      }
+    }
+
+  }
+}
+
+@media screen and (max-width: 900px) {
+  .navbar {
+    // border: 2px solid yellow;
+    justify-content: center;
+    gap: 120px;
+
+
+    .navbar-logo {
+      // border: 2px solid rgb(0, 255, 85);
+      margin: 0px;
+
+      #Image {}
+
+      .navbar-slogan {
+        // border: 2px solid rgb(255, 123, 0);
+
+      }
+    }
+
+    .navbar-search {
+      // border: 2px solid rgb(8, 0, 255);
+
+      input {
+        // border: 5px solid red;
+        display: none;
+
+
+      }
+
+      .fa-search {
+        // border: 5px solid red;
+        display: none !important;
+        left: -30px;
+        font-size: 30px;
+
+
+      }
+
+      .fa-search-x {
+        display: block;
+      }
+      .fa-search-x:hover {
+        color: rgb(106, 192, 69);
+      }
+
+
+
+      .navbar-list {
+        // border: 2px solid rgb(255, 0, 191);
+
+        justify-content: space-around !important;
+        align-items: center!important;
+
+        .ListItem {
+          // border: 2px solid rgb(255, 0, 191);
+
+          display: none;
+
+        }
+
+        .ListItem:hover {}
+
+        #four-K {
+          font-size: 20px;
+
+        }
+
+        #log-regis {
+          display: none;
+
+        }
+
+        .icon {
+          display: block;
+          font-size: 25px;
+          cursor: pointer;
+        }
+        .icon:hover {
+          color: rgb(106, 192, 69);
+
+        }
+
+        #log-regis:hover {}
+      }
+    }
+
+  }
+}
+
+@media screen and (max-width: 780px) {
+  .navbar {
+    // border: 2px solid yellow;
+    justify-content: right;
+    width: 0 auto!important;
+
+
+    .navbar-logo {
+      // border: 2px solid rgb(0, 255, 85);
+// margin-right: 140px;
+
+      #Image {
+        // border: 2px solid rgb(0, 255, 85);
+        margin-left: 40px;
+      }
+
+      .navbar-slogan {
+        // border: 2px solid rgb(255, 123, 0);
+
+      }
+    }
+
+    .navbar-search {
+      // border: 2px solid rgb(8, 0, 255);
+
+      input {
+        // border: 5px solid red;
+
+
+
+      }
+
+      .fa-search {}
+
+
+      .navbar-list {
+        // border: 2px solid rgb(255, 0, 191);
+
+
+        .ListItem {}
+
+        .ListItem:hover {}
+
+        #four-K {}
+
+        #log-regis {}
+
+        .icon {}
+
+        #log-regis:hover {}
+      }
+    }
+
+  }
+}
+
+@media screen and (max-width: 565px) {
+  .navbar {
+    // border: 2px solid yellow!important;
+    justify-content: center;
+    gap: 60px;
+    width: 0px auto!important;
+
+
+
+    .navbar-logo {
+      // border: 2px solid rgb(0, 255, 85);
+margin-right: -20px;
+      #Image {
+        // border: 2px solid rgb(0, 255, 85);
+
+        // width: 70px;
+        margin-right: -80px;
+      }
+
+      .navbar-slogan {
+        // border: 2px solid rgb(255, 123, 0);
+
+      }
+    }
+
+    .navbar-search {
+      // border: 2px solid rgb(8, 0, 255);
+
+      input {}
+
+      .fa-search {}
+
+
+      .navbar-list {
+        // border: 2px solid rgb(255, 0, 191);
+        gap: 10px;
+
+        .ListItem {}
+
+        .ListItem:hover {}
+
+        #four-K {
+          font-size: 18px;
+
+        }
+
+        #log-regis {}
+
+        .icon {
+          font-size: 20px;
+        }
+
+        #log-regis:hover {}
+      }
+    }
+
+  }
+}
+@media screen and (max-width: 403px) {
+  .navbar {
+    // border: 2px solid yellow;
+    justify-content: space-between;
+    gap: 10px;
+    width: 0px auto!important;
+
+
+
+    .navbar-logo {
+      // width: 100%;
+      // border: 2px solid rgb(255, 174, 0);
+      height: 100%!important;
+      width: 100%!important;
+
+      
+      #Image {
+        // border: 2px solid rgb(0, 255, 85);
+        // width: 100%;
+        margin-left: 5px;
+        width: 150px;
+
+      }
+
+      .navbar-slogan {
+        // border: 2px solid rgb(255, 123, 0);
+
+      }
+    }
+
+    .navbar-search {
+      // border: 2px solid rgb(8, 0, 255);
+
+      input {}
+
+      .fa-search {}
+
+
+      .navbar-list {
+        // border: 2px solid rgb(255, 0, 191);
+        gap: 0px;
+
+        .ListItem {}
+
+        .ListItem:hover {}
+
+        #four-K {
+          font-size: 18px;
+
+        }
+
+        #log-regis {}
+
+        .icon {
+          font-size: 20px;
+        }
+
+        #log-regis:hover {}
+      }
+    }
+
+  }
+}

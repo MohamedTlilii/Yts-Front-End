@@ -1,0 +1,460 @@
+.Box {
+    // border: 2px solid red !important;
+    display: none;
+padding-top: 94px;
+// height: 400px!important;
+    .Card {
+
+        margin: 0 auto !important;
+        padding: 0 15px !important;
+        // border: 2px solid rgb(0, 255, 21) !important;
+        // height: 100vh!important;
+        align-items: center;
+        height: 44vh;
+        // background-color: black;
+        border-bottom: 1px solid #2f2f2f;
+
+
+    }
+
+    .FormControl {
+        // border: 2px solid rgb(0, 255, 21) !important;
+        margin: 15px;
+        display: flex;
+        justify-content: center;
+
+
+        .Input {
+            // border: 2px solid rgb(0, 128, 255) !important;
+            // margin-bottom: 10px;
+            height: 35px;
+            font-size: 14px;
+            line-height: 1.42857143;
+            border-radius: 4px;
+            width: 700px;
+
+        }
+
+        .BTN {
+            // border: 2px solid rgb(0, 128, 255) !important;
+            background-color: green;
+            color: white;
+            margin-left: -1px;
+            padding: 6px 12px;
+            font-size: 14px;
+            line-height: 1.42857143;
+            border-radius: 4px;
+            height: 35px;
+            width: 68px;
+        }
+    }
+
+    .BoxBox {
+        // border: 2px solid rgb(12, 45, 136);
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        width: auto;
+        // gap: 30px;
+        column-gap: 270px;
+        // row-gap: 15px;
+        // margin-bottom: auto;
+        margin-top: -15px;
+
+
+        .SoloBox {
+            // border: 2px solid rgb(176, 8, 151);
+
+        }
+
+        .Textt {
+            // border: 2px solid gray;
+            text-align: center;
+            // align-items: center;
+            margin: 10px;
+        }
+
+        .SelectBox {
+            border: 1px solid gray;
+            width: 130px;
+            height: 40px;
+            font-size: .9em;
+            font-weight: 400;
+        }
+
+    }
+}
+
+@media screen and (max-width: 900px) {
+    .Box {
+        // border: 2px solid red;
+        display: block;
+        // position: absolute!important;
+        // top: 60px;
+        height: 300px!important;
+
+        .Card {
+            height: 300px
+            // height: 37vh;
+            // background-color: black;
+    
+    
+        }
+    
+        .FormControl {
+            // border: 2px solid rgb(0, 255, 21) !important;
+            
+    
+    
+            .Input {
+                // border: 2px solid rgb(0, 128, 255) !important;
+                // margin-bottom: 10px;
+               
+    
+            }
+    
+            .BTN {
+                // border: 2px solid rgb(0, 128, 255) !important;
+             
+            }
+        }
+    
+        .BoxBox {
+            // border: 2px solid rgb(12, 45, 136);
+    
+    
+            .SoloBox {
+                // border: 2px solid rgb(176, 8, 151);
+    
+            }
+    
+            .Textt {
+                // border: 2px solid gray;
+            }
+    
+            .SelectBox {
+            }
+    
+        }
+    }
+
+}
+
+@media screen and (max-width: 660px) {
+    .Box {
+
+        // border: 2px solid red;
+    }
+
+    .Card {
+        // border: 2px solid red!important;
+        // height: 44vh;
+        height: 300px !important;
+
+
+
+    }
+
+    .FormControl {
+        // border: 2px solid rgb(0, 255, 21) !important;
+
+
+        .Input {
+            // border: 2px solid rgb(0, 128, 255) !important;
+            // margin-bottom: 10px;
+            width: 350px !important;
+
+        }
+
+        .BTN {
+            // border: 2px solid rgb(0, 128, 255) !important;
+        }
+    }
+
+    .BoxBox {
+        // border: 2px solid rgb(12, 45, 136);
+        // gap: 30px;
+        column-gap: 150px !important;
+        // row-gap: 15px;
+        // margin-bottom: auto;
+
+
+        .SoloBox {
+            // border: 2px solid rgb(176, 8, 151);
+
+        }
+
+        .Textt {
+            // border: 2px solid gray;
+
+        }
+
+        .SelectBox {
+            border: 1px solid gray;
+
+        }
+
+    }
+}
+
+@media screen and (max-width: 500px) {
+    .Box {
+
+        // border: 2px solid red;
+    }
+
+    .Card {
+        // border: 2px solid red!important;
+        // height: 44vh;
+        height: 310px !important;
+
+
+    }
+
+    .FormControl {
+        // border: 2px solid rgb(0, 255, 21) !important;
+
+
+        .Input {
+            // border: 2px solid rgb(0, 128, 255) !important;
+            // margin-bottom: 10px;
+            width: 290px !important;
+
+        }
+
+        .BTN {
+            // border: 2px solid rgb(0, 128, 255) !important;
+        }
+    }
+
+    .BoxBox {
+        // border: 2px solid rgb(12, 45, 136);
+        // gap: 30px;
+        column-gap: 80px !important;
+        // row-gap: 15px;
+        // margin-bottom: auto;
+
+
+        .SoloBox {
+            // border: 2px solid rgb(176, 8, 151);
+
+        }
+
+        .Textt {
+            // border: 2px solid gray;
+
+        }
+
+        .SelectBox {
+            border: 1px solid gray;
+
+        }
+
+    }
+}
+
+@media screen and (max-width: 450px) {
+    .Box {
+
+        // border: 2px solid red;
+        // height: auto!important;
+    }
+
+    .Card {
+        // border: 2px solid red!important;
+        // height: 44vh;
+        height: 260px !important;
+
+
+
+    }
+
+    .FormControl {
+        // border: 2px solid rgb(0, 255, 21) !important;
+
+
+        .Input {
+            // border: 2px solid rgb(0, 128, 255) !important;
+            // margin-bottom: 10px;
+            width: 250px !important;
+
+        }
+
+        .BTN {
+            // border: 2px solid rgb(0, 128, 255) !important;
+        }
+    }
+
+    .BoxBox {
+        // border: 2px solid rgb(12, 45, 136);
+        // gap: 30px;
+        column-gap: 40px !important;
+        // row-gap: 15px;
+        // margin-bottom: auto;
+
+
+        .Textt {
+            // border: 2px solid gray;
+            // align-items: center;
+            margin: 7px !important;
+        }
+
+        .SelectBox {
+            border: 1px solid gray;
+            width: 110px !important;
+            height: 30px !important;
+            font-size: .7em !important;
+
+        }
+
+        .SelectBox {
+            border: 1px solid gray;
+
+        }
+
+    }
+}
+
+@media screen and (max-width: 350px) {
+    .Box {
+
+        // border: 2px solid red!important;
+        // height: auto!important;
+    }
+
+    .Card {
+        // border: 2px solid red!important;
+        // height: 44vh;
+        height: 230px !important;
+
+
+
+    }
+
+    .FormControl {
+        // border: 2px solid rgb(0, 255, 21) !important;
+
+
+        .Input {
+            // border: 2px solid rgb(0, 128, 255) !important;
+            margin-bottom: 10px;
+            width: 200px !important;
+
+            height: 27px !important;
+            font-size: 10px !important;
+            // line-height: 1.42857143;
+
+
+        }
+
+        .BTN {
+            // border: 2px solid rgb(0, 128, 255) !important;
+            font-size: 11px !important;
+            height: 27px !important;
+            width: 66px !important;
+        }
+    }
+
+    .BoxBox {
+        // border: 2px solid rgb(12, 45, 136);
+        // gap: 30px;
+        column-gap: 20px !important;
+        // row-gap: 15px;
+        // margin-bottom: auto;
+
+
+        .Textt {
+            // border: 2px solid gray;
+            // align-items: center;
+            margin: 5px !important;
+            font-size: .8em !important;
+
+        }
+
+        .SelectBox {
+            border: 1px solid gray;
+            width: 90px !important;
+            height: 20px !important;
+            font-size: .5em !important;
+
+        }
+
+        .SelectBox {
+            border: 1px solid gray;
+
+        }
+
+    }
+}
+@media screen and (max-width: 320px) {
+    .Box {
+
+        // border: 2px solid red!important;
+        // height: auto!important;
+        padding-top: 45px;
+
+    }
+
+    .Card {
+        // border: 2px solid red!important;
+        // height: 44vh;
+        height: 230px !important;
+
+
+
+    }
+
+    .FormControl {
+        // border: 2px solid rgb(0, 255, 21) !important;
+
+
+        .Input {
+            // border: 2px solid rgb(0, 128, 255) !important;
+            margin-bottom: 10px;
+            width: 200px !important;
+
+            height: 27px !important;
+            font-size: 10px !important;
+            // line-height: 1.42857143;
+
+
+        }
+
+        .BTN {
+            // border: 2px solid rgb(0, 128, 255) !important;
+            font-size: 11px !important;
+            height: 27px !important;
+            width: 66px !important;
+        }
+    }
+
+    .BoxBox {
+        // border: 2px solid rgb(12, 45, 136);
+        // gap: 30px;
+        column-gap: 20px !important;
+        // row-gap: 15px;
+        // margin-bottom: auto;
+
+
+        .Textt {
+            // border: 2px solid gray;
+            // align-items: center;
+            margin: 5px !important;
+            font-size: .8em !important;
+
+        }
+
+        .SelectBox {
+            border: 1px solid gray;
+            width: 90px !important;
+            height: 20px !important;
+            font-size: .5em !important;
+
+        }
+
+        .SelectBox {
+            border: 1px solid gray;
+
+        }
+
+    }
+}

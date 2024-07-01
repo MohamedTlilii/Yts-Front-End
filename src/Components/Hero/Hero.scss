@@ -1,0 +1,60 @@
+.hero-Stack {
+    align-items: center;
+
+    // border: 2px solid red!important;
+    .title {
+        // border: 2px solid red!important;
+
+        font-size: 2.75em;
+        font-weight: 700;
+        margin-bottom: 15px;
+        margin-top: 0;
+        
+    }
+
+    .second-title {
+        // border: 2px solid rgb(0, 255, 157) !important;
+        font-size: .95em;
+        color: #ccc;
+        width: 650px;
+        margin: 0 auto;
+        line-height: 21px;
+        // margin-bottom: 30px;
+    }
+
+    .third-title {
+        // border: 2px solid rgb(25, 0, 255) !important;
+        font-size: .95em;
+        line-height: 21px;
+
+        a {
+            // border: 5px solid black;
+        }
+    }
+
+    .four-title {
+        // border: 2px solid rgb(25, 0, 255) !important;
+        display: flex;
+        align-items: center !important;
+
+        a {
+            // border: 5px solid rgb(125, 7, 7) !important;
+          
+        }
+    }
+
+    .five-title {
+        // border: 2px solid rgb(255, 0, 247) !important;
+        // border-bottom: 1px solid rgba(255, 255, 255, .2);
+margin-top: 10px;
+        h2 {
+            // border: 2px solid rgb(25, 0, 255) !important;
+
+        }
+
+        a {
+            // border: 1px solid rgb(215, 21, 21) !important;
+        }
+    }
+   
+}
