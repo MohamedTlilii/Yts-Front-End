@@ -11,28 +11,22 @@
         height: 230px !important;
         display: flex;
         flex-direction: column;
-        line-height:40px;
+        line-height: 40px;
+        align-items: center;
 
 
         // column-gap: 400px!important;
         .Card-Movies {
             // border: 2px solid rgb(0, 21, 255) !important;
-            padding-left: 280px;
-            padding-right: 280px;
-            // margin: '40px'!important;
-            // padding: 40px;
-            // margin: 0 auto !important;
-            // padding: 0 15px !important;
-            // // border: 2px solid rgb(0, 255, 21) !important;
+            // padding-left: 280px;
+            // padding-right: 280px;
             height: 100vh !important;
-            // align-items: center;
-            // height: 44vh;
-            // // background-color: black;
-            // border-bottom: 1px solid #2f2f2f;
             display: flex;
             flex-direction: column;
             gap: 0px;
-            // text-align: center;
+            width: 100%;
+            align-items: center;
+
 
 
             h1 {
@@ -48,7 +42,7 @@
 
         .FormControl-Movies {
             // border: 2px solid rgb(255, 51, 0) !important;
-
+width: fit-content;
             display: flex;
             // justify-content: center;
             justify-content: start;
@@ -100,7 +94,7 @@
             .SoloBox-Movies {
                 // border: 2px solid rgb(176, 8, 151);
                 position: relative;
-                top: 20px!important;
+                top: 20px !important;
 
             }
 
