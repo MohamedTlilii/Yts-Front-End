@@ -9,6 +9,7 @@ import Movies from './Pages/Movies/Movies';
 import ConnexionLayout from './Layouts/ConnexionLayout';
 import Login from './Pages/Login/Login';
 import Register from './Pages/Register/Register';
+import SingleMovie from './Pages/SingleMove/SingleMovie';
 
 
 function App() {
@@ -19,6 +20,7 @@ function App() {
      <Route path="forK" element={<ForK />} />
      <Route path="/trending" element={<Trending />} />
      <Route path="/movies" element={<Movies />} />
+     <Route path="singlemovie/:id" element={<SingleMovie />} /> {/* Update the path */}
      </Route>
 
 
@@ -27,7 +29,7 @@ function App() {
 
      
      <Route path="/" element={<ConnexionLayout />}>
-        <Route
+        {/* <Route
           path="login"
           element={
               <Login />
@@ -38,7 +40,7 @@ function App() {
           element={
               <Register/>
           }
-        />
+        /> */}
       </Route>
    </Routes>
   );

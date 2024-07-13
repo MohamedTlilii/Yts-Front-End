@@ -1,68 +1,8 @@
 .movies {
     // border: 2px solid red;
-    height: 180vh;
+    height: 275vh !important;
     position: relative;
     top: 100px;
-
-    .movies-listt {
-        // border: 2px solid rgb(51, 255, 0) !important;
-        height: auto ;
-        display: grid;
-        grid-template-columns: repeat(5, 1fr);
-        /* 5 columns of equal width */
-        gap: 0px 20px; /* Gap vertically (10px) and horizontally (20px) */
-        margin: 100px;
-    margin: auto 380px auto 380px;
-    // margin-right: 380px;
-    // text-align: center;
-    justify-items: center;
-    }
-
-    .movie-item {
-        // border: 2px solid red !important;
-
-        // background-color: #f0f0f0;
-        padding: 10px;
-        border-radius: 8px;
-        // box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
-        align-items: center;
-        text-align: center;
-        // width: 150px !important;
-        // height: 280px;
-
-    }
-
-    #movie-poster {
-        // border: 2px solid rgb(0, 60, 255) !important;
-            width:180px!important;
-            height: 250px!important;
-
-        border-radius: 8px;
-        margin-bottom: 10px;
-        border: 3px solid white;
-
-       
-    }
-
-    .movie-details {
-        // border: 2px solid red !important;
-
-        // flex: 1;
-        display: flex;
-        justify-content: start;
-        gap: 10px;
-        // align-items: center;
-        margin-left: 8px;
-
-    }
-
-    .movie-yers {
-        // border: 2px solid red !important;
-width: fit-content;
-margin-left: 8px;
-
-    }
-
     .pagination {
         // border: 2px solid rgb(86, 174, 23) !important;
 
@@ -72,18 +12,24 @@ margin-left: 8px;
         // width: 250px;
         // align-items: center;
         text-align: center;
-        line-height: 40px;
+        line-height: 60px;
+
         h3 {
             // border: 2px solid rgb(255, 0, 255) !important;
+            color: #6ac045;
+            font-weight: bold;
 
         }
     }
 
     .page-link {
+                    // border: 2px solid rgb(255, 0, 255) !important;
+
         padding: 10px;
         margin: 0 5px;
         cursor: pointer;
-        color: #007bff;
+        border: 2px solid rgba(227, 213, 213, 0.634);
+        // color: #007bff;
         // text-decoration: underline;
     }
 
@@ -91,4 +37,806 @@ margin-left: 8px;
         font-weight: bold;
         pointer-events: none;
     }
+
+    .movies-listt {
+        // border: 2px solid rgb(51, 255, 0) !important;
+        height: auto;
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+        gap: 0px 20px;
+        // margin: 100px;
+        margin: auto 200px; 
+        // margin-right: 380px;
+        // text-align: center;
+        justify-items: center;
+        position: relative;
+        // top: 30px;  
+    }
+
+    .loading-css {
+        // border: 2px solid rgb(51, 255, 0) !important;
+        // margin-left: 500px;
+        // width: 300px;
+        // height: 1000px;
+        // margin-top: 400px;
+        // height: 400px;
+        // width: 300px;
+        // margin-left: 550px;
+        // // font-size: 240px;
+        // position: relative;
+        // top: 220px;
+
+
+
+    }
+
+    .movie-item {
+        padding: 10px;
+        border-radius: 8px;
+        align-items: center;
+        text-align: center;
+        position: relative; /* Ensure relative positioning for child elements */
+        overflow: hidden; /* Prevents child elements from overflowing */
+
+        &:hover {
+            #movie-poster {
+                opacity: 0.3;
+            }
+            .movie-details-hover {
+                opacity: 1;
+            }
+        }
+    }
+
+
+    #movie-poster {
+        // border: 2px solid rgb(0, 60, 255) !important;
+        width: 180px !important;
+        height: 250px !important;
+
+        border-radius: 8px;
+        margin-bottom: 10px;
+        border: 3px solid rgba(255, 255, 255, .2);
+        transition: opacity 0.5s ease;
+
+
+    
+
 }
+    .movie-details-hover {
+                // border: 2px solid red !important;
+                // display: none;
+                position: absolute;
+                top: 10px;
+                width: 178px;
+                height: 250px;
+                display: flex;
+                flex-direction: column;
+                gap: 15px;
+                align-items: center;
+                justify-content: center;
+                opacity: 0;
+                transition: opacity 0.5s ease;
+                background-color: rgba(0, 0, 0, 0.8); /* Example background color for hover details */
+                color: white; /* Example text color for hover details */
+                padding: 10px; /* Example padding for hover details */
+                border-radius: 8px; /* Example border radius for hover details */
+                z-index: 1; /* Ensures hover details appear above other elements */
+        .faster {
+            // border: 2px solid red;
+
+        }
+                h2 {
+            // border: 2px solid red;
+        }
+                h4 {
+            // border: 2px solid blue;
+            width: 120px;
+        }
+ 
+
+    }
+    button {
+        // border: 1px solid black;
+        background-color: #6ac045;
+        padding: 5px 10px;
+        margin-top: 10px;
+        cursor: pointer;
+        color: white;
+    }
+    }
+    .movie-item:hover .movie-details-hover {
+        opacity: 1;
+        position: absolute;
+    }
+    
+    .movie-item:hover #movie-poster {
+        opacity: 0.3;
+    }
+
+    .movie-details {
+        // border: 2px solid red !important;
+        // flex: 1;
+        display: flex;
+        justify-content: start;
+        gap: 10px;
+        // align-items: center;
+        margin-left: 8px;
+h3 {
+    // color: white;
+
+}
+    }
+
+    .movie-yers {
+        // border: 2px solid red !important;
+        width: fit-content;
+        margin-left: 8px;
+
+    }
+
+    
+
+// @media screen and (max-width: 1450px) {
+//     .movies {
+//         // border: 2px solid red;
+//     height: 300vh!important;
+
+
+//         .movies-listt {
+//             // border: 2px solid rgb(51, 255, 0) !important;
+//             // height: 1800px ;
+//             gap: 0px 10px; /* Gap vertically (10px) and horizontally (20px) */
+//             // margin: 100px;
+//       }
+//       .loading-css {
+//                 // border: 2px solid rgb(51, 255, 0) !important;
+//     // margin-left: 500px;
+//     // width: 300px;
+//     // height: 1000px;
+//     // margin-top: 400px;
+//     // height: 400px;
+//     // width: 300px;
+//     margin-left: 510px;
+//     // font-size: 240px;
+
+
+
+
+//      }
+
+//         .movie-item {
+//             // border: 2px solid red !important;
+
+//             // background-color: #f0f0f0;
+//             padding: 10px;
+//             border-radius: 8px;
+//             // box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+//             align-items: center;
+//             text-align: center;
+//             // width: 150px !important;
+//             // height: 280px;
+//             font-size: 15px;
+
+//         }
+
+//         #movie-poster {
+//             // border: 2px solid rgb(0, 60, 255) !important;
+//                 width:150px!important;
+//                 height: 210px!important;
+
+
+
+
+//         }
+
+//         .movie-details {
+//             // border: 2px solid red !important;
+//             margin-left: 4px;
+
+//         }
+
+//         .movie-yers {
+//             // border: 2px solid red !important;
+
+//     margin-left: 4px;
+
+//         }
+
+//         .pagination {
+//             // border: 2px solid rgb(86, 174, 23) !important;
+
+//             // display: flex;
+//             // justify-content: center;
+//             margin-top: 20px;
+//             // width: 250px;
+//             // align-items: center;
+//             text-align: center;
+//             line-height: 60px;
+//             h3 {
+//                 // border: 2px solid rgb(255, 0, 255) !important;
+
+//             }
+//         }
+
+//         .page-link {
+//             padding: 7px;
+//             margin: 0 5px;
+//             cursor: pointer;
+//             border: 2px solid  rgba(227, 213, 213, 0.634);
+//             // color: #007bff;
+//             // text-decoration: underline;
+//         }
+
+//         .page-link.active {
+//             font-weight: bold;
+//             pointer-events: none;
+//         }
+//     }
+// }
+// @media screen and (max-width: 1270px) {
+// .movies {
+//     // border: 2px solid red;
+//     height: 380vh!important;
+
+
+//     .movies-listt {
+//         // border: 2px solid rgb(51, 255, 0) !important;
+//         gap: 0px 10px; /* Gap vertically (10px) and horizontally (20px) */
+//         grid-template-columns: repeat(4, 1fr);
+
+// // top: 30px;  
+//   }
+//   .loading-css {
+//             // border: 2px solid rgb(51, 255, 0) !important;
+// // margin-left: 500px;
+// // width: 300px;
+// // height: 1000px;
+// // margin-top: 400px;
+// // height: 400px;
+// // width: 300px;
+// margin-left: 510px;
+
+
+
+
+//  }
+
+//     .movie-item {
+//         // border: 2px solid red !important;
+
+//         // background-color: #f0f0f0;
+//         padding: 10px;
+//             border-radius: 8px;
+//             // box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+//             align-items: center;
+//             text-align: center;
+//             // width: 150px !important;
+//             // height: 280px;
+//             font-size: 15px;
+
+//     }
+
+//     #movie-poster {
+//         // border: 2px solid rgb(0, 60, 255) !important;
+//             width:160px!important;
+//             height: 230px!important;
+
+//         border-radius: 8px;
+//         margin-bottom: 10px;
+//         border: 3px solid white;
+
+
+//     }
+
+//     .movie-details {
+//         // border: 2px solid red !important;
+
+//         // flex: 1;
+//         display: flex;
+//         justify-content: start;
+//         gap: 10px;
+//         // align-items: center;
+//         margin-left: 2px;
+
+//     }
+
+//     .movie-yers {
+//         // border: 2px solid red !important;
+// width: fit-content;
+// margin-left: 2px;
+
+//     }
+
+//     .pagination {
+//         // border: 2px solid rgb(86, 174, 23) !important;
+
+//         // display: flex;
+//         // justify-content: center;
+//         margin-top: 20px;
+//         // width: 250px;
+//         // align-items: center;
+//         text-align: center;
+//         line-height: 60px;
+//         h3 {
+//             // border: 2px solid rgb(255, 0, 255) !important;
+
+//         }
+//     }
+
+//     .page-link {
+//         padding: 10px;
+//         margin: 0 5px;
+//         cursor: pointer;
+//         border: 2px solid  rgba(227, 213, 213, 0.634);
+//         // color: #007bff;
+//         // text-decoration: underline;
+//     }
+
+//     .page-link.active {
+//         font-weight: bold;
+//         pointer-events: none;
+//     }
+// }}
+// @media screen and (max-width: 1170px) {
+//     .movies {
+//         // border: 2px solid red;
+//         height: 640vh!important;
+
+
+//         .movies-listt {
+//             // border: 2px solid rgb(51, 255, 0) !important;
+//             // gap: 0px 10px; /* Gap vertically (10px) and horizontally (20px) */
+//             grid-template-columns: repeat(2, 1fr);
+
+//     // top: 30px;  
+//       }
+//       .loading-css {
+//                 // border: 2px solid rgb(51, 255, 0) !important;
+
+//     // margin-left: 510px;
+
+
+
+
+//      }
+
+//         .movie-item {
+//             // border: 2px solid red !important;
+
+//             // padding: 10px;
+//             //     border-radius: 8px;
+//             //     align-items: center;
+//             //     text-align: center;
+//             //     font-size: 15px;
+
+//         }
+
+//         #movie-poster {
+//             // border: 2px solid rgb(0, 60, 255) !important;
+//             //     width:160px!important;
+//             //     height: 230px!important;
+
+//             // border-radius: 8px;
+//             // margin-bottom: 10px;
+//             // border: 3px solid white;
+
+
+//         }
+
+//         .movie-details {
+//             // border: 2px solid red !important;
+
+//             // display: flex;
+//             // justify-content: start;
+//             // gap: 10px;
+//             // margin-left: 2px;
+
+//         }
+
+//         .movie-yers {
+//             // border: 2px solid red !important;
+//     // width: fit-content;
+//     // margin-left: 2px;
+
+//         }
+
+//         .pagination {
+//             // border: 2px solid rgb(86, 174, 23) !important;
+
+//             // margin-top: 20px;
+
+//             // text-align: center;
+//             // line-height: 60px;
+//             h3 {
+//                 // border: 2px solid rgb(255, 0, 255) !important;
+
+//             }
+//         }
+
+//         .page-link {
+//             // padding: 10px;
+//             // margin: 0 5px;
+//             // cursor: pointer;
+//             // border: 2px solid  rgba(227, 213, 213, 0.634);
+//         }
+
+//         .page-link.active {
+//             // font-weight: bold;
+//             // pointer-events: none;
+//         }
+//     }
+// }
+// @media screen and (max-width: 900px) {
+//     .movies {
+//         // border: 2px solid red;
+//         height: 590vh!important;
+//         // position: relative;
+//         top: 55px;
+//         .movies-listt {
+//             // border: 2px solid rgb(51, 255, 0) !important;
+//             // gap: 0px 10px; /* Gap vertically (10px) and horizontally (20px) */
+//             // grid-template-columns: repeat(2, 1fr);
+//             margin-left: 40px;
+//             margin-right: 40px;
+
+//     // top: 30px;  
+//       }
+//       .loading-css {
+//                 // border: 2px solid rgb(51, 255, 0) !important;
+
+//     // margin-left: 510px;
+
+
+
+
+//      }
+
+//         .movie-item {
+//             // border: 2px solid red !important;
+
+//             // padding: 10px;
+//             //     border-radius: 8px;
+//             //     align-items: center;
+//             //     text-align: center;
+//             //     font-size: 15px;
+
+//         }
+
+//         #movie-poster {
+//             // border: 2px solid rgb(0, 60, 255) !important;
+//             //     width:160px!important;
+//             //     height: 230px!important;
+
+//             // border-radius: 8px;
+//             // margin-bottom: 10px;
+//             // border: 3px solid white;
+
+
+//         }
+
+//         .movie-details {
+//             // border: 2px solid red !important;
+
+//             // display: flex;
+//             // justify-content: start;
+//             // gap: 10px;
+//             // margin-left: 2px;
+
+//         }
+
+//         .movie-yers {
+//             // border: 2px solid red !important;
+//     // width: fit-content;
+//     // margin-left: 2px;
+
+//         }
+
+//         .pagination {
+//             // border: 2px solid rgb(86, 174, 23) !important;
+
+//             // margin-top: 20px;
+
+//             // text-align: center;
+//             // line-height: 60px;
+//             h3 {
+//                 // border: 2px solid rgb(255, 0, 255) !important;
+
+//             }
+//         }
+
+//         .page-link {
+//             // padding: 10px;
+//             // margin: 0 5px;
+//             // cursor: pointer;
+//             // border: 2px solid  rgba(227, 213, 213, 0.634);
+//         }
+
+//         .page-link.active {
+//             // font-weight: bold;
+//             // pointer-events: none;
+//         }
+//     }
+// }
+// @media screen and (max-width: 752px) {
+//     .movies {
+//         // border: 2px solid red;
+//         // height: 590vh!important;
+//         // position: relative;
+//         // top: 55px;
+//         .movies-listt {
+//             // border: 2px solid rgb(51, 255, 0) !important;
+//             // gap: 0px 10px; /* Gap vertically (10px) and horizontally (20px) */
+//             // grid-template-columns: repeat(2, 1fr);
+//     // top: 30px; 
+//     // margin-left: 40px;
+//     // margin-right: 40px;
+//     margin: auto;
+
+//       }
+//       .loading-css {
+//                 // border: 2px solid rgb(51, 255, 0) !important;
+
+//     // margin-left: 510px;
+
+
+
+
+//      }
+
+//         .movie-item {
+//             // border: 2px solid red !important;
+
+//             // padding: 10px;
+//             //     border-radius: 8px;
+//             //     align-items: center;
+//             //     text-align: center;
+//             //     font-size: 15px;
+
+//         }
+
+//         #movie-poster {
+//             // border: 2px solid rgb(0, 60, 255) !important;
+//             //     width:160px!important;
+//             //     height: 230px!important;
+
+//             // border-radius: 8px;
+//             // margin-bottom: 10px;
+//             // border: 3px solid white;
+
+
+//         }
+
+//         .movie-details {
+//             // border: 2px solid red !important;
+
+//             // display: flex;
+//             // justify-content: start;
+//             // gap: 10px;
+//             // margin-left: 2px;
+
+//         }
+
+//         .movie-yers {
+//             // border: 2px solid red !important;
+//     // width: fit-content;
+//     // margin-left: 2px;
+
+//         }
+
+//         .pagination {
+//             // border: 2px solid rgb(86, 174, 23) !important;
+
+//             // margin-top: 20px;
+
+//             // text-align: center;
+//             // line-height: 60px;
+//             h3 {
+//                 // border: 2px solid rgb(255, 0, 255) !important;
+
+//             }
+//         }
+
+//         .page-link {
+//             // padding: 10px;
+//             // margin: 0 5px;
+//             // cursor: pointer;
+//             // border: 2px solid  rgba(227, 213, 213, 0.634);
+//         }
+
+//         .page-link.active {
+//             // font-weight: bold;
+//             // pointer-events: none;
+//         }
+//     }
+// }
+// @media screen and (max-width: 489px) {
+//     .movies {
+//         // border: 2px solid red;
+//         height: 510vh!important;
+//         // position: relative;
+//         // top: 55px;
+//         .movies-listt {
+//             // border: 2px solid rgb(51, 255, 0) !important;
+//             // gap: 0px 10px; /* Gap vertically (10px) and horizontally (20px) */
+//             // grid-template-columns: repeat(2, 1fr);
+//     // top: 30px; 
+//     // margin-left: 40px;
+//     // margin-right: 40px;
+//     margin: auto;
+
+//       }
+//       .loading-css {
+//                 // border: 2px solid rgb(51, 255, 0) !important;
+
+//     // margin-left: 510px;
+
+
+
+
+//      }
+
+//         .movie-item {
+//             // border: 2px solid red !important;
+
+//             // padding: 10px;
+//             //     border-radius: 8px;
+//             //     align-items: center;
+//             //     text-align: center;
+//             //     font-size: 15px;
+
+//         }
+
+//         #movie-poster {
+//             // border: 2px solid rgb(0, 60, 255) !important;
+//                 width:120px!important;
+//                 height: 200px!important;
+
+//             // border-radius: 8px;
+//             // margin-bottom: 10px;
+//             // border: 3px solid white;
+
+
+//         }
+
+//         .movie-details {
+//             // border: 2px solid red !important;
+
+//             // display: flex;
+//             // justify-content: start;
+//             // gap: 10px;
+//             // margin-left: 2px;
+//             font-size: 12px;
+
+//         }
+
+//         .movie-yers {
+//             // border: 2px solid red !important;
+//     // width: fit-content;
+//     // margin-left: 2px;
+//     font-size: 12px;
+
+
+//         }
+
+//         .pagination {
+//             // border: 2px solid rgb(86, 174, 23) !important;
+//     // width: fit-content;
+// // justify-items: center!important;            
+//             // text-align: center;
+//             // line-height: 60px;
+//             h3 {
+//                 // border: 2px solid rgb(255, 0, 255) !important;
+
+//             }
+//         }
+
+//         .page-link {
+//             padding: 2px;
+//             // margin: 0 5px;
+//             // cursor: pointer;
+//             // border: 2px solid  rgba(227, 213, 213, 0.634);
+//         }
+
+//         .page-link.active {
+//             // font-weight: bold;
+//             // pointer-events: none;
+//         }
+//     }
+// }
+
+// @media screen and (max-width: 355px) {
+//     .movies {
+//         // border: 2px solid red;
+//         height: 5700px!important;
+//         // position: relative;
+//         // top: 55px;
+//         .movies-listt {
+//             // border: 2px solid rgb(51, 255, 0) !important;
+//             // gap: 0px 10px; /* Gap vertically (10px) and horizontally (20px) */
+//             grid-template-columns: repeat(1, 1fr);
+//     // top: 30px; 
+//     // margin-left: 40px;
+//     // margin-right: 40px;
+//     margin: auto;
+
+//       }
+//       .loading-css {
+//                 // border: 2px solid rgb(51, 255, 0) !important;
+
+//     // margin-left: 510px;
+
+
+
+
+//      }
+
+//         .movie-item {
+//             // border: 2px solid red !important;
+
+//             // padding: 10px;
+//             //     border-radius: 8px;
+//             //     align-items: center;
+//             //     text-align: center;
+//             //     font-size: 15px;
+
+//         }
+
+//         #movie-poster {
+//             // border: 2px solid rgb(0, 60, 255) !important;
+//                 width:120px!important;
+//                 height: 200px!important;
+
+//             // border-radius: 8px;
+//             // margin-bottom: 10px;
+//             // border: 3px solid white;
+
+
+//         }
+
+//         .movie-details {
+//             // border: 2px solid red !important;
+
+//             // display: flex;
+//             // justify-content: start;
+//             // gap: 10px;
+//             // margin-left: 2px;
+//             font-size: 12px;
+
+//         }
+
+//         .movie-yers {
+//             // border: 2px solid red !important;
+//     // width: fit-content;
+//     // margin-left: 2px;
+//     font-size: 12px;
+
+
+//         }
+
+//         .pagination {
+//             // border: 2px solid rgb(86, 174, 23) !important;
+
+//             // margin-top: 20px;
+
+//             // text-align: center;
+//             // line-height: 60px;
+//             h3 {
+//                 // border: 2px solid rgb(255, 0, 255) !important;
+
+//             }
+//         }
+
+//         .page-link {
+//             // padding: 10px;
+//             // margin: 0 5px;
+//             // cursor: pointer;
+//             // border: 2px solid  rgba(227, 213, 213, 0.634);
+//         }
+
+//         .page-link.active {
+//             // font-weight: bold;
+//             // pointer-events: none;
+//         }
+//     }
+// }

@@ -11,7 +11,7 @@ function PublicLayout() {
   return (
     <Box  bg={bgColor} color={color} >
         <NavSearch/>
-              <Outlet />
+              <Outlet  />
               <Footer />
 
     </Box>

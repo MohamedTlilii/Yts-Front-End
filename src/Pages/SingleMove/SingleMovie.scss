@@ -1,0 +1,282 @@
+.SingleMovie {
+    // border: 2px solid red;
+    // padding: 20px;
+    text-align: center;
+    position: relative;
+    top: 80px;
+    height: 180vh;
+
+    .MoviePoster {
+        // border: 2px solid rgb(132, 255, 0);
+        display: flex;
+        justify-content: center;
+        gap: 20px;
+        padding: 20px;
+
+
+
+        .cover {
+            // border: 2px solid rgb(255, 0, 200);
+            width: 300px;
+            // align-items: center;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 520px;
+
+            img {
+                width: 270px;
+                border-radius: 10px;
+            }
+
+            .download {
+                // border: 2px solid rgb(132, 255, 0);
+                background-color: #6ac045;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                padding: 10px 90px;
+                margin-top: 10px;
+                cursor: pointer;
+                // color: white;
+            }
+
+            .watch_now {
+                // border: 2px solid rgb(132, 255, 0);
+                background-color: #0aad9e;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                padding: 10px 93px;
+                margin-top: 10px;
+                cursor: pointer;
+            }
+        }
+
+        .MovieDetails {
+            // border: 2px solid rgb(234, 205, 18);
+            // max-width: 600px;
+            width: 500px;
+            text-align: left;
+            display: flex;
+            flex-direction: column;
+
+            h2 {
+                // border: 2px solid rgb(0, 132, 255);
+                // margin: 10px 0;
+                font-size: 2.5em;
+                margin-bottom: 24px;
+                line-height: 42px;
+                font-weight: 700;
+
+            }
+
+            .year {
+                // border: 2px solid rgb(0, 255, 191);
+                line-height: 24px;
+                font-size: 1.25em;
+                font-weight: 700;
+
+            }
+
+            .genresss {
+                // border: 2px solid rgb(0, 200, 255);
+                font-size: 1.25em;
+                font-weight: 700;
+                margin-bottom: 30px;
+
+            }
+
+            .available {
+                // border: 2px solid green;
+                float: left !important;
+                font-style: italic;
+                display: flex;
+                gap: 10px;
+                margin-bottom: 20px;
+
+
+
+                strong {
+                    // border: 2px solid gray;
+
+                }
+
+                .BTN-1 {
+
+                    border: 1px solid;
+                    border-radius: 4px;
+                    font-size: .8em;
+                    padding: 5px 12px;
+
+                }
+
+                .BTN-2 {
+                    border: 1px solid;
+                    border-radius: 4px;
+                    font-size: .8em;
+                    padding: 5px 12px;
+
+                }
+
+
+            }
+
+            .download-sub {
+                // border: 2px solid rgb(0, 255, 183) !important;
+                display: flex;
+                border: 1px solid;
+                border-radius: 4px;
+                font-size: .8em;
+                padding: 5px 12px;
+                align-items: center;
+                width: fit-content;
+                gap: 4px;
+                margin-bottom: 20px;
+                // background-color: #292423;
+
+                .BtnC_cisav {
+                    color: #6ac045;
+                    font-size: 15px;
+                    // font-weight: 800;
+                }
+            }
+
+        }
+
+        .like_count {
+            // border: 2px solid black;
+            display: flex;
+            gap: 54px;
+            margin-bottom: 15px;
+
+
+            .heart-icon {
+                // border: 2px solid black;
+                font-size: 1.7em;
+
+
+                // margin-bottom: 5px;
+            }
+
+            .like_count_count {
+                // border: 2px solid black;
+                font-size: 1.15em;
+                font-weight: 700;
+            }
+        }
+
+        .review {
+            // border: 2px solid greenyellow;
+            margin-bottom: 15px;
+
+            display: flex !important;
+            gap: 50px;
+            width: fit-content;
+
+            img {
+                // border: 2px solid red;
+                width: 1.9em !important;
+
+            }
+
+            .reviw_ {
+                // border: 2px solid red;
+
+            }
+
+            p {
+                // border: 2px solid gray;
+                font-size: 1.15em;
+                font-weight: 700;
+            }
+
+        }
+
+        .audience {
+            display: flex !important;
+            margin-bottom: 15px;
+
+            gap: 50px;
+            // width: fit-content;
+
+            img {
+                width: 1.9em !important;
+
+            }
+
+            .audience_ {
+                // border: 2px solid red;
+
+            }
+
+            p {
+                font-size: 1.15em;
+                font-weight: 700;
+            }
+
+        }
+
+        .imdh {
+            // border: 2px solid blue;
+            display: flex !important;
+            margin-bottom: 15px;
+            align-items: center;
+            gap: 27px;
+            // width: fit-content;
+
+
+            img {
+                width: 2.9em !important;
+
+            }
+
+            p {
+                // border: 2px solid gray;
+                font-size: 1.15em;
+                font-weight: 700;
+
+            }
+        }
+
+        .similar_movie {
+            // border: 2px solid rgb(39, 6, 171);
+            width: 30%;
+            text-align: left;
+
+
+
+
+            p {
+                // border: 2px solid red;
+                font-weight: 700;
+                font-size: 16px;
+                text-align: left;
+                margin-bottom: 5px;
+            }
+
+            .same_four_movies {
+                // border: 2px solid red;
+                display: grid;
+                grid-template-columns: 1fr 1fr;
+                gap: 10px;
+                /* Space between the grid items */
+                width: 50%;
+
+                // margin: 0 auto; 
+                img {
+                    // border: 2px solid red;
+                    cursor: pointer;
+                    padding: 20px;
+                    border: 2px solid #f8f8f8;
+                    text-align: center;
+                    // width: 100px;
+                    height: 130px;
+                }
+
+            }
+
+        }
+    }
+}
