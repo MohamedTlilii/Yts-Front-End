@@ -68,7 +68,7 @@ console.log(registerData);
   }; 
   const handleRegister = () => {
   
-  axios.post("/api/user/register",registerData)
+  axios.post("http://localhost:5000/api/user/register",registerData)
   .then((res)=>{
     // Hide login form if visible
   setShowLoginForm(true);
