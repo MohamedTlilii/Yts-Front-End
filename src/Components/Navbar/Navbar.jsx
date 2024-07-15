@@ -15,7 +15,8 @@ import {
   FormControl,
   FormLabel,
   Stack,
-  Button
+  Button,
+  Checkbox
 } from '@chakra-ui/react';
 import { useContext, useEffect, useState,useRef  } from 'react';
 import { StoreContext } from '../../StoreContext';
@@ -24,12 +25,12 @@ import axios from 'axios';
 import MovieItem from "../MovieItem/MovieItem";
 
 const NAV_ITEMS = [
-  { id: 'log-regis', href: '/', label: 'Home' },
+  { id: 'nav_items', href: '/', label: 'Home' },
   { id: 'four-K', href: '/forK', label: '4K' },
-  { id: 'log-regis', href: '/trending', label: 'Trending', icon: IoIosStats, iconOnly: true },
-  { id: 'log-regis', href: '/movies', label: 'Movies', icon: CiViewList, iconOnly: true },
-  // { id: 'log-regis', href: '', label: 'Login',icon: CiLogin, iconOnly: true },
-  // { id: 'log-regis', href: '', label: 'Register',  },
+  { id: 'nav_items', href: '/trending', label: 'Trending', icon: IoIosStats, iconOnly: true },
+  { id: 'nav_items', href: '/movies', label: 'Movies', icon: CiViewList, iconOnly: true },
+  // { id: 'nav_items', href: '', label: 'Login',icon: CiLogin, iconOnly: true },
+  // { id: 'nav_items', href: '', label: 'Register',  },
 ];
 
 function Navbar() {
@@ -41,17 +42,14 @@ function Navbar() {
   const [isLoggedIn, setIsLoggedIn] = useState(false);
   const [showLoginForm, setShowLoginForm] = useState(false);
   const [showRegisterForm, setShowRegisterForm] = useState(false);
-
+  const [showPasswordResetForm, setShowPasswordResetForm] = useState(false);
+  const [showPass, setShowPass] = useState(false);
+  const [registerData, setRegisterData] = useState({});
+console.log(registerData);
   const moviesBoxRef = useRef(null);
-
-
   const toggleSearch = () => {
     setStore({ ...store, showNavbar: !store.showNavbar });
   };
-
- 
-
-
   const handleSearchChange = (e) => {
     setSearchQuery(e.target.value);
   };
@@ -62,20 +60,31 @@ function Navbar() {
       setShowLoginForm(true);
     }
   };
-
   const handleLogin = () => {
-    // Implement your login logic here
     setIsLoggedIn(true);
     setShowLoginForm(false);
-  };
+   
+    
+  }; 
   const handleRegister = () => {
-  // Hide login form if visible
+  
+  axios.post("/api/user/register",registerData)
+  .then((res)=>{
+    // Hide login form if visible
   setShowLoginForm(true);
   // Implement your register logic here
   setShowRegisterForm(false);
+    console.log(res);
+  }).catch((err)=>{
+    console.dir(err);
+  })
 
 };
-
+const handlePasswordReset = () => {
+  // Implement your password reset logic here
+  setShowPasswordResetForm(true);
+  setShowLoginForm(false); // Hide the login form
+};
  
   useEffect(() => {
     const fetchData = async () => {
@@ -97,34 +106,6 @@ function Navbar() {
 
     fetchData();
   }, [searchQuery]);
-  useEffect(() => {
-    const handleClickOutside = (event) => {
-      if (moviesBoxRef.current && !moviesBoxRef.current.contains(event.target)) {
-        setMovies([]);
-      }
-    };
-
-    document.addEventListener('mousedown', handleClickOutside);
-    return () => {
-      document.removeEventListener('mousedown', handleClickOutside);
-    };
-  }, []);
-
-
-  //
-  useEffect(() => {
-    const handleClickOutside = (event) => {
-      if (moviesBoxRef.current && !moviesBoxRef.current.contains(event.target)) {
-        setMovies([]);
-      }
-    };
-
-    document.addEventListener('mousedown', handleClickOutside);
-    return () => {
-      document.removeEventListener('mousedown', handleClickOutside);
-    };
-  }, []);
-
   return (
     <Box as="header" className='navbar ' bg={bgColor} color={color}>
       <Box className='navbar-logo'>
@@ -146,7 +127,7 @@ function Navbar() {
 
 
 
-
+{/* search movies */}
 {movies.length > 0 && (
           <Box ref={moviesBoxRef} className="Movies-items" bg={bgColor} color={color} mt={2} p={2} borderRadius="md" boxShadow="md" maxH="400px" overflowY="auto">
             {movies.map(movie => (
@@ -158,7 +139,7 @@ function Navbar() {
 
 
 
-
+{/* responsve icon navbar  */}
          <UnorderedList className='navbar-list'>
         <Icon as={CiSearch} className='fa-search-x' onClick={toggleSearch} />
           {NAV_ITEMS.map((item, index) => (
@@ -181,21 +162,22 @@ function Navbar() {
 
 
 {isLoggedIn ? (
-  <React.Fragment>
+  <React.Fragment >
     {/* <Link id='logout' href="#" onClick={handleLoginLogout}
     //  className="logout-link"
     >
       Logout
     </Link> */}
-    <Icon as={CiLogout} className='icon' ml={2} onClick={handleLoginLogout} />
+    <Icon as={CiLogout} className='iconn' ml={2} onClick={handleLoginLogout} />
   </React.Fragment>
 ) : (
-  <React.Fragment>
-    <Link id='login' href="#" onClick={() => setShowLoginForm(true)}>
-      Login
+  <React.Fragment >
+    <Link className='login_register_' href="#" onClick={() => setShowLoginForm(true)}>
+      Login 
     </Link>
+    |
     {/* nbadlo links btag nrl */}
-    <Link id='register' href="#" onClick={() => setShowRegisterForm(true)}>
+    <Link className='login_register_' href="#" onClick={() => setShowRegisterForm(true)}>
       Register
     </Link>
     {/* <Icon as={CiLogin} className='icon' ml={2} /> */}
@@ -209,20 +191,43 @@ function Navbar() {
       </Box>
       {showLoginForm && (
         <Box className="login-form" bg={bgColor} color={color} p={4} borderRadius="md" boxShadow="md">
-          <form>
+          <form
+        //     onChange={(e) => {
+        //   setLoginData({ ...loginData, [e.target.name]: e.target.value })
+        //   console.log(loginData);;
+        // }}
+        >
+          <FormLabel style={{ textAlign: "center",padding:"10px",fontWeight:"700",fontSize:"1.2em",color:"#6ac045" }}>Login</FormLabel>
+
             <FormControl id="email">
+
               <FormLabel>Email address</FormLabel>
-              <Input type="email" />
+              <Input type="email" placeholder="Username or Email"
+              />
             </FormControl>
             <FormControl id="password" mt={4}>
-              <FormLabel>Password</FormLabel>
-              <Input type="password" />
-            </FormControl>
+  <FormLabel>Password</FormLabel>
+  <Input type={showPass ? "text" : "password"} placeholder="Password" />
+
+</FormControl>
+
+            <FormLabel className="chek-and-forget-btn">
+     
+            <Checkbox
+    className="check-box"
+    isChecked={showPass}
+    onChange={() => setShowPass(!showPass)} // Toggle the showPass state
+  >
+  </Checkbox>
+              <button className="h1" onClick={handlePasswordReset} >Forgot your password ?             </button>
+            </FormLabel>
             <Stack spacing={4} mt={4}>
-              <Button colorScheme="teal" onClick={handleLogin}>
+              <Button className="btn-l-" colorScheme="teal"
+               onClick={handleLogin}
+               >
                 Login
               </Button>
-              <Button variant="outline" onClick={() => setShowLoginForm(false)}>
+              <Button className="btn-ca-" variant="outline" onClick={() => setShowLoginForm(false)}>
                 Cancel
               </Button>
             </Stack>
@@ -231,30 +236,82 @@ function Navbar() {
       )}
       {showRegisterForm && (
         <Box className="register-form" bg={bgColor} color={color} p={4} borderRadius="md" boxShadow="md">
-          <form>
+          <form onChange={(e)=>{setRegisterData({...registerData,[e.target.name]: e.target.value})}}>
+            <FormLabel style={{ textAlign: "center",padding:"10px",fontWeight:"700",fontSize:"1.2em",color:"#6ac045" }}>Register</FormLabel>
+
+            <FormControl  style={{height:"90px"}} >
+              <FormLabel id="register-username">Username</FormLabel>
+              <Input id="register-username-form" type="username" placeholder="Username"  name="username"
+ />
+            </FormControl>
+            
             <FormControl id="register-email">
               <FormLabel>Email address</FormLabel>
-              <Input type="email" />
+              <Input type="email" placeholder="E-Mail (no confirmation needed)"            name="email"
+              />
             </FormControl>
             <FormControl id="register-password" mt={4}>
               <FormLabel>Password</FormLabel>
-              <Input type="password" />
-            </FormControl>
+              <Input type={showPass ? "text" : "password"} placeholder="Password" name="password" />
+              </FormControl>
             <FormControl id="confirm-password" mt={4}>
               <FormLabel>Confirm Password</FormLabel>
-              <Input type="password" />
+              <Input type={showPass ? "text" : "password"} placeholder="Confirm Password" name="Confirm Password" />
+
             </FormControl>
+            
+            <FormLabel className="chek-and-forget-btn">
+            <Checkbox
+    className="check-box"
+    isChecked={showPass}
+    onChange={() => setShowPass(!showPass)} // Toggle the showPass state
+  >
+  </Checkbox>
+              <h1>
+            By clicking Register, you agree to our 
+            By clicking Register, you agree to our 
+    <a href="https://yts.mx/terms" style={{color: 'blue', textDecoration: 'underline'}}>Terms and Conditions</a>
+            
+            </h1></FormLabel>
             <Stack spacing={4} mt={4}>
-              <Button colorScheme="teal" onClick={handleRegister}>
+              <Button className="btn-r-" colorScheme="teal" onClick={()=>{
+                handleRegister()
+              }}>
                 Register
               </Button>
-              <Button variant="outline" onClick={() => setShowRegisterForm(false)}>
+              <Button className="btn-c-" variant="outline" onClick={() => setShowRegisterForm(false)}>
                 Cancel
               </Button>
             </Stack>
           </form>
         </Box>
       )}
+
+
+
+
+{showPasswordResetForm && (
+        <Box className="password-reset-form" bg={bgColor} color={color} p={4} borderRadius="md" boxShadow="md">
+          <form>
+            <FormLabel style={{ textAlign: "center", padding: "10px", fontWeight: "700", fontSize: "1.2em", color: "#6ac045" }}>Reset Password</FormLabel>
+            <h1 style={{ textAlign: "center", padding: "10px",  fontSize: ".7em", }}>If you have Forgotten your password, just type in your E-mail Address and YTS will send you a link to Reset Your Password.</h1>
+
+            <FormControl id="reset-email">
+              <FormLabel>Email address</FormLabel>
+              <Input type="email" placeholder="E-Mail" />
+            </FormControl>
+            <Stack spacing={4} mt={4}>
+              <Button className="btn-r-" colorScheme="teal" >
+                Reset Password
+              </Button>
+              <Button className="btn-c-" variant="outline" onClick={() => setShowPasswordResetForm(false)}>
+                Cancel
+              </Button>
+            </Stack>
+          </form>
+        </Box>
+      )}
+
     </Box>
   );
 }
