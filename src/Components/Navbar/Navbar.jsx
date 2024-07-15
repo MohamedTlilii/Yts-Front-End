@@ -21,7 +21,7 @@ import {
 import { useContext, useEffect, useState,useRef  } from 'react';
 import { StoreContext } from '../../StoreContext';
 import React from 'react';
-import axios from 'axios';
+import axios from "axios";
 import MovieItem from "../MovieItem/MovieItem";
 
 const NAV_ITEMS = [
@@ -66,20 +66,34 @@ console.log(registerData);
    
     
   }; 
-  const handleRegister = () => {
-  
-  axios.post("http://localhost:5000/api/user/register",registerData)
-  .then((res)=>{
-    // Hide login form if visible
-  setShowLoginForm(true);
-  // Implement your register logic here
-  setShowRegisterForm(false);
-    console.log(res);
-  }).catch((err)=>{
-    console.dir(err);
-  })
 
-};
+  const handleRegister = () => {
+    axios.post("http://localhost:5000/api/user/register", registerData)
+      .then((res) => {
+        if (res.data.status) {
+          // Hide login form if visible
+          setShowLoginForm(true);
+          // Hide register form
+          setShowRegisterForm(false);
+          console.log(res.data.message);
+        } else {
+          console.error("Registration failed:", res.data.message);
+        }
+      }).catch((err) => {
+        console.dir(err);
+        if (err.response) {
+          if (err.response.status === 409) {
+            console.error("Conflict: ", err.response.data.message);
+          } else if (err.response.status === 400) {
+            console.error("Bad Request: ", err.response.data.message);
+          } else {
+            console.error("An error occurred: ", err.response.data.message);
+          }
+        } else {
+          console.error("An error occurred: ", err.message);
+        }
+      });
+  };  
 const handlePasswordReset = () => {
   // Implement your password reset logic here
   setShowPasswordResetForm(true);
@@ -274,9 +288,9 @@ const handlePasswordReset = () => {
             
             </h1></FormLabel>
             <Stack spacing={4} mt={4}>
-              <Button className="btn-r-" colorScheme="teal" onClick={()=>{
-                handleRegister()
-              }}>
+              <Button className="btn-r-" colorScheme="teal" onClick={
+                handleRegister
+              }>
                 Register
               </Button>
               <Button className="btn-c-" variant="outline" onClick={() => setShowRegisterForm(false)}>
