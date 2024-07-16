@@ -1,6 +1,6 @@
 import "./Navbar.scss";
 import { IoIosStats } from "react-icons/io";
-import { CiViewList, CiLogin, CiSearch,CiLogout } from "react-icons/ci";
+import { CiViewList, CiSearch,CiLogout } from "react-icons/ci";
 import BtnTheme from '../Theme/BtnTheme';
 import {
   Box,
@@ -16,21 +16,23 @@ import {
   FormLabel,
   Stack,
   Button,
-  Checkbox
+  Checkbox,
+  
 } from '@chakra-ui/react';
+import { MessageHeader, Message } from "semantic-ui-react";
+
 import { useContext, useEffect, useState,useRef  } from 'react';
 import { StoreContext } from '../../StoreContext';
 import React from 'react';
 import axios from "axios";
 import MovieItem from "../MovieItem/MovieItem";
+import {  useNavigate } from "react-router-dom";
 
 const NAV_ITEMS = [
   { id: 'nav_items', href: '/', label: 'Home' },
   { id: 'four-K', href: '/forK', label: '4K' },
   { id: 'nav_items', href: '/trending', label: 'Trending', icon: IoIosStats, iconOnly: true },
   { id: 'nav_items', href: '/movies', label: 'Movies', icon: CiViewList, iconOnly: true },
-  // { id: 'nav_items', href: '', label: 'Login',icon: CiLogin, iconOnly: true },
-  // { id: 'nav_items', href: '', label: 'Register',  },
 ];
 
 function Navbar() {
@@ -45,8 +47,18 @@ function Navbar() {
   const [showPasswordResetForm, setShowPasswordResetForm] = useState(false);
   const [showPass, setShowPass] = useState(false);
   const [registerData, setRegisterData] = useState({});
-console.log(registerData);
+  const [loginData, setLoginData] = useState({});
+
+  const [message, setMessage] = useState("");
+  const [error, setError] = useState("");
+  const [loading, setLoading] = useState(false);
+  const [bannedErr, setBannedErr] = useState("");
+
+  // console.log("registerData:", registerData);
+  const navigate = useNavigate();
+
   const moviesBoxRef = useRef(null);
+
   const toggleSearch = () => {
     setStore({ ...store, showNavbar: !store.showNavbar });
   };
@@ -60,40 +72,90 @@ console.log(registerData);
       setShowLoginForm(true);
     }
   };
-  const handleLogin = () => {
-    setIsLoggedIn(true);
-    setShowLoginForm(false);
-   
-    
-  }; 
+  // Login
+  const handleLogin = (event) => {
+    event.preventDefault(); // Prevent default form submission
+    setLoading(true);
+    console.log('Login Data:', loginData); // Log login data for debugging
 
-  const handleRegister = () => {
-    axios.post("http://localhost:5000/api/user/register", registerData)
+    axios
+      .post("http://localhost:5000/api/user/login", loginData)
       .then((res) => {
-        if (res.data.status) {
-          // Hide login form if visible
-          setShowLoginForm(true);
-          // Hide register form
-          setShowRegisterForm(false);
-          console.log(res.data.message);
-        } else {
-          console.error("Registration failed:", res.data.message);
-        }
-      }).catch((err) => {
-        console.dir(err);
-        if (err.response) {
-          if (err.response.status === 409) {
-            console.error("Conflict: ", err.response.data.message);
-          } else if (err.response.status === 400) {
-            console.error("Bad Request: ", err.response.data.message);
-          } else {
-            console.error("An error occurred: ", err.response.data.message);
+        console.log(res.data);
+        localStorage.setItem("token", res.data.data.token);
+        localStorage.setItem("isUser", res.data.data.isUser);
+        localStorage.setItem("isBanned", res.data.data.isBanned);
+        localStorage.setItem("id", res.data.data.id);
+        setTimeout(() => {
+          setLoading(false);
+          if (res.data.data.isUser && !res.data.data.isBanned) {
+            setMessage("Logged successfully");
+            navigate("/");
+          } else if (res.data.data.isUser && res.data.data.isBanned) {
+            setBannedErr("You are banned for 30 days");
           }
-        } else {
-          console.error("An error occurred: ", err.message);
-        }
+        }, 2000);
+      })
+      .catch((err) => {
+        console.dir(err);
+        setLoading(false);
+        setError(err.response?.data?.error || "An error occurred");
+        setTimeout(() => {
+          setError("");
+        }, 8000);
       });
-  };  
+  };
+    // Login
+// Register
+  const handleRegister = () => {
+    setLoading(true);
+
+    axios.post("http://localhost:5000/api/user/register", registerData)
+    
+      .then((res) => {          
+          console.log(res);
+          setLoading(false);
+          if(!error){
+            setMessage('User was Created Successfuly')
+          }
+          // Hide the message after a delay
+      setTimeout(() => {
+        setMessage('');
+      }, 3000);
+          setTimeout(() => {
+            // navigate("/login");
+            setShowLoginForm(true);
+          setShowRegisterForm(false);
+          }, 3000);
+
+        })
+        .catch((err) => {
+          setLoading(false);
+          if (err.response && err.response.data && err.response.data.message) {
+            setError(err.response.data.message);
+          } else if (err.response.data.error.userName) {
+            setError(err.response.data.error.userName.message);
+          } else if  (err.response.data.error.email) {
+            setError(err.response.data.error.email.message);
+          } else {
+            setError('An unexpected error occurred.');
+          }
+          setTimeout(() => {
+            setError('');
+          }, 10000);
+          console.error(err);
+        });
+    };
+// Register
+const handleInputChange = (e) => {
+    const { name, value } = e.target;
+    setRegisterData((prevData) => ({
+      ...prevData,
+      [name]: value
+    }));
+  };
+  
+  
 const handlePasswordReset = () => {
   // Implement your password reset logic here
   setShowPasswordResetForm(true);
@@ -206,22 +268,26 @@ const handlePasswordReset = () => {
       {showLoginForm && (
         <Box className="login-form" bg={bgColor} color={color} p={4} borderRadius="md" boxShadow="md">
           <form
-        //     onChange={(e) => {
-        //   setLoginData({ ...loginData, [e.target.name]: e.target.value })
-        //   console.log(loginData);;
-        // }}
-        >
+           onSubmit={handleLogin}>
           <FormLabel style={{ textAlign: "center",padding:"10px",fontWeight:"700",fontSize:"1.2em",color:"#6ac045" }}>Login</FormLabel>
 
             <FormControl id="email">
 
               <FormLabel>Email address</FormLabel>
-              <Input type="email" placeholder="Username or Email"
+              <Input  type="email"
+          name="email"
+          placeholder="Email"
+          value={loginData.email}
+          onChange={(e) => setLoginData({ ...loginData, email: e.target.value })}
               />
             </FormControl>
             <FormControl id="password" mt={4}>
   <FormLabel>Password</FormLabel>
-  <Input type={showPass ? "text" : "password"} placeholder="Password" />
+  <Input type={showPass ? "text" : "password"}
+          name="password"
+          placeholder="Password"
+          value={loginData.password}
+          onChange={(e) => setLoginData({ ...loginData, password: e.target.value })}/>
 
 </FormControl>
 
@@ -235,10 +301,37 @@ const handlePasswordReset = () => {
   </Checkbox>
               <button className="h1" onClick={handlePasswordReset} >Forgot your password ?             </button>
             </FormLabel>
+
+
+
+            <>
+    {error && (
+      <Message status="error">
+        <MessageHeader>OOOPPPS! 🤕</MessageHeader>
+        <p>{error}</p>
+      </Message>
+    )}
+    {bannedErr && (
+      <Message status="error">
+        <MessageHeader>{bannedErr} 🤕</MessageHeader>
+        <p>{error}</p>
+      </Message>
+    )}
+    {message && (
+
+      <Message status="success">
+        <MessageHeader>{message} 🥳</MessageHeader>
+        <p>You will be redirected to the Home page</p>
+      </Message>
+    )}
+  </>
             <Stack spacing={4} mt={4}>
-              <Button className="btn-l-" colorScheme="teal"
-               onClick={handleLogin}
-               >
+              <Button className="btn-l-"
+          colorScheme="teal"
+          type="submit"
+          isLoading={loading} // Assuming you are using Chakra UI's Button
+
+>
                 Login
               </Button>
               <Button className="btn-ca-" variant="outline" onClick={() => setShowLoginForm(false)}>
@@ -250,30 +343,39 @@ const handlePasswordReset = () => {
       )}
       {showRegisterForm && (
         <Box className="register-form" bg={bgColor} color={color} p={4} borderRadius="md" boxShadow="md">
-          <form onChange={(e)=>{setRegisterData({...registerData,[e.target.name]: e.target.value})}}>
+          <form onSubmit={(e) => { e.preventDefault(); handleRegister(); }}>
             <FormLabel style={{ textAlign: "center",padding:"10px",fontWeight:"700",fontSize:"1.2em",color:"#6ac045" }}>Register</FormLabel>
 
             <FormControl  style={{height:"90px"}} >
               <FormLabel id="register-username">Username</FormLabel>
-              <Input id="register-username-form" type="username" placeholder="Username"  name="username"
+              <Input id="register-username-form" type="text"
+      name="userName"
+      value={registerData.userName}
+      onChange={handleInputChange}
+      placeholder="Username"
+      required
  />
             </FormControl>
             
             <FormControl id="register-email">
               <FormLabel>Email address</FormLabel>
-              <Input type="email" placeholder="E-Mail (no confirmation needed)"            name="email"
+              <Input type="email"
+      name="email"
+      value={registerData.email}
+      onChange={handleInputChange}
+      placeholder="E-Mail (no confirmation needed)"
+      required
               />
             </FormControl>
             <FormControl id="register-password" mt={4}>
               <FormLabel>Password</FormLabel>
-              <Input type={showPass ? "text" : "password"} placeholder="Password" name="password" />
+              <Input type={showPass ? "text" : "password"}  
+      name="password"
+      value={registerData.password}
+      onChange={handleInputChange}
+      placeholder="Password"
+      required/>
               </FormControl>
-            <FormControl id="confirm-password" mt={4}>
-              <FormLabel>Confirm Password</FormLabel>
-              <Input type={showPass ? "text" : "password"} placeholder="Confirm Password" name="Confirm Password" />
-
-            </FormControl>
-            
             <FormLabel className="chek-and-forget-btn">
             <Checkbox
     className="check-box"
@@ -287,10 +389,29 @@ const handlePasswordReset = () => {
     <a href="https://yts.mx/terms" style={{color: 'blue', textDecoration: 'underline'}}>Terms and Conditions</a>
             
             </h1></FormLabel>
+            {/* <h2 style={{color:"red",fontSize:"20px"}}>{message}</h2> */}
+            <>
+    {error && (
+      <Message status="error">
+        <MessageHeader>OOOPPPS! 🤕</MessageHeader>
+        <p>{error}</p>
+      </Message>
+    )}
+    {message && (
+
+      <Message status="success">
+        <MessageHeader>{message} 🥳</MessageHeader>
+        <p>You will be redirected to the Login page</p>
+      </Message>
+    )}
+  </>
+
+
+
             <Stack spacing={4} mt={4}>
-              <Button className="btn-r-" colorScheme="teal" onClick={
-                handleRegister
-              }>
+              <Button className="btn-r-" colorScheme="teal"   onClick={handleRegister}
+          isLoading={loading}
+        >
                 Register
               </Button>
               <Button className="btn-c-" variant="outline" onClick={() => setShowRegisterForm(false)}>
