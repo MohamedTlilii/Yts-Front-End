@@ -1,0 +1,26 @@
+.landingPage {
+  height: 100vh;
+  top: 80px;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  padding-top: 60px;
+  padding-bottom: 30px;
+  margin-right: auto;
+  margin-left: auto;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+.landingPage .line-section {
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+  margin-top: 30px;
+}
+
+@media screen and (max-width: 900px) {
+  .landingPage {
+    padding: 10px !important;
+  }
+  .landingPage .line-section {
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+  }
+}/*# sourceMappingURL=LandingPage.css.map */

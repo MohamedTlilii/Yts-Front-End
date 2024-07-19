@@ -1,0 +1,28 @@
+.Movies-items {
+  position: absolute;
+  margin-top: 477px !important;
+  margin-right: 410px !important;
+  width: 250px;
+}
+
+#box-cover-serach {
+  display: flex;
+  gap: 5px;
+  border-bottom: 1px solid;
+  border-color: gray 0.2;
+}
+
+#image-cover-serach {
+  width: -moz-fit-content;
+  width: fit-content;
+}
+
+#titlle-cover-serach {
+  font-size: 16px;
+}
+
+@media screen and (max-width: 900px) {
+  .Movies-items {
+    display: none;
+  }
+}/*# sourceMappingURL=MovieItem.css.map */

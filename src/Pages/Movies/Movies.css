@@ -1,0 +1,104 @@
+.movies {
+  height: 275vh !important;
+  position: relative;
+  top: 100px;
+}
+.movies .pagination {
+  margin-top: 20px;
+  text-align: center;
+  line-height: 60px;
+}
+.movies .pagination h3 {
+  color: #6ac045;
+  font-weight: bold;
+}
+.movies .page-link {
+  padding: 10px;
+  margin: 0 5px;
+  cursor: pointer;
+  border: 2px solid rgba(227, 213, 213, 0.634);
+}
+.movies .page-link.active {
+  font-weight: bold;
+  pointer-events: none;
+}
+.movies .movies-listt {
+  height: auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 0px 20px;
+  margin: auto 200px;
+  justify-items: center;
+  position: relative;
+}
+.movies .movie-item {
+  padding: 10px;
+  border-radius: 8px;
+  align-items: center;
+  text-align: center;
+  position: relative; /* Ensure relative positioning for child elements */
+  overflow: hidden; /* Prevents child elements from overflowing */
+}
+.movies .movie-item:hover #movie-poster {
+  opacity: 0.3;
+}
+.movies .movie-item:hover .movie-details-hover {
+  opacity: 1;
+}
+.movies #movie-poster {
+  width: 180px !important;
+  height: 250px !important;
+  border-radius: 8px;
+  margin-bottom: 10px;
+  border: 3px solid rgba(255, 255, 255, 0.2);
+  transition: opacity 0.5s ease;
+}
+.movies .movie-details-hover {
+  position: absolute;
+  top: 10px;
+  width: 178px;
+  height: 250px;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  transition: opacity 0.5s ease;
+  background-color: rgba(0, 0, 0, 0.8); /* Example background color for hover details */
+  color: white; /* Example text color for hover details */
+  padding: 10px; /* Example padding for hover details */
+  border-radius: 8px; /* Example border radius for hover details */
+  z-index: 1; /* Ensures hover details appear above other elements */
+}
+.movies .movie-details-hover h4 {
+  width: 120px;
+}
+.movies button {
+  background-color: #6ac045;
+  padding: 5px 10px;
+  margin-top: 10px;
+  cursor: pointer;
+  color: white;
+}
+
+.movie-item:hover .movie-details-hover {
+  opacity: 1;
+  position: absolute;
+}
+
+.movie-item:hover #movie-poster {
+  opacity: 0.3;
+}
+
+.movie-details {
+  display: flex;
+  justify-content: start;
+  gap: 10px;
+  margin-left: 8px;
+}
+.movie-yers {
+  width: -moz-fit-content;
+  width: fit-content;
+  margin-left: 8px;
+}/*# sourceMappingURL=Movies.css.map */

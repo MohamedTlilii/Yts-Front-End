@@ -1,0 +1,186 @@
+.Box {
+  display: none;
+  padding-top: 94px;
+}
+.Box .Card {
+  margin: 0 auto !important;
+  padding: 0 15px !important;
+  align-items: center;
+  height: 44vh;
+  border-bottom: 1px solid #2f2f2f;
+}
+.Box .FormControl {
+  margin: 15px;
+  display: flex;
+  justify-content: center;
+}
+.Box .FormControl .Input {
+  height: 35px;
+  font-size: 14px;
+  line-height: 1.42857143;
+  border-radius: 4px;
+  width: 700px;
+}
+.Box .FormControl .BTN {
+  background-color: green;
+  color: white;
+  margin-left: -1px;
+  padding: 6px 12px;
+  font-size: 14px;
+  line-height: 1.42857143;
+  border-radius: 4px;
+  height: 35px;
+  width: 68px;
+}
+.Box .BoxBox {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  width: auto;
+  -moz-column-gap: 270px;
+       column-gap: 270px;
+  margin-top: -15px;
+}
+.Box .BoxBox .Textt {
+  text-align: center;
+  margin: 10px;
+}
+.Box .BoxBox .SelectBox {
+  border: 1px solid gray;
+  width: 130px;
+  height: 40px;
+  font-size: 0.9em;
+  font-weight: 400;
+}
+
+@media screen and (max-width: 900px) {
+  .Box {
+    display: block;
+    height: 300px !important;
+  }
+  .Box .Card {
+    height: 300px;
+  }
+}
+@media screen and (max-width: 660px) {
+  .Card {
+    height: 300px !important;
+  }
+  .FormControl .Input {
+    width: 350px !important;
+  }
+  .BoxBox {
+    -moz-column-gap: 150px !important;
+         column-gap: 150px !important;
+  }
+  .BoxBox .SelectBox {
+    border: 1px solid gray;
+  }
+}
+@media screen and (max-width: 500px) {
+  .Card {
+    height: 310px !important;
+  }
+  .FormControl .Input {
+    width: 290px !important;
+  }
+  .BoxBox {
+    -moz-column-gap: 80px !important;
+         column-gap: 80px !important;
+  }
+  .BoxBox .SelectBox {
+    border: 1px solid gray;
+  }
+}
+@media screen and (max-width: 450px) {
+  .Card {
+    height: 260px !important;
+  }
+  .FormControl .Input {
+    width: 250px !important;
+  }
+  .BoxBox {
+    -moz-column-gap: 40px !important;
+         column-gap: 40px !important;
+  }
+  .BoxBox .Textt {
+    margin: 7px !important;
+  }
+  .BoxBox .SelectBox {
+    border: 1px solid gray;
+    width: 110px !important;
+    height: 30px !important;
+    font-size: 0.7em !important;
+  }
+  .BoxBox .SelectBox {
+    border: 1px solid gray;
+  }
+}
+@media screen and (max-width: 350px) {
+  .Card {
+    height: 230px !important;
+  }
+  .FormControl .Input {
+    margin-bottom: 10px;
+    width: 200px !important;
+    height: 27px !important;
+    font-size: 10px !important;
+  }
+  .FormControl .BTN {
+    font-size: 11px !important;
+    height: 27px !important;
+    width: 66px !important;
+  }
+  .BoxBox {
+    -moz-column-gap: 20px !important;
+         column-gap: 20px !important;
+  }
+  .BoxBox .Textt {
+    margin: 5px !important;
+    font-size: 0.8em !important;
+  }
+  .BoxBox .SelectBox {
+    border: 1px solid gray;
+    width: 90px !important;
+    height: 20px !important;
+    font-size: 0.5em !important;
+  }
+  .BoxBox .SelectBox {
+    border: 1px solid gray;
+  }
+}
+@media screen and (max-width: 320px) {
+  .Box {
+    padding-top: 45px;
+  }
+  .Card {
+    height: 230px !important;
+  }
+  .FormControl .Input {
+    margin-bottom: 10px;
+    width: 200px !important;
+    height: 27px !important;
+    font-size: 10px !important;
+  }
+  .FormControl .BTN {
+    font-size: 11px !important;
+    height: 27px !important;
+    width: 66px !important;
+  }
+  .BoxBox {
+    -moz-column-gap: 20px !important;
+         column-gap: 20px !important;
+  }
+  .BoxBox .Textt {
+    margin: 5px !important;
+    font-size: 0.8em !important;
+  }
+  .BoxBox .SelectBox {
+    border: 1px solid gray;
+    width: 90px !important;
+    height: 20px !important;
+    font-size: 0.5em !important;
+  }
+  .BoxBox .SelectBox {
+    border: 1px solid gray;
+  }
+}/*# sourceMappingURL=SearchNav.css.map */

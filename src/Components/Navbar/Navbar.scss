@@ -141,13 +141,16 @@
     form {
       .chek-and-forget-btn {
         display: flex;
-        gap: 10px;
+        // gap: 10px;
         align-items: center;
+        justify-content: space-between;
       }
+
       .check-box {
         padding-top: 1em;
 
       }
+
       .h1 {
         // border: 2px solid red;
         font-style: italic;
@@ -156,6 +159,7 @@
         text-align: center;
         cursor: pointer;
       }
+
       // border: 2px solid red;
       .btn-l- {
         background-color: rgba(106, 192, 69, 0.876);
@@ -187,20 +191,22 @@
     padding: 30px;
 
     form {
-      
+
       .chek-and-forget-btn {
         // border: 2px solid red;
         display: flex;
-        gap: 10px;
-        align-items: center!important;
-        
+        // gap: 10px;
+        align-items: center !important;
+        justify-content: space-between;
       }
+
       .check-box {
         padding-top: 1em;
-        
+
         // border: 2px solid red;
-margin-top: 9px;
+        margin-top: 9px;
       }
+
       h1 {
         // border: 2px solid red;
         font-style: italic;
@@ -229,6 +235,7 @@ margin-top: 9px;
       }
     }
   }
+
   .password-reset-form {
     border: 1px solid rgba(227, 213, 213, 0.634);
     position: absolute;
@@ -236,6 +243,7 @@ margin-top: 9px;
     width: 600px;
     cursor: auto;
     padding: 40px;
+
     form {
       .h1 {
         // border: 2px solid red;
@@ -245,10 +253,12 @@ margin-top: 9px;
         text-align: center;
         cursor: pointer;
       }
-      // border: 2px solid red;
+
       .btn-r- {
+        // border: 2px solid red;
         background-color: rgba(106, 192, 69, 0.876);
         color: white;
+        width: 520px;
 
       }
 

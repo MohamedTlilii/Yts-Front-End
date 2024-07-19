@@ -1,0 +1,174 @@
+.SingleMovie {
+  text-align: center;
+  position: relative;
+  top: 80px;
+  height: 180vh;
+}
+.SingleMovie .MoviePoster {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  padding: 20px;
+}
+.SingleMovie .MoviePoster .cover {
+  width: 300px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 520px;
+}
+.SingleMovie .MoviePoster .cover img {
+  width: 270px;
+  border-radius: 10px;
+}
+.SingleMovie .MoviePoster .cover .download {
+  background-color: #6ac045;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px 90px;
+  margin-top: 10px;
+  cursor: pointer;
+}
+.SingleMovie .MoviePoster .cover .watch_now {
+  background-color: #0aad9e;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px 93px;
+  margin-top: 10px;
+  cursor: pointer;
+}
+.SingleMovie .MoviePoster .MovieDetails {
+  width: 500px;
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+}
+.SingleMovie .MoviePoster .MovieDetails h2 {
+  font-size: 2.5em;
+  margin-bottom: 24px;
+  line-height: 42px;
+  font-weight: 700;
+}
+.SingleMovie .MoviePoster .MovieDetails .year {
+  line-height: 24px;
+  font-size: 1.25em;
+  font-weight: 700;
+}
+.SingleMovie .MoviePoster .MovieDetails .genresss {
+  font-size: 1.25em;
+  font-weight: 700;
+  margin-bottom: 30px;
+}
+.SingleMovie .MoviePoster .MovieDetails .available {
+  float: left !important;
+  font-style: italic;
+  display: flex;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+.SingleMovie .MoviePoster .MovieDetails .available .BTN-1 {
+  border: 1px solid;
+  border-radius: 4px;
+  font-size: 0.8em;
+  padding: 5px 12px;
+}
+.SingleMovie .MoviePoster .MovieDetails .available .BTN-2 {
+  border: 1px solid;
+  border-radius: 4px;
+  font-size: 0.8em;
+  padding: 5px 12px;
+}
+.SingleMovie .MoviePoster .MovieDetails .download-sub {
+  display: flex;
+  border: 1px solid;
+  border-radius: 4px;
+  font-size: 0.8em;
+  padding: 5px 12px;
+  align-items: center;
+  width: -moz-fit-content;
+  width: fit-content;
+  gap: 4px;
+  margin-bottom: 20px;
+}
+.SingleMovie .MoviePoster .MovieDetails .download-sub .BtnC_cisav {
+  color: #6ac045;
+  font-size: 15px;
+}
+.SingleMovie .MoviePoster .like_count {
+  display: flex;
+  gap: 54px;
+  margin-bottom: 15px;
+}
+.SingleMovie .MoviePoster .like_count .heart-icon {
+  font-size: 1.7em;
+}
+.SingleMovie .MoviePoster .like_count .like_count_count {
+  font-size: 1.15em;
+  font-weight: 700;
+}
+.SingleMovie .MoviePoster .review {
+  margin-bottom: 15px;
+  display: flex !important;
+  gap: 50px;
+  width: -moz-fit-content;
+  width: fit-content;
+}
+.SingleMovie .MoviePoster .review img {
+  width: 1.9em !important;
+}
+.SingleMovie .MoviePoster .review p {
+  font-size: 1.15em;
+  font-weight: 700;
+}
+.SingleMovie .MoviePoster .audience {
+  display: flex !important;
+  margin-bottom: 15px;
+  gap: 50px;
+}
+.SingleMovie .MoviePoster .audience img {
+  width: 1.9em !important;
+}
+.SingleMovie .MoviePoster .audience p {
+  font-size: 1.15em;
+  font-weight: 700;
+}
+.SingleMovie .MoviePoster .imdh {
+  display: flex !important;
+  margin-bottom: 15px;
+  align-items: center;
+  gap: 27px;
+}
+.SingleMovie .MoviePoster .imdh img {
+  width: 2.9em !important;
+}
+.SingleMovie .MoviePoster .imdh p {
+  font-size: 1.15em;
+  font-weight: 700;
+}
+.SingleMovie .MoviePoster .similar_movie {
+  width: 30%;
+  text-align: left;
+}
+.SingleMovie .MoviePoster .similar_movie p {
+  font-weight: 700;
+  font-size: 16px;
+  text-align: left;
+  margin-bottom: 5px;
+}
+.SingleMovie .MoviePoster .similar_movie .same_four_movies {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+  /* Space between the grid items */
+  width: 50%;
+}
+.SingleMovie .MoviePoster .similar_movie .same_four_movies img {
+  cursor: pointer;
+  padding: 20px;
+  border: 2px solid #f8f8f8;
+  text-align: center;
+  height: 130px;
+}/*# sourceMappingURL=SingleMovie.css.map */

@@ -1,0 +1,27 @@
+.hero-Stack {
+  align-items: center;
+}
+.hero-Stack .title {
+  font-size: 2.75em;
+  font-weight: 700;
+  margin-bottom: 15px;
+  margin-top: 0;
+}
+.hero-Stack .second-title {
+  font-size: 0.95em;
+  color: #ccc;
+  width: 650px;
+  margin: 0 auto;
+  line-height: 21px;
+}
+.hero-Stack .third-title {
+  font-size: 0.95em;
+  line-height: 21px;
+}
+.hero-Stack .four-title {
+  display: flex;
+  align-items: center !important;
+}
+.hero-Stack .five-title {
+  margin-top: 10px;
+}/*# sourceMappingURL=Hero.css.map */
