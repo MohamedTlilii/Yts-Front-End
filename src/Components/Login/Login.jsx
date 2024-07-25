@@ -9,11 +9,9 @@ import {
   Button,
   Checkbox,
   useColorModeValue,
- 
-  
 } from '@chakra-ui/react';
 import { MessageHeader, Message } from 'semantic-ui-react';
-import { Link, useNavigate } from 'react-router-dom';
+import { useParams, useNavigate } from 'react-router-dom';
 
 function Login({ showLoginForm, setShowLoginForm, setIsLoggedIn }) {
   const bgColor = useColorModeValue('white', 'black');
@@ -26,6 +24,8 @@ function Login({ showLoginForm, setShowLoginForm, setIsLoggedIn }) {
   const [showPass, setShowPass] = useState(false);
   const [showPasswordResetForm, setShowPasswordResetForm] = useState(false);
   // const [showPasswordResetFormClick, setShowPasswordResetFormClick] = useState(true);
+  const { token } = useParams(); // Get token from URL params
+
   const navigate = useNavigate(); // Use the useNavigate hook for programmatic navigation
 
 
@@ -65,33 +65,51 @@ function Login({ showLoginForm, setShowLoginForm, setIsLoggedIn }) {
       });
   };
 
-  const handlePasswordReset = () => {
+  const handlePasswordBtn = () => {
     // Implement your password reset logic here
     setShowPasswordResetForm(true);
     setShowLoginForm(false); // Hide the login form
   };
-  const handleResetPasswordClick = (event) => {
-    event.preventDefault(); // Prevent default form submission
-    setShowPasswordResetForm(false); // Hide the reset form
-    navigate('/resetPassword');
-  };
 
-  // // email
-  // const handlePasswordReset = () => {
-  //   // Implement logic to send reset password email
-  //   axios
-  //     .put('http://localhost:5000/api/user/forgotPassword', { email: resetEmail })
-  //     .then((res) => {
-  //       // Handle success
-  //       setShowPasswordResetForm(false); // Hide the reset form after successful submission
-  //       setMessage(res.data.message);
-  //     })
-  //     .catch((err) => {
-  //       // Handle error
-  //       console.error(err);
-  //       setError(err.response?.data?.error || 'An error occurred');
-  //     });
-  // };
+
+  // email
+  const handlePasswordReset = (event) => {
+    // Implement logic to send reset password email
+    event.preventDefault(); // Prevent default form submission
+      // setShowPasswordResetForm(false); // Hide the reset formzezearzerzerazer
+      setLoading(true);
+
+    axios
+    .post(`http://localhost:5000/api/user/forgotPassword`, { email: loginData.email } )
+      .then((res) => {
+        // Handle success
+        console.log('Password reset email sent successfully', res);
+
+        setMessage(res.data.message);
+        // console.log(res.data.message);
+        
+        setLoading(false);
+ // Clear the message after 5 seconds
+ setTimeout(() => {
+
+  setMessage("");
+  setShowPasswordResetForm(false); // Hide the reset form after successful submission
+
+  // navigate('/resetPasswordPage/:token');
+}, 8000);
+      })
+      .catch((err) => {
+        // Handle error
+        console.error('Error sending password reset email', err);
+        setLoading(false);
+
+        setError(err.response?.data?.error || 'An error occurred');
+        // Clear the error message after 5 seconds
+      setTimeout(() => {
+        setError("");
+      }, 8000);
+      });
+  };
 
 
   return (
@@ -111,7 +129,7 @@ function Login({ showLoginForm, setShowLoginForm, setIsLoggedIn }) {
             <FormLabel className="chek-and-forget-btn">
               <Checkbox className="check-box" isChecked={showPass} onChange={() => setShowPass(!showPass)}>
               </Checkbox>
-              <button className="h1" onClick={handlePasswordReset}>Forgot your password?</button>
+              <button className="h1" onClick={handlePasswordBtn}>Forgot your password?</button>
             </FormLabel>
             <>
               {error && (
@@ -147,17 +165,46 @@ function Login({ showLoginForm, setShowLoginForm, setIsLoggedIn }) {
       )}
        {showPasswordResetForm && (
         <Box className="password-reset-form" bg={bgColor} color={color} p={4} borderRadius="md" boxShadow="md">
-          <form>
+          <form 
+          onSubmit={handlePasswordReset}
+          >
             <FormLabel style={{ textAlign: "center", padding: "10px", fontWeight: "700", fontSize: "1.2em", color: "#6ac045" }}>Reset Password</FormLabel>
             <h1 style={{ textAlign: "center", padding: "10px", fontSize: ".7em" }}>If you have forgotten your password, just type in your email address and YTS will send you a link to reset your password.</h1>
             <FormControl id="reset-email">
               <FormLabel>Email address</FormLabel>
-              <Input type="email" placeholder="E-Mail" />
+              <Input type="email" placeholder="E-Mail"  value={loginData.email} onChange={(e) => setLoginData({ ...loginData, email: e.target.value })}/>
             </FormControl>
+
+
+
+
+            <>
+              {error && (
+                <Message style={{color:"red"}} status="error">
+                  <MessageHeader >OOOPPPS! 🤕</MessageHeader>
+                  <p>{error}</p>
+                </Message>
+              )}
+             
+              {message  && (
+                <Message style={{color:"#6ABA46"}} status="success">
+                  <MessageHeader>{message} 🥳</MessageHeader>
+                  {/* <p>You will be redirected to the Home page</p> */}
+                </Message>
+              )}
+            </>
+
+
+
+
+
+
+
+
+
             <Stack spacing={4} mt={4}>
-            {/* <Link to="resetPassword"> */}
-      <Button className="btn-r-" colorScheme="teal" onClick={handleResetPasswordClick}>
-        Reset Password
+            <Button className="btn-r-" colorScheme="teal" type="submit" isLoading={loading}>
+            Reset Password
       </Button>
     {/* </Link>  */}
 

@@ -11,8 +11,8 @@ import ConnexionLayout from './Layouts/ConnexionLayout';
 // import Register from './Pages/Register/Register';
 import SingleMovie from './Pages/SingleMove/SingleMovie';
 import UserRoute from './Routes/UserRoute';
-import Login from './Components/Login/Login';
-import ResetPassword from './Pages/ResetPassword/ResetPassword';
+import RequestPasswordReset from './Pages/RequestPasswordReset/RequestPasswordReset';
+import UserResetPasswordTokenRoute from './Routes/UserResetPasswordTokenRoute';
 
 
 function App() {
@@ -21,15 +21,21 @@ function App() {
       <Route path='/' element={<PublicLayout />} >
         <Route index element={<LandingPage />} />
         <Route path="forK" element={<ForK />} />
-        <Route path="/trending" element={<Trending />} />
-        <Route path="/movies" element={<Movies />} />
+        <Route path="trending" element={<Trending />} />
+        <Route path="movies" element={<Movies />} />
         <Route path="singlemovie/:id" element={
           <UserRoute>
             <SingleMovie />
           </UserRoute>
         } />
-        <Route path="/resetPassword" element={<ResetPassword />} />
-        </Route>
+        <Route path="api/user/requestPasswordReset/:token" element={
+          // <UserResetPasswordTokenRoute>
+          <RequestPasswordReset />
+        }
+        />
+        {/* </UserResetPasswordTokenRoute> */}
+
+      </Route>
 
 
 

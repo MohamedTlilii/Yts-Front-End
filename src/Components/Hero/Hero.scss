@@ -1,7 +1,7 @@
 .hero-Stack {
+    // border: 2px solid red!important;
     align-items: center;
 
-    // border: 2px solid red!important;
     .title {
         // border: 2px solid red!important;
 
@@ -9,14 +9,14 @@
         font-weight: 700;
         margin-bottom: 15px;
         margin-top: 0;
-        
+
     }
 
     .second-title {
         // border: 2px solid rgb(0, 255, 157) !important;
         font-size: .95em;
         color: #ccc;
-        width: 650px;
+        width: 650px !important;
         margin: 0 auto;
         line-height: 21px;
         // margin-bottom: 30px;
@@ -39,22 +39,62 @@
 
         a {
             // border: 5px solid rgb(125, 7, 7) !important;
-          
+
         }
     }
 
     .five-title {
         // border: 2px solid rgb(255, 0, 247) !important;
         // border-bottom: 1px solid rgba(255, 255, 255, .2);
-margin-top: 10px;
-        h2 {
+        margin-top: 10px;
+        display: flex;
+        justify-content: space-between;
+        width: 1000px;
+        gap: 5px;
+        border-bottom: 1px solid rgba(227, 213, 213, 0.634);
+        padding-bottom: 20px;
+        margin-bottom:8px;
+
+        .five-title-one {
             // border: 2px solid rgb(25, 0, 255) !important;
+            align-items: center;
+            gap: 7px;
+
+            .five-title-icon {
+                color: #6ac045;
+                font-size: 20px;
+            }
+
+            h2 {
+                // border: 2px solid rgb(25, 0, 255) !important;
+                font-size: 1.15em;
+                font-weight: 700;
+
+            }
+        }
+
+        
+        .five-title-two {
+            // border: 2px solid rgb(25, 0, 255) !important;
+            align-items: center;
+            gap: 7px;
+
+            .five-title-two-icon {
+                color: orange;
+                font-size: 20px;
+
+            }
+
+            a {
+                font-size: 1.15em;
+                font-weight: 700;
+                color: #2a6496;
+                // border: 1px solid rgb(215, 21, 21) !important;
+            }
 
         }
 
-        a {
-            // border: 1px solid rgb(215, 21, 21) !important;
-        }
+
     }
-   
+
 }

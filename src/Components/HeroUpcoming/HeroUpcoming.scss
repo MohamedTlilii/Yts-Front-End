@@ -1,0 +1,118 @@
+.hero-upcoming-container {
+    // border: 2px solid red;
+    padding: 20px;
+    // height: 450px;
+
+    .hero-upcoming-tittle {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-left: 310px;
+        margin-right: 330px;
+
+        h2 {
+            margin: 0;
+            font-size: 1.15em;
+            font-weight: 700;
+            padding: 0 15px;
+            margin-bottom: 5px;
+        }
+
+        h3 {
+            font-size: 14px;
+            font-weight: 700;
+            color: rgba(255, 255, 255, 0.638);
+        }
+    }
+
+    .hero-upcoming-movies {
+        // border: 2px solid red;
+
+        // border: 2px solid rgb(128, 255, 0);
+        margin-top: 20px;
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 20px;
+        margin-left: 335px;
+        margin-right: 335px;
+        // height: 950px;
+
+        .movie {
+            // border: 2px solid rgb(128, 255, 0);
+
+            padding: 10px;
+            text-align: center;
+            align-items: center;
+            position: relative;
+
+            img {
+
+                width: 100%;
+                height: auto;
+                display: block;
+                border: 5px solid rgb(255, 255, 255);
+
+            }
+          
+
+            .movie-details-hover {
+                // border: 2px solid red;
+                display: none;
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 83%;
+                background: rgba(0, 0, 0, 0.8);
+                color: #fff;
+                align-items: center;
+                justify-content: center;
+                text-align: center;
+                padding: 10px;
+                box-sizing: border-box;
+
+                .fa-star {
+                    color: #6ac045;
+                    margin-bottom: 10px;
+                }
+
+                h2 {
+                    font-size: 1.2em;
+                    margin-bottom: 10px;
+                }
+
+                h4 {
+                    margin-bottom: 10px;
+                }
+
+                button {
+                    background-color: #6ac045;
+                    padding: 5px 10px;
+                    margin-top: 10px;
+                    cursor: pointer;
+                    color: white;
+                    border: none;
+                    border-radius: 4px;
+
+                }
+
+                button:hover {
+                    background-color: #6ac045ae;
+                }
+            }
+
+            &:hover {
+                
+                transform: scale(1.05);
+                opacity: 3;
+            }
+
+            &:hover .movie-details-hover {
+                display: flex;
+                flex-direction: column;
+                border: 5px solid rgb(128, 255, 0);
+
+            }
+        }
+    }
+}

@@ -1,9 +1,109 @@
-import React from 'react'
-import "./HeroRow.scss"
+import React, { useEffect, useState } from 'react';
+import axios from 'axios';
+import { Box, Spinner } from '@chakra-ui/react';
+import { FaStar } from 'react-icons/fa';
+import { Link } from 'react-router-dom';
+import "./HeroRow.scss";
+import { IoDownload } from "react-icons/io5";
+
 function HeroRow() {
+  const [movies, setMovies] = useState([]);
+  const [loading, setLoading] = useState(true);
+  const [error, setError] = useState(null);
+
+  useEffect(() => {
+    const fetchMovies = async () => {
+      setLoading(true);
+      try {
+        const queryParams = new URLSearchParams({
+          limit: 4,
+          page: Math.floor(Math.random() * 100) + 1, // Random page to get different movies on refresh
+        });
+        const response = await axios.get(`https://yts.mx/api/v2/list_movies.json?${queryParams.toString()}`);
+
+        if (response.data?.data?.movies) {
+          setMovies(response.data.data.movies);
+          setError(null);
+        } else {
+          console.error('Unexpected API response structure:', response.data);
+          setError('Unexpected API response structure');
+        }
+      } catch (error) {
+        console.error('Error fetching movies:', error);
+        setError('Failed to fetch movies');
+      } finally {
+        setLoading(false);
+      }
+    };
+
+    fetchMovies();
+  }, []);
+
+  const truncateTitle = (title, maxLength) => {
+    return title.length <= maxLength ? title : title.slice(0, maxLength) + '...';
+  };
+
   return (
-    <div>HeroRow</div>
-  )
+    <Box className='hero-row-m-container'>
+    <Box className='hero-Row-movies'>
+      {loading && <Spinner size='xl' className="loading-css" />}
+      {!loading && error && <p>{error}</p>}
+      {!loading && !error && movies.length > 0 && (
+        movies.map((movie) => (
+          <div className='hero-row-movies-item' key={movie.id}>
+            <img src={movie.large_cover_image} alt={movie.title} id='movie-poster' />
+            <div className='movie-details-hover'>
+              <FaStar className='faster'  />
+              <h2>{movie.rating}/10</h2>
+              <h4>{movie.genres ? movie.genres.join(" ") : "No genres available"}</h4>
+              <Link to={`/singlemovie/${movie.id}`}>
+                <button>View Details</button>
+              </Link>
+            </div>
+            <div className='movie-details'>
+              <h2>[{movie.language}]</h2>
+              <Link to={`/singlemovie/${movie.id}`}>
+                <Box><h3>{truncateTitle(movie.title, 15)}</h3></Box>
+              </Link>
+            </div>
+            <h3 className='movie-year'>{movie.year}</h3>
+            
+          </div>
+        ))
+      )}
+<div>
+</div>   
+ </Box>
+ <Box className='warning-hero-row'>
+  <h1>Warning!‌‌‌ Download only with VPΝ... </h1>
+  <p className='dw'>Downloading torrents is risky for you: your IP and leaked private data being actively tracked by your ISP and Government Agencies Protect yourself from expensive lawsuits and fines NOW! You must use a VPΝ like Private. It is the only way to download torrents fully anonymous by encrypting all traffic with zero logs.
+
+  </p>
+  <p className='paragh-red-white' >
+   Personal data disclosing your real identity: your IP address
+    <span > 102.158.110.123  </span>
+is exposed, which points directly to your location in 
+<span >Tunis, TUNISIA   </span> 
+. You are browsing with 
+<span >Chrome 126.0.0.0 (Windows 10)</span>
+, resolution 
+<span >1920x1080px</span>, 
+<span >  6-cores CPU 
+</span>.
+  </p>
+  <p class="paragh-blue">
+<span >″Do not risk it! Protect yourself right now by downloading Private VPN″</span> - William
+</p>
+<button className="dw-vpn">
+<IoDownload className='iodwnload' />
+
+      Download Private VPN
+    </button>
+  </Box>
+ 
+
+</Box>
+  );
 }
 
-export default HeroRow
+export default HeroRow;

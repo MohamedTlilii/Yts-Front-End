@@ -1,6 +1,6 @@
     .landingPage {
-        // border: 2px solid rgb(0, 255, 68);
-        height: 100vh;
+        border: 2px solid rgb(0, 255, 68);
+        // height: 300vh;
         top: 80px;
         position: relative;
         
@@ -16,24 +16,26 @@
         padding-right: 15px;
         // background-color: red;
         // width: 0px auto;
-
+height: 320vh;
         .line-section {
-            border-bottom: 1px solid rgba(255, 255, 255, .2);
-            margin-top: 30px;
+            // border-bottom: 1px solid rgba(255, 255, 255, .2);
+            // margin-top: 30px;
+            border-bottom: 1px solid rgba(227, 213, 213, 0.634);
+
 
         }
 
     }
 
-    @media screen and (max-width: 900px) {
-        .landingPage {
-            // border: 2px solid rgb(0, 255, 68);
-            padding: 10px!important;
+    // @media screen and (max-width: 900px) {
+    //     .landingPage {
+    //         // border: 2px solid rgb(0, 255, 68);
+    //         padding: 10px!important;
           
 
-            .line-section {
-                border-bottom: 1px solid rgba(255, 255, 255, .2);
+    //         .line-section {
+    //             border-bottom: 1px solid rgba(255, 255, 255, .2);
 
-            }
-        }
-    }
+    //         }
+    //     }
+    // }

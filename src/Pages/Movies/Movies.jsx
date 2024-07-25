@@ -140,7 +140,7 @@ function Movies() {
     <FaStar className='faster' color='#6ac045' />
     <h2 >{movie.rating}/10</h2>
     {/* <h4>{movie.genres }</h4> */}
-    <h4>{movie.genres.join(" ")}</h4>
+    <h4>{movie.genres ? movie.genres.join(" ") : "No genres available"}</h4>
 
     <Link to={`/singlemovie/${movie.id}`}>      <button>View Details</button>
     </Link>

@@ -25,7 +25,7 @@ import React from 'react';
 import { Text, Stack, Link, Flex } from '@chakra-ui/react';
 import './Hero.scss';
 import { FaTelegram,FaTwitter   } from "react-icons/fa";
-import { CiStar } from "react-icons/ci";
+import { IoStar } from "react-icons/io5";
 import { FaRssSquare } from "react-icons/fa";
 
 
@@ -64,20 +64,23 @@ function Hero() {
       
       <Flex align="center" className='five-title'>
 
-        <CiStar />
+       <Flex className='five-title-one' >
+       <IoStar className='five-title-icon'   />
         <Text fontSize='lg' as="h2" mr={2} >
 
-          <span className="icon-star"></span> Popular Downloads
+          <h2>Popular Downloads</h2> 
         </Text>
-       <Link> <FaRssSquare /></Link>
+       </Flex>
+       <Flex className='five-title-two' >
+       <Link> <FaRssSquare className='five-title-two-icon'  /></Link>
         <Text fontSize='lg' as="h2" mr={2}>
 
         <Link href="https://yts.mx/browse-movies/0/all/all/0/featured/0/all" mr={2} isExternal>
-          more featured...
-        </Link>
+<a>more featured...</a>     
+   </Link>
        
         </Text>
-    
+        </Flex>
       </Flex>
      
     </Stack>

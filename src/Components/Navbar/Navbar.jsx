@@ -23,7 +23,7 @@ import axios from "axios";
 import MovieItem from "../MovieItem/MovieItem";
 import Register from "../Register/Register";
 import Login from "../Login/Login";
-import { Button } from "semantic-ui-react";
+import { useNavigate } from 'react-router-dom';
 
 const NAV_ITEMS = [
   { id: 'nav_items', href: '/', label: 'Home' },
@@ -44,6 +44,7 @@ function Navbar() {
   // const [showPasswordResetForm, setShowPasswordResetForm] = useState(false);
 
   const moviesBoxRef = useRef(null);
+  const navigate = useNavigate();
 
   const toggleSearch = () => {
     setStore({ ...store, showNavbar: !store.showNavbar });
@@ -53,6 +54,11 @@ function Navbar() {
     setSearchQuery(e.target.value);
   };
 
+  const handleNavigation = (movieId) => {
+    navigate(`/singlemovie/${movieId}`);
+  };
+
+  
   const handleLoginLogout = () => {
     if (isLoggedIn) {
       localStorage.removeItem("token");
@@ -110,8 +116,12 @@ function Navbar() {
         {movies.length > 0 && (
           <Box ref={moviesBoxRef} className="Movies-items" bg={bgColor} color={color} mt={2} p={2} borderRadius="md" boxShadow="md" maxH="400px" overflowY="auto">
             {movies.map(movie => (
-              <MovieItem key={movie.id} movie={movie} />
-            ))}
+               
+               <div key={movie.id} onClick={() => handleNavigation(movie.id)} style={{ cursor: 'pointer' }}>
+               <MovieItem movie={movie} />
+             </div>
+
+                    ))}
           </Box>
         )}
         <UnorderedList className='navbar-list'>
