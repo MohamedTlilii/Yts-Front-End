@@ -29,12 +29,10 @@ function App() {
           </UserRoute>
         } />
         <Route path="api/user/requestPasswordReset/:token" element={
-          // <UserResetPasswordTokenRoute>
-          <RequestPasswordReset />
-        }
-        />
-        {/* </UserResetPasswordTokenRoute> */}
-
+          <UserResetPasswordTokenRoute>
+            <RequestPasswordReset />
+          </UserResetPasswordTokenRoute>
+        } />
       </Route>
 
 

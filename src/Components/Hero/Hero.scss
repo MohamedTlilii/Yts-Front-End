@@ -52,8 +52,8 @@
         width: 1000px;
         gap: 5px;
         border-bottom: 1px solid rgba(227, 213, 213, 0.634);
-        padding-bottom: 20px;
-        margin-bottom:8px;
+        // padding-bottom: 20px;
+        margin-bottom: 8px;
 
         .five-title-one {
             // border: 2px solid rgb(25, 0, 255) !important;
@@ -73,19 +73,24 @@
             }
         }
 
-        
+
         .five-title-two {
             // border: 2px solid rgb(25, 0, 255) !important;
+            // text-align: center;
             align-items: center;
             gap: 7px;
 
             .five-title-two-icon {
+                // border: 2px solid rgb(25, 0, 255) !important;
+
                 color: orange;
                 font-size: 20px;
 
             }
 
-            a {
+            h2 {
+                // border: 2px solid rgb(25, 0, 255) !important;
+                height: 30px;
                 font-size: 1.15em;
                 font-weight: 700;
                 color: #2a6496;
@@ -97,4 +102,569 @@
 
     }
 
+}
+
+@media screen and (max-width: 1450px) {
+    .hero-Stack {
+        // border: 2px solid red!important;
+        align-items: center;
+        width: 100%;
+
+        .title {
+            // border: 2px solid red!important;
+
+            font-size: 2.55em;
+            font-weight: 700;
+            // margin-bottom: 0px;
+            // margin-top: 0;
+
+
+        }
+
+        .second-title {
+            // border: 2px solid rgb(0, 255, 157) !important;
+            // font-size: .95em;
+            // color: #ccc;
+            // width: 650px !important;
+            // margin: 0 auto;
+            // line-height: 21px;
+            margin-top: -20px;
+
+        }
+
+        .third-title {
+            // border: 2px solid rgb(25, 0, 255) !important;
+            // font-size: .95em;
+            // line-height: 21px;
+            margin-top: -15px;
+
+
+            a {
+                // border: 5px solid black;
+            }
+        }
+
+        .four-title {
+            // border: 2px solid rgb(25, 0, 255) !important;
+            // display: flex;
+            // align-items: center !important;
+            // margin-top: -10px;
+
+
+            a {
+                // border: 5px solid rgb(125, 7, 7) !important;
+
+            }
+        }
+
+        .five-title {
+            // border: 2px solid rgb(255, 0, 247) !important;
+            // border-bottom: 1px solid rgba(255, 255, 255, .2);
+            // margin-top: 10px;
+            // display: flex;
+            justify-content: space-around;
+            // width: 1000px;
+            // gap: 5px;
+            // border-bottom: 1px solid rgba(227, 213, 213, 0.634);
+            padding-bottom: 10px;
+            // margin-bottom:8px;
+
+            .five-title-one {
+                // border: 2px solid rgb(25, 0, 255) !important;
+                // align-items: center;
+                // gap: 7px;
+
+                .five-title-icon {
+                    // color: #6ac045;
+                    font-size: 15px;
+                }
+
+                h2 {
+                    // border: 2px solid rgb(25, 0, 255) !important;
+                    font-size: 1em;
+                    // font-weight: 700;
+
+                }
+            }
+
+
+            .five-title-two {
+                // border: 2px solid rgb(25, 0, 255) !important;
+                // align-items: center;
+                // gap: 7px;
+
+                .five-title-two-icon {
+                    // color: orange;
+                    font-size: 15px;
+
+                }
+
+                h2 {
+                    font-size: 1em;
+                    // font-weight: 700;
+                    // color: #2a6496;
+                    // border: 1px solid rgb(215, 21, 21) !important;
+                }
+
+            }
+
+
+        }
+
+    }
+}
+
+@media screen and (max-width: 1000px) {
+    .hero-Stack {
+        // border: 2px solid rgb(0, 255, 38)!important;
+        width: 100%;
+
+
+        .title {
+            // border: 2px solid red!important;
+
+            font-size: 2em;
+            // margin-bottom: 0px;
+            // margin-top: 0;
+
+
+        }
+
+        .second-title {
+            // border: 2px solid rgb(0, 255, 157) !important;
+            font-size: .75em;
+            // color: #ccc;
+            // width: 650px !important;
+            // margin: 0 auto;
+            // line-height: 21px;
+            text-align: center;
+
+        }
+
+        .third-title {
+            // border: 2px solid rgb(25, 0, 255) !important;
+            // font-size: .95em;
+            // line-height: 21px;
+
+
+            a {
+                // border: 5px solid black;
+            }
+        }
+
+        .four-title {
+            // border: 2px solid rgb(25, 0, 255) !important;
+            // display: flex;
+            // align-items: center !important;
+            // margin-top: -10px;
+
+
+            a {
+                // border: 5px solid rgb(125, 7, 7) !important;
+
+            }
+        }
+
+        .five-title {
+            // border: 2px solid rgb(255, 0, 247) !important;
+            // border-bottom: 1px solid rgba(255, 255, 255, .2);
+            // margin-top: 10px;
+            // display: flex;
+            // justify-content: space-between;
+            // width: 1000px;
+            gap: 405px;
+            // border-bottom: 1px solid rgba(227, 213, 213, 0.634);
+            padding-bottom: 10px;
+            // margin-bottom:8px;
+            width: max-content;
+
+
+            .five-title-one {
+                // border: 2px solid rgb(25, 0, 255) !important;
+                // align-items: center;
+                // gap: 7px;
+
+                .five-title-icon {
+                    // color: #6ac045;
+                }
+
+                h2 {
+                    // border: 2px solid rgb(25, 0, 255) !important;
+                    font-size: 1em;
+                    // font-weight: 700;
+
+                }
+            }
+
+
+            .five-title-two {
+                // border: 2px solid rgb(25, 0, 255) !important;
+                // align-items: center;
+                // gap: 7px;
+
+                .five-title-two-icon {
+                    // color: orange;
+
+                }
+
+                h2 {
+                    // font-weight: 700;
+                    // color: #2a6496;
+                    // border: 1px solid rgb(215, 21, 21) !important;
+                }
+
+            }
+
+
+        }
+
+    }
+
+}
+
+@media screen and (max-width: 900px) {
+    .hero-Stack {
+        // border: 2px solid rgb(0, 255, 38)!important;
+
+
+        .title {
+            // border: 2px solid red!important;
+
+
+
+        }
+
+        .second-title {
+            // border: 2px solid rgb(0, 255, 157) !important;
+
+
+        }
+
+        .third-title {
+            // border: 2px solid rgb(25, 0, 255) !important;
+
+
+
+            a {
+                // border: 5px solid black;
+            }
+        }
+
+        .four-title {
+            // border: 2px solid rgb(25, 0, 255) !important;
+
+
+
+            a {
+                // border: 5px solid rgb(125, 7, 7) !important;
+
+            }
+        }
+
+        .five-title {
+            // border: 2px solid rgb(255, 0, 247) !important;
+
+            gap: 300px;
+
+
+            .five-title-one {
+                // border: 2px solid rgb(25, 0, 255) !important;
+
+
+                .five-title-icon {}
+
+                h2 {
+                    // border: 2px solid rgb(25, 0, 255) !important;
+
+
+                }
+            }
+
+
+            .five-title-two {
+                // border: 2px solid rgb(25, 0, 255) !important;
+
+
+                .five-title-two-icon {}
+
+                h2 {
+                    // border: 1px solid rgb(215, 21, 21) !important;
+                }
+
+            }
+
+
+        }
+
+    }
+}
+
+@media screen and (max-width: 780px) {
+    .hero-Stack {
+        // border: 2px solid rgb(0, 255, 38) !important;
+
+
+        .title {
+            // border: 2px solid red!important;
+            display: none;
+
+
+        }
+
+        .second-title {
+            // border: 2px solid rgb(0, 255, 157) !important;
+            display: none;
+
+
+        }
+
+        .third-title {
+            // border: 2px solid rgb(25, 0, 255) !important;
+            display: none;
+
+
+
+            a {
+                // border: 5px solid black;
+            }
+        }
+
+        .four-title {
+            // border: 2px solid rgb(25, 0, 255) !important;
+
+
+
+            a {
+                // border: 5px solid rgb(125, 7, 7) !important;
+
+            }
+        }
+
+        .five-title {
+            // border: 2px solid rgb(255, 0, 247) !important;
+
+            gap: 200px;
+
+
+            .five-title-one {
+                // border: 2px solid rgb(25, 0, 255) !important;
+
+
+                .five-title-icon {}
+
+                h2 {
+                    // border: 2px solid rgb(25, 0, 255) !important;
+
+
+                }
+            }
+
+
+            .five-title-two {
+                // border: 2px solid rgb(25, 0, 255) !important;
+
+
+                .five-title-two-icon {}
+
+                h2 {
+                    // border: 1px solid rgb(215, 21, 21) !important;
+                }
+
+            }
+
+
+        }
+
+    }
+}
+
+@media screen and (max-width: 565px) {
+    .hero-Stack {
+        // border: 2px solid rgb(0, 255, 38) !important;
+        width: auto;
+
+        .title {
+            // border: 2px solid red!important;
+            display: none;
+
+
+        }
+
+        .second-title {
+            // border: 2px solid rgb(0, 255, 157) !important;
+            display: none;
+
+
+        }
+
+        .third-title {
+            // border: 2px solid rgb(25, 0, 255) !important;
+            display: none;
+
+
+
+            a {
+                // border: 5px solid black;
+            }
+        }
+
+        .four-title {
+            // border: 2px solid rgb(25, 0, 255) !important;
+            font-size: 12px;
+            gap: 5px;
+
+
+
+            a {
+                // border: 5px solid rgb(125, 7, 7) !important;
+
+            }
+        }
+
+        .five-title {
+            // border: 2px solid rgb(255,   0, 247) ;
+            // font-size: 12px ;
+            width: auto;
+            gap: 80px;
+
+
+
+            .five-title-one {
+                // border: 2px solid rgb(0, 255, 0) !important;
+                // font-size: 10px;
+
+                .five-title-icon {
+                    font-size: 10px;
+
+                }
+
+                h2 {
+                    // border: 2px solid rgb(25, 0, 255) !important;
+                    font-size: 10px;
+
+
+                }
+            }
+
+
+            .five-title-two {
+                // border: 2px solid rgb(255, 234, 0) !important;
+                // font-size: 10px;
+                // width: auto;
+
+
+
+
+                .five-title-two-icon {
+                    font-size: 10px;
+                    // margin-top: 6px;
+
+                }
+
+                h2 {
+                    // border: 1px solid rgb(57, 215, 21) !important;
+                    font-size: 10px;
+                    height: 17px;
+                }
+
+            }
+
+
+        }
+
+    }
+}
+
+
+
+
+
+
+@media screen and (max-width: 403px) {
+    .hero-Stack {
+        // border: 2px solid rgb(0, 255, 38) !important;
+
+
+        .title {
+            // border: 2px solid red!important;
+            display: none;
+
+
+        }
+
+        .second-title {
+            // border: 2px solid rgb(0, 255, 157) !important;
+            display: none;
+
+
+        }
+
+        .third-title {
+            // border: 2px solid rgb(25, 0, 255) !important;
+            display: none;
+
+
+
+            a {
+                // border: 5px solid black;
+            }
+        }
+
+        .four-title {
+            // border: 2px solid rgb(25, 0, 255) !important;
+            font-size: 10px;
+
+
+
+            a {
+                // border: 5px solid rgb(125, 7, 7) !important;
+
+            }
+        }
+
+        .five-title {
+            // border: 2px solid rgb(255, 0, 247) !important;
+            // font-size: 10px!important;
+            gap: 30px;
+
+
+            .five-title-one {
+                // border: 2px solid rgb(25, 0, 255) !important;
+
+                .five-title-icon {
+                    font-size: 8px;
+
+                }
+
+                h2 {
+                    // border: 2px solid rgb(25, 0, 255) !important;
+                    font-size: 8px;
+
+
+                }
+            }
+
+
+            .five-title-two {
+                // border: 2px solid rgb(17, 255, 0) !important;
+
+
+                .five-title-two-icon {
+                    font-size: 8px;
+
+                }
+
+                h2 {
+                    // border: 1px solid rgb(215, 21, 21) !important;
+                    font-size: 8px;
+                    margin-top: 2px;
+
+                }
+
+            }
+
+
+        }
+
+    }
 }

@@ -1,14 +1,15 @@
 .movies {
     // border: 2px solid red;
-    height: 225vh !important;
+    height: 270vh!important;
     position: relative;
-    top: 100px;
+    top: 65px;
+    
     .pagination {
         // border: 2px solid rgb(86, 174, 23) !important;
 
         // display: flex;
         // justify-content: center;
-        margin-top: 20px;
+        margin-top: 30px;
         // width: 250px;
         // align-items: center;
         text-align: center;
@@ -54,7 +55,7 @@
     }
 
     .loading-css {
-        // border: 2px solid rgb(51, 255, 0) !important;
+        // border: 2px  solid rgb(51, 255, 0);
         // margin-left: 500px;
         // width: 300px;
         // height: 1000px;
@@ -71,6 +72,7 @@
     }
 
     .movie-item {
+        // border: 1px solid red;
         padding: 10px;
         border-radius: 8px;
         align-items: center;

@@ -11,9 +11,6 @@ import {
   useColorModeValue,
   Link,
   Input,
-  // Stack,
-  // FormControl,
-  // FormLabel,
 } from '@chakra-ui/react';
 
 import { useContext, useEffect, useState, useRef } from 'react';
@@ -41,9 +38,9 @@ function Navbar() {
   const [isLoggedIn, setIsLoggedIn] = useState(false);
   const [showLoginForm, setShowLoginForm] = useState(false);
   const [showRegisterForm, setShowRegisterForm] = useState(false);
-  // const [showPasswordResetForm, setShowPasswordResetForm] = useState(false);
-
+  
   const moviesBoxRef = useRef(null);
+  const searchInputRef = useRef(null); // Reference for the search input
   const navigate = useNavigate();
 
   const toggleSearch = () => {
@@ -58,7 +55,6 @@ function Navbar() {
     navigate(`/singlemovie/${movieId}`);
   };
 
-  
   const handleLoginLogout = () => {
     if (isLoggedIn) {
       localStorage.removeItem("token");
@@ -96,10 +92,31 @@ function Navbar() {
     }
   }, [searchQuery]);
 
+  // Close movie suggestions when clicking outside of the search box
+  useEffect(() => {
+    const handleClickOutside = (event) => {
+      if (moviesBoxRef.current && !moviesBoxRef.current.contains(event.target) && searchInputRef.current && !searchInputRef.current.contains(event.target)) {
+        setMovies([]); // Close suggestions
+      }
+    };
+
+    document.addEventListener('mousedown', handleClickOutside);
+    return () => {
+      document.removeEventListener('mousedown', handleClickOutside);
+    };
+  }, []);
+
+  // Show suggestions again when the input is focused
+  const handleFocus = () => {
+    if (searchQuery) {
+      setMovies(movies); // Show suggestions again
+    }
+  };
+
   return (
     <Box as="header" className='navbar ' bg={bgColor} color={color}>
       <Box className='navbar-logo'>
-        <Link href="https://yts.mx/">
+        <Link href="/">
           <Image src="/assets/Navbar/logo-YTS.svg" alt="YTS" id='Image' />
         </Link>
         <Text className="navbar-slogan">HD movies at the smallest file size.</Text>
@@ -107,21 +124,21 @@ function Navbar() {
       <Box className='navbar-search'>
         <Icon as={CiSearch} className='fa-search' />
         <Input
+          ref={searchInputRef} // Assign the ref to the input
           type="text"
           placeholder="Quick search"
           value={searchQuery}
           onChange={handleSearchChange}
+          onFocus={handleFocus} // Show suggestions when focused
           style={{ textTransform: 'capitalize' }}
         />
         {movies.length > 0 && (
           <Box ref={moviesBoxRef} className="Movies-items" bg={bgColor} color={color} mt={2} p={2} borderRadius="md" boxShadow="md" maxH="400px" overflowY="auto">
             {movies.map(movie => (
-               
-               <div key={movie.id} onClick={() => handleNavigation(movie.id)} style={{ cursor: 'pointer' }}>
-               <MovieItem movie={movie} />
-             </div>
-
-                    ))}
+              <div key={movie.id} onClick={() => handleNavigation(movie.id)} style={{ cursor: 'pointer' }}>
+                <MovieItem movie={movie} />
+              </div>
+            ))}
           </Box>
         )}
         <UnorderedList className='navbar-list'>
@@ -161,26 +178,6 @@ function Navbar() {
       </Box>
       <Login showLoginForm={showLoginForm} setShowLoginForm={setShowLoginForm} setIsLoggedIn={setIsLoggedIn} />
       <Register showRegisterForm={showRegisterForm} setShowRegisterForm={setShowRegisterForm} setShowLoginForm={setShowLoginForm} />
-      {/* {showPasswordResetForm && (
-        <Box className="password-reset-form" bg={bgColor} color={color} p={4} borderRadius="md" boxShadow="md">
-          <form>
-            <FormLabel style={{ textAlign: "center", padding: "10px", fontWeight: "700", fontSize: "1.2em", color: "#6ac045" }}>Reset Password</FormLabel>
-            <h1 style={{ textAlign: "center", padding: "10px", fontSize: ".7em" }}>If you have forgotten your password, just type in your email address and YTS will send you a link to reset your password.</h1>
-            <FormControl id="reset-email">
-              <FormLabel>Email address</FormLabel>
-              <Input type="email" placeholder="E-Mail" />
-            </FormControl>
-            <Stack spacing={4} mt={4}>
-              <Button className="btn-r-" colorScheme="teal">
-                Reset Password
-              </Button>
-              <Button className="btn-c-" variant="outline" onClick={() => setShowPasswordResetForm(false)}>
-                Cancel
-              </Button>
-            </Stack>
-          </form>
-        </Box>
-      )} */}
     </Box>
   );
 }

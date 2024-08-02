@@ -1,12 +1,17 @@
-import React, { useEffect, useState } from 'react';
+import React, {  useEffect, useState } from 'react';
 import axios from 'axios';
-import { Box, Spinner } from '@chakra-ui/react';
+import { Box, Spinner,  useColorModeValue,
+} from '@chakra-ui/react';
 import { FaStar } from 'react-icons/fa';
 import { Link } from 'react-router-dom';
 import "./HeroRow.scss";
 import { IoDownload } from "react-icons/io5";
 
 function HeroRow() {
+  const bgColor = useColorModeValue('white', 'black');
+  const color = useColorModeValue('black', 'white');
+
+
   const [movies, setMovies] = useState([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
@@ -44,9 +49,9 @@ function HeroRow() {
   };
 
   return (
-    <Box className='hero-row-m-container'>
+    <Box className='hero-row-m-container'  bg={bgColor} color={color} >
     <Box className='hero-Row-movies'>
-      {loading && <Spinner size='xl' className="loading-css" />}
+      {loading && <Spinner size='xl'  />}
       {!loading && error && <p>{error}</p>}
       {!loading && !error && movies.length > 0 && (
         movies.map((movie) => (
@@ -56,13 +61,13 @@ function HeroRow() {
               <FaStar className='faster'  />
               <h2>{movie.rating}/10</h2>
               <h4>{movie.genres ? movie.genres.join(" ") : "No genres available"}</h4>
-              <Link to={`/singlemovie/${movie.id}`}>
+              <Link to={`/singlemovie/${movie.id}`}  style={{ color: color }}>
                 <button>View Details</button>
               </Link>
             </div>
             <div className='movie-details'>
               <h2>[{movie.language}]</h2>
-              <Link to={`/singlemovie/${movie.id}`}>
+              <Link to={`/singlemovie/${movie.id}`}  style={{ color: color }}>
                 <Box><h3>{truncateTitle(movie.title, 15)}</h3></Box>
               </Link>
             </div>
@@ -75,7 +80,7 @@ function HeroRow() {
 </div>   
  </Box>
  <Box className='warning-hero-row'>
-  <h1>Warning!‌‌‌ Download only with VPΝ... </h1>
+  <h1>Warning!‌‌‌ <span>Download only with VPΝ... </span></h1>
   <p className='dw'>Downloading torrents is risky for you: your IP and leaked private data being actively tracked by your ISP and Government Agencies Protect yourself from expensive lawsuits and fines NOW! You must use a VPΝ like Private. It is the only way to download torrents fully anonymous by encrypting all traffic with zero logs.
 
   </p>
@@ -99,6 +104,14 @@ is exposed, which points directly to your location in
 
       Download Private VPN
     </button>
+
+
+    <p className='not-vpn-using'>If you are not using a VPΝ already: Accessing and Playing Torrents on a Smartphone is risky and dangerous. You may be in  <span>Tozeur, TUNISIA</span>  and using:  <span>Chrome 126.0.0.0 (Windows 10)</span> . Your IP is  <span>197.31.169.30</span> . We strongly recommend all users protecting their device with a VPΝ.</p>
+<button className="dw-vpn-surf">
+<IoDownload className='iodwnloadd' />
+
+GET Surf   
+ </button>
   </Box>
  
 

@@ -15,7 +15,7 @@ function LandingPage() {
 <div className='line-section'></div>
 
 <HeroUpcoming/>
-<div className='line-section'></div>
+{/* <div className='line-section'></div> */}
 
     </Box>
   )

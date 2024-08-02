@@ -66,7 +66,7 @@ function RequestPasswordReset() {
 
     return (
         <>
-            <Box className="reset-password-container" bg={bgColor} color={color} p={8} rounded="md" shadow="md">
+            <div className="reset-password-container" bg={bgColor} color={color} p={8} rounded="md" shadow="md">
                 <Box className="reset-password-card" bg={bgColor} color={color} p={6} rounded="md" shadow="md">
                     <Heading className='title-reset' style={{ textAlign: "center", padding: "10px", fontWeight: "700", fontSize: "1.2em", color: "#6ac045" }}>
                         Reset Password
@@ -97,9 +97,12 @@ function RequestPasswordReset() {
                             />
                         </FormControl>
                         <FormLabel className="check-and-forget-btn">
-                            <Checkbox className="check-box" checked={showPass} onChange={() => setShowPass(!showPass)}>
+                            
+                        <label className="show-password-label">
+                                <Checkbox className="check-box" checked={showPass} onChange={() => setShowPass(!showPass)}  />
                                 Show Password
-                            </Checkbox>
+                            </label>                       
+
                             <>
                 {error && (
                     <Message style={{ color: "red" }} status="error">
@@ -120,7 +123,7 @@ function RequestPasswordReset() {
                         </Button>
                     </form>
                 </Box>
-            </Box>
+            </div>
            
         </>
     );

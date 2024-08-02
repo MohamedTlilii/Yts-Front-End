@@ -1,14 +1,21 @@
 .hero-latest-container {
     // border: 2px solid red;
-    padding: 20px;
-    height: 1050px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: auto;
+    padding-bottom: 40px;
 
     .hero-latest-tittle {
+        // border: 2px solid red;
+
         display: flex;
         justify-content: space-between;
         align-items: center;
-        margin-left: 310px;
-        margin-right: 330px;
+        // margin-left: 220px;
+        // margin-right: 220px;
+        gap: 700px;
+        margin: 40px;
 
         h2 {
             margin: 0;
@@ -21,7 +28,7 @@
         h3 {
             font-size: 14px;
             font-weight: 700;
-            color: rgba(255, 255, 255, 0.638);
+            // color:rgba(227, 213, 213, 0.634);
         }
     }
 
@@ -30,87 +37,1032 @@
         margin-top: 20px;
         display: grid;
         grid-template-columns: repeat(4, 1fr);
+        grid-template-rows: repeat(2, auto);
+        align-items: center;
         gap: 20px;
-        margin-left: 335px;
-        margin-right: 335px;
-        height: 950px;
+        // padding: 40px;
+        height: auto;
+        justify-items: center;
+        margin-right: 219px;
+        margin-left: 219px;
 
-        .movie {
-            // border: 2px solid rgb(128, 255, 0);
-
-            padding: 10px;
-            text-align: center;
-            align-items: center;
+        .hero-latest-movies-item {
+            // border: 2px solid red;
             position: relative;
+            width: 230px;
+            text-align: center;
+            border-radius: 8px;
+            overflow: hidden;
+            transition: transform 0.3s ease;
 
-            img {
+            //   height: 300px;
+            #movie-latest-poster {
+                border: 5px solid;
 
-                width: 100%;
-                height: auto;
-                display: block;
-                border: 5px solid rgb(255, 255, 255);
+                //   width: 1390px!important;
+                height: 350px;
+                border-radius: 8px;
+                margin-bottom: 10px;
+                // border: 3px solid rgba(255, 255, 255, 0.2);
+                transition: opacity 0.5s ease;
 
-            }
-          
-
-            .movie-details-hover {
-                // border: 2px solid red;
-                display: none;
-                position: absolute;
-                top: 0;
-                left: 0;
-                width: 100%;
-                height: 83%;
-                background: rgba(0, 0, 0, 0.8);
-                color: #fff;
-                align-items: center;
-                justify-content: center;
-                text-align: center;
-                padding: 10px;
-                box-sizing: border-box;
-
-                .fa-star {
-                    color: #6ac045;
-                    margin-bottom: 10px;
-                }
-
-                h2 {
-                    font-size: 1.2em;
-                    margin-bottom: 10px;
-                }
-
-                h4 {
-                    margin-bottom: 10px;
-                }
-
-                button {
-                    background-color: #6ac045;
-                    padding: 5px 10px;
-                    margin-top: 10px;
-                    cursor: pointer;
-                    color: white;
-                    border: none;
-                    border-radius: 4px;
-
-                }
-
-                button:hover {
-                    background-color: #6ac045ae;
-                }
             }
 
             &:hover {
-                
                 transform: scale(1.05);
-                opacity: 3;
+
+                #movie-poster {
+                    opacity: 0.3;
+                }
+
+                .movie-details-latest-hover {
+                    opacity: 1;
+                }
+            }
+        }
+
+        .movie-details-latest-hover {
+            // border: 2px solid red!important;
+            border: 5px solid rgb(128, 255, 0);
+
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 87%;
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+            align-items: center;
+            justify-content: center;
+            opacity: 0;
+            transition: opacity 0.5s ease;
+            background-color: rgba(0, 0, 0, 0.8);
+            color: white;
+            padding: 10px;
+            border-radius: 8px;
+            z-index: 1;
+
+
+            .faster {
+                color: #6ac045;
+                margin-bottom: 10px;
+
             }
 
-            &:hover .movie-details-hover {
-                display: flex;
-                flex-direction: column;
-                border: 5px solid rgb(128, 255, 0);
+            h2 {
+                // color: black!important;
+            }
+
+            h4 {}
+
+            button {
+                background-color: #6ac045;
+                padding: 5px 10px;
+                margin-top: 10px;
+                cursor: pointer;
+                color: white;
+                border: none;
+                border-radius: 4px;
+            }
+
+        }
+
+        .movie-details-latest {
+            // border: 2px solid red!important;
+
+            display: flex;
+            justify-content: flex-start;
+            gap: 10px;
+
+            //   padding: 0 8px;
+            h2 {
+                color: rgb(94, 94, 249);
+            }
+
+            h3 {
+                // color: rgba(106, 100, 100, 0.889);
+            }
+
+        }
+
+        .movie-year-latest {
+            text-align: left;
+            // margin-left: 0px;
+            // color: rgba(255, 255, 255, 0.452);
+        }
+
+
+    }
+}
+
+@media screen and (max-width: 1450px) {
+    .hero-latest-container {
+        // border: 2px solid red;
+        // padding: 20px;
+        // height: auto;
+
+        .hero-latest-tittle {
+            // border: 2px solid rgb(21, 193, 75);
+
+            // display: flex;
+            // justify-content: space-between;
+            // align-items: center;
+            // margin-left: 220px;
+            // margin-right: 220px;
+            // display: flex;
+            gap: 600px;
+
+            h2 {
+                // border: 2px solid red;
+
+                // margin: 0;
+                font-size: 14px;
+                // font-weight: 700;
+                // padding: 0 15px;
+                // margin-bottom: 5px;
+            }
+
+            h3 {
+                // border: 2px solid red;
+
+                // font-size: 14px;
+                // font-weight: 700;
+                // color:rgba(227, 213, 213, 0.634);
+            }
+        }
+
+        .hero-latest-movies {
+            // border: 2px solid rgb(128, 255, 0);
+            // margin-top: 20px;
+            // display: grid;
+            // grid-template-columns: repeat(4, 1fr);
+            // grid-template-rows: repeat(2, auto);
+            // align-items: center;
+            // gap: 20px;
+            // // padding: 40px;
+            // height: auto;
+            // justify-items: center;
+            // margin-right: 219px;
+            // margin-left: 219px;
+
+            .hero-latest-movies-item {
+                // border: 2px solid red;
+                // position: relative;
+                // width: 230px;
+                // text-align: center;
+                // border-radius: 8px;
+                // overflow: hidden;
+                // transition: transform 0.3s ease;
+
+                //   height: 300px;
+                width: 200px;
+
+                height: 380px;
+
+                #movie-latest-poster {
+                    // border: 2px solid red;
+
+                    // //   width: 1390px!important;
+                    // height: 350px;
+                    // border-radius: 8px;
+                    // margin-bottom: 10px;
+                    // // border: 3px solid rgba(255, 255, 255, 0.2);
+                    // transition: opacity 0.5s ease;
+                    border: 5px solid rgb(252, 252, 252) !important;
+
+                    height: 320px;
+                }
+
+                &:hover {
+                    // transform: scale(1.05);
+
+                    #movie-poster {
+                        // opacity: 0.3;
+                    }
+
+                    .movie-details-latest-hover {
+                        // opacity: 1;
+                    }
+                }
+            }
+
+            .movie-details-latest-hover {
+                // border: 2px solid red!important;
+                // border: 5px solid rgb(128, 255, 0);
+
+                // position: absolute;
+                // top: 0;
+                // left: 0;
+                // width: 100%;
+                // height: 87%;
+                // display: flex;
+                // flex-direction: column;
+                // gap: 15px;
+                // align-items: center;
+                // justify-content: center;
+                // opacity: 0;
+                // transition: opacity 0.5s ease;
+                // background-color: rgba(0, 0, 0, 0.8);
+                // color: white;
+                // padding: 10px;
+                // border-radius: 8px;
+                // z-index: 1;
+                height: 85%;
+
+
+
+                .faster {
+                    // color: #6ac045;
+                    // margin-bottom: 10px;
+
+                }
+
+                h2 {
+                    // color: black!important;
+                }
+
+                h4 {}
+
+                button {
+                    // background-color: #6ac045;
+                    // padding: 5px 10px;
+                    // margin-top: 10px;
+                    // cursor: pointer;
+                    // color: white;
+                    // border: none;
+                    // border-radius: 4px;
+                }
 
             }
+
+            .movie-details-latest {
+                // border: 2px solid red!important;
+
+                // display: flex;
+                // justify-content: flex-start;
+                // gap: 10px;
+
+                // //   padding: 0 8px;
+                font-size: 15px;
+
+                h2 {
+                    // color: rgb(94, 94, 249);
+                }
+
+                h3 {
+                    // color: rgba(106, 100, 100, 0.889);
+                    // color: white;
+
+                }
+
+            }
+
+            .movie-year-latest {
+                // text-align: left;
+                // margin-left: 0px;
+                // color: rgba(255, 255, 255, 0.452);
+                font-size: 15px;
+
+            }
+
+
+        }
+    }
+}
+
+@media screen and (max-width: 1000px) {
+    .hero-latest-container {
+        // border: 2px solid red;
+        // padding: 20px;
+        // height: auto;
+
+        .hero-latest-tittle {
+            // border: 2px solid red;
+
+            // display: flex;
+            // justify-content: space-between;
+            // align-items: center;
+            // margin-left: 220px;
+            // margin-right: 220px;
+            // display: flex;
+            gap: 200px;
+
+            h2 {
+                // margin: 0;
+                // font-size: 1.15em;
+                // font-weight: 700;
+                // padding: 0 15px;
+                // margin-bottom: 5px;
+            }
+
+            h3 {
+                // font-size: 14px;
+                // font-weight: 700;
+                // color:rgba(227, 213, 213, 0.634);
+            }
+        }
+
+        .hero-latest-movies {
+            // border: 2px solid rgb(128, 255, 0);
+            // margin-top: 20px;
+            // display: grid;
+            // grid-template-columns: repeat(4, 1fr);
+            // grid-template-rows: repeat(2, auto);
+            // align-items: center;
+            // gap: 20px;
+            // // padding: 40px;
+            // height: auto;
+            // justify-items: center;
+            // margin-right: 219px;
+            // margin-left: 219px;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            column-gap: 90px;
+
+            .hero-latest-movies-item {
+                // border: 2px solid red;
+                // position: relative;
+                // width: 230px;
+                // text-align: center;
+                // border-radius: 8px;
+                // overflow: hidden;
+                // transition: transform 0.3s ease;
+
+                //   height: 300px;
+                width: 170px;
+
+                height: 330px;
+
+                #movie-latest-poster {
+                    // border: 5px solid;
+
+                    // //   width: 1390px!important;
+                    // height: 350px;
+                    // border-radius: 8px;
+                    // margin-bottom: 10px;
+                    // // border: 3px solid rgba(255, 255, 255, 0.2);
+                    // transition: opacity 0.5s ease;
+                    border: 5px solid rgb(252, 252, 252) !important;
+
+                    height: 278px;
+                }
+
+                &:hover {
+                    // transform: scale(1.05);
+
+                    #movie-poster {
+                        // opacity: 0.3;
+                    }
+
+                    .movie-details-latest-hover {
+                        // opacity: 1;
+                    }
+                }
+            }
+
+            .movie-details-latest-hover {
+                // border: 2px solid red!important;
+                // border: 5px solid rgb(128, 255, 0);
+
+                // position: absolute;
+                // top: 0;
+                // left: 0;
+                // width: 100%;
+                // height: 87%;
+                // display: flex;
+                // flex-direction: column;
+                // gap: 15px;
+                // align-items: center;
+                // justify-content: center;
+                // opacity: 0;
+                // transition: opacity 0.5s ease;
+                // background-color: rgba(0, 0, 0, 0.8);
+                // color: white;
+                // padding: 10px;
+                // border-radius: 8px;
+                // z-index: 1;
+                height: 85%;
+
+
+
+                .faster {
+                    // color: #6ac045;
+                    // margin-bottom: 10px;
+
+                }
+
+                h2 {
+                    // color: black!important;
+                }
+
+                h4 {}
+
+                button {
+                    // background-color: #6ac045;
+                    // padding: 5px 10px;
+                    // margin-top: 10px;
+                    // cursor: pointer;
+                    // color: white;
+                    // border: none;
+                    // border-radius: 4px;
+                }
+
+            }
+
+            .movie-details-latest {
+                // border: 2px solid red!important;
+
+                // display: flex;
+                // justify-content: flex-start;
+                // gap: 10px;
+
+                // //   padding: 0 8px;
+                font-size: 14px;
+
+                h2 {
+                    // color: rgb(94, 94, 249);
+                }
+
+                h3 {
+                    // color: rgba(106, 100, 100, 0.889);
+                    // color: white;
+
+                }
+
+            }
+
+            .movie-year-latest {
+                // text-align: left;
+                // margin-left: 0px;
+                // color: rgba(255, 255, 255, 0.452);
+                font-size: 14px;
+
+            }
+
+
+        }
+    }
+
+}
+
+@media screen and (max-width: 900px) {
+    .hero-latest-container {
+        // border: 2px solid red;
+        // padding: 20px;
+        // height: auto;
+
+        .hero-latest-tittle {
+            // border: 2px solid red;
+
+            // display: flex;
+            // justify-content: space-between;
+            // align-items: center;
+            // margin-left: 220px;
+            // margin-right: 220px;
+            // display: flex;
+            // gap: 400px;
+
+            h2 {
+                // margin: 0;
+                // font-size: 1.15em;
+                // font-weight: 700;
+                // padding: 0 15px;
+                // margin-bottom: 5px;
+            }
+
+            h3 {
+                // font-size: 14px;
+                // font-weight: 700;
+                // color:rgba(227, 213, 213, 0.634);
+            }
+        }
+
+        .hero-latest-movies {
+
+            // border: 2px solid rgb(128, 255, 0);
+            // margin-top: 20px;
+            // display: grid;
+            // grid-template-columns: repeat(4, 1fr);
+            // grid-template-rows: repeat(2, auto);
+            // align-items: center;
+            // gap: 20px;
+            // // padding: 40px;
+            // height: auto;
+            // justify-items: center;
+            // margin-right: 219px;
+            // margin-left: 219px;
+            // display: grid;
+            // grid-template-columns: 1fr 1fr ;
+            // column-gap: 90px;
+            .hero-latest-movies-item {
+                // border: 2px solid red;
+                // position: relative;
+                // width: 230px;
+                // text-align: center;
+                // border-radius: 8px;
+                // overflow: hidden;
+                // transition: transform 0.3s ease;
+
+                //   height: 300px;
+                // width: 170px;
+
+                // height: 330px;
+                #movie-latest-poster {
+                    // border: 5px solid;
+
+                    // //   width: 1390px!important;
+                    // height: 350px;
+                    // border-radius: 8px;
+                    // margin-bottom: 10px;
+                    // // border: 3px solid rgba(255, 255, 255, 0.2);
+                    // transition: opacity 0.5s ease;
+                    border: 5px solid rgb(252, 252, 252) !important;
+
+                    // height: 278px;
+                }
+
+                &:hover {
+                    // transform: scale(1.05);
+
+                    #movie-poster {
+                        // opacity: 0.3;
+                    }
+
+                    .movie-details-latest-hover {
+                        // opacity: 1;
+                    }
+                }
+            }
+
+            .movie-details-latest-hover {
+                // border: 2px solid red!important;
+                // border: 5px solid rgb(128, 255, 0);
+
+                // position: absolute;
+                // top: 0;
+                // left: 0;
+                // width: 100%;
+                // height: 87%;
+                // display: flex;
+                // flex-direction: column;
+                // gap: 15px;
+                // align-items: center;
+                // justify-content: center;
+                // opacity: 0;
+                // transition: opacity 0.5s ease;
+                // background-color: rgba(0, 0, 0, 0.8);
+                // color: white;
+                // padding: 10px;
+                // border-radius: 8px;
+                // z-index: 1;
+                // height: 85%;
+
+
+
+                .faster {
+                    // color: #6ac045;
+                    // margin-bottom: 10px;
+
+                }
+
+                h2 {
+                    // color: black!important;
+                }
+
+                h4 {}
+
+                button {
+                    // background-color: #6ac045;
+                    // padding: 5px 10px;
+                    // margin-top: 10px;
+                    // cursor: pointer;
+                    // color: white;
+                    // border: none;
+                    // border-radius: 4px;
+                }
+
+            }
+
+            .movie-details-latest {
+                // border: 2px solid red!important;
+
+                // display: flex;
+                // justify-content: flex-start;
+                // gap: 10px;
+
+                // //   padding: 0 8px;
+                // font-size: 14px;
+
+                h2 {
+                    // color: rgb(94, 94, 249);
+                }
+
+                h3 {
+                    // color: rgba(106, 100, 100, 0.889);
+                    // color: white;
+
+                }
+
+            }
+
+            .movie-year-latest {
+                // text-align: left;
+                // margin-left: 0px;
+                // color: rgba(255, 255, 255, 0.452);
+                // font-size: 14px;
+
+            }
+
+
+        }
+    }
+}
+
+// @media screen and (max-width: 780px) {
+
+// }
+
+@media screen and (max-width: 567px) {
+    .hero-latest-container {
+
+        // border: 2px solid red;
+        // padding: 20px;
+        // height: auto;
+        // width: 94%;
+        .hero-latest-tittle {
+            // border: 2px solid red;
+
+            // display: flex;
+            // justify-content: space-between;
+            // align-items: center;
+            // margin-left: 220px;
+            // margin-right: 220px;
+            // display: flex;
+            // gap: 400px;
+            gap: 120px;
+
+            h2 {
+                // border: 2px solid red;
+
+                // border: 2px solid red;
+
+                // margin: 0;
+                font-size: 0.9em;
+                // font-weight: 700;
+                // padding: 0 15px;
+                // margin-bottom: 5px;
+                // font-size: 15px;
+            }
+
+            h3 {
+
+                font-size: 12px;
+                // font-weight: 700;
+                // color:rgba(227, 213, 213, 0.634);
+                // font-size: 12px;  
+            }
+        }
+
+        .hero-latest-movies {
+            // border: 2px solid rgb(128, 255, 0);
+            // margin-top: 20px;
+            // display: grid;
+            // grid-template-columns: repeat(4, 1fr);
+            // grid-template-rows: repeat(2, auto);
+            // align-items: center;
+            // gap: 20px;
+            // // padding: 40px;
+            // height: auto;
+            // justify-items: center;
+            // margin-right: 219px;
+            // margin-left: 219px;
+            // display: grid;
+            // grid-template-columns: 1fr 1fr ;
+            // column-gap: 90px;
+            column-gap: 7px;
+            // justify-items: center;
+            width: 90%;
+
+            .hero-latest-movies-item {
+                // border: 2px solid red;
+                // position: relative;
+                // width: 230px;
+                // text-align: center;
+                // border-radius: 8px;
+                // overflow: hidden;
+                // transition: transform 0.3s ease;
+
+                //   height: 300px;
+                // width: 170px;
+
+                // height: 330px;
+                #movie-latest-poster {
+                    // border: 5px solid;
+
+                    // //   width: 1390px!important;
+                    // height: 350px;
+                    // border-radius: 8px;
+                    // margin-bottom: 10px;
+                    // // border: 3px solid rgba(255, 255, 255, 0.2);
+                    // transition: opacity 0.5s ease;
+                    // border: 5px solid rgb(252, 252, 252) !important;
+
+                    // height: 278px;
+                }
+
+                &:hover {
+                    // transform: scale(1.05);
+
+                    #movie-poster {
+                        // opacity: 0.3;
+                    }
+
+                    .movie-details-latest-hover {
+                        // opacity: 1;
+                    }
+                }
+            }
+
+            .movie-details-latest-hover {
+                // border: 2px solid red!important;
+                // border: 5px solid rgb(128, 255, 0);
+
+                // position: absolute;
+                // top: 0;
+                // left: 0;
+                // width: 100%;
+                // height: 87%;
+                // display: flex;
+                // flex-direction: column;
+                // gap: 15px;
+                // align-items: center;
+                // justify-content: center;
+                // opacity: 0;
+                // transition: opacity 0.5s ease;
+                // background-color: rgba(0, 0, 0, 0.8);
+                // color: white;
+                // padding: 10px;
+                // border-radius: 8px;
+                // z-index: 1;
+                // height: 85%;
+
+
+
+                .faster {
+                    // color: #6ac045;
+                    // margin-bottom: 10px;
+
+                }
+
+                h2 {
+                    // color: black!important;
+                }
+
+                h4 {}
+
+                button {
+                    // background-color: #6ac045;
+                    // padding: 5px 10px;
+                    // margin-top: 10px;
+                    // cursor: pointer;
+                    // color: white;
+                    // border: none;
+                    // border-radius: 4px;
+                }
+
+            }
+
+            .movie-details-latest {
+                // border: 2px solid red!important;
+
+                // display: flex;
+                // justify-content: flex-start;
+                // gap: 10px;
+
+                // //   padding: 0 8px;
+                // font-size: 14px;
+
+                h2 {
+                    // color: rgb(94, 94, 249);
+                }
+
+                h3 {
+                    // color: rgba(106, 100, 100, 0.889);
+                    // color: white;
+
+                }
+
+            }
+
+            .movie-year-latest {
+                // text-align: left;
+                // margin-left: 0px;
+                // color: rgba(255, 255, 255, 0.452);
+                // font-size: 14px;
+
+            }
+
+
+        }
+    }
+}
+
+@media screen and (max-width: 455px) {
+    .hero-latest-container {
+        // border: 2px solid red;
+        // padding: 20px;
+        // height: auto;
+        // width: 94%;
+        width: 98%;
+
+        .hero-latest-tittle {
+            // border: 2px solid red;
+            // border: 2px solid red;
+            margin: 20px;
+
+            // display: flex;
+            // justify-content: space-between;
+            // align-items: center;
+            // margin-left: 220px;
+            // margin-right: 220px;
+            // display: flex;
+            // gap: 400px;
+            gap: 80px;
+
+            h2 {
+                // border: 2px solid red;
+
+                // margin: 0;
+                font-size: 0.6em;
+                // font-weight: 700;
+                // padding: 0 15px;
+                // margin-bottom: 5px;
+                // font-size: 15px;
+            }
+
+            h3 {
+                // border: 2px solid red;
+
+                font-size: 0.6em;
+                // font-weight: 700;
+                // color:rgba(227, 213, 213, 0.634);
+                // font-size: 12px;  
+            }
+        }
+
+        .hero-latest-movies {
+            // border: 2px solid rgb(128, 255, 0);
+            // margin-top: 20px;
+            // display: grid;
+            // grid-template-columns: repeat(4, 1fr);
+            // grid-template-rows: repeat(2, auto);
+            // align-items: center;
+            // gap: 20px;
+            // // padding: 40px;
+            // height: auto;
+            // justify-items: center;
+            // margin-right: 219px;
+            // margin-left: 219px;
+            // display: grid;
+            // grid-template-columns: 1fr 1fr ;
+            // column-gap: 90px;
+            column-gap: 10px;
+            // justify-items: center;
+            width: 100%;
+
+            .hero-latest-movies-item {
+                // border: 2px solid red;
+                // position: relative;
+                // width: 230px;
+                // text-align: center;
+                // border-radius: 8px;
+                // overflow: hidden;
+                // transition: transform 0.3s ease;
+
+                //   height: 300px;
+                // width: 170px;
+                width: 130px;
+                height: auto;
+
+                // height: 330px;
+                #movie-latest-poster {
+                    border: 5px solid;
+
+                    // //   width: 1390px!important;
+                    // height: 350px;
+                    // border-radius: 8px;
+                    // margin-bottom: 10px;
+                    // // border: 3px solid rgba(255, 255, 255, 0.2);
+                    // transition: opacity 0.5s ease;
+                    // border: 5px solid rgb(252, 252, 252) !important;
+                    height: 200px;
+
+                    // height: 278px;
+                }
+
+                &:hover {
+                    // transform: scale(1.05);
+
+                    #movie-poster {
+                        // opacity: 0.3;
+                    }
+
+                    .movie-details-latest-hover {
+                        // opacity: 1;
+                    }
+                }
+            }
+
+            .movie-details-latest-hover {
+                // border: 2px solid red!important;
+                // border: 5px solid rgb(128, 255, 0);
+
+                // position: absolute;
+                // top: 0;
+                // left: 0;
+                // width: 100%;
+                // height: 87%;
+                // display: flex;
+                // flex-direction: column;
+                // gap: 15px;
+                // align-items: center;
+                // justify-content: center;
+                // opacity: 0;
+                // transition: opacity 0.5s ease;
+                // background-color: rgba(0, 0, 0, 0.8);
+                // color: white;
+                // padding: 10px;
+                // border-radius: 8px;
+                // z-index: 1;
+                // height: 85%;
+
+                height: 200px;
+                width: 127px;
+
+
+                .faster {
+                    // color: #6ac045;
+                    // margin-bottom: 10px;
+                    font-size: 10px;
+                }
+
+                h2 {
+                    // color: black!important;
+                    font-size: 10px;
+                }
+
+                h4 {
+                    font-size: 10px;
+                }
+
+                button {
+                    // background-color: #6ac045;
+                    // padding: 5px 10px;
+                    // margin-top: 10px;
+                    // cursor: pointer;
+                    // color: white;
+                    // border: none;
+                    // border-radius: 4px;
+                    font-size: 10px;
+                }
+
+            }
+
+            .movie-details-latest {
+                // border: 2px solid red!important;
+
+                // display: flex;
+                // justify-content: flex-start;
+                // gap: 10px;
+
+                // //   padding: 0 8px;
+                // font-size: 14px;
+                width: fit-content;
+                font-size: 12px;
+
+                h2 {
+                    // color: rgb(94, 94, 249);
+                }
+
+                h3 {
+                    // color: rgba(106, 100, 100, 0.889);
+                    // color: white;
+
+                }
+
+            }
+
+            .movie-year-latest {
+                // text-align: left;
+                // margin-left: 0px;
+                // color: rgba(255, 255, 255, 0.452);
+                // font-size: 14px;
+                font-size: 12px;
+                width: fit-content;
+            }
+
+
         }
     }
 }

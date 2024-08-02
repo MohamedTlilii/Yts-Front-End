@@ -76,7 +76,7 @@ function Hero() {
         <Text fontSize='lg' as="h2" mr={2}>
 
         <Link href="https://yts.mx/browse-movies/0/all/all/0/featured/0/all" mr={2} isExternal>
-<a>more featured...</a>     
+<h2>more featured...</h2>     
    </Link>
        
         </Text>

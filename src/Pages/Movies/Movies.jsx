@@ -18,6 +18,7 @@ function Movies() {
   const [currentPage, setCurrentPage] = useState(1);
   const [moviesPerPage] = useState(20); // Adjust to display 17 movies per page
   const [totalMovies, setTotalMovies] = useState(0); // State to hold total movies count
+  
   const fetchMovies = async () => {
     setLoading(true);
     try {
@@ -161,6 +162,7 @@ function Movies() {
         )}
       </Box>
       <div className="pagination">
+      {/* <h3>YIFY Movies - page {currentPage}</h3> */}
       {renderPagination()}
 
       </div>

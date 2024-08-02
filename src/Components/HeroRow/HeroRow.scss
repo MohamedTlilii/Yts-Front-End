@@ -3,7 +3,11 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  height: 87vh;
+  height: auto;
+  padding-bottom: 40px;
+  // border-bottom: 1px solid rgba(227, 213, 213, 0.634);
+
+
 
   .hero-Row-movies {
     // border: 2px solid red;
@@ -13,13 +17,15 @@
     align-items: center;
     flex-wrap: wrap;
     gap: 20px;
-    padding: 20px;
+    padding: 40px;
+    width: auto 0px !important;
   }
 
   .hero-row-movies-item {
-    //   border: 2px solid red;
+    // border: 2px solid red;
     position: relative;
-    width: 230px;
+    width: auto 0px;
+    height: auto 0px;
     text-align: center;
     border-radius: 8px;
     overflow: hidden;
@@ -27,13 +33,15 @@
 
     //   height: 300px;
     #movie-poster {
-      border: 5px solid rgb(252, 252, 252)!important;
+      // border: 5px solid #2f2f2f !important;
+      border: 5px solid;
+
 
       //   width: 1390px!important;
       height: 350px;
       border-radius: 8px;
       margin-bottom: 10px;
-      border: 3px solid rgba(255, 255, 255, 0.2);
+      // border: 3px solid rgba(255, 255, 255, 0.2);
       transition: opacity 0.5s ease;
 
     }
@@ -72,15 +80,17 @@
     padding: 10px;
     border-radius: 8px;
     z-index: 1;
-    
+
 
     .faster {
       color: #6ac045;
-                          margin-bottom: 10px;
+      margin-bottom: 10px;
 
     }
 
-    h2 {}
+    h2 {
+      // color: black!important;
+    }
 
     h4 {}
 
@@ -109,7 +119,7 @@
     }
 
     h3 {
-      color: white;
+      // color: rgba(106, 100, 100, 0.889);
     }
 
   }
@@ -117,13 +127,13 @@
   .movie-year {
     text-align: left;
     margin-left: 8px;
-    color: rgba(255, 255, 255, 0.452);
+    // color: rgba(255, 255, 255, 0.452);
   }
 
   .warning-hero-row {
     border: 5px solid #6ac045;
-    width: 1160px;
-    height: 310px;
+    width: 90%;
+    height: auto;
     display: flex;
     flex-direction: column;
     background-color: black;
@@ -131,19 +141,23 @@
     text-align: center;
 
 
+
     h1 {
-      // border: 2px solid #6ac045;
-      border-bottom: 1px solid rgba(227, 213, 213, 0.634);
+      // border: 2px solid #6ac04 5;
+      // border-bottom: 1px solid rgba(227, 213, 213, 0.634);
       // width: 550px;
       font-size: 40px;
       margin-top: 0px;
       margin-bottom: 0px;
+      color: white;
     }
 
     .dw {
       line-height: 28px;
       width: auto;
       margin-bottom: 10px;
+      color: white;
+
     }
 
     .paragh-red-white {
@@ -179,10 +193,883 @@
       display: flex;
       align-items: center;
       padding: 10px 20px;
+      position: relative;
+      bottom: 7px;
+      color: white;
 
-      .iodwnload {
+      .iodwnload {}
+    }
+
+    .not-vpn-using {
+      display: none;
+      color: white;
+
+      span {
+        background-color: red;
+      }
+    }
+
+    .dw-vpn-surf {
+      color: white;
+
+      display: none;
+
+
+      .iodwnloadd {
+        position: relative;
+        top: -2px;
       }
     }
 
   }
+}
+
+@media screen and (max-width: 1450px) {
+  .hero-row-m-container {
+    // border: 2px solid rgb(47, 0, 255);
+    // display: flex;
+    // flex-direction: column;
+    // align-items: center;
+    // height: auto;
+    // padding-bottom: 40px;
+
+
+
+    .hero-Row-movies {
+      // border: 2px solid red ;
+
+      // display: flex;
+      // justify-content: center;
+      // align-items: center;
+      // flex-wrap: wrap;
+      // gap: 20px;
+      // padding: 40px;
+    }
+
+    .hero-row-movies-item {
+      // border: 2px solid red;
+      // position: relative;
+      // text-align: center;
+      // border-radius: 8px;
+      // overflow: hidden;
+      // transition: transform 0.3s ease;
+      width: 200px;
+
+      height: 380px;
+
+      #movie-poster {
+        border: 5px solid rgb(252, 252, 252) !important;
+
+        height: 320px;
+        // border-radius: 8px;
+        // margin-bottom: 10px;
+        // border: 3px solid rgba(255, 255, 255, 0.2);
+        // transition: opacity 0.5s ease;
+
+      }
+
+      &:hover {
+        // transform: scale(1.05);
+
+        #movie-poster {
+          // opacity: 0.3;
+        }
+
+        .movie-details-hover {
+          // opacity: 1;
+        }
+      }
+    }
+
+    .movie-details-hover {
+      // border: 2px solid red!important;
+      // border: 5px solid rgb(128, 255, 0);
+
+      // position: absolute;
+      // top: 0;
+      // left: 0;
+      // width: 100%;
+      height: 85%;
+      // display: flex;
+      // flex-direction: column;
+      // gap: 15px;
+      // align-items: center;
+      // justify-content: center;
+      // opacity: 0;
+      // transition: opacity 0.5s ease;
+      // background-color: rgba(0, 0, 0, 0.8);
+      // color: white;
+      // padding: 10px;
+      // border-radius: 8px;
+      // z-index: 1;
+
+
+      .faster {
+        // color: #6ac045;
+        // margin-bottom: 10px;
+
+      }
+
+      h2 {
+        // border: 2px solid red!important;
+
+        // color: black!important;
+      }
+
+      h4 {
+        // border: 2px solid red!important;
+
+      }
+
+      button {
+        // background-color: #6ac045;
+        // padding: 5px 10px;
+        // margin-top: 10px;
+        // cursor: pointer;
+        // color: white;
+        // border: none;
+        // border-radius: 4px;
+      }
+
+    }
+
+    .movie-details {
+      // border: 2px solid red!important;
+
+      // display: flex;
+      // justify-content: flex-start;
+      // gap: 10px;
+
+      //   padding: 0 8px;
+      font-size: 15px;
+
+      h2 {
+        // color: rgb(94, 94, 249);
+
+      }
+
+      h3 {
+        // color: white;
+
+      }
+
+    }
+
+    .movie-year {
+      // text-align: left;
+      // margin-left: 8px;
+      // color: rgba(255, 255, 255, 0.452);
+      font-size: 15px;
+
+    }
+
+    .warning-hero-row {
+      // border: 5px solid #6ac045;
+
+
+      // display: flex;
+      // flex-direction: column;
+      // background-color: black;
+      // align-items: center;
+      // text-align: center;
+
+
+
+      h1 {
+        // border: 2px solid #6ac045;
+        // border-bottom: 1px solid rgba(227, 213, 213, 0.634);
+        // width: 550px;
+        font-size: 35px;
+        // margin-top: 0px;
+        // margin-bottom: 0px;
+        // color: white;
+      }
+
+      .dw {
+        // line-height: 28px;
+        // width: auto;
+        // margin-bottom: 10px;
+        // color: white;
+        font-size: 14px;
+
+
+      }
+
+      .paragh-red-white {
+        // color: #6ac045;
+        // // text-align: justify;
+        // font-weight: bold;
+        // line-height: 30px;
+        // width: auto;
+        font-size: 14px;
+
+
+        span {
+          // background-color: red;
+          // color: white;
+        }
+      }
+
+      .paragh-blue {
+        // color: #4c96d0;
+        // margin-top: 10px;
+        // margin-bottom: 10px;
+
+        span {
+          font-size: 100%;
+          // font-weight: bold;
+
+        }
+      }
+
+      .dw-vpn {
+        // padding: 3px 10px;
+        // text-shadow: 2px 2px #4b9924;
+        // font-weight: bold;
+        // background-color: #4b9924;
+        // display: flex;
+        // align-items: center;
+        // padding: 10px 20px;
+        font-size: 14px;
+
+
+        .iodwnload {}
+      }
+
+    }
+  }
+}
+
+@media screen and (max-width: 1000px) {
+  .hero-row-m-container {
+    // border: 2px solid rgb(47, 0, 255);
+    // display: flex;
+    // flex-direction: column;
+    // align-items: center;
+    // height: auto;
+    // padding-bottom: 40px;
+
+
+
+    .hero-Row-movies {
+      // border: 2px solid red ;
+
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      column-gap: 90px;
+    }
+
+    .hero-row-movies-item {
+      // border: 2px solid red;
+      // position: relative;
+      // text-align: center;
+      // border-radius: 8px;
+      // overflow: hidden;
+      // transition: transform 0.3s ease;
+      width: 170px;
+
+      height: 330px;
+
+      #movie-poster {
+        border: 5px solid rgb(252, 252, 252) !important;
+
+        height: 278px;
+        // border-radius: 8px;
+        // margin-bottom: 10px;
+        // border: 3px solid rgba(255, 255, 255, 0.2);
+        // transition: opacity 0.5s ease;
+
+      }
+
+      &:hover {
+        // transform: scale(1.05);
+
+        #movie-poster {
+          // opacity: 0.3;
+        }
+
+        .movie-details-hover {
+          // opacity: 1;
+        }
+      }
+    }
+
+    .movie-details-hover {
+      // border: 2px solid red!important;
+      // border: 5px solid rgb(128, 255, 0);
+
+      // position: absolute;
+      // top: 0;
+      // left: 0;
+      // width: 100%;
+      height: 85%;
+
+
+
+      .faster {
+        // color: #6ac045;
+        // margin-bottom: 10px;
+
+      }
+
+      h2 {
+        // border: 2px solid red!important;
+
+        // color: black!important;
+      }
+
+      h4 {
+        // border: 2px solid red!important;
+
+      }
+
+      button {
+        // background-color: #6ac045;
+        // padding: 5px 10px;
+        // margin-top: 10px;
+        // cursor: pointer;
+        // color: white;
+        // border: none;
+        // border-radius: 4px;
+      }
+
+    }
+
+    .movie-details {
+      // border: 2px solid red!important;
+
+      // display: flex;
+      // justify-content: flex-start;
+      // gap: 10px;
+
+      //   padding: 0 8px;
+      font-size: 14px;
+
+      h2 {
+        // color: rgb(94, 94, 249);
+
+      }
+
+      h3 {
+        // color: white;
+
+      }
+
+    }
+
+    .movie-year {
+      // text-align: left;
+      // margin-left: 8px;
+      // color: rgba(255, 255, 255, 0.452);
+      font-size: 14px;
+
+    }
+
+    .warning-hero-row {
+      // border: 5px solid #6ac045;
+
+
+      // display: flex;
+      // flex-direction: column;
+      // background-color: black;
+      // align-items: center;
+      // text-align: center;
+
+
+
+      h1 {
+        // border: 2px solid #6ac045;
+        // border-bottom: 1px solid rgba(227, 213, 213, 0.634);
+        // width: 550px;
+        font-size: 35px;
+
+        // margin-top: 0px;
+        // margin-bottom: 0px;
+        // color: white;
+        span {
+          display: none;
+        }
+      }
+
+      .dw {
+        // line-height: 28px;
+        // width: auto;
+        // margin-bottom: 10px;
+        // color: white;
+        font-size: 14px;
+        display: none;
+
+
+      }
+
+      .paragh-red-white {
+        // color: #6ac045;
+        // // text-align: justify;
+        // font-weight: bold;
+        // line-height: 30px;
+        // width: auto;
+        font-size: 14px;
+        display: none;
+
+
+        span {
+          // background-color: red;
+          // color: white;
+        }
+      }
+
+      .paragh-blue {
+        // color: #4c96d0;
+        // margin-top: 10px;
+        // margin-bottom: 10px;
+        display: none;
+
+        span {
+          font-size: 100%;
+          // font-weight: bold;
+
+        }
+      }
+
+      .not-vpn-using {
+        display: block;
+        line-height: 30px;
+        width: auto;
+        margin-bottom: 10px;
+
+        // text-align: center;
+        span {
+          background-color: red;
+        }
+      }
+
+      .dw-vpn {
+        display: none;
+
+        // padding: 3px 10px;
+        // text-shadow: 2px 2px #4b9924;
+        // font-weight: bold;
+        // background-color: #4b9924;
+        // display: flex;
+        // align-items: center;
+        // padding: 10px 20px;
+        font-size: 14px;
+
+
+        .iodwnload {}
+      }
+
+      .dw-vpn-surf {
+        padding: 3px 10px;
+        text-shadow: 2px 2px #4b9924;
+        font-weight: bold;
+        background-color: #4b9924;
+        display: fleX !important;
+        align-items: center;
+        padding: 10px 20px;
+        position: relative;
+        bottom: 7px;
+        display: block;
+
+
+        .iodwnloadd {}
+      }
+
+
+    }
+  }
+}
+
+@media screen and (max-width: 900px) {
+  .hero-row-m-container {
+    // border: 2px solid rgb(47, 0, 255);
+    // display: flex;
+    // flex-direction: column;
+    // align-items: center;
+    // height: auto;
+    // padding-bottom: 40px;
+
+
+
+    .hero-Row-movies {
+      // border: 2px solid red ;
+
+      // display: flex;
+      // justify-content: center;
+      // align-items: center;
+      // flex-wrap: wrap;
+      // gap: 20px;
+      // padding: 40px;
+    }
+
+    .hero-row-movies-item {
+      // border: 2px solid red;
+      // position: relative;
+      // text-align: center;
+      // border-radius: 8px;
+      // overflow: hidden;
+      // transition: transform 0.3s ease;
+
+
+      #movie-poster {
+        border: 5px solid rgb(252, 252, 252) !important;
+
+
+      }
+
+      &:hover {
+        // transform: scale(1.05);
+
+        #movie-poster {
+          // opacity: 0.3;
+        }
+
+        .movie-details-hover {
+          // opacity: 1;
+        }
+      }
+    }
+
+    .movie-details-hover {
+      // border: 2px solid red!important;
+      // border: 5px solid rgb(128, 255, 0);
+
+      // position: absolute;
+      // top: 0;
+      // left: 0;
+      // width: 100%;
+      // height: 85%;
+
+
+
+      .faster {
+        // color: #6ac045;
+        // margin-bottom: 10px;
+
+      }
+
+      h2 {
+        // border: 2px solid red!important;
+
+        // color: black!important;
+      }
+
+      h4 {
+        // border: 2px solid red!important;
+
+      }
+
+      button {
+        // background-color: #6ac045;
+        // padding: 5px 10px;
+        // margin-top: 10px;
+        // cursor: pointer;
+        // color: white;
+        // border: none;
+        // border-radius: 4px;
+      }
+
+    }
+
+    .movie-details {
+      // border: 2px solid red!important;
+
+      // display: flex;
+      // justify-content: flex-start;
+      // gap: 10px;
+
+      //   padding: 0 8px;
+      // font-size: 14px;
+
+      h2 {
+        // color: rgb(94, 94, 249);
+
+      }
+
+      h3 {
+        // color: white;
+
+      }
+
+    }
+
+    .movie-year {
+      // text-align: left;
+      // margin-left: 8px;
+      // color: rgba(255, 255, 255, 0.452);
+      // font-size: 14px;
+
+    }
+
+    .warning-hero-row {
+      // border: 5px solid #6ac045;
+
+
+      // display: flex;
+      // flex-direction: column;
+      // background-color: black;
+      // align-items: center;
+      // text-align: center;
+
+
+
+      h1 {
+        // border: 2px solid #6ac045;
+        // border-bottom: 1px solid rgba(227, 213, 213, 0.634);
+        // width: 550px;
+        font-size: 35px;
+
+        // margin-top: 0px;
+        // margin-bottom: 0px;
+        // color: white;
+        span {
+          display: none;
+        }
+      }
+
+      .dw {
+        // line-height: 28px;
+        // width: auto;
+        // margin-bottom: 10px;
+        // color: white;
+
+
+      }
+
+      .paragh-red-white {
+        // color: #6ac045;
+        // // text-align: justify;
+        // font-weight: bold;
+        // line-height: 30px;
+        // width: auto;
+
+
+
+        span {
+          // background-color: red;
+          // color: white;
+        }
+      }
+
+      .paragh-blue {
+        // color: #4c96d0;
+        // margin-top: 10px;
+        // margin-bottom: 10px;
+        display: none;
+
+        span {
+          font-size: 100%;
+          // font-weight: bold;
+
+        }
+      }
+
+      .not-vpn-using {
+        display: block;
+        line-height: 30px;
+        width: auto;
+        margin-bottom: 10px;
+        // text-align: center;
+        font-size: 15px;
+
+        span {
+          background-color: red;
+        }
+      }
+
+      .dw-vpn {
+
+        // padding: 3px 10px;
+        // text-shadow: 2px 2px #4b9924;
+        // font-weight: bold;
+        // background-color: #4b9924;
+        // display: flex;
+        // align-items: center;
+        // padding: 10px 20px;
+        font-size: 14px;
+
+
+        .iodwnload {}
+      }
+
+      .dw-vpn-surf {
+        padding: 3px 10px;
+        text-shadow: 2px 2px #4b9924;
+        font-weight: bold;
+        background-color: #4b9924;
+        display: fleX !important;
+        padding: 10px 20px;
+        position: relative;
+        bottom: 7px;
+        display: block;
+        font-size: 15px;
+        gap: 10px;
+
+
+        .iodwnloadd {}
+      }
+
+
+    }
+  }
+}
+
+// @media screen and (max-width: 780px) {}
+
+@media screen and (max-width: 500px) {
+  .hero-row-m-container {
+    // border: 2px solid rgb(47, 0, 255);
+    width: 94%;
+    .hero-Row-movies {
+      // border: 2px solid red ;
+      // justify-items: center;
+      column-gap: 7px;
+      width: 90%;
+
+
+    }
+  }
+}
+
+@media screen and (max-width: 455px) {
+  .hero-row-m-container {
+    // border: 2px solid rgb(47, 0, 255);
+    width: 98%;
+
+
+    .hero-Row-movies {
+      // border: 2px solid red ;
+      // justify-items: center;
+      column-gap: 10px;
+      width: 70%;
+
+
+    }
+
+    .hero-row-movies-item {
+
+
+
+      // border: 1px solid rgb(155, 14, 14) !important;
+      width:  140px;
+      height: auto;
+      #movie-poster {
+        height: 200px;
+
+      }
+
+      &:hover {
+
+        #movie-poster {}
+
+        .movie-details-hover {}
+      }
+    }
+
+    .movie-details-hover {
+      // border: 2px solid red!important;
+      height: 200px;
+      width: 136px;
+
+
+
+
+      .faster {
+        font-size: 10px;
+      }
+
+      h2 {
+        // border: 2px solid red!important;
+        font-size: 10px;
+
+
+      }
+
+      h4 {
+        // border: 2px solid red!important;
+        font-size: 10px;
+
+      }
+
+      button {
+        font-size: 10px;
+      }
+
+    }
+
+    .movie-details {
+      // border: 2px solid red;
+width: fit-content;
+      font-size: 12px;
+
+      h2 {
+        // color: rgb(94, 94, 249);
+
+      }
+
+      h3 {}
+
+    }
+
+    .movie-year {
+      font-size: 12px;
+      width: fit-content;
+
+    }
+
+    .warning-hero-row {
+      // border: 5px solid #6ac045;
+
+      margin-top: 30px;
+
+
+
+      h1 {
+
+        span {}
+      }
+
+      .dw {}
+
+      .paragh-red-white {
+
+
+
+
+        span {}
+      }
+
+      .paragh-blue {
+
+        span {}
+      }
+
+      .not-vpn-using {
+
+        font-size: 13px;
+
+        span {}
+      }
+
+      .dw-vpn {
+
+
+
+
+        .iodwnload {}
+      }
+
+      .dw-vpn-surf {
+
+        font-size: 13px !important;
+
+
+        .iodwnloadd {}
+      }
+
+
+    }
+  }
+
+
 }

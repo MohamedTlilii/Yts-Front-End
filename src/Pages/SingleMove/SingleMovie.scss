@@ -5,6 +5,8 @@
     position: relative;
     top: 80px;
     height: 180vh;
+    // height: auto;
+
 
     .MoviePoster {
         // border: 2px solid rgb(132, 255, 0);
@@ -277,6 +279,592 @@
 
             }
 
+        }
+    }
+}
+
+// fix from here
+@media screen and (max-width: 1450px) {
+    .SingleMovie {
+        // border: 2px solid red;
+
+        top: 100px;
+
+        .MoviePoster {
+            // border: 2px solid rgb(24, 12, 194);
+
+            .cover {
+                // border: 2px solid red;
+
+                width: 250px;
+                height: 450px;
+
+                img {
+                    // border: 2px solid red;
+
+                    width: 220px;
+
+                }
+
+                .download {
+                    // border: 2px solid red;
+                    padding: 10px 77px;
+                }
+
+                .watch_now {
+                    // border: 2px solid red;
+
+                    padding: 10px 80px;
+                }
+            }
+
+            .MovieDetails {
+                width: 450px;
+                // border: 2px solid red;
+
+
+                h2 {}
+
+                .year {}
+
+                .genresss {}
+
+                .available {
+                    strong {}
+
+                    .BTN-1 {}
+
+                    .BTN-2 {}
+                }
+
+                .download-sub {
+                    .BtnC_cisav {}
+                }
+            }
+
+            .like_count {
+                .heart-icon {}
+
+                .like_count_count {}
+            }
+
+            .review {
+                img {}
+
+                .reviw_ {}
+
+                p {}
+            }
+
+            .audience {
+                img {}
+
+                .audience_ {}
+
+                p {}
+            }
+
+            .imdh {
+                img {}
+
+                p {}
+            }
+
+            .similar_movie {
+                // border: 2px solid red;
+
+                width: 35%;
+
+                p {}
+
+                .same_four_movies {
+                    img {}
+                }
+            }
+        }
+    }
+}
+
+
+@media screen and (max-width: 1000px) {
+    .SingleMovie {
+        // border: 2px solid rgb(19, 197, 176);
+
+
+        .MoviePoster {
+            flex-direction: column;
+            align-items: center;
+            // align-items: center;
+            // display: grid;
+            // grid-template-columns: 1fr 1fr;
+            // border: 2px solid red;
+
+
+            .cover {
+                width: 200px;
+                height: 350px;
+
+                img {
+                    width: 180px;
+
+                }
+
+                .download {
+                    padding: 8px 60px;
+                }
+
+                .watch_now {
+                    padding: 8px 60px;
+                }
+            }
+
+            .MovieDetails {
+                width: 100%;
+                text-align: center;
+                margin-top: 20px;
+
+                h2 {}
+
+                .year {}
+
+                .genresss {}
+
+                .available {
+                    strong {}
+
+                    .BTN-1 {}
+
+                    .BTN-2 {}
+                }
+
+                .download-sub {
+                    .BtnC_cisav {}
+                }
+            }
+
+            .like_count {
+                .heart-icon {}
+
+                .like_count_count {}
+            }
+
+            .review {
+                img {}
+
+                .reviw_ {}
+
+                p {}
+            }
+
+            .audience {
+                img {}
+
+                .audience_ {}
+
+                p {}
+            }
+
+            .imdh {
+                img {}
+
+                p {}
+            }
+
+            .similar_movie {
+                width: 100%;
+
+                p {}
+
+                .same_four_movies {
+                    grid-template-columns: 1fr;
+                    width: 100%;
+
+                    img {}
+                }
+            }
+        }
+    }
+}
+
+
+@media screen and (max-width: 900px) {
+    .SingleMovie {
+        height: auto;
+
+
+        .MoviePoster {
+
+
+            .cover {
+                width: 180px;
+                height: 320px;
+
+
+                img {
+                    width: 160px;
+
+                }
+
+                .download {
+                    padding: 8px 50px;
+                }
+
+                .watch_now {
+                    padding: 8px 50px;
+                }
+            }
+
+            .MovieDetails {
+                width: 90%;
+
+
+                h2 {}
+
+                .year {}
+
+                .genresss {}
+
+                .available {
+                    strong {}
+
+                    .BTN-1 {}
+
+                    .BTN-2 {}
+                }
+
+                .download-sub {
+                    .BtnC_cisav {}
+                }
+            }
+
+            .like_count {
+                .heart-icon {}
+
+                .like_count_count {}
+            }
+
+            .review {
+                img {}
+
+                .reviw_ {}
+
+                p {}
+            }
+
+            .audience {
+                img {}
+
+                .audience_ {}
+
+                p {}
+            }
+
+            .imdh {
+                img {}
+
+                p {}
+            }
+
+            .similar_movie {
+                width: 100%;
+
+                p {}
+
+                .same_four_movies {
+                    grid-template-columns: repeat(2, 1fr);
+                    gap: 5px;
+
+                    img {}
+                }
+            }
+        }
+    }
+}
+
+
+@media screen and (max-width: 780px) {
+    .SingleMovie {
+
+
+        .MoviePoster {
+
+
+            .cover {
+                width: 150px;
+                height: 280px;
+
+
+                img {
+                    width: 130px;
+
+                }
+
+                .download {
+                    padding: 6px 40px;
+                }
+
+                .watch_now {
+                    padding: 6px 40px;
+                }
+            }
+
+            .MovieDetails {
+                width: 100%;
+                padding: 0 10px;
+
+
+                h2 {}
+
+                .year {}
+
+                .genresss {}
+
+                .available {
+                    strong {}
+
+                    .BTN-1 {}
+
+                    .BTN-2 {}
+                }
+
+                .download-sub {
+                    .BtnC_cisav {}
+                }
+            }
+
+            .like_count {
+                .heart-icon {}
+
+                .like_count_count {}
+            }
+
+            .review {
+                img {}
+
+                .reviw_ {}
+
+                p {}
+            }
+
+            .audience {
+                img {}
+
+                .audience_ {}
+
+                p {}
+            }
+
+            .imdh {
+                img {}
+
+                p {}
+            }
+
+            .similar_movie {
+                width: 100%;
+
+                p {}
+
+                .same_four_movies {
+                    grid-template-columns: repeat(2, 1fr);
+
+                    img {}
+                }
+            }
+        }
+    }
+}
+
+
+@media screen and (max-width: 565px) {
+    .SingleMovie {
+        // top: 10px;
+
+
+        .MoviePoster {
+
+
+            .cover {
+                width: 120px;
+                height: 240px;
+
+
+                img {
+                    width: 100px;
+
+                }
+
+                .download {
+                    padding: 5px 30px;
+                    font-size: 0.8em;
+                }
+
+                .watch_now {
+                    padding: 5px 30px;
+                    font-size: 0.8em;
+                }
+            }
+
+            .MovieDetails {
+                width: 100%;
+                text-align: center;
+
+
+                h2 {}
+
+                .year {}
+
+                .genresss {}
+
+                .available {
+                    strong {}
+
+                    .BTN-1 {}
+
+                    .BTN-2 {}
+                }
+
+                .download-sub {
+                    .BtnC_cisav {}
+                }
+            }
+
+            .like_count {
+                .heart-icon {}
+
+                .like_count_count {}
+            }
+
+            .review {
+                img {}
+
+                .reviw_ {}
+
+                p {}
+            }
+
+            .audience {
+                img {}
+
+                .audience_ {}
+
+                p {}
+            }
+
+            .imdh {
+                img {}
+
+                p {}
+            }
+
+            .similar_movie {
+                width: 100%;
+
+                p {}
+
+                .same_four_movies {
+                    grid-template-columns: 1fr;
+                    gap: 5px;
+
+                    img {}
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 450px) {
+    .SingleMovie {
+        padding: 10px;
+
+
+        .MoviePoster {
+
+
+            .cover {
+                width: 100px;
+                height: 200px;
+
+
+                img {
+                    width: 80px;
+
+                }
+
+                .download {
+                    padding: 4px 20px;
+                    font-size: 0.7em;
+
+                    .watch_now {
+                        padding: 4px 20px;
+                        font-size: 0.7em;
+                    }
+
+                    .MovieDetails {
+                        width: 100%;
+                        font-size: 0.9em;
+
+                        h2 {}
+
+                        .year {}
+
+                        .genresss {}
+
+                        .available {
+                            strong {}
+
+                            .BTN-1 {}
+
+                            .BTN-2 {}
+                        }
+
+                        .download-sub {
+                            .BtnC_cisav {}
+                        }
+                    }
+
+                    .like_count {
+                        .heart-icon {}
+
+                        .like_count_count {}
+                    }
+
+                    .review {
+                        img {}
+
+                        .reviw_ {}
+
+                        p {}
+                    }
+
+                    .audience {
+                        img {}
+
+                        .audience_ {}
+
+                        p {}
+                    }
+
+                    .imdh {
+                        img {}
+
+                        p {}
+                    }
+
+                    .similar_movie {
+                        width: 100%;
+
+                        p {}
+
+                        .same_four_movies {
+                            grid-template-columns: 1fr;
+
+
+                            img {}
+                        }
+                    }
+                }
+            }
         }
     }
 }
