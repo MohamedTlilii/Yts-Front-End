@@ -2,34 +2,48 @@
     // border: 2px solid red;
     // padding: 20px;
     text-align: center;
-    position: relative;
-    top: 80px;
-    height: 180vh;
+    // position: relative;
+    // top: 80px;
+    // height: 180vh;
     // height: auto;
+    width: 80%;
+    margin: 0 auto;
+    padding: 20px;
+
+
 
 
     .MoviePoster {
         // border: 2px solid rgb(132, 255, 0);
         display: flex;
-        justify-content: center;
-        gap: 20px;
+        justify-content: center !important;
+        gap: 40px;
         padding: 20px;
+        margin-right: auto;
+        margin-left: auto;
+        // padding-left: 15px;
+        // padding-right: 15px;
+        height: auto;
+        width: 100% !important;
 
 
 
         .cover {
-            // border: 2px solid rgb(255, 0, 200);
+            // border: 2px solid rgb(132, 255, 0);
+
             width: 300px;
             // align-items: center;
             display: flex;
             flex-direction: column;
             justify-content: center;
             align-items: center;
-            height: 520px;
+            // height: 520px;
 
-            img {
-                width: 270px;
-                border-radius: 10px;
+            .IMG {
+                border-radius: 4px;
+                border: 5px solid;
+                // border: 2px solid red;
+
             }
 
             .download {
@@ -41,7 +55,14 @@
                 padding: 10px 90px;
                 margin-top: 10px;
                 cursor: pointer;
-                // color: white;
+                border-radius: 8px;
+                width: 100%;
+                gap: 5px;
+                font-weight: 700;
+
+                #ciSavasown {
+                    font-size: 20px;
+                }
             }
 
             .watch_now {
@@ -53,6 +74,11 @@
                 padding: 10px 93px;
                 margin-top: 10px;
                 cursor: pointer;
+                border-radius: 8px;
+                width: 100%;
+                font-weight: 700;
+
+
             }
         }
 
@@ -71,11 +97,13 @@
                 margin-bottom: 24px;
                 line-height: 42px;
                 font-weight: 700;
-
+                width: fit-content;
             }
 
             .year {
                 // border: 2px solid rgb(0, 255, 191);
+                width: fit-content;
+
                 line-height: 24px;
                 font-size: 1.25em;
                 font-weight: 700;
@@ -84,6 +112,8 @@
 
             .genresss {
                 // border: 2px solid rgb(0, 200, 255);
+                width: fit-content;
+
                 font-size: 1.25em;
                 font-weight: 700;
                 margin-bottom: 30px;
@@ -92,33 +122,68 @@
 
             .available {
                 // border: 2px solid green;
-                float: left !important;
+                // float: left !important;
                 font-style: italic;
                 display: flex;
-                gap: 10px;
+                flex-wrap: wrap;
+                gap: 7px;
                 margin-bottom: 20px;
+                align-items: center;
 
 
 
                 strong {
-                    // border: 2px solid gray;
+                    // border: 12px solid gray;
 
                 }
 
                 .BTN-1 {
 
-                    border: 1px solid;
                     border-radius: 4px;
-                    font-size: .8em;
-                    padding: 5px 12px;
-
+                    font-size: 1em;
+                    padding: 2px;
+                    background-color: rgb(11, 11, 11);
+                    border: 1px solid gray;
+                    color: white;
                 }
 
                 .BTN-2 {
-                    border: 1px solid;
                     border-radius: 4px;
-                    font-size: .8em;
-                    padding: 5px 12px;
+                    font-size: 1em;
+                    padding: 2px;
+                    background-color: rgb(11, 11, 11);
+                    border: 1px solid gray;
+                    color: white;
+
+                }
+
+                .BTN-3 {
+                    border-radius: 4px;
+                    font-size: 1em;
+                    padding: 2px;
+                    background-color: rgb(11, 11, 11);
+                    border: 1px solid gray;
+                    color: white;
+
+                }
+
+                .BTN-4 {
+                    border-radius: 4px;
+                    font-size: 1em;
+                    padding: 2px;
+                    background-color: rgb(11, 11, 11);
+                    border: 1px solid gray;
+                    color: white;
+
+                }
+
+                .BTN-5 {
+                    border-radius: 4px;
+                    font-size: 1em;
+                    padding: 2px;
+                    background-color: rgb(11, 11, 11);
+                    border: 1px solid gray;
+                    color: white;
 
                 }
 
@@ -128,20 +193,22 @@
             .download-sub {
                 // border: 2px solid rgb(0, 255, 183) !important;
                 display: flex;
-                border: 1px solid;
                 border-radius: 4px;
-                font-size: .8em;
+                font-size: 1em;
                 padding: 5px 12px;
                 align-items: center;
                 width: fit-content;
-                gap: 4px;
                 margin-bottom: 20px;
+                gap: 3px;
                 // background-color: #292423;
+                padding: 3px;
+                background-color: rgb(11, 11, 11);
+                border: 1px solid gray;
+                color: white;
 
                 .BtnC_cisav {
                     color: #6ac045;
-                    font-size: 15px;
-                    // font-weight: 800;
+                    font-size: 20px;
                 }
             }
 
@@ -152,12 +219,13 @@
             display: flex;
             gap: 54px;
             margin-bottom: 15px;
+            width: fit-content;
 
 
             .heart-icon {
                 // border: 2px solid black;
                 font-size: 1.7em;
-
+                // width: fit-content;
 
                 // margin-bottom: 5px;
             }
@@ -179,7 +247,7 @@
 
             img {
                 // border: 2px solid red;
-                width: 1.9em !important;
+                width: 1.7em !important;
 
             }
 
@@ -197,14 +265,16 @@
         }
 
         .audience {
+            // border: 2px solid gray;
+
             display: flex !important;
             margin-bottom: 15px;
 
             gap: 50px;
-            // width: fit-content;
+            width: fit-content;
 
             img {
-                width: 1.9em !important;
+                width: 1.7em !important;
 
             }
 
@@ -226,7 +296,7 @@
             margin-bottom: 15px;
             align-items: center;
             gap: 27px;
-            // width: fit-content;
+            width: fit-content;
 
 
             img {
@@ -246,6 +316,7 @@
             // border: 2px solid rgb(39, 6, 171);
             width: 30%;
             text-align: left;
+            height: fit-content;
 
 
 
@@ -256,230 +327,388 @@
                 font-size: 16px;
                 text-align: left;
                 margin-bottom: 5px;
+                width: fit-content;
             }
 
             .same_four_movies {
-                // border: 2px solid red;
+                // border: 2px solid rgb(166, 255, 0);
                 display: grid;
                 grid-template-columns: 1fr 1fr;
-                gap: 10px;
+                gap: 20px;
                 /* Space between the grid items */
-                width: 50%;
+                width: fit-content;
 
                 // margin: 0 auto; 
                 img {
-                    // border: 2px solid red;
+                    border-radius: 4px;
+                    border: 5px solid;
                     cursor: pointer;
-                    padding: 20px;
-                    border: 2px solid #f8f8f8;
+                    // padding: 10px;
+                    // border: 2px solid #f8f8f8;
                     text-align: center;
-                    // width: 100px;
+                    width: fit-content;
                     height: 130px;
                 }
 
             }
 
         }
+
     }
-}
 
-// fix from here
-@media screen and (max-width: 1450px) {
-    .SingleMovie {
-        // border: 2px solid red;
 
-        top: 100px;
 
-        .MoviePoster {
-            // border: 2px solid rgb(24, 12, 194);
+    .moviegenres {
+        // border: 2px solid rgb(255, 0, 170);
 
-            .cover {
-                // border: 2px solid red;
+        .tags {
+            width: fit-content;
+            // border: 2px solid rgb(255, 0, 170);
+            display: flex;
+            gap: 10px;
+            margin-bottom: 20px;
 
-                width: 250px;
-                height: 450px;
-
-                img {
-                    // border: 2px solid red;
-
-                    width: 220px;
-
-                }
-
-                .download {
-                    // border: 2px solid red;
-                    padding: 10px 77px;
-                }
-
-                .watch_now {
-                    // border: 2px solid red;
-
-                    padding: 10px 80px;
-                }
+            .tag {
+                background-color: rgb(11, 11, 11);
+                border: 1px solid gray;
+                color: white;
+                padding: 5px 15px;
+                border-radius: 3px;
             }
+        }
 
-            .MovieDetails {
-                width: 450px;
-                // border: 2px solid red;
+        .vpn-warning {
+            background-color: #101010;
+            border: 5px solid #00FF00;
+            padding: 20px;
+            border-radius: 5px;
+            text-align: center;
+            margin-bottom: 20px;
 
 
-                h2 {}
+            p {
+                color: white;
+                margin: 0 0 10px 0;
 
-                .year {}
-
-                .genresss {}
-
-                .available {
-                    strong {}
-
-                    .BTN-1 {}
-
-                    .BTN-2 {}
-                }
-
-                .download-sub {
-                    .BtnC_cisav {}
+                span {
+                    color: #FFFF00;
                 }
             }
 
-            .like_count {
-                .heart-icon {}
-
-                .like_count_count {}
-            }
-
-            .review {
-                img {}
-
-                .reviw_ {}
-
-                p {}
-            }
-
-            .audience {
-                img {}
-
-                .audience_ {}
-
-                p {}
-            }
-
-            .imdh {
-                img {}
-
-                p {}
-            }
-
-            .similar_movie {
-                // border: 2px solid red;
-
-                width: 35%;
-
-                p {}
-
-                .same_four_movies {
-                    img {}
-                }
+            .vpn-button {
+                background-color: #00FF00;
+                color: #000;
+                border: none;
+                padding: 10px 20px;
+                border-radius: 3px;
+                cursor: pointer;
             }
         }
     }
-}
 
 
-@media screen and (max-width: 1000px) {
-    .SingleMovie {
-        // border: 2px solid rgb(19, 197, 176);
+    .movie-trailer {
+        // border: 11px solid blue;
 
+        // display: flex;
+        // // flex-direction: column;
+        // justify-content: center;
+        align-items: center;
+        // padding: 10px;
 
-        .MoviePoster {
-            flex-direction: column;
+        .images-container {
+            // border: 11px solid rgb(192, 24, 72);
+            gap: 4px;
+
+            display: flex;
+            justify-content: center;
+
+            .image-container {
+
+                position: relative;
+
+                img {
+
+                    width: 390px;
+                    height: 186px;
+                    cursor: pointer; // Change cursor to indicate clickable images
+
+                }
+
+                .play-button {
+                    position: absolute;
+                    top: 50%;
+                    left: 50%;
+                    transform: translate(-50%, -50%);
+                    font-size: 3rem;
+                    color: white;
+                    background: rgba(0, 0, 0, 0.5);
+                    border: none;
+                    border-radius: 50%;
+                    padding: 1rem;
+                    cursor: pointer;
+                    z-index: 10;
+                }
+            }
+
+            img {
+                cursor: pointer;
+                width: 390px;
+                height: 186px;
+                // margin: 0 5px;
+            }
+        }
+
+        .video-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100vw; // Full viewport width
+            height: 100vh; // Full viewport height
+            background-color: rgba(5, 4, 4, 0.923); // Transparent background for the video container
+            display: flex;
             align-items: center;
-            // align-items: center;
-            // display: grid;
-            // grid-template-columns: 1fr 1fr;
-            // border: 2px solid red;
+            justify-content: center;
+            z-index: 9999;
+            cursor: pointer; // Ensure clicks are registered on the overlay
 
+            .video-container {
+                position: relative;
+                width: 45vw; // Medium size for the video
+                height: 50vh;
+                display: flex;
+                align-items: center;
+                justify-content: center;
 
-            .cover {
-                width: 200px;
-                height: 350px;
-
-                img {
-                    width: 180px;
-
+                .close-button {
+                    color: white;
+                    position: absolute;
+                    top: -55px;
+                    right: -10px;
+                    background: rgba(0, 0, 0, 0.5);
+                    border-radius: 50%;
+                    padding: 1rem;
+                    border: none;
                 }
 
-                .download {
-                    padding: 8px 60px;
-                }
-
-                .watch_now {
-                    padding: 8px 60px;
-                }
-            }
-
-            .MovieDetails {
-                width: 100%;
-                text-align: center;
-                margin-top: 20px;
-
-                h2 {}
-
-                .year {}
-
-                .genresss {}
-
-                .available {
-                    strong {}
-
-                    .BTN-1 {}
-
-                    .BTN-2 {}
-                }
-
-                .download-sub {
-                    .BtnC_cisav {}
-                }
-            }
-
-            .like_count {
-                .heart-icon {}
-
-                .like_count_count {}
-            }
-
-            .review {
-                img {}
-
-                .reviw_ {}
-
-                p {}
-            }
-
-            .audience {
-                img {}
-
-                .audience_ {}
-
-                p {}
-            }
-
-            .imdh {
-                img {}
-
-                p {}
-            }
-
-            .similar_movie {
-                width: 100%;
-
-                p {}
-
-                .same_four_movies {
-                    grid-template-columns: 1fr;
+                .video-player {
                     width: 100%;
+                    height: 100%;
+                    border: none; // Remove any borders for a clean look
+                }
+            }
+        }
 
-                    img {}
+        .image-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100vw;
+            /* Full viewport width */
+            height: 100vh;
+            /* Full viewport height */
+            background-color: rgba(5, 4, 4, 0.923); // Transparent background for the video container
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            z-index: 9999;
+            cursor: pointer;
+            /* Ensure clicks are registered on the overlay */
+
+            .image-container {
+                position: relative;
+                width: 70vw; // Medium size for the video
+                height: 80vh;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+
+                .close-button-img {
+                    color: white;
+                    position: absolute;
+                    top: -45px;
+                    right: -10px;
+                    font-size: 1rem;
+                    cursor: pointer;
+                    z-index: 10;
+                    background: rgba(0, 0, 0, 0.5);
+                    border-radius: 50%;
+                    padding: 1rem;
+                    border: none;
+
+                }
+
+                .prev-button {
+                    color: white;
+                    font-size: 1rem;
+                    background: rgba(0, 0, 0, 0.5);
+                    border-radius: 50%;
+                    padding: 1rem;
+                    cursor: pointer;
+                    border: none;
+                }
+
+                .image-player {
+                    width: 100%;
+                    height: 100%;
+                    object-fit: contain;
+                    /* Preserve aspect ratio */
+                }
+
+                .next-button {
+                    color: white;
+                    font-size: 1rem;
+                    background: rgba(0, 0, 0, 0.5);
+                    border-radius: 50%;
+                    padding: 1rem;
+                    cursor: pointer;
+                    border: none;
+                }
+            }
+        }
+
+
+
+
+
+
+
+    }
+
+    .plot-section {
+        // border: 1px solid blue;
+        padding-top: 30px;
+        display: flex;
+        justify-content: center;
+        gap: 40px;
+
+        .plot-container {
+            // border: 2px solid red;
+            // align-items: center;
+            width: 70%;
+            display: flex;
+            flex-wrap: wrap;
+            align-content: flex-start !important;
+            gap: 10px;
+
+            .plot-title {
+                // color: #FFFF00;
+                font-size: 1.25em;
+                font-weight: 700;
+            }
+
+            .plot-descritption {
+                // border: 2px solid red;
+                color: #919191;
+                line-height: 24px;
+                text-align: justify;
+
+            }
+
+            .uploaded-info {
+                .uploaded-info-- {
+                    color: #919191;
+                    line-height: 24px;
+                    text-align: justify;
+
+                }
+
+                .date-info-- {
+                    color: #919191;
+                    line-height: 24px;
+                }
+            }
+
+
+        }
+
+
+
+
+
+
+        .director-cast {
+            // border: 1px solid rgb(255, 166, 0);
+            display: flex;
+            flex-direction: column;
+            width: 30%;
+            gap: 20px;
+
+
+            .director-section {
+                border-bottom: 1px solid #919191;
+                margin-bottom: 20px;
+
+                // top: 10px;
+                .dirctor-title {
+                    margin-bottom: 10px;
+
+                    font-size: 1.25em;
+                    font-weight: 700;
+                    display: flex;
+                }
+
+                .director-info {
+                    display: flex;
+                    gap: 10px;
+                    padding: 3px;
+                    align-items: center;
+                    // margin-bottom: 10px;
+
+
+                    .director-img {
+                        width: 40px;
+                        border-radius: 50%;
+                        background-color: yellow;
+                    }
+
+                    .directror-name {
+                        color: #919191;
+                        font-size: .95em;
+                        font-weight: 700;
+                    }
+                }
+            }
+
+            .cast-section {
+
+
+                .top-cast-title {
+                    font-size: 1.25em;
+                    font-weight: 700;
+                    display: flex;
+                    margin-bottom: 10px;
+
+                }
+
+                .cast-info {
+                    border-bottom: 1px solid #919191 !important;
+                    display: flex;
+                    gap: 10px;
+                    padding: 3px;
+                    align-items: center;
+                    margin-bottom: 10px;
+
+
+                    .img-cast {
+                        width: 40px;
+                        border-radius: 50%;
+                        background-color: yellow;
+                    }
+
+                    .cast-name {
+                        color: #919191;
+                        font-size: .95em;
+                        font-weight: 700;
+                    }
+
+
+
+                    .cast-name-inmovie {
+                        // color: #919191;
+                        font-size: .95em;
+                        font-weight: 700;
+                    }
                 }
             }
         }
@@ -487,384 +716,731 @@
 }
 
 
-@media screen and (max-width: 900px) {
-    .SingleMovie {
-        height: auto;
+@media screen and (max-width: 1450px) {}
+
+@media screen and (max-width: 1000px) {}
+
+@media screen and (max-width: 900px) {}
+
+@media screen and (max-width: 780px) {}
+
+@media screen and (max-width: 565px) {}
+
+@media screen and (max-width: 403px) {}
+
+// .SingleMovie {
+//     // border: 2px solid red;
+//     // padding: 20px;
+//     text-align: center;
+//     // position: relative;
+//     // top: 80px;
+//     // height: 180vh;
+//     // height: auto;
+//     width: 80%;
+//     margin: 0 auto;
+//     padding: 20px;
+
+
+
+
+//     .MoviePoster {
+//         // border: 2px solid rgb(132, 255, 0);
+//         display: flex;
+//         justify-content: center !important;
+//         gap: 40px;
+//         padding: 20px;
+//         margin-right: auto;
+//         margin-left: auto;
+//         // padding-left: 15px;
+//         // padding-right: 15px;
+//         height: auto;
+//         width: 100% !important;
+
+
+
+//         .cover {
+//             // border: 2px solid rgb(132, 255, 0);
+
+//             width: 300px;
+//             // align-items: center;
+//             display: flex;
+//             flex-direction: column;
+//             justify-content: center;
+//             align-items: center;
+//             // height: 520px;
+
+//             .IMG {
+//                 border-radius: 4px;
+//                 border: 5px solid;
+//                 // border: 2px solid red;
+
+//             }
+
+//             .download {
+//                 // border: 2px solid rgb(132, 255, 0);
+//                 background-color: #6ac045;
+//                 display: flex;
+//                 justify-content: center;
+//                 align-items: center;
+//                 padding: 10px 90px;
+//                 margin-top: 10px;
+//                 cursor: pointer;
+//                 border-radius: 8px;
+//                 width: 100%;
+//                 gap: 5px;
+//                 font-weight: 700;
+
+//                 #ciSavasown {
+//                     font-size: 20px;
+//                 }
+//             }
+
+//             .watch_now {
+//                 // border: 2px solid rgb(132, 255, 0);
+//                 background-color: #0aad9e;
+//                 display: flex;
+//                 justify-content: center;
+//                 align-items: center;
+//                 padding: 10px 93px;
+//                 margin-top: 10px;
+//                 cursor: pointer;
+//                 border-radius: 8px;
+//                 width: 100%;
+//                 font-weight: 700;
+
+
+//             }
+//         }
+
+//         .MovieDetails {
+//             // border: 2px solid rgb(234, 205, 18);
+//             // max-width: 600px;
+//             width: 500px;
+//             text-align: left;
+//             display: flex;
+//             flex-direction: column;
+
+//             h2 {
+//                 // border: 2px solid rgb(0, 132, 255);
+//                 // margin: 10px 0;
+//                 font-size: 2.5em;
+//                 margin-bottom: 24px;
+//                 line-height: 42px;
+//                 font-weight: 700;
+//                 width: fit-content;
+//             }
+
+//             .year {
+//                 // border: 2px solid rgb(0, 255, 191);
+//                 width: fit-content;
+
+//                 line-height: 24px;
+//                 font-size: 1.25em;
+//                 font-weight: 700;
+
+//             }
+
+//             .genresss {
+//                 // border: 2px solid rgb(0, 200, 255);
+//                 width: fit-content;
+
+//                 font-size: 1.25em;
+//                 font-weight: 700;
+//                 margin-bottom: 30px;
+
+//             }
+
+//             .available {
+//                 // border: 2px solid green;
+//                 // float: left !important;
+//                 font-style: italic;
+//                 display: flex;
+//                 flex-wrap: wrap;
+//                 gap: 7px;
+//                 margin-bottom: 20px;
+//                 align-items: center;
+
+
+
+//                 strong {
+//                     // border: 12px solid gray;
+
+//                 }
+
+//                 .BTN-1 {
+
+//                     border-radius: 4px;
+//                     font-size: 1em;
+//                     padding: 2px;
+//                     background-color: rgb(11, 11, 11);
+//                     border: 1px solid gray;
+//                     color: white;
+//                 }
+
+//                 .BTN-2 {
+//                     border-radius: 4px;
+//                     font-size: 1em;
+//                     padding: 2px;
+//                     background-color: rgb(11, 11, 11);
+//                     border: 1px solid gray;
+//                     color: white;
+
+//                 }
+
+//                 .BTN-3 {
+//                     border-radius: 4px;
+//                     font-size: 1em;
+//                     padding: 2px;
+//                     background-color: rgb(11, 11, 11);
+//                     border: 1px solid gray;
+//                     color: white;
+
+//                 }
+
+//                 .BTN-4 {
+//                     border-radius: 4px;
+//                     font-size: 1em;
+//                     padding: 2px;
+//                     background-color: rgb(11, 11, 11);
+//                     border: 1px solid gray;
+//                     color: white;
+
+//                 }
+
+//                 .BTN-5 {
+//                     border-radius: 4px;
+//                     font-size: 1em;
+//                     padding: 2px;
+//                     background-color: rgb(11, 11, 11);
+//                     border: 1px solid gray;
+//                     color: white;
+
+//                 }
+
+
+//             }
+
+//             .download-sub {
+//                 // border: 2px solid rgb(0, 255, 183) !important;
+//                 display: flex;
+//                 border-radius: 4px;
+//                 font-size: 1em;
+//                 padding: 5px 12px;
+//                 align-items: center;
+//                 width: fit-content;
+//                 margin-bottom: 20px;
+//                 gap: 3px;
+//                 // background-color: #292423;
+//                 padding: 3px;
+//                 background-color: rgb(11, 11, 11);
+//                 border: 1px solid gray;
+//                 color: white;
+
+//                 .BtnC_cisav {
+//                     color: #6ac045;
+//                     font-size: 20px;
+//                 }
+//             }
+
+//         }
+
+//         .like_count {
+//             // border: 2px solid black;
+//             display: flex;
+//             gap: 54px;
+//             margin-bottom: 15px;
+//             width: fit-content;
 
 
-        .MoviePoster {
+//             .heart-icon {
+//                 // border: 2px solid black;
+//                 font-size: 1.7em;
+//                 // width: fit-content;
 
+//                 // margin-bottom: 5px;
+//             }
+
+//             .like_count_count {
+//                 // border: 2px solid black;
+//                 font-size: 1.15em;
+//                 font-weight: 700;
+//             }
+//         }
+
+//         .review {
+//             // border: 2px solid greenyellow;
+//             margin-bottom: 15px;
+
+//             display: flex !important;
+//             gap: 50px;
+//             width: fit-content;
+
+//             img {
+//                 // border: 2px solid red;
+//                 width: 1.7em !important;
+
+//             }
+
+//             .reviw_ {
+//                 // border: 2px solid red;
+
+//             }
+
+//             p {
+//                 // border: 2px solid gray;
+//                 font-size: 1.15em;
+//                 font-weight: 700;
+//             }
 
-            .cover {
-                width: 180px;
-                height: 320px;
-
-
-                img {
-                    width: 160px;
-
-                }
-
-                .download {
-                    padding: 8px 50px;
-                }
-
-                .watch_now {
-                    padding: 8px 50px;
-                }
-            }
-
-            .MovieDetails {
-                width: 90%;
-
-
-                h2 {}
-
-                .year {}
-
-                .genresss {}
-
-                .available {
-                    strong {}
-
-                    .BTN-1 {}
-
-                    .BTN-2 {}
-                }
-
-                .download-sub {
-                    .BtnC_cisav {}
-                }
-            }
-
-            .like_count {
-                .heart-icon {}
-
-                .like_count_count {}
-            }
-
-            .review {
-                img {}
-
-                .reviw_ {}
-
-                p {}
-            }
-
-            .audience {
-                img {}
-
-                .audience_ {}
-
-                p {}
-            }
-
-            .imdh {
-                img {}
-
-                p {}
-            }
-
-            .similar_movie {
-                width: 100%;
-
-                p {}
-
-                .same_four_movies {
-                    grid-template-columns: repeat(2, 1fr);
-                    gap: 5px;
-
-                    img {}
-                }
-            }
-        }
-    }
-}
-
-
-@media screen and (max-width: 780px) {
-    .SingleMovie {
-
-
-        .MoviePoster {
-
-
-            .cover {
-                width: 150px;
-                height: 280px;
-
-
-                img {
-                    width: 130px;
-
-                }
-
-                .download {
-                    padding: 6px 40px;
-                }
-
-                .watch_now {
-                    padding: 6px 40px;
-                }
-            }
-
-            .MovieDetails {
-                width: 100%;
-                padding: 0 10px;
-
-
-                h2 {}
-
-                .year {}
-
-                .genresss {}
-
-                .available {
-                    strong {}
-
-                    .BTN-1 {}
-
-                    .BTN-2 {}
-                }
-
-                .download-sub {
-                    .BtnC_cisav {}
-                }
-            }
-
-            .like_count {
-                .heart-icon {}
-
-                .like_count_count {}
-            }
-
-            .review {
-                img {}
-
-                .reviw_ {}
-
-                p {}
-            }
-
-            .audience {
-                img {}
-
-                .audience_ {}
-
-                p {}
-            }
-
-            .imdh {
-                img {}
-
-                p {}
-            }
-
-            .similar_movie {
-                width: 100%;
-
-                p {}
-
-                .same_four_movies {
-                    grid-template-columns: repeat(2, 1fr);
-
-                    img {}
-                }
-            }
-        }
-    }
-}
-
-
-@media screen and (max-width: 565px) {
-    .SingleMovie {
-        // top: 10px;
-
-
-        .MoviePoster {
-
-
-            .cover {
-                width: 120px;
-                height: 240px;
-
-
-                img {
-                    width: 100px;
-
-                }
-
-                .download {
-                    padding: 5px 30px;
-                    font-size: 0.8em;
-                }
-
-                .watch_now {
-                    padding: 5px 30px;
-                    font-size: 0.8em;
-                }
-            }
-
-            .MovieDetails {
-                width: 100%;
-                text-align: center;
-
-
-                h2 {}
-
-                .year {}
-
-                .genresss {}
-
-                .available {
-                    strong {}
-
-                    .BTN-1 {}
-
-                    .BTN-2 {}
-                }
-
-                .download-sub {
-                    .BtnC_cisav {}
-                }
-            }
-
-            .like_count {
-                .heart-icon {}
-
-                .like_count_count {}
-            }
-
-            .review {
-                img {}
-
-                .reviw_ {}
-
-                p {}
-            }
-
-            .audience {
-                img {}
-
-                .audience_ {}
-
-                p {}
-            }
-
-            .imdh {
-                img {}
-
-                p {}
-            }
-
-            .similar_movie {
-                width: 100%;
-
-                p {}
-
-                .same_four_movies {
-                    grid-template-columns: 1fr;
-                    gap: 5px;
-
-                    img {}
-                }
-            }
-        }
-    }
-}
-
-@media screen and (max-width: 450px) {
-    .SingleMovie {
-        padding: 10px;
-
-
-        .MoviePoster {
-
-
-            .cover {
-                width: 100px;
-                height: 200px;
-
-
-                img {
-                    width: 80px;
-
-                }
-
-                .download {
-                    padding: 4px 20px;
-                    font-size: 0.7em;
-
-                    .watch_now {
-                        padding: 4px 20px;
-                        font-size: 0.7em;
-                    }
-
-                    .MovieDetails {
-                        width: 100%;
-                        font-size: 0.9em;
-
-                        h2 {}
-
-                        .year {}
-
-                        .genresss {}
-
-                        .available {
-                            strong {}
-
-                            .BTN-1 {}
-
-                            .BTN-2 {}
-                        }
-
-                        .download-sub {
-                            .BtnC_cisav {}
-                        }
-                    }
-
-                    .like_count {
-                        .heart-icon {}
-
-                        .like_count_count {}
-                    }
-
-                    .review {
-                        img {}
-
-                        .reviw_ {}
-
-                        p {}
-                    }
-
-                    .audience {
-                        img {}
-
-                        .audience_ {}
-
-                        p {}
-                    }
-
-                    .imdh {
-                        img {}
-
-                        p {}
-                    }
-
-                    .similar_movie {
-                        width: 100%;
-
-                        p {}
-
-                        .same_four_movies {
-                            grid-template-columns: 1fr;
-
-
-                            img {}
-                        }
-                    }
-                }
-            }
-        }
-    }
-}
+//         }
+
+//         .audience {
+//             // border: 2px solid gray;
+
+//             display: flex !important;
+//             margin-bottom: 15px;
+
+//             gap: 50px;
+//             width: fit-content;
+
+//             img {
+//                 width: 1.7em !important;
+
+//             }
+
+//             .audience_ {
+//                 // border: 2px solid red;
+
+//             }
+
+//             p {
+//                 font-size: 1.15em;
+//                 font-weight: 700;
+//             }
+
+//         }
+
+//         .imdh {
+//             // border: 2px solid blue;
+//             display: flex !important;
+//             margin-bottom: 15px;
+//             align-items: center;
+//             gap: 27px;
+//             width: fit-content;
+
+
+//             img {
+//                 width: 2.9em !important;
+
+//             }
+
+//             p {
+//                 // border: 2px solid gray;
+//                 font-size: 1.15em;
+//                 font-weight: 700;
+
+//             }
+//         }
+
+//         .similar_movie {
+//             // border: 2px solid rgb(39, 6, 171);
+//             width: 30%;
+//             text-align: left;
+//             height: fit-content;
+
+
+
+
+//             p {
+//                 // border: 2px solid red;
+//                 font-weight: 700;
+//                 font-size: 16px;
+//                 text-align: left;
+//                 margin-bottom: 5px;
+//                 width: fit-content;
+//             }
+
+//             .same_four_movies {
+//                 // border: 2px solid rgb(166, 255, 0);
+//                 display: grid;
+//                 grid-template-columns: 1fr 1fr;
+//                 gap: 20px;
+//                 /* Space between the grid items */
+//                 width: fit-content;
+
+//                 // margin: 0 auto; 
+//                 img {
+//                     border-radius: 4px;
+//                     border: 5px solid;
+//                     cursor: pointer;
+//                     // padding: 10px;
+//                     // border: 2px solid #f8f8f8;
+//                     text-align: center;
+//                     width: fit-content;
+//                     height: 130px;
+//                 }
+
+//             }
+
+//         }
+
+//     }
+
+
+
+//     .moviegenres {
+//         // border: 2px solid rgb(255, 0, 170);
+
+//         .tags {
+//             width: fit-content;
+//             // border: 2px solid rgb(255, 0, 170);
+//             display: flex;
+//             gap: 10px;
+//             margin-bottom: 20px;
+
+//             .tag {
+//                 background-color: rgb(11, 11, 11);
+//                 border: 1px solid gray;
+//                 color: white;
+//                 padding: 5px 15px;
+//                 border-radius: 3px;
+//             }
+//         }
+
+//         .vpn-warning {
+//             background-color: #101010;
+//             border: 5px solid #00FF00;
+//             padding: 20px;
+//             border-radius: 5px;
+//             text-align: center;
+//             margin-bottom: 20px;
+
+
+//             p {
+//                 color: white;
+//                 margin: 0 0 10px 0;
+
+//                 span {
+//                     color: #FFFF00;
+//                 }
+//             }
+
+//             .vpn-button {
+//                 background-color: #00FF00;
+//                 color: #000;
+//                 border: none;
+//                 padding: 10px 20px;
+//                 border-radius: 3px;
+//                 cursor: pointer;
+//             }
+//         }
+//     }
+
+
+//     .movie-trailer {
+//         // border: 11px solid blue;
+
+//         // display: flex;
+//         // // flex-direction: column;
+//         // justify-content: center;
+//         align-items: center;
+//         // padding: 10px;
+
+//         .images-container {
+//             // border: 11px solid rgb(192, 24, 72);
+//             gap: 4px;
+
+//             display: flex;
+//             justify-content: center;
+
+//             .image-container {
+
+//                 position: relative;
+
+//                 img {
+
+//                     width: 390px;
+//                     height: 186px;
+//                     cursor: pointer; // Change cursor to indicate clickable images
+
+//                 }
+
+//                 .play-button {
+//                     position: absolute;
+//                     top: 50%;
+//                     left: 50%;
+//                     transform: translate(-50%, -50%);
+//                     font-size: 3rem;
+//                     color: white;
+//                     background: rgba(0, 0, 0, 0.5);
+//                     border: none;
+//                     border-radius: 50%;
+//                     padding: 1rem;
+//                     cursor: pointer;
+//                     z-index: 10;
+//                 }
+//             }
+
+//             img {
+//                 cursor: pointer;
+//                 width: 390px;
+//                 height: 186px;
+//                 // margin: 0 5px;
+//             }
+//         }
+
+//         .video-overlay {
+//             position: fixed;
+//             top: 0;
+//             left: 0;
+//             width: 100vw; // Full viewport width
+//             height: 100vh; // Full viewport height
+//             background-color: rgba(5, 4, 4, 0.923); // Transparent background for the video container
+//             display: flex;
+//             align-items: center;
+//             justify-content: center;
+//             z-index: 9999;
+//             cursor: pointer; // Ensure clicks are registered on the overlay
+
+//             .video-container {
+//                 position: relative;
+//                 width: 45vw; // Medium size for the video
+//                 height: 50vh;
+//                 display: flex;
+//                 align-items: center;
+//                 justify-content: center;
+
+//                 .close-button {
+//                     color: white;
+//                     position: absolute;
+//                     top: -55px;
+//                     right: -10px;
+//                     background: rgba(0, 0, 0, 0.5);
+//                     border-radius: 50%;
+//                     padding: 1rem;
+//                     border: none;
+//                 }
+
+//                 .video-player {
+//                     width: 100%;
+//                     height: 100%;
+//                     border: none; // Remove any borders for a clean look
+//                 }
+//             }
+//         }
+
+//         .image-overlay {
+//             position: fixed;
+//             top: 0;
+//             left: 0;
+//             width: 100vw;
+//             /* Full viewport width */
+//             height: 100vh;
+//             /* Full viewport height */
+//             background-color: rgba(5, 4, 4, 0.923); // Transparent background for the video container
+//             display: flex;
+//             align-items: center;
+//             justify-content: center;
+//             z-index: 9999;
+//             cursor: pointer;
+//             /* Ensure clicks are registered on the overlay */
+
+//             .image-container {
+//                 position: relative;
+//                 width: 70vw; // Medium size for the video
+//                 height: 80vh;
+//                 display: flex;
+//                 align-items: center;
+//                 justify-content: center;
+
+//                 .close-button-img {
+//                     color: white;
+//                     position: absolute;
+//                     top: -45px;
+//                     right: -10px;
+//                     font-size: 1rem;
+//                     cursor: pointer;
+//                     z-index: 10;
+//                     background: rgba(0, 0, 0, 0.5);
+//                     border-radius: 50%;
+//                     padding: 1rem;
+//                     border: none;
+
+//                 }
+
+//                 .prev-button {
+//                     color: white;
+//                     font-size: 1rem;
+//                     background: rgba(0, 0, 0, 0.5);
+//                     border-radius: 50%;
+//                     padding: 1rem;
+//                     cursor: pointer;
+//                     border: none;
+//                 }
+
+//                 .image-player {
+//                     width: 100%;
+//                     height: 100%;
+//                     object-fit: contain;
+//                     /* Preserve aspect ratio */
+//                 }
+
+//                 .next-button {
+//                     color: white;
+//                     font-size: 1rem;
+//                     background: rgba(0, 0, 0, 0.5);
+//                     border-radius: 50%;
+//                     padding: 1rem;
+//                     cursor: pointer;
+//                     border: none;
+//                 }
+//             }
+//         }
+
+
+
+
+
+
+
+//     }
+
+//     .plot-section {
+//         // border: 1px solid blue;
+//         padding-top: 30px;
+//         display: flex;
+//         justify-content: center;
+//         gap: 40px;
+
+//         .plot-container {
+//             // border: 2px solid red;
+//             // align-items: center;
+//             width: 70%;
+//             display: flex;
+//             flex-wrap: wrap;
+//             align-content: flex-start !important;
+//             gap: 10px;
+
+//             .plot-title {
+//                 // color: #FFFF00;
+//                 font-size: 1.25em;
+//                 font-weight: 700;
+//             }
+
+//             .plot-descritption {
+//                 // border: 2px solid red;
+//                 color: #919191;
+//                 line-height: 24px;
+//                 text-align: justify;
+
+//             }
+
+//             .uploaded-info {
+//                 .uploaded-info-- {
+//                     color: #919191;
+//                     line-height: 24px;
+//                     text-align: justify;
+
+//                 }
+
+//                 .date-info-- {
+//                     color: #919191;
+//                     line-height: 24px;
+//                 }
+//             }
+
+
+//         }
+
+
+
+
+
+
+//         .director-cast {
+//             // border: 1px solid rgb(255, 166, 0);
+//             display: flex;
+//             flex-direction: column;
+//             width: 30%;
+//             gap: 20px;
+
+
+//             .director-section {
+//                 border-bottom: 1px solid #919191;
+//                 margin-bottom: 20px;
+
+//                 // top: 10px;
+//                 .dirctor-title {
+//                     margin-bottom: 10px;
+
+//                     font-size: 1.25em;
+//                     font-weight: 700;
+//                     display: flex;
+//                 }
+
+//                 .director-info {
+//                     display: flex;
+//                     gap: 10px;
+//                     padding: 3px;
+//                     align-items: center;
+//                     // margin-bottom: 10px;
+
+
+//                     .director-img {
+//                         width: 40px;
+//                         border-radius: 50%;
+//                         background-color: yellow;
+//                     }
+
+//                     .directror-name {
+//                         color: #919191;
+//                         font-size: .95em;
+//                         font-weight: 700;
+//                     }
+//                 }
+//             }
+
+//             .cast-section {
+
+
+//                 .top-cast-title {
+//                     font-size: 1.25em;
+//                     font-weight: 700;
+//                     display: flex;
+//                     margin-bottom: 10px;
+
+//                 }
+
+//                 .cast-info {
+//                     border-bottom: 1px solid #919191 !important;
+//                     display: flex;
+//                     gap: 10px;
+//                     padding: 3px;
+//                     align-items: center;
+//                     margin-bottom: 10px;
+
+
+//                     .img-cast {
+//                         width: 40px;
+//                         border-radius: 50%;
+//                         background-color: yellow;
+//                     }
+
+//                     .cast-name {
+//                         color: #919191;
+//                         font-size: .95em;
+//                         font-weight: 700;
+//                     }
+
+
+
+//                     .cast-name-inmovie {
+//                         // color: #919191;
+//                         font-size: .95em;
+//                         font-weight: 700;
+//                     }
+//                 }
+//             }
+//         }
+//     }
+// }

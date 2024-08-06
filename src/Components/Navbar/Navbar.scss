@@ -6,9 +6,9 @@
   align-items: center !important;
   // background-color: black;
   height: 9vh;
-  position: fixed;
+  // position: fixed;
   width: 100%;
-  z-index: 1000;
+  // z-index: 1000;
   border-bottom: 1px solid rgba(227, 213, 213, 0.634);
 
   // border-color: rgba(2, 2, 2, 0.147);
@@ -70,6 +70,7 @@
     }
 
     .fa-search-x {
+      
       display: none;
       font-size: 20px;
       // position: absolute;
@@ -130,153 +131,11 @@
     font-weight: 700;
   }
 
-  .login-form {
-    border: 1px solid rgba(227, 213, 213, 0.634);
-    position: absolute;
-    top: 165px;
-    width: 600px;
-    cursor: auto;
-    padding: 40px;
+ 
 
-    form {
-      .chek-and-forget-btn {
-        display: flex;
-        // gap: 10px;
-        align-items: center;
-        justify-content: space-between;
-      }
+ 
 
-      .check-box {
-        padding-top: 1em;
-
-      }
-
-      .h1 {
-        // border: 2px solid red;
-        font-style: italic;
-        font-size: .7em;
-        padding-top: 1.5em;
-        text-align: center;
-        cursor: pointer;
-      }
-
-      // border: 2px solid red;
-      .btn-l- {
-        background-color: rgba(106, 192, 69, 0.876);
-        color: white;
-
-      }
-
-      .btn-l-:hover {
-        background-color: rgb(106, 192, 69);
-      }
-
-      .btn-ca- {
-        // background-color: rgba(106, 192, 69, 0.876);
-      }
-
-      .btn-ca-:hover {
-        background-color: red;
-        color: white;
-      }
-    }
-  }
-
-  .register-form {
-    border: 1px solid rgba(227, 213, 213, 0.634);
-    position: absolute;
-    top: 69px;
-    width: 600px;
-    cursor: auto;
-    padding: 30px;
-
-    form {
-
-      .chek-and-forget-btn {
-        // border: 2px solid red;
-        display: flex;
-        // gap: 10px;
-        align-items: center !important;
-        justify-content: space-between;
-      }
-
-      .check-box {
-        padding-top: 1em;
-
-        // border: 2px solid red;
-        margin-top: 9px;
-      }
-
-      h1 {
-        // border: 2px solid red;
-        font-style: italic;
-        font-size: .7em;
-        padding-top: 2.5em;
-        text-align: center;
-      }
-
-      // border: 2px solid red;
-      .btn-r- {
-        background-color: rgba(106, 192, 69, 0.876);
-        color: white;
-      }
-
-      .btn-r-:hover {
-        background-color: rgb(106, 192, 69);
-      }
-
-      .btn-c- {
-        // background-color: rgba(106, 192, 69, 0.876);
-      }
-
-      .btn-c-:hover {
-        background-color: red;
-        color: white;
-      }
-    }
-  }
-
-  .password-reset-form {
-    border: 1px solid rgba(227, 213, 213, 0.634);
-    position: absolute;
-    top: 165px;
-    width: 600px;
-    cursor: auto;
-    padding: 40px;
-
-    form {
-      .h1 {
-        // border: 2px solid red;
-        font-style: italic;
-        font-size: .7em;
-        padding-top: 1.5em;
-        text-align: center;
-        cursor: pointer;
-      }
-
-      .btn-r- {
-        // border: 2px solid red;
-        background-color: rgba(106, 192, 69, 0.876);
-        color: white;
-        width: 520px;
-
-      }
-
-      .btn-r-:hover {
-        background-color: rgb(106, 192, 69);
-      }
-
-      .btn-c- {
-        // background-color: rgba(106, 192, 69, 0.876);
-      }
-
-      .btn-c-:hover {
-        background-color: red;
-        color: white;
-      }
-    }
-
-  }
+  
 }
 
 @media screen and (max-width: 1450px) {
@@ -312,6 +171,8 @@
       }
 
       .fa-search {
+                // border: 5px solid red;
+
         display: block !important;
         position: absolute;
         top: 50%;

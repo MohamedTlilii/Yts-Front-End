@@ -91,7 +91,7 @@ function Movies() {
   
       if (currentPage > 1) {
         paginationItems.push(
-          <span bg={bgColor} color={color} key="prev" className="page-link" onClick={() => handlePageChange(currentPage - 1)}>
+          <span bg={bgColor} color={color} key="prev" className="movies-page-link" onClick={() => handlePageChange(currentPage - 1)}>
             « Previous
           </span>
         );
@@ -101,7 +101,7 @@ function Movies() {
         paginationItems.push(
           <span
             key={i}
-            className={`page-link ${currentPage === i ? 'active' : ''}`}
+            className={`movies-page-link ${currentPage === i ? 'active' : ''}`}
             onClick={() => handlePageChange(i)}
           >
             {i}
@@ -111,7 +111,7 @@ function Movies() {
   
       if (currentPage < totalPages) {
         paginationItems.push(
-          <span key="next" className="page-link" onClick={() => handlePageChange(currentPage + 1)}>
+          <span key="next" className="movies-page-link" onClick={() => handlePageChange(currentPage + 1)}>
             Next »
           </span>
         );
@@ -123,14 +123,14 @@ function Movies() {
   return (
     <Box className="movies"  >
       <SearchMovies onSearch={handleSearch} />
-      <div className="pagination">
+      <div className="movies-pagination">
       <h3>YIFY Movies - page {currentPage}</h3>
       {renderPagination()}
 
       </div>
       <Box className='movies-listt'>
         
-        {loading && <Spinner size='xl'  className="loading-css" /> }
+        {loading && <Spinner size='xl'  className="movies-loading-css" /> }
         {/* {error && <p>{error}</p>} */}
         {!loading && !error && movies.length > 0 ? (
           movies.map((movie, index) => (
@@ -158,10 +158,10 @@ function Movies() {
 </div>
           ))
         ) : (
-          !loading && <p className='loading-css'>Your search - {searchQuery} - did not match any movies.</p>
+          !loading && <p className='movies-loading-css'>Your search - {searchQuery} - did not match any movies.</p>
         )}
       </Box>
-      <div className="pagination">
+      <div className="movies-pagination-last">
       {/* <h3>YIFY Movies - page {currentPage}</h3> */}
       {renderPagination()}
 

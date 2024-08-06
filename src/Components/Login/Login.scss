@@ -1,0 +1,278 @@
+  .login-form {
+    border: 1px solid rgba(227, 213, 213, 0.634);
+    position: absolute;
+    top: 165px;
+    width: 600px;
+    cursor: auto;
+    padding: 40px;
+    // background-color: yellow!important;
+    z-index: 1000;
+    /* Ensure this value is higher than the hero section */
+    position: fixed;
+    margin-top: 100px;
+
+    form {
+
+      // border: 2px solid;
+      .chek-and-forget-btn {
+        display: flex;
+        // gap: 10px;
+        align-items: center;
+        justify-content: space-between;
+      }
+
+      .check-box {
+        padding-top: 1em;
+
+      }
+
+      .h1 {
+        // border: 2px solid red;
+        font-style: italic;
+        font-size: .7em;
+        padding-top: 1.5em;
+        text-align: center;
+        cursor: pointer;
+      }
+
+      // border: 2px solid red;
+      .btn-l- {
+        background-color: rgba(106, 192, 69, 0.876);
+        color: white;
+
+      }
+
+      .btn-l-:hover {
+        background-color: rgb(106, 192, 69);
+      }
+
+      .btn-ca- {
+        // background-color: rgba(106, 192, 69, 0.876);
+      }
+
+      .btn-ca-:hover {
+        background-color: red;
+        color: white;
+      }
+    }
+
+  }
+
+
+
+
+
+  @media screen and (max-width: 1450px) {
+    .login-form {
+      width: 550px;
+      padding: 30px;
+      top: 130px;
+
+      form {
+        .h1 {
+          font-size: .8em;
+        }
+      }
+    }
+  }
+
+  @media screen and (max-width: 1000px) {
+    .login-form {
+      width: 450px;
+      padding: 20px;
+      top: 100px;
+
+      form {
+        .h1 {
+          font-size: .9em;
+        }
+      }
+    }
+  }
+
+  @media screen and (max-width: 900px) {
+    .login-form {
+      width: 400px;
+      padding: 15px;
+      top: 80px;
+
+      form {
+        .h1 {
+          font-size: 0.7em;
+        }
+      }
+    }
+  }
+
+  @media screen and (max-width: 780px) {
+    .login-form {
+      width: 100%;
+      padding: 20px;
+      top: 80px;
+      /* Adjust top position if necessary */
+
+
+      form {
+        .h1 {
+          font-size: 0.7em;
+        }
+      }
+    }
+  }
+
+  @media screen and (max-width: 565px) {
+    .login-form {
+      // width: 300px;
+      // padding: 10px;
+      // top: 40px;
+
+      form {
+        .h1 {
+          font-size: 0.7em;
+        }
+      }
+    }
+  }
+
+  @media screen and (max-width: 450px) {
+    .login-form {
+      width: 100%;
+      padding: 10px;
+      top: 40px;
+      /* Adjust top position if necessary */
+
+
+      form {
+        .h1 {
+          font-size: .4em;
+        }
+      }
+    }
+  }
+
+
+
+
+
+
+
+
+
+
+
+
+
+  .password-reset-form {
+    border: 1px solid rgba(227, 213, 213, 0.634);
+    position: absolute;
+    top: 165px;
+    width: 600px;
+    cursor: auto;
+    padding: 40px;
+    z-index: 1000;
+    position: fixed;
+margin-top: 150px;
+
+    form {
+      .h1 {
+        // border: 2px solid red;
+        font-style: italic;
+        font-size: .7em;
+        padding-top: 1.5em;
+        text-align: center;
+        cursor: pointer;
+      }
+
+      .btn-r- {
+        // border: 2px solid red;
+        background-color: rgba(106, 192, 69, 0.876);
+        color: white;
+        width: auto 0;
+
+      }
+
+      .btn-r-:hover {
+        background-color: rgb(106, 192, 69);
+      }
+
+      .btn-c- {
+        // background-color: rgba(106, 192, 69, 0.876);
+      }
+
+      .btn-c-:hover {
+        background-color: red;
+        color: white;
+      }
+    }
+
+  }
+
+  @media screen and (max-width: 1450px) {
+    .password-reset-form {
+      width: 80%;
+      top: 120px;
+      /* Adjust top position if necessary */
+    }
+  }
+
+  @media screen and (max-width: 1000px) {
+    .password-reset-form {
+      width: 90%;
+      padding: 30px;
+    }
+
+    .password-reset-form .h1 {
+      font-size: .6em;
+    }
+  }
+
+  @media screen and (max-width: 900px) {
+    .password-reset-form {
+      width: 95%;
+      top: 100px;
+      /* Adjust top position if necessary */
+    }
+
+    .password-reset-form .h1 {
+      font-size: .55em;
+    }
+  }
+
+  @media screen and (max-width: 780px) {
+    .password-reset-form {
+      width: 100%;
+      padding: 20px;
+      top: 80px;
+      /* Adjust top position if necessary */
+    }
+
+    .password-reset-form .h1 {
+      font-size: .5em;
+    }
+  }
+
+  @media screen and (max-width: 565px) {
+    .password-reset-form {
+      width: 100%;
+      padding: 15px;
+      top: 60px;
+      /* Adjust top position if necessary */
+    }
+
+    .password-reset-form .h1 {
+      font-size: .45em;
+    }
+  }
+
+  @media screen and (max-width: 450px) {
+    .password-reset-form {
+      width: 100%;
+      padding: 10px;
+      top: 40px;
+      /* Adjust top position if necessary */
+    }
+
+    .password-reset-form .h1 {
+      font-size: .4em;
+    }
+  }

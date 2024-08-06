@@ -131,6 +131,7 @@ function Navbar() {
           onChange={handleSearchChange}
           onFocus={handleFocus} // Show suggestions when focused
           style={{ textTransform: 'capitalize' }}
+          // color={color}
         />
         {movies.length > 0 && (
           <Box ref={moviesBoxRef} className="Movies-items" bg={bgColor} color={color} mt={2} p={2} borderRadius="md" boxShadow="md" maxH="400px" overflowY="auto">
@@ -142,7 +143,9 @@ function Navbar() {
           </Box>
         )}
         <UnorderedList className='navbar-list'>
-          <Icon as={CiSearch} className='fa-search-x' onClick={toggleSearch} />
+          <Icon as={CiSearch} className='fa-search-x'
+           onClick={toggleSearch}
+            />
           {NAV_ITEMS.map((item, index) => (
             <React.Fragment key={index}>
               <Link id={item.id} bg={bgColor} color={color} href={item.href}>

@@ -1,9 +1,8 @@
 .trending {
     // border: 2px solid red;
-    height: 230vh!important;
+    height: 270vh !important;
     position: relative;
-    padding: 10px;
-    top: 60px;
+    bottom:  1px;
     
     .trending-pagination {
         // border: 2px solid rgb(86, 174, 23) !important;
@@ -23,8 +22,40 @@
 
         }
     }
+    .trending-pagination-last {
+        // border: 2px solid rgb(86, 174, 23) !important;
 
+        // display: flex;
+        // justify-content: center;
+        margin-top: 30px;
+        // width: 250px;
+        // align-items: center;
+        text-align: center;
+        line-height: 60px;
+
+        h3 {
+            // border: 2px solid rgb(255, 0, 255) !important;
+            color: #6ac045;
+            font-weight: bold;
+
+        }
+    }
    
+    .trending-page-link {
+        // border: 2px solid rgb(255, 0, 255) !important;
+
+        padding: 10px;
+        margin: 0 5px;
+        cursor: pointer;
+        border: 2px solid rgba(227, 213, 213, 0.634);
+        // color: #007bff;
+        // text-decoration: underline;
+    }
+
+    .trending-page-link.active {
+        font-weight: bold;
+        pointer-events: none;
+    }
 
     .trending-movies-listt {
         // border: 2px solid rgb(51, 255, 0) !important;
@@ -41,7 +72,7 @@
         // top: 30px;  
     }
 
-    .loading-css {
+    .trending-loading-css {
         // border: 2px  solid rgb(51, 255, 0);
         // margin-left: 500px;
         // width: 300px;
@@ -79,15 +110,16 @@
 
 
     #trending-movie-poster {
-        border: 5px solid rgb(255, 255, 255)!important;
+        // border: 5px solid rgb(255, 255, 255)!important;
 
         width: 180px !important;
         height: 250px !important;
 
         border-radius: 8px;
         margin-bottom: 10px;
-        border: 3px solid rgba(255, 255, 255, .2);
+        // border: 3px solid rgba(255, 255, 255, .2);
         transition: opacity 0.5s ease;
+        border: 5px solid;
 
 
     
@@ -135,7 +167,7 @@
         color: white;
     }
     }
-    .trending-item:hover .movie-details-hover {
+    .trending-item:hover .trending-details-hover {
         opacity: 1;
         position: absolute;
     }
@@ -163,4 +195,1017 @@ h3 {
         width: fit-content;
         margin-left: 8px;
 
+    }
+
+    @media screen and (max-width: 1495px) {
+        .trending {
+            // border: 2px solid red;
+            height: auto !important;
+    
+    
+            .trending-pagination {
+                // border: 2px solid rgb(86, 174, 23) !important;
+    
+    
+                margin: 30px;
+                // text-align: center;
+                // line-height: 60px;
+    
+    
+    
+                h3 {
+                    // border: 2px solid rgb(255, 0, 255) !important;
+    
+    
+                }
+            }
+    
+            .trending-pagination-last {
+                // border: 2px solid rgb(86, 174, 23) !important;
+                height: 100px;
+    
+                // margin-top: 30px;
+                h3 {
+                    // border: 2px solid rgb(255, 0, 255) !important;
+    
+    
+                }
+            }
+    
+            .trending-page-link {
+                // border: 2px solid rgb(255, 0, 255) !important;
+    
+    
+            }
+    
+            .trending-page-link.active {}
+    
+            .trending-movies-listt {
+                // border: 2px solid rgb(51, 255, 0) !important;
+    
+            }
+    
+            .trending-loading-css {}
+    
+            .trending-movie-item {
+                // border: 1px solid red;
+    
+                &:hover {
+                    #forK-movie-poster {}
+    
+                    .forK-movie-details-hover {}
+                }
+            }
+    
+    
+            #trending-movie-poster {}
+    
+            .trending-details-hover {
+    
+                // border: 5px solid rgb(128, 255, 0)!important;
+                // display: none;
+                .faster {
+                    // border: 2px solid red;
+    
+                }
+    
+                h2 {
+                    // border: 2px solid red;
+                }
+    
+                h4 {
+                    // border: 2px solid blue;
+                }
+    
+    
+            }
+    
+            button {
+                // border: 1px solid black;
+            }
+        }
+    
+        .trending-movie-item:hover .trending-details-hover {}
+    
+        .trending-movie-item:hover #trending-movie-poster {}
+    
+        .trending-movie-details {
+    
+            // border: 2px solid red !important;
+            // flex: 1;
+            h3 {
+                // color: white;
+    
+            }
+        }
+    
+        .trending-movie-yers {
+            // border: 2px solid red !important;
+    
+        }
+    }
+    
+    @media screen and (max-width: 1278px) {
+    
+    
+        .trending {
+            // border: 2px solid red;
+            // height: 420vh!important;
+    
+    
+            .trending-pagination {
+                // border: 2px solid rgb(86, 174, 23) !important;
+    
+    
+                // margin: 30px;
+    
+    
+    
+                h3 {
+                    // border: 2px solid rgb(255, 0, 255) !important;
+    
+    
+                }
+            }
+    
+            .trending-pagination-last {
+                // border: 2px solid rgb(86, 174, 23) !important;
+    
+                // margin-top: 30px;
+                h3 {
+                    // border: 2px solid rgb(255, 0, 255) !important;
+    
+    
+                }
+            }
+    
+            .trending-page-link {
+                // border: 2px solid rgb(255, 0, 255) !important;
+    
+    
+            }
+    
+            .trending-page-link.active {}
+    
+            .trending-movies-listt {
+                // border: 2px solid rgb(51, 255, 0) !important;
+    
+            }
+    
+            .trending-loading-css {}
+    
+            .trending-movie-item {
+                // border: 1px solid red;
+    
+                &:hover {
+                    #forK-movie-poster {}
+    
+                    .forK-movie-details-hover {}
+                }
+            }
+    
+    
+            #trending-movie-poster {}
+    
+            .trending-movie-details-hover {
+    
+                // border: 5px solid rgb(128, 255, 0)!important;
+                // display: none;
+                .faster {
+                    // border: 2px solid red;
+    
+                }
+    
+                h2 {
+                    // border: 2px solid red;
+                }
+    
+                h4 {
+                    // border: 2px solid blue;
+                }
+    
+    
+            }
+    
+            button {
+                // border: 1px solid black;
+            }
+        }
+    
+        .trending-movie-item:hover .trending-details-hover {}
+    
+        .trending-movie-item:hover #trending-movie-poster {}
+    
+        .trending-movie-details {
+    
+            // border: 2px solid red !important;
+            // flex: 1;
+            h3 {
+                // color: white;
+    
+            }
+        }
+    
+        .trending-yers {
+            // border: 2px solid red !important;
+    
+        }
+    }
+    
+    
+    @media screen and (max-width: 1058px) {
+        .trending {
+            // border: 2px solid red;
+            // height: auto!important;
+    
+    
+            .trending-pagination {
+                // border: 2px solid rgb(86, 174, 23) !important;
+    
+    
+                // margin: 30px;
+    
+    
+    
+                h3 {
+                    // border: 2px solid rgb(255, 0, 255) !important;
+    
+    
+                }
+            }
+    
+            .trending-pagination-last {
+                // border: 2px solid rgb(86, 174, 23) !important;
+                height: 100px;
+    
+                // margin-top: 30px;
+                h3 {
+                    // border: 2px solid rgb(255, 0, 255) !important;
+    
+    
+                }
+            }
+    
+            .trending-page-link {
+                // border: 2px solid rgb(255, 0, 255) !important;
+    
+    
+            }
+    
+            .trending-page-link.active {}
+    
+            .trending-movies-listt {
+                // border: 2px solid rgb(51, 255, 0) !important;
+    
+            }
+    
+            .trending-loading-css {}
+    
+            .trending-movie-item {
+                // border: 1px solid red;
+    
+                &:hover {
+                    #forK-movie-poster {}
+    
+                    .forK-movie-details-hover {}
+                }
+            }
+    
+    
+            #trending-movie-poster {}
+    
+            .trending-details-hover {
+    
+                // border: 5px solid rgb(128, 255, 0)!important;
+                // display: none;
+                .faster {
+                    // border: 2px solid red;
+    
+                }
+    
+                h2 {
+                    // border: 2px solid red;
+                }
+    
+                h4 {
+                    // border: 2px solid blue;
+                }
+    
+    
+            }
+    
+            button {
+                // border: 1px solid black;
+            }
+        }
+    
+        .trending-movie-item:hover .trending-details-hover {}
+    
+        .trending-movie-item:hover #trending-movie-poster {}
+    
+        .trending-movie-details {
+    
+            // border: 2px solid red !important;
+            // flex: 1;
+            h3 {
+                // color: white;
+    
+            }
+        }
+    
+        .trending-yers {
+            // border: 2px solid red !important;
+    
+        }
+    }
+    
+    @media screen and (max-width: 900px) {
+        .trending {
+            // border: 2px solid red ;
+            height: auto !important;
+            top: 0;
+    
+            .trending-pagination {
+                // border: 2px solid rgb(86, 174, 23) !important;
+    
+    
+                margin-top: 50px;
+    
+    
+    
+                h3 {
+                    // border: 2px solid rgb(255, 0, 255) !important;
+    
+    
+                }
+            }
+    
+            .trending-pagination-last {
+    
+                // border: 2px solid rgb(86, 174, 23) !important;
+                // height: 100px;
+                // height: 50px;
+                // margin-top: 30px;
+                h3 {
+                    // border: 2px solid rgb(255, 0, 255) !important;
+    
+    
+                }
+            }
+    
+            .trending-page-link {
+                // border: 2px solid rgb(255, 0, 255) !important;
+    
+    
+            }
+    
+            .trending-page-link.active {}
+    
+            .trending-movies-listt {
+                // border: 2px solid rgb(51, 255, 0) !important;
+    
+            }
+    
+            .trending-loading-css {}
+    
+            .trending-movie-item {
+                // border: 1px solid red;
+    
+                &:hover {
+                    #forK-movie-poster {}
+    
+                    .forK-movie-details-hover {}
+                }
+            }
+    
+    
+            #trending-movie-poster {}
+    
+            .trending-details-hover {
+    
+                // border: 5px solid rgb(128, 255, 0)!important;
+                // display: none;
+                .faster {
+                    // border: 2px solid red;
+    
+                }
+    
+                h2 {
+                    // border: 2px solid red;
+                }
+    
+                h4 {
+                    // border: 2px solid blue;
+                }
+    
+    
+            }
+    
+            button {
+                // border: 1px solid black;
+            }
+        }
+    
+        .trending-movie-item:hover .trending-details-hover {}
+    
+        .trending-movie-item:hover #trending-movie-poster {}
+    
+        .trending-movie-details {
+    
+            // border: 2px solid red !important;
+            // flex: 1;
+            h3 {
+                // color: white;
+    
+            }
+        }
+    
+        .trending-yers {
+            // border: 2px solid red !important;
+    
+        }
+    }
+    
+    @media screen and (max-width: 600px) {
+        .trending {
+            // border: 2px solid red;
+            // height: 270vh!important;
+            // position: relative;
+            // top: 65px;
+    
+            .trending-pagination {
+                // border: 2px solid rgb(86, 174, 23) !important;
+    
+                // margin-top: 30px;
+    
+                // text-align: center;
+                // line-height: 60px;
+    
+                h3 {
+                    // border: 2px solid rgb(255, 0, 255) !important;
+                    // color: #6ac045;
+                    // font-weight: bold;
+    
+                }
+            }
+    
+            .trending-pagination-last {
+                // border: 2px solid rgb(86, 174, 23) !important;
+    
+                // margin-top: 30px;
+                // text-align: center;
+                // line-height: 60px;
+    
+                h3 {
+                    // border: 2px solid rgb(255, 0, 255) !important;
+    
+    
+                }
+            }
+    
+            .trending-page-link {
+                // border: 2px solid rgb(255, 0, 255) !important;
+    
+                // padding: 10px;
+                // margin: 0 5px;
+                // cursor: pointer;
+                // border: 2px solid rgba(227, 213, 213, 0.634);
+            }
+    
+            .trending-page-link.active {
+                // font-weight: bold;
+                // pointer-events: none;
+            }
+    
+            .trending-movies-listt {
+                // border: 2px solid rgb(4, 0, 255) !important;
+                // height: auto;
+                // display: grid;
+                // grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+                // gap: 0px 20px;
+                // margin: auto 200px; 
+                // justify-items: center!important;
+                // position: relative;
+                margin: 30px;
+    
+            }
+    
+            .trending-loading-css {
+                // border: 2px  solid rgb(51, 255, 0);
+                // margin-left: 500px;
+                // width: 300px;
+                // height: 1000px;
+                // margin-top: 400px;
+                // height: 400px;
+                // width: 300px;
+                // margin-left: 550px;
+                // // font-size: 240px;
+                // position: relative;
+                // top: 220px;
+    
+    
+    
+            }
+    
+            .trending-movie-item {
+                // border: 1px solid red;
+                // padding: 10px;
+                // border-radius: 8px;
+                // align-items: center;
+                // text-align: center;
+                // position: relative; /* Ensure relative positioning for child elements */
+                // overflow: hidden; /* Prevents child elements from overflowing */
+    
+                &:hover {
+                    #forK-movie-poster {
+                        // opacity: 0.3;
+                    }
+    
+                    .forK-movie-details-hover {
+                        // opacity: 1;
+                    }
+                }
+            }
+    
+    
+            #trending-movie-poster {
+                // border: 5px solid;
+    
+                // width: 180px !important;
+                // height: 250px !important;
+    
+                // border-radius: 8px;
+                // margin-bottom: 10px;
+                // transition: opacity 0.5s ease;
+    
+    
+    
+    
+            }
+    
+            .trending-details-hover {
+                // border: 5px solid rgb(128, 255, 0) !important;
+    
+                // display: none;
+                // position: absolute;
+                // top: 10px;
+                // width: 179px;
+                // height: 250px;
+                // display: flex;
+                // flex-direction: column;
+                // gap: 15px;
+                // align-items: center;
+                // justify-content: center;
+                // opacity: 0;
+                // transition: opacity 0.5s ease;
+                // background-color: rgba(0, 0, 0, 0.8); /* Example background color for hover details */
+                // color: white; /* Example text color for hover details */
+                // padding: 10px; /* Example padding for hover details */
+                // border-radius: 8px; /* Example border radius for hover details */
+                // z-index: 1; /* Ensures hover details appear above other elements */
+                .faster {
+                    // border: 2px solid red;
+    
+                }
+    
+                h2 {
+                    // border: 2px solid red;
+                }
+    
+                h4 {
+                    // border: 2px solid blue;
+                    // width: 120px;
+                }
+    
+    
+            }
+    
+            button {
+                // border: 1px solid black;
+                // background-color: #6ac045;
+                // padding: 5px 10px;
+                // margin-top: 10px;
+                // cursor: pointer;
+                // color: white;
+            }
+        }
+    
+        .trending-movie-item:hover .trending-details-hover {
+            // opacity: 1;
+            // position: absolute;
+        }
+    
+        .trending-movie-item:hover #trending-movie-poster {
+            // opacity: 0.3;
+        }
+    
+        .trending-movie-details {
+            // border: 2px solid red !important;
+    
+            // display: flex;
+            // justify-content: start;
+            // gap: 10px;
+            // margin-left: 8px;
+            h3 {
+                // color: white;
+    
+            }
+        }
+    
+        .trending-yers {
+            // border: 2px solid red !important;
+            // width: fit-content;
+            // margin-left: 8px;
+    
+        }
+    }
+    
+    @media screen and (max-width: 470px) {
+        .trending {
+            // border: 2px solid red;
+            // height: 270vh!important;
+            // position: relative;
+            // top: 65px;
+    
+            .trending-pagination {
+                // border: 2px solid rgb(86, 174, 23) !important;
+    
+                // margin-top: 30px;
+    
+                // text-align: center;
+                // line-height: 60px;
+                // width: fit-content;
+    
+                h3 {
+                    // border: 2px solid rgb(255, 0, 255) !important;
+                    // color: #6ac045;
+                    // font-weight: bold;
+    
+                }
+            }
+    
+            .trending-pagination-last {
+                // border: 2px solid rgb(86, 174, 23) !important;
+    
+                // margin-top: 30px;
+                // text-align: center;
+                // line-height: 60px;
+    
+                h3 {
+                    // border: 2px solid rgb(255, 0, 255) !important;
+    
+    
+                }
+            }
+    
+            .trending-page-link {
+                // border: 2px solid rgb(255, 0, 255) !important;
+    
+                padding: 5px;
+                margin: 0 3px;
+                // cursor: pointer;
+                // border: 2px solid rgba(227, 213, 213, 0.634);
+            }
+    
+            .trending-page-link.active {
+                // font-weight: bold;
+                // pointer-events: none;
+            }
+    
+            .trending-movies-listt {
+                // border: 2px solid rgb(4, 0, 255) !important;
+                // height: auto;
+                // display: grid;
+                // grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+                // gap: 0px 20px;
+                // margin: auto 200px; 
+                // justify-items: center!important;
+                // position: relative;
+                margin: 30px;
+    
+            }
+    
+            .trending-loading-css {
+                // border: 2px  solid rgb(51, 255, 0);
+                // margin-left: 500px;
+                // width: 300px;
+                // height: 1000px;
+                // margin-top: 400px;
+                // height: 400px;
+                // width: 300px;
+                // margin-left: 550px;
+                // // font-size: 240px;
+                // position: relative;
+                // top: 220px;
+    
+    
+    
+            }
+    
+            .trending-movie-item {
+                // border: 1px solid red;
+                // padding: 10px;
+                // border-radius: 8px;
+                // align-items: center;
+                // text-align: center;
+                // position: relative; /* Ensure relative positioning for child elements */
+                // overflow: hidden; /* Prevents child elements from overflowing */
+    
+                &:hover {
+                    #trending-movie-poster {
+                        // opacity: 0.3;
+                    }
+    
+                    .trending-details-hover {
+                        // opacity: 1;
+                    }
+                }
+            }
+    
+    
+            #trending-movie-poster {
+                // border: 5px solid;
+    
+                // width: 180px !important;
+                // height: 250px !important;
+    
+                // border-radius: 8px;
+                // margin-bottom: 10px;
+                // transition: opacity 0.5s ease;
+    
+    
+    
+    
+            }
+    
+            .trending-details-hover {
+                // border: 5px solid rgb(128, 255, 0) !important;
+    
+                // display: none;
+                // position: absolute;
+                // top: 10px;
+                // width: 179px;
+                // height: 250px;
+                // display: flex;
+                // flex-direction: column;
+                // gap: 15px;
+                // align-items: center;
+                // justify-content: center;
+                // opacity: 0;
+                // transition: opacity 0.5s ease;
+                // background-color: rgba(0, 0, 0, 0.8); /* Example background color for hover details */
+                // color: white; /* Example text color for hover details */
+                // padding: 10px; /* Example padding for hover details */
+                // border-radius: 8px; /* Example border radius for hover details */
+                // z-index: 1; /* Ensures hover details appear above other elements */
+                .faster {
+                    // border: 2px solid red;
+    
+                }
+    
+                h2 {
+                    // border: 2px solid red;
+                }
+    
+                h4 {
+                    // border: 2px solid blue;
+                    // width: 120px;
+                }
+    
+    
+            }
+    
+            button {
+                // border: 1px solid black;
+                // background-color: #6ac045;
+                // padding: 5px 10px;
+                // margin-top: 10px;
+                // cursor: pointer;
+                // color: white;
+            }
+        }
+    
+        .trending-movie-item:hover .trending-details-hover {
+            // opacity: 1;
+            // position: absolute;
+        }
+    
+        .trending-movie-item:hover #trending-movie-poster {
+            // opacity: 0.3;
+        }
+    
+        .trending-movie-details {
+            // border: 2px solid red !important;
+    
+            // display: flex;
+            // justify-content: start;
+            // gap: 10px;
+            // margin-left: 8px;
+            h3 {
+                // color: white;
+    
+            }
+        }
+    
+        .trending-yers {
+            // border: 2px solid red !important;
+            // width: fit-content;
+            // margin-left: 8px;
+    
+        }
+    }
+    
+    @media screen and (max-width: 341px) {
+        .trending {
+            // border: 2px solid red;
+            // height: 270vh!important;
+            // position: relative;
+            // top: 65px;
+    
+            .trending-pagination {
+                // border: 2px solid rgb(86, 174, 23) !important;
+    
+                // margin-top: 30px;
+    
+                // text-align: center;
+                // line-height: 60px;
+                // width: fit-content;
+    
+                h3 {
+                    // border: 2px solid rgb(255, 0, 255) !important;
+                    // color: #6ac045;
+                    // font-weight: bold;
+    
+                }
+            }
+    
+            .trending-pagination-last {
+                // border: 2px solid rgb(86, 174, 23) !important;
+    
+                // margin-top: 30px;
+                // text-align: center;
+                // line-height: 60px;
+    
+                h3 {
+                    // border: 2px solid rgb(255, 0, 255) !important;
+    
+    
+                }
+            }
+    
+            .trending-page-link {
+                // border: 2px solid rgb(255, 0, 255) !important;
+    
+                padding: 3px;
+                margin: 0 2px;
+                // cursor: pointer;
+                // border: 2px solid rgba(227, 213, 213, 0.634);
+            }
+    
+            .trending-page-link.active {
+                // font-weight: bold;
+                // pointer-events: none;
+            }
+    
+            .trending-movies-listt {
+                // border: 2px solid rgb(4, 0, 255) !important;
+                // height: auto;
+                // display: grid;
+                // grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+                // gap: 0px 20px;
+                // margin: auto 200px; 
+                // justify-items: center!important;
+                // position: relative;
+                margin: 10px;
+    
+            }
+    
+            .trending-loading-css {
+                // border: 2px  solid rgb(51, 255, 0);
+                // margin-left: 500px;
+                // width: 300px;
+                // height: 1000px;
+                // margin-top: 400px;
+                // height: 400px;
+                // width: 300px;
+                // margin-left: 550px;
+                // // font-size: 240px;
+                // position: relative;
+                // top: 220px;
+    
+    
+    
+            }
+    
+            .trending-movie-item {
+                // border: 1px solid red;
+                // padding: 10px;
+                // border-radius: 8px;
+                // align-items: center;
+                // text-align: center;
+                // position: relative; /* Ensure relative positioning for child elements */
+                // overflow: hidden; /* Prevents child elements from overflowing */
+    
+                &:hover {
+                    #trending-movie-poster {
+                        // opacity: 0.3;
+                    }
+    
+                    .trending-details-hover {
+                        // opacity: 1;
+                    }
+                }
+            }
+    
+    
+            #trending-movie-poster {
+                // border: 5px solid;
+    
+                // width: 180px !important;
+                // height: 250px !important;
+    
+                // border-radius: 8px;
+                // margin-bottom: 10px;
+                // transition: opacity 0.5s ease;
+    
+    
+    
+    
+            }
+    
+            .trending-details-hover {
+                // border: 5px solid rgb(128, 255, 0) !important;
+    
+                // display: none;
+                // position: absolute;
+                // top: 10px;
+                // width: 179px;
+                // height: 250px;
+                // display: flex;
+                // flex-direction: column;
+                // gap: 15px;
+                // align-items: center;
+                // justify-content: center;
+                // opacity: 0;
+                // transition: opacity 0.5s ease;
+                // background-color: rgba(0, 0, 0, 0.8); /* Example background color for hover details */
+                // color: white; /* Example text color for hover details */
+                // padding: 10px; /* Example padding for hover details */
+                // border-radius: 8px; /* Example border radius for hover details */
+                // z-index: 1; /* Ensures hover details appear above other elements */
+                .faster {
+                    // border: 2px solid red;
+    
+                }
+    
+                h2 {
+                    // border: 2px solid red;
+                }
+    
+                h4 {
+                    // border: 2px solid blue;
+                    // width: 120px;
+                }
+    
+    
+            }
+    
+            button {
+                // border: 1px solid black;
+                // background-color: #6ac045;
+                // padding: 5px 10px;
+                // margin-top: 10px;
+                // cursor: pointer;
+                // color: white;
+            }
+        }
+    
+        .trending-movie-item:hover .trending-details-hover {
+            // opacity: 1;
+            // position: absolute;
+        }
+    
+        .trending-movie-item:hover #trending-movie-poster {
+            // opacity: 0.3;
+        }
+    
+        .trending-movie-details {
+            // border: 2px solid red !important;
+    
+            // display: flex;
+            // justify-content: start;
+            // gap: 10px;
+            // margin-left: 8px;
+            h3 {
+                // color: white;
+    
+            }
+        }
+    
+        .trending-yers {
+            // border: 2px solid red !important;
+            // width: fit-content;
+            // margin-left: 8px;
+    
+        }
     }

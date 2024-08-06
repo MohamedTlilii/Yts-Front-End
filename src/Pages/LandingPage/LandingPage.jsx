@@ -7,7 +7,7 @@ import HeroUpcoming from '../../Components/HeroUpcoming/HeroUpcoming'
 import { Box, } from '@chakra-ui/react'
 function LandingPage() {
   return (
-    <Box className="landingPage" >
+    <Box className="landingPage"  >
         <Hero/>
         <HeroRow/>
         <div className='line-section'></div>

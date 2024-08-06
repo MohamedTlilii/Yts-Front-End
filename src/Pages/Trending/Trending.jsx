@@ -10,13 +10,14 @@ function Trending() {
   const bgColor = useColorModeValue('white', 'black');
   const color = useColorModeValue('black', 'white');
 
+  const [searchQuery, setSearchQuery] = useState('');
+  const [filters, setFilters] = useState({});
   const [movies, setMovies] = useState([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
-  const [moviesPerPage] = useState(20); // Adjust to display 20 movies per page
-  const [searchQuery, setSearchQuery] = useState(""); // Initialize searchQuery
-  const [filters, setFilters] = useState({}); // Initialize filters
-  const [currentPage, setCurrentPage] = useState(1); // Initialize currentPage
+  const [currentPage, setCurrentPage] = useState(1);
+  const [moviesPerPage] = useState(20); // Adjust to display 17 movies per page
+  const [totalMovies, setTotalMovies] = useState(0); // State to hold total movies count
 
   const fetchMovies = async () => {
     setLoading(true);
@@ -30,13 +31,14 @@ function Trending() {
         limit: moviesPerPage,
         page: currentPage,
         with_cast: true
-      });
+      }).toString();
 
-      const response = await axios.get(`https://yts.mx/api/v2/list_movies.json?${queryParams.toString()}`);
+      const response = await axios.get(`https://yts.mx/api/v2/list_movies.json?${queryParams}`);
 
       if (response.data?.data?.movies) {
         console.log(response.data);
         setMovies(response.data.data.movies);
+        setTotalMovies(response.data.data.movie_count); // Update total movies count
         if (response.data.data.movies.length === 0) {
           setError(`Your search - ${searchQuery} - did not match any movies.`);
         } else {
@@ -56,7 +58,17 @@ function Trending() {
 
   useEffect(() => {
     fetchMovies();
-  }, [searchQuery, filters, currentPage]); // Depend on searchQuery, filters, and currentPage
+  }, [searchQuery, filters, currentPage, moviesPerPage]);
+
+  const handleSearch = (query, newFilters) => {
+    setSearchQuery(query);
+    setFilters(newFilters);
+    setCurrentPage(1); // Reset page to 1 when performing a new search
+  };
+
+  const handlePageChange = (pageNumber) => {
+    setCurrentPage(pageNumber);
+  };
 
   // Function to truncate title to specified number of characters
   const truncateTitle = (title, maxLength) => {
@@ -65,14 +77,63 @@ function Trending() {
     }
     return title.substring(0, maxLength) + '...';
   };
+    // Generate pagination links
+    const renderPagination = () => {
+      const totalPages = Math.ceil(totalMovies / moviesPerPage);
+      const pagesToShow = 8;
+      const halfPagesToShow = Math.floor(pagesToShow / 2);
+      let startPage = Math.max(1, currentPage - halfPagesToShow);
+      let endPage = Math.min(totalPages, startPage + pagesToShow - 1);
+  
+      if (endPage - startPage + 1 < pagesToShow) {
+        startPage = Math.max(1, endPage - pagesToShow + 1);
+      }
+  
+      const paginationItems = [];
+  
+      if (currentPage > 1) {
+        paginationItems.push(
+          <span key="prev" className="trending-page-link" onClick={() => handlePageChange(currentPage - 1)}>
+            « Previous
+          </span>
+        );
+      }
+  
+      for (let i = startPage; i <= endPage; i++) {
+        paginationItems.push(
+          <span
+            key={i}
+            className={`trending-page-link ${currentPage === i ? 'active' : ''}`}
+            onClick={() => handlePageChange(i)}
+          >
+            {i}
+          </span>
+        );
+      }
+  
+      if (currentPage < totalPages) {
+        paginationItems.push(
+          <span key="next" className="trending-page-link" onClick={() => handlePageChange(currentPage + 1)}>
+            Next »
+          </span>
+        );
+      }
+  
+      return paginationItems;
+    };
+  
 
   return (
     <Box className="trending">
+            <SearchMovies onSearch={handleSearch} />
+
       <div className="trending-pagination">
         <h3>24h YIFY Trending Movies</h3>
+        {renderPagination()}
+
       </div>
       <Box className='trending-movies-listt'>
-        {loading && <Spinner size='xl' className="loading-css" />}
+        {loading && <Spinner size='xl' className="trending-loading-css" />}
         {!loading && error && <p>{error}</p>}
         {!loading && !error && movies.length > 0 ? (
           movies.map((movie) => (
@@ -98,9 +159,13 @@ function Trending() {
             </div>
           ))
         ) : (
-          !loading && <p className='loading-css'>Your search - {searchQuery} - did not match any movies.</p>
+          !loading && <p className='trending-loading-css'>Your search - {searchQuery} - did not match any movies.</p>
         )}
+
       </Box>
+      <div className="trending-pagination-last">
+        {renderPagination()}
+      </div>
     </Box>
   );
 }
