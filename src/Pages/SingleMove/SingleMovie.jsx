@@ -4,7 +4,7 @@ import './SingleMovie.scss';
 import { Link, useParams } from 'react-router-dom';
 import { CiSaveDown2 } from "react-icons/ci";
 import { FaHeart, FaPlay, FaTimes, FaArrowLeft, FaArrowRight } from "react-icons/fa";
-import { Box, Spinner,useColorModeValue } from '@chakra-ui/react';
+import { Box,useColorModeValue } from '@chakra-ui/react';
 
 
 function SingleMovie() {
@@ -136,11 +136,11 @@ const handlePrevImage = () => {
         </div>
       </div>
       <div className='moviegenres'>
-        <div className="tags">
+        {/* <div className="tags">
           {movie.genres.map((genre, index) => (
             <div key={index}  bg={bgColor} color={color} className="tag">{genre}</div>
           ))}
-        </div>
+        </div> */}
         <div className="vpn-warning">
           <p>
             Please enable your VPN when downloading torrents<br />
@@ -203,48 +203,45 @@ const handlePrevImage = () => {
                 )}
       </div>
       <div className='plot-section'>
-        <div className='plot-container'>
-                <h2 className='plot-title'>Plot Summary</h2>
-                <p className='plot-descritption'>
-                    During the 1980s, a failed stand-up comedian is driven insane and turns to a life of crime and chaos in Gotham City while becoming an infamous psychopathic crime figure.
-                </p>
+  <div className='plot-container'>
+    <h2 className='plot-title'>Plot Summary</h2>
+    <p className='plot-descritption'>
+      {movie.description_full}
+    </p>
 
-                {/* Uploaded Info */}
-            <div className='uploaded-info'>
-                <p className='uploaded-info--'>Uploaded by: FREEMAN</p>
-                <p className='date-info--'>January 26, 2020 at 06:34 AM</p>
-            </div>
-            </div>
-            <div className='director-cast'>
-            <div className='director-section'>
-                <h2 className='dirctor-title'>Director</h2>
-                <div className='director-info'>
-                  <img className='director-img' src="https://cdn-icons-png.flaticon.com/256/1077/1077114.png" alt="" />
-                <h3 className='directror-name'>Todd Phillips</h3>
-                </div>
-                </div>
-              <div className='cast-section'>
-              <h2 className='top-cast-title'>Top cast</h2>
-              <div className='cast-info'>
-                  <img className='img-cast'  src="https://cdn-icons-png.flaticon.com/256/1077/1077114.png" alt="" />
-                <h3 className='cast-name'>Robert De Niro </h3>  <h3 className='cast-name-inmovie'> as Murray Franklin</h3>
-                </div>
-              <div className='cast-info'>
-                  <img className='img-cast'  src="https://cdn-icons-png.flaticon.com/256/1077/1077114.png" alt="" />
-                <h3 className='cast-name'>Joaquin Phoenix </h3>
-                 <h3 className='cast-name-inmovie'>as Arthur Fleck</h3>
-                </div>
-              <div className='cast-info'>
-                  <img className='img-cast'  src="https://cdn-icons-png.flaticon.com/256/1077/1077114.png" alt="" />
-                <h3 className='cast-name'>Zazie Beetz  </h3>  <h3 className='cast-name-inmovie'>as Sophie Dumond</h3>
-                </div>
-              <div className='cast-info'>
-                  <img  className='img-cast'  src="https://cdn-icons-png.flaticon.com/256/1077/1077114.png" alt="" />
-                <h3 className='cast-name'>Shea Whigham </h3> <h3 className='cast-name-inmovie'>as Detective Burke</h3>
-                </div>
-              </div>
-            </div>
-      </div>
+    {/* Uploaded Info */}
+    {/* {movie.uploader && ( */}
+  <div className='uploaded-info'>
+    <p className='uploaded-info--'>Uploaded by: {movie.uploader}</p>
+    <p className='date-info--'>{new Date(movie.date_uploaded).toLocaleString()}</p>
+  </div>
+{/* )} */}
+  </div>
+  
+  <div className='director-cast'>
+  {/* {movie.director && ( */}
+  <div className='director-section'>
+    <h2 className='dirctor-title'>Director</h2>
+    <div className='director-info'>
+      <img className='director-img' src="https://cdn-icons-png.flaticon.com/256/1077/1077114.png" alt="Director" />
+      <h3 className='directror-name'>{movie.director}xxx</h3>
+    </div>
+  </div>
+{/* )} */}
+
+    <div className='cast-section'>
+      <h2 className='top-cast-title'>Top cast</h2>
+      {movie.cast && movie.cast.map((member, index) => (
+        <div className='cast-info' key={index}>
+          <img className='img-cast' src={member.url_small_image} alt="" />
+          <h3 className='cast-name'>{member.name}</h3>
+          <h3 className='cast-name-inmovie'>as {member.character_name}</h3>
+        </div>
+      ))}
+    </div>
+  </div>
+</div>
+
 
             
 

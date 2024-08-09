@@ -36,6 +36,8 @@ function Login({ showLoginForm, setShowLoginForm, setIsLoggedIn }) {
       setMessage('');
       setIsLoggedIn(true); // Set logged in state
       setShowLoginForm(false); // Hide login form
+      navigate('/profil'); // Redirect to Profil page
+
     }, 2000);
   };
 

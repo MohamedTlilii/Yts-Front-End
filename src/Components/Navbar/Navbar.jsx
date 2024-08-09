@@ -1,6 +1,6 @@
 import "./Navbar.scss";
 import { IoIosStats } from "react-icons/io";
-import { CiViewList, CiSearch, CiLogout } from "react-icons/ci";
+import { CiViewList, CiSearch, CiLogout, CiUser } from "react-icons/ci";
 import BtnTheme from '../Theme/BtnTheme';
 import {
   Box,
@@ -27,6 +27,7 @@ const NAV_ITEMS = [
   { id: 'four-K', href: '/forK', label: '4K' },
   { id: 'nav_items', href: '/trending', label: 'Trending', icon: IoIosStats, iconOnly: true },
   { id: 'nav_items', href: '/movies', label: 'Movies', icon: CiViewList, iconOnly: true },
+  { id: 'nav_items', href: '/profil', label: 'Profil', icon: CiUser, iconOnly: true },
 ];
 
 function Navbar() {
@@ -38,10 +39,18 @@ function Navbar() {
   const [isLoggedIn, setIsLoggedIn] = useState(false);
   const [showLoginForm, setShowLoginForm] = useState(false);
   const [showRegisterForm, setShowRegisterForm] = useState(false);
-  
+
   const moviesBoxRef = useRef(null);
-  const searchInputRef = useRef(null); // Reference for the search input
+  const searchInputRef = useRef(null);
+  const profilLinkRef = useRef(null);
+
   const navigate = useNavigate();
+
+  useEffect(() => {
+    if (isLoggedIn && profilLinkRef.current) {
+      profilLinkRef.current.focus();
+    }
+  }, [isLoggedIn]);
 
   const toggleSearch = () => {
     setStore({ ...store, showNavbar: !store.showNavbar });
@@ -62,9 +71,11 @@ function Navbar() {
       localStorage.removeItem("isBanned");
       localStorage.removeItem("id");
       setIsLoggedIn(false);
+      navigate('/'); // Redirect to home page immediately after logout
+
     } else {
       setShowLoginForm(true);
-      setShowRegisterForm(false); // Close register form when opening login form
+      setShowRegisterForm(false);
     }
   };
 
@@ -92,11 +103,10 @@ function Navbar() {
     }
   }, [searchQuery]);
 
-  // Close movie suggestions when clicking outside of the search box
   useEffect(() => {
     const handleClickOutside = (event) => {
       if (moviesBoxRef.current && !moviesBoxRef.current.contains(event.target) && searchInputRef.current && !searchInputRef.current.contains(event.target)) {
-        setMovies([]); // Close suggestions
+        setMovies([]);
       }
     };
 
@@ -106,10 +116,9 @@ function Navbar() {
     };
   }, []);
 
-  // Show suggestions again when the input is focused
   const handleFocus = () => {
     if (searchQuery) {
-      setMovies(movies); // Show suggestions again
+      setMovies(movies);
     }
   };
 
@@ -124,14 +133,13 @@ function Navbar() {
       <Box className='navbar-search'>
         <Icon as={CiSearch} className='fa-search' />
         <Input
-          ref={searchInputRef} // Assign the ref to the input
+          ref={searchInputRef}
           type="text"
           placeholder="Quick search"
           value={searchQuery}
           onChange={handleSearchChange}
-          onFocus={handleFocus} // Show suggestions when focused
+          onFocus={handleFocus}
           style={{ textTransform: 'capitalize' }}
-          // color={color}
         />
         {movies.length > 0 && (
           <Box ref={moviesBoxRef} className="Movies-items" bg={bgColor} color={color} mt={2} p={2} borderRadius="md" boxShadow="md" maxH="400px" overflowY="auto">
@@ -143,10 +151,8 @@ function Navbar() {
           </Box>
         )}
         <UnorderedList className='navbar-list'>
-          <Icon as={CiSearch} className='fa-search-x'
-           onClick={toggleSearch}
-            />
-          {NAV_ITEMS.map((item, index) => (
+          <Icon as={CiSearch} className='fa-search-x' onClick={toggleSearch} />
+          {NAV_ITEMS.filter(item => item.label !== 'Profil' || isLoggedIn).map((item, index) => (
             <React.Fragment key={index}>
               <Link id={item.id} bg={bgColor} color={color} href={item.href}>
                 {item.label}

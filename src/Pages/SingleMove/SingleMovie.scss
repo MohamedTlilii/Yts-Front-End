@@ -361,21 +361,21 @@
     .moviegenres {
         // border: 2px solid rgb(255, 0, 170);
 
-        .tags {
-            width: fit-content;
-            // border: 2px solid rgb(255, 0, 170);
-            display: flex;
-            gap: 10px;
-            margin-bottom: 20px;
+        // .tags {
+        //     width: fit-content;
+        //     // border: 2px solid rgb(255, 0, 170);
+        //     display: flex;
+        //     gap: 10px;
+        //     margin-bottom: 20px;
 
-            .tag {
-                background-color: rgb(11, 11, 11);
-                border: 1px solid gray;
-                color: white;
-                padding: 5px 15px;
-                border-radius: 3px;
-            }
-        }
+        //     .tag {
+        //         background-color: rgb(11, 11, 11);
+        //         border: 1px solid gray;
+        //         color: white;
+        //         padding: 5px 15px;
+        //         border-radius: 3px;
+        //     }
+        // }
 
         .vpn-warning {
             background-color: #101010;
@@ -658,6 +658,7 @@
 
                     .director-img {
                         width: 40px;
+                        height: 40px;
                         border-radius: 50%;
                         background-color: yellow;
                     }
@@ -688,26 +689,37 @@
                     padding: 3px;
                     align-items: center;
                     margin-bottom: 10px;
+                    // width: auto 0;
+                    // border: 2px solid red;
+
 
 
                     .img-cast {
                         width: 40px;
+                        height: 40px;
                         border-radius: 50%;
                         background-color: yellow;
+                        // border: 2px solid red;
                     }
 
                     .cast-name {
+                        // border: 2px solid red;
                         color: #919191;
                         font-size: .95em;
                         font-weight: 700;
+                        width: 100%;
+
                     }
 
 
 
                     .cast-name-inmovie {
+                        // border: 2px solid red;
                         // color: #919191;
                         font-size: .95em;
                         font-weight: 700;
+                        width: 100%;
+
                     }
                 }
             }
@@ -716,7 +728,7 @@
 }
 
 
-@media screen and (max-width: 1450px) {}
+@media screen and (max-width: 1282px) {}
 
 @media screen and (max-width: 1000px) {}
 
@@ -730,12 +742,7 @@
 
 // .SingleMovie {
 //     // border: 2px solid red;
-//     // padding: 20px;
 //     text-align: center;
-//     // position: relative;
-//     // top: 80px;
-//     // height: 180vh;
-//     // height: auto;
 //     width: 80%;
 //     margin: 0 auto;
 //     padding: 20px;
@@ -751,8 +758,6 @@
 //         padding: 20px;
 //         margin-right: auto;
 //         margin-left: auto;
-//         // padding-left: 15px;
-//         // padding-right: 15px;
 //         height: auto;
 //         width: 100% !important;
 
@@ -762,17 +767,15 @@
 //             // border: 2px solid rgb(132, 255, 0);
 
 //             width: 300px;
-//             // align-items: center;
 //             display: flex;
 //             flex-direction: column;
 //             justify-content: center;
 //             align-items: center;
-//             // height: 520px;
 
 //             .IMG {
+//                 // border: 2px solid red;
 //                 border-radius: 4px;
 //                 border: 5px solid;
-//                 // border: 2px solid red;
 
 //             }
 
@@ -814,7 +817,6 @@
 
 //         .MovieDetails {
 //             // border: 2px solid rgb(234, 205, 18);
-//             // max-width: 600px;
 //             width: 500px;
 //             text-align: left;
 //             display: flex;
@@ -822,7 +824,6 @@
 
 //             h2 {
 //                 // border: 2px solid rgb(0, 132, 255);
-//                 // margin: 10px 0;
 //                 font-size: 2.5em;
 //                 margin-bottom: 24px;
 //                 line-height: 42px;
@@ -852,7 +853,6 @@
 
 //             .available {
 //                 // border: 2px solid green;
-//                 // float: left !important;
 //                 font-style: italic;
 //                 display: flex;
 //                 flex-wrap: wrap;
@@ -930,7 +930,6 @@
 //                 width: fit-content;
 //                 margin-bottom: 20px;
 //                 gap: 3px;
-//                 // background-color: #292423;
 //                 padding: 3px;
 //                 background-color: rgb(11, 11, 11);
 //                 border: 1px solid gray;
@@ -954,11 +953,7 @@
 
 //             .heart-icon {
 //                 // border: 2px solid black;
-//                 font-size: 1.7em;
-//                 // width: fit-content;
-
-//                 // margin-bottom: 5px;
-//             }
+//                 font-size: 1.7em;            }
 
 //             .like_count_count {
 //                 // border: 2px solid black;
@@ -1065,16 +1060,12 @@
 //                 display: grid;
 //                 grid-template-columns: 1fr 1fr;
 //                 gap: 20px;
-//                 /* Space between the grid items */
 //                 width: fit-content;
 
-//                 // margin: 0 auto; 
 //                 img {
 //                     border-radius: 4px;
 //                     border: 5px solid;
 //                     cursor: pointer;
-//                     // padding: 10px;
-//                     // border: 2px solid #f8f8f8;
 //                     text-align: center;
 //                     width: fit-content;
 //                     height: 130px;
@@ -1091,21 +1082,21 @@
 //     .moviegenres {
 //         // border: 2px solid rgb(255, 0, 170);
 
-//         .tags {
-//             width: fit-content;
-//             // border: 2px solid rgb(255, 0, 170);
-//             display: flex;
-//             gap: 10px;
-//             margin-bottom: 20px;
+//         // .tags {
+//         //     width: fit-content;
+//         //     // border: 2px solid rgb(255, 0, 170);
+//         //     display: flex;
+//         //     gap: 10px;
+//         //     margin-bottom: 20px;
 
-//             .tag {
-//                 background-color: rgb(11, 11, 11);
-//                 border: 1px solid gray;
-//                 color: white;
-//                 padding: 5px 15px;
-//                 border-radius: 3px;
-//             }
-//         }
+//         //     .tag {
+//         //         background-color: rgb(11, 11, 11);
+//         //         border: 1px solid gray;
+//         //         color: white;
+//         //         padding: 5px 15px;
+//         //         border-radius: 3px;
+//         //     }
+//         // }
 
 //         .vpn-warning {
 //             background-color: #101010;
@@ -1139,12 +1130,7 @@
 
 //     .movie-trailer {
 //         // border: 11px solid blue;
-
-//         // display: flex;
-//         // // flex-direction: column;
-//         // justify-content: center;
 //         align-items: center;
-//         // padding: 10px;
 
 //         .images-container {
 //             // border: 11px solid rgb(192, 24, 72);
@@ -1161,7 +1147,7 @@
 
 //                     width: 390px;
 //                     height: 186px;
-//                     cursor: pointer; // Change cursor to indicate clickable images
+//                     cursor: pointer; 
 
 //                 }
 
@@ -1185,7 +1171,6 @@
 //                 cursor: pointer;
 //                 width: 390px;
 //                 height: 186px;
-//                 // margin: 0 5px;
 //             }
 //         }
 
@@ -1193,18 +1178,18 @@
 //             position: fixed;
 //             top: 0;
 //             left: 0;
-//             width: 100vw; // Full viewport width
-//             height: 100vh; // Full viewport height
-//             background-color: rgba(5, 4, 4, 0.923); // Transparent background for the video container
+//             width: 100vw; 
+//             height: 100vh; 
+//             background-color: rgba(5, 4, 4, 0.923); 
 //             display: flex;
 //             align-items: center;
 //             justify-content: center;
 //             z-index: 9999;
-//             cursor: pointer; // Ensure clicks are registered on the overlay
+//             cursor: pointer; 
 
 //             .video-container {
 //                 position: relative;
-//                 width: 45vw; // Medium size for the video
+//                 width: 45vw; 
 //                 height: 50vh;
 //                 display: flex;
 //                 align-items: center;
@@ -1224,7 +1209,7 @@
 //                 .video-player {
 //                     width: 100%;
 //                     height: 100%;
-//                     border: none; // Remove any borders for a clean look
+//                     border: none; 
 //                 }
 //             }
 //         }
@@ -1234,20 +1219,17 @@
 //             top: 0;
 //             left: 0;
 //             width: 100vw;
-//             /* Full viewport width */
 //             height: 100vh;
-//             /* Full viewport height */
-//             background-color: rgba(5, 4, 4, 0.923); // Transparent background for the video container
+//             background-color: rgba(5, 4, 4, 0.923); 
 //             display: flex;
 //             align-items: center;
 //             justify-content: center;
 //             z-index: 9999;
 //             cursor: pointer;
-//             /* Ensure clicks are registered on the overlay */
 
 //             .image-container {
 //                 position: relative;
-//                 width: 70vw; // Medium size for the video
+//                 width: 70vw; 
 //                 height: 80vh;
 //                 display: flex;
 //                 align-items: center;
@@ -1282,7 +1264,6 @@
 //                     width: 100%;
 //                     height: 100%;
 //                     object-fit: contain;
-//                     /* Preserve aspect ratio */
 //                 }
 
 //                 .next-button {
@@ -1314,7 +1295,6 @@
 
 //         .plot-container {
 //             // border: 2px solid red;
-//             // align-items: center;
 //             width: 70%;
 //             display: flex;
 //             flex-wrap: wrap;
@@ -1322,7 +1302,6 @@
 //             gap: 10px;
 
 //             .plot-title {
-//                 // color: #FFFF00;
 //                 font-size: 1.25em;
 //                 font-weight: 700;
 //             }
@@ -1369,7 +1348,6 @@
 //                 border-bottom: 1px solid #919191;
 //                 margin-bottom: 20px;
 
-//                 // top: 10px;
 //                 .dirctor-title {
 //                     margin-bottom: 10px;
 
@@ -1383,11 +1361,10 @@
 //                     gap: 10px;
 //                     padding: 3px;
 //                     align-items: center;
-//                     // margin-bottom: 10px;
-
 
 //                     .director-img {
 //                         width: 40px;
+//                         height: 40px;
 //                         border-radius: 50%;
 //                         background-color: yellow;
 //                     }
@@ -1421,7 +1398,9 @@
 
 
 //                     .img-cast {
+//                         // border: 2px solid red;
 //                         width: 40px;
+//                         height: 40px;
 //                         border-radius: 50%;
 //                         background-color: yellow;
 //                     }
@@ -1435,7 +1414,6 @@
 
 
 //                     .cast-name-inmovie {
-//                         // color: #919191;
 //                         font-size: .95em;
 //                         font-weight: 700;
 //                     }
