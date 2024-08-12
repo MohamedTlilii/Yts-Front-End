@@ -57,9 +57,9 @@ function ForK() {
   };
 
   useEffect(() => {
+    console.log('Fetching movies with:', { searchQuery, filters, currentPage, moviesPerPage });
     fetchMovies();
   }, [searchQuery, filters, currentPage, moviesPerPage]);
-
   const handleSearch = (query, newFilters) => {
     setSearchQuery(query);
     setFilters(newFilters);

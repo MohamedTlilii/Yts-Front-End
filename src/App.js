@@ -12,7 +12,7 @@ import RequestPasswordReset from './Pages/RequestPasswordReset/RequestPasswordRe
 import Profil from './Pages/Profil/Profil';
 import 'react-toastify/dist/ReactToastify.css';
 import TestToast from './Components/Toast/Toast';
-import UserResetPasswordTokenRoute from './Routes/UserResetPasswordTokenRoute';
+// import UserResetPasswordTokenRoute from './Routes/UserResetPasswordTokenRoute';
 
 function App() {
   return (
