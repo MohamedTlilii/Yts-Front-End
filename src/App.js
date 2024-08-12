@@ -10,8 +10,9 @@ import SingleMovie from './Pages/SingleMove/SingleMovie';
 import UserRoute from './Routes/UserRoute';
 import RequestPasswordReset from './Pages/RequestPasswordReset/RequestPasswordReset';
 import Profil from './Pages/Profil/Profil';
-import 'react-toastify/dist/ReactToastify.css'; 
+import 'react-toastify/dist/ReactToastify.css';
 import TestToast from './Components/Toast/Toast';
+import UserResetPasswordTokenRoute from './Routes/UserResetPasswordTokenRoute';
 
 function App() {
   return (
@@ -28,7 +29,9 @@ function App() {
             </UserRoute>
           } />
           <Route path="api/user/requestPasswordReset/:token" element={
+            // <UserResetPasswordTokenRoute>
             <RequestPasswordReset />
+            // </UserResetPasswordTokenRoute>
           } />
           <Route path="profil" element={
             <UserRoute>
