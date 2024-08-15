@@ -13,7 +13,7 @@ import {
   useColorModeValue,
 } from '@chakra-ui/react';
 import { MessageHeader, Message } from 'semantic-ui-react';
-import { useParams, useNavigate } from 'react-router-dom';
+import {  useNavigate } from 'react-router-dom';
 
 function Login({ showLoginForm, setShowLoginForm, setIsLoggedIn }) {
   const bgColor = useColorModeValue('white', 'black');
@@ -26,7 +26,7 @@ function Login({ showLoginForm, setShowLoginForm, setIsLoggedIn }) {
   const [showPass, setShowPass] = useState(false);
   const [showPasswordResetForm, setShowPasswordResetForm] = useState(false);
   // const [showPasswordResetFormClick, setShowPasswordResetFormClick] = useState(true);
-  const { token } = useParams(); // Get token from URL params
+  // const { token } = useParams(); // Get token from URL params
 
   const navigate = useNavigate(); // Use the useNavigate hook for programmatic navigation
 
@@ -44,9 +44,7 @@ function Login({ showLoginForm, setShowLoginForm, setIsLoggedIn }) {
   const handleLogin = (event) => {
     event.preventDefault(); // Prevent default form submission
     setLoading(true);
-
-    axios
-      .post("http://localhost:5000/api/user/login", loginData)
+    axios.post("https://yts-back-end.onrender.com/api/user/login", loginData)
       .then((res) => {
         localStorage.setItem("token", res.data.data.token);
         localStorage.setItem("isUser", res.data.data.isUser);
@@ -82,9 +80,9 @@ function Login({ showLoginForm, setShowLoginForm, setIsLoggedIn }) {
     event.preventDefault(); // Prevent default form submission
       // setShowPasswordResetForm(false); // Hide the reset formzezearzerzerazer
       setLoading(true);
-
+// console.log(loginData);
     axios
-    .post(`http://localhost:5000/api/user/forgotPassword`, { email: loginData.email } )
+    .post(`https://yts-back-end.onrender.com/api/user/forgotPassword`, { email: loginData.email } )
       .then((res) => {
         // Handle success
         console.log('Password reset email sent successfully', res);

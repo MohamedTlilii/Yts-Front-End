@@ -35,7 +35,8 @@ function Register({ showRegisterForm, setShowRegisterForm, setShowLoginForm }) {
     const handleRegister = () => {
         setLoading(true);
 
-        axios.post("https://ecoridebackend.onrender.com/api/user/register", registerData)
+        // console.log(registerData);
+        axios.post("https://yts-back-end.onrender.com/api/user/register", registerData)
             .then((res) => {
                 setLoading(false);
                 setMessage('User was Created Successfully');

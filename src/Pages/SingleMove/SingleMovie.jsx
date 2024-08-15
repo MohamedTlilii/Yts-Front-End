@@ -24,7 +24,7 @@ function SingleMovie() {
     const fetchMovie = async () => {
       try {
         const response = await axios.get(`https://yts.mx/api/v2/movie_details.json?movie_id=${id}&with_images=true&with_cast=true`);
-        console.log('movie details:', response.data.data.movie);
+        // console.log('movie details:', response.data.data.movie);
         setMovie(response.data.data.movie);
       } catch (error) {
         console.error('Error fetching movie:', error);
@@ -34,7 +34,7 @@ function SingleMovie() {
     const fetchSuggestions = async () => {
       try {
         const response = await axios.get(`https://yts.mx/api/v2/movie_suggestions.json?movie_id=${id}`);
-        console.log('Movie Suggestions:', response.data.data.movies);
+        // console.log('Movie Suggestions:', response.data.data.movies);
         setSuggestions(response.data.data.movies);
       } catch (error) {
         console.error('Error fetching suggestions:', error);
@@ -85,13 +85,22 @@ const handlePrevImage = () => {
     setImageIndex((prevIndex) => (prevIndex - 1 + images.length) % images.length);
     setSelectedImage(images[(imageIndex - 1 + images.length) % images.length]);
 };
+
+
+
+
+
+
+
   return (
     <Box className='SingleMovie'  >
       <div className='MoviePoster'>
         <div className='cover'>
           <img className='IMG' src={movie.large_cover_image} alt={movie.title} />
-          <button className='download'><CiSaveDown2 id='ciSavasown' />Download</button>
-          <button className='watch_now'>Watch Now</button>
+          <button className='download'
+           ><CiSaveDown2 id='ciSavasown'  />Download</button>
+          <button className='watch_now' 
+          >Watch Now</button>
         </div>
         <div className="MovieDetails">
           <h2>{movie.title}</h2>

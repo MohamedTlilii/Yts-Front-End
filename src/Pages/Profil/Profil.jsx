@@ -7,7 +7,7 @@ import axios from "axios";
 import { url } from "../../utils/url";
 import { useFetch } from "../../utils/useFetch";
 import { toast, ToastContainer } from 'react-toastify';
-import TestToast from '../../Components/Toast/Toast';
+// import TestToast from '../../Components/Toast/Toast';
 
 function Profil() {
   
@@ -25,7 +25,7 @@ function Profil() {
 // console.log(token);
   // const handleClick = () => setShowPassword(!showPassword);
   const { data } = useFetch(
-    "http://localhost:5000/api/user/GetInformation",
+    "https://yts-back-end.onrender.com/api/user/GetInformation",
     token
   );
   // console.log(data);

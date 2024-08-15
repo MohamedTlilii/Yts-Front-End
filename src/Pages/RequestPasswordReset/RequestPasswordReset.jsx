@@ -22,12 +22,12 @@ function RequestPasswordReset() {
     const [message, setMessage] = useState("");
     const [error, setError] = useState("");
     const [passwordData, setPasswordData] = useState({ newPassword: '', confirmPassword: '' });
-    console.log(passwordData);
+    // console.log(passwordData);
 
     const [loading, setLoading] = useState(false);
 
     const { token } = useParams();
-    console.log("Reset Password Token:", token);
+    // console.log("Reset Password Token:", token);
 
     const navigate = useNavigate();
 
@@ -43,7 +43,7 @@ function RequestPasswordReset() {
         }
 
         axios
-            .post(`http://localhost:5000/api/user/requestPasswordReset/${token}`, {
+            .post(`https://yts-back-end.onrender.com/api/user/resetPasswordPage/${token}`, {
                 
                 newPassword: passwordData.newPassword,
                 confirmNewPassword: passwordData.confirmPassword
