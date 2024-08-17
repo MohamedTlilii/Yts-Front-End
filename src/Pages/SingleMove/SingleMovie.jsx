@@ -1,17 +1,16 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect,useRef } from 'react';
 import axios from 'axios';
 import './SingleMovie.scss';
 import { Link, useParams } from 'react-router-dom';
 import { CiSaveDown2 } from "react-icons/ci";
 import { FaHeart, FaPlay, FaTimes, FaArrowLeft, FaArrowRight } from "react-icons/fa";
 import { Box,useColorModeValue } from '@chakra-ui/react';
+// import WebTorrent from 'webtorrent';
 
 
 function SingleMovie() {
   const bgColor = useColorModeValue('white', 'black');
-
   const color = useColorModeValue('black', 'white');
-
   const [movie, setMovie] = useState();
   const [suggestions, setSuggestions] = useState([]);
   const [isVideoVisible, setIsVideoVisible] = useState(false);
@@ -24,7 +23,7 @@ function SingleMovie() {
     const fetchMovie = async () => {
       try {
         const response = await axios.get(`https://yts.mx/api/v2/movie_details.json?movie_id=${id}&with_images=true&with_cast=true`);
-        // console.log('movie details:', response.data.data.movie);
+        console.log('movie details:', response.data.data.movie);
         setMovie(response.data.data.movie);
       } catch (error) {
         console.error('Error fetching movie:', error);
@@ -88,6 +87,24 @@ const handlePrevImage = () => {
 
 
 
+const watchMovie = () => {
+  const trailerUrl = `https://www.youtube.com/watch?v=${movie.yt_trailer_code}`;
+  window.open(trailerUrl, '_blank')
+};
+
+const downloadMovie = () => {
+  if (movie.torrents && movie.torrents.length > 0) {
+    const downloadUrl = movie.torrents[0].url; 
+    const link = document.createElement('a');
+    link.href = downloadUrl;
+    link.download = `${movie.title_long}.torrent`; 
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
+  } else {
+    alert("No download links available.");
+  }
+};
 
 
 
@@ -97,9 +114,9 @@ const handlePrevImage = () => {
       <div className='MoviePoster'>
         <div className='cover'>
           <img className='IMG' src={movie.large_cover_image} alt={movie.title} />
-          <button className='download'
-           ><CiSaveDown2 id='ciSavasown'  />Download</button>
-          <button className='watch_now' 
+          <button className='download'  onClick={downloadMovie}
+           ><CiSaveDown2 id='ciSavasown'   />Download</button>
+          <button className='watch_now' onClick={watchMovie}
           >Watch Now</button>
         </div>
         <div className="MovieDetails">
@@ -145,11 +162,7 @@ const handlePrevImage = () => {
         </div>
       </div>
       <div className='moviegenres'>
-        {/* <div className="tags">
-          {movie.genres.map((genre, index) => (
-            <div key={index}  bg={bgColor} color={color} className="tag">{genre}</div>
-          ))}
-        </div> */}
+       
         <div className="vpn-warning">
           <p>
             Please enable your VPN when downloading torrents<br />

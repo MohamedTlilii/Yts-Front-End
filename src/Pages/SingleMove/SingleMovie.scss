@@ -14,11 +14,11 @@
 
 
     .MoviePoster {
-        // border: 2px solid rgb(132, 255, 0);
+        // border: 2px solid rgb(0, 255, 115);
         display: flex;
         justify-content: center !important;
-        gap: 40px;
-        padding: 20px;
+        gap: 60px;
+        padding: 30px;
         margin-right: auto;
         margin-left: auto;
         // padding-left: 15px;
@@ -29,9 +29,9 @@
 
 
         .cover {
-            // border: 2px solid rgb(132, 255, 0);
+            // border: 2px solid rgb(0, 255, 115);
 
-            width: 300px;
+            width: 400px;
             // align-items: center;
             display: flex;
             flex-direction: column;
@@ -61,6 +61,8 @@
                 font-weight: 700;
 
                 #ciSavasown {
+                    // border: 2px solid rgb(132, 255, 0);
+
                     font-size: 20px;
                 }
             }
@@ -83,9 +85,11 @@
         }
 
         .MovieDetails {
-            // border: 2px solid rgb(234, 205, 18);
+            // border: 2px solid rgb(0, 255, 115);
             // max-width: 600px;
-            width: 500px;
+            width: 600px;
+            height: fit-content;
+
             text-align: left;
             display: flex;
             flex-direction: column;
@@ -313,7 +317,7 @@
         }
 
         .similar_movie {
-            // border: 2px solid rgb(39, 6, 171);
+            // border: 2px solid rgb(0, 255, 115);
             width: 30%;
             text-align: left;
             height: fit-content;
@@ -332,13 +336,12 @@
 
             .same_four_movies {
                 // border: 2px solid rgb(166, 255, 0);
-                display: grid;
-                grid-template-columns: 1fr 1fr;
-                gap: 20px;
-                /* Space between the grid items */
-                width: fit-content;
+                display: flex;
+                flex-wrap: wrap;
+                gap: 40px;
+                /* Add space between the images */
+                width: 310px;
 
-                // margin: 0 auto; 
                 img {
                     border-radius: 4px;
                     border: 5px solid;
@@ -346,8 +349,8 @@
                     // padding: 10px;
                     // border: 2px solid #f8f8f8;
                     text-align: center;
-                    width: fit-content;
-                    height: 130px;
+                    width: 130px;
+                    height: 170px;
                 }
 
             }
@@ -360,30 +363,19 @@
 
     .moviegenres {
         // border: 2px solid rgb(255, 0, 170);
+        margin-left: 30px;
+        margin-right: 30px;
 
-        // .tags {
-        //     width: fit-content;
-        //     // border: 2px solid rgb(255, 0, 170);
-        //     display: flex;
-        //     gap: 10px;
-        //     margin-bottom: 20px;
-
-        //     .tag {
-        //         background-color: rgb(11, 11, 11);
-        //         border: 1px solid gray;
-        //         color: white;
-        //         padding: 5px 15px;
-        //         border-radius: 3px;
-        //     }
-        // }
 
         .vpn-warning {
+
             background-color: #101010;
             border: 5px solid #00FF00;
             padding: 20px;
             border-radius: 5px;
             text-align: center;
             margin-bottom: 20px;
+
 
 
             p {
@@ -408,20 +400,20 @@
 
 
     .movie-trailer {
-        // border: 11px solid blue;
+        // border: 1px solid blue;
 
         // display: flex;
-        // // flex-direction: column;
         // justify-content: center;
         align-items: center;
-        // padding: 10px;
+        height: 300px;
 
         .images-container {
-            // border: 11px solid rgb(192, 24, 72);
-            gap: 4px;
+            // border: 1px solid rgb(192, 24, 72);
+            // gap: 4px;
+            height: 300px;
 
             display: flex;
-            justify-content: center;
+            justify-content: space-around;
 
             .image-container {
 
@@ -429,8 +421,8 @@
 
                 img {
 
-                    width: 390px;
-                    height: 186px;
+                    width: 420px;
+                    height: 256px;
                     cursor: pointer; // Change cursor to indicate clickable images
 
                 }
@@ -453,8 +445,8 @@
 
             img {
                 cursor: pointer;
-                width: 390px;
-                height: 186px;
+                width: 420px;
+                height: 256px;
                 // margin: 0 5px;
             }
         }
@@ -587,17 +579,21 @@
             // align-items: center;
             width: 70%;
             display: flex;
-            flex-wrap: wrap;
-            align-content: flex-start !important;
-            gap: 10px;
+            flex-direction: column;
+
 
             .plot-title {
+                // border: 2px solid red;
+                width: fit-content;
+
                 // color: #FFFF00;
                 font-size: 1.25em;
                 font-weight: 700;
             }
 
             .plot-descritption {
+                width: fit-content;
+
                 // border: 2px solid red;
                 color: #919191;
                 line-height: 24px;
@@ -606,7 +602,14 @@
             }
 
             .uploaded-info {
+                width: fit-content;
+
+                // border: 2px solid red;
+
                 .uploaded-info-- {
+                    // border: 2px solid red;
+                    width: fit-content;
+
                     color: #919191;
                     line-height: 24px;
                     text-align: justify;
@@ -614,6 +617,9 @@
                 }
 
                 .date-info-- {
+                    // border: 2px solid red;
+                    width: fit-content;
+
                     color: #919191;
                     line-height: 24px;
                 }
@@ -727,698 +733,2062 @@
     }
 }
 
+@media screen and (max-width: 1675px) {
+    .movie-trailer {
+        // border: 1px solid blue;
 
-@media screen and (max-width: 1282px) {}
-
-@media screen and (max-width: 1000px) {}
-
-@media screen and (max-width: 900px) {}
-
-@media screen and (max-width: 780px) {}
-
-@media screen and (max-width: 565px) {}
-
-@media screen and (max-width: 403px) {}
-
-// .SingleMovie {
-//     // border: 2px solid red;
-//     text-align: center;
-//     width: 80%;
-//     margin: 0 auto;
-//     padding: 20px;
-
-
-
-
-//     .MoviePoster {
-//         // border: 2px solid rgb(132, 255, 0);
-//         display: flex;
-//         justify-content: center !important;
-//         gap: 40px;
-//         padding: 20px;
-//         margin-right: auto;
-//         margin-left: auto;
-//         height: auto;
-//         width: 100% !important;
-
-
 
-//         .cover {
-//             // border: 2px solid rgb(132, 255, 0);
 
-//             width: 300px;
-//             display: flex;
-//             flex-direction: column;
-//             justify-content: center;
-//             align-items: center;
+        .images-container {
+            // border: 1px solid rgb(192, 24, 72);
 
-//             .IMG {
-//                 // border: 2px solid red;
-//                 border-radius: 4px;
-//                 border: 5px solid;
-
-//             }
 
-//             .download {
-//                 // border: 2px solid rgb(132, 255, 0);
-//                 background-color: #6ac045;
-//                 display: flex;
-//                 justify-content: center;
-//                 align-items: center;
-//                 padding: 10px 90px;
-//                 margin-top: 10px;
-//                 cursor: pointer;
-//                 border-radius: 8px;
-//                 width: 100%;
-//                 gap: 5px;
-//                 font-weight: 700;
-
-//                 #ciSavasown {
-//                     font-size: 20px;
-//                 }
-//             }
-
-//             .watch_now {
-//                 // border: 2px solid rgb(132, 255, 0);
-//                 background-color: #0aad9e;
-//                 display: flex;
-//                 justify-content: center;
-//                 align-items: center;
-//                 padding: 10px 93px;
-//                 margin-top: 10px;
-//                 cursor: pointer;
-//                 border-radius: 8px;
-//                 width: 100%;
-//                 font-weight: 700;
-
-
-//             }
-//         }
-
-//         .MovieDetails {
-//             // border: 2px solid rgb(234, 205, 18);
-//             width: 500px;
-//             text-align: left;
-//             display: flex;
-//             flex-direction: column;
-
-//             h2 {
-//                 // border: 2px solid rgb(0, 132, 255);
-//                 font-size: 2.5em;
-//                 margin-bottom: 24px;
-//                 line-height: 42px;
-//                 font-weight: 700;
-//                 width: fit-content;
-//             }
-
-//             .year {
-//                 // border: 2px solid rgb(0, 255, 191);
-//                 width: fit-content;
-
-//                 line-height: 24px;
-//                 font-size: 1.25em;
-//                 font-weight: 700;
-
-//             }
-
-//             .genresss {
-//                 // border: 2px solid rgb(0, 200, 255);
-//                 width: fit-content;
-
-//                 font-size: 1.25em;
-//                 font-weight: 700;
-//                 margin-bottom: 30px;
-
-//             }
-
-//             .available {
-//                 // border: 2px solid green;
-//                 font-style: italic;
-//                 display: flex;
-//                 flex-wrap: wrap;
-//                 gap: 7px;
-//                 margin-bottom: 20px;
-//                 align-items: center;
-
-
-
-//                 strong {
-//                     // border: 12px solid gray;
-
-//                 }
-
-//                 .BTN-1 {
-
-//                     border-radius: 4px;
-//                     font-size: 1em;
-//                     padding: 2px;
-//                     background-color: rgb(11, 11, 11);
-//                     border: 1px solid gray;
-//                     color: white;
-//                 }
-
-//                 .BTN-2 {
-//                     border-radius: 4px;
-//                     font-size: 1em;
-//                     padding: 2px;
-//                     background-color: rgb(11, 11, 11);
-//                     border: 1px solid gray;
-//                     color: white;
-
-//                 }
-
-//                 .BTN-3 {
-//                     border-radius: 4px;
-//                     font-size: 1em;
-//                     padding: 2px;
-//                     background-color: rgb(11, 11, 11);
-//                     border: 1px solid gray;
-//                     color: white;
-
-//                 }
-
-//                 .BTN-4 {
-//                     border-radius: 4px;
-//                     font-size: 1em;
-//                     padding: 2px;
-//                     background-color: rgb(11, 11, 11);
-//                     border: 1px solid gray;
-//                     color: white;
-
-//                 }
+            justify-content: space-around;
 
-//                 .BTN-5 {
-//                     border-radius: 4px;
-//                     font-size: 1em;
-//                     padding: 2px;
-//                     background-color: rgb(11, 11, 11);
-//                     border: 1px solid gray;
-//                     color: white;
+            .image-container {
 
-//                 }
 
+                img {
 
-//             }
+                    width: 350px !important;
+                    height: 256px;
+                    cursor: pointer; // Change cursor to indicate clickable images
 
-//             .download-sub {
-//                 // border: 2px solid rgb(0, 255, 183) !important;
-//                 display: flex;
-//                 border-radius: 4px;
-//                 font-size: 1em;
-//                 padding: 5px 12px;
-//                 align-items: center;
-//                 width: fit-content;
-//                 margin-bottom: 20px;
-//                 gap: 3px;
-//                 padding: 3px;
-//                 background-color: rgb(11, 11, 11);
-//                 border: 1px solid gray;
-//                 color: white;
+                }
 
-//                 .BtnC_cisav {
-//                     color: #6ac045;
-//                     font-size: 20px;
-//                 }
-//             }
+                .play-button {
+                    top: 45% !important;
 
-//         }
+                }
+            }
 
-//         .like_count {
-//             // border: 2px solid black;
-//             display: flex;
-//             gap: 54px;
-//             margin-bottom: 15px;
-//             width: fit-content;
+            img {
+                cursor: pointer;
+                width: 350px !important;
 
+            }
+        }
 
-//             .heart-icon {
-//                 // border: 2px solid black;
-//                 font-size: 1.7em;            }
+        .video-overlay {
 
-//             .like_count_count {
-//                 // border: 2px solid black;
-//                 font-size: 1.15em;
-//                 font-weight: 700;
-//             }
-//         }
 
-//         .review {
-//             // border: 2px solid greenyellow;
-//             margin-bottom: 15px;
+            .video-container {
 
-//             display: flex !important;
-//             gap: 50px;
-//             width: fit-content;
-
-//             img {
-//                 // border: 2px solid red;
-//                 width: 1.7em !important;
 
-//             }
+                .close-button {}
 
-//             .reviw_ {
-//                 // border: 2px solid red;
+                .video-player {}
+            }
+        }
 
-//             }
+        .image-overlay {
 
-//             p {
-//                 // border: 2px solid gray;
-//                 font-size: 1.15em;
-//                 font-weight: 700;
-//             }
+            .image-container {
 
-//         }
 
-//         .audience {
-//             // border: 2px solid gray;
+                .close-button-img {}
 
-//             display: flex !important;
-//             margin-bottom: 15px;
+                .prev-button {}
 
-//             gap: 50px;
-//             width: fit-content;
+                .image-player {}
 
-//             img {
-//                 width: 1.7em !important;
+                .next-button {}
+            }
+        }
 
-//             }
 
-//             .audience_ {
-//                 // border: 2px solid red;
-
-//             }
 
-//             p {
-//                 font-size: 1.15em;
-//                 font-weight: 700;
-//             }
 
-//         }
 
-//         .imdh {
-//             // border: 2px solid blue;
-//             display: flex !important;
-//             margin-bottom: 15px;
-//             align-items: center;
-//             gap: 27px;
-//             width: fit-content;
-
-
-//             img {
-//                 width: 2.9em !important;
-
-//             }
-
-//             p {
-//                 // border: 2px solid gray;
-//                 font-size: 1.15em;
-//                 font-weight: 700;
-
-//             }
-//         }
-
-//         .similar_movie {
-//             // border: 2px solid rgb(39, 6, 171);
-//             width: 30%;
-//             text-align: left;
-//             height: fit-content;
 
 
+    }
+}
 
+@media screen and (max-width: 1420px) {
+    .movie-trailer {
+        // border: 1px solid blue;
 
-//             p {
-//                 // border: 2px solid red;
-//                 font-weight: 700;
-//                 font-size: 16px;
-//                 text-align: left;
-//                 margin-bottom: 5px;
-//                 width: fit-content;
-//             }
 
-//             .same_four_movies {
-//                 // border: 2px solid rgb(166, 255, 0);
-//                 display: grid;
-//                 grid-template-columns: 1fr 1fr;
-//                 gap: 20px;
-//                 width: fit-content;
-
-//                 img {
-//                     border-radius: 4px;
-//                     border: 5px solid;
-//                     cursor: pointer;
-//                     text-align: center;
-//                     width: fit-content;
-//                     height: 130px;
-//                 }
-
-//             }
-
-//         }
-
-//     }
-
-
-
-//     .moviegenres {
-//         // border: 2px solid rgb(255, 0, 170);
-
-//         // .tags {
-//         //     width: fit-content;
-//         //     // border: 2px solid rgb(255, 0, 170);
-//         //     display: flex;
-//         //     gap: 10px;
-//         //     margin-bottom: 20px;
-
-//         //     .tag {
-//         //         background-color: rgb(11, 11, 11);
-//         //         border: 1px solid gray;
-//         //         color: white;
-//         //         padding: 5px 15px;
-//         //         border-radius: 3px;
-//         //     }
-//         // }
-
-//         .vpn-warning {
-//             background-color: #101010;
-//             border: 5px solid #00FF00;
-//             padding: 20px;
-//             border-radius: 5px;
-//             text-align: center;
-//             margin-bottom: 20px;
-
-
-//             p {
-//                 color: white;
-//                 margin: 0 0 10px 0;
-
-//                 span {
-//                     color: #FFFF00;
-//                 }
-//             }
-
-//             .vpn-button {
-//                 background-color: #00FF00;
-//                 color: #000;
-//                 border: none;
-//                 padding: 10px 20px;
-//                 border-radius: 3px;
-//                 cursor: pointer;
-//             }
-//         }
-//     }
-
-
-//     .movie-trailer {
-//         // border: 11px solid blue;
-//         align-items: center;
-
-//         .images-container {
-//             // border: 11px solid rgb(192, 24, 72);
-//             gap: 4px;
-
-//             display: flex;
-//             justify-content: center;
-
-//             .image-container {
-
-//                 position: relative;
-
-//                 img {
-
-//                     width: 390px;
-//                     height: 186px;
-//                     cursor: pointer; 
-
-//                 }
-
-//                 .play-button {
-//                     position: absolute;
-//                     top: 50%;
-//                     left: 50%;
-//                     transform: translate(-50%, -50%);
-//                     font-size: 3rem;
-//                     color: white;
-//                     background: rgba(0, 0, 0, 0.5);
-//                     border: none;
-//                     border-radius: 50%;
-//                     padding: 1rem;
-//                     cursor: pointer;
-//                     z-index: 10;
-//                 }
-//             }
-
-//             img {
-//                 cursor: pointer;
-//                 width: 390px;
-//                 height: 186px;
-//             }
-//         }
-
-//         .video-overlay {
-//             position: fixed;
-//             top: 0;
-//             left: 0;
-//             width: 100vw; 
-//             height: 100vh; 
-//             background-color: rgba(5, 4, 4, 0.923); 
-//             display: flex;
-//             align-items: center;
-//             justify-content: center;
-//             z-index: 9999;
-//             cursor: pointer; 
-
-//             .video-container {
-//                 position: relative;
-//                 width: 45vw; 
-//                 height: 50vh;
-//                 display: flex;
-//                 align-items: center;
-//                 justify-content: center;
-
-//                 .close-button {
-//                     color: white;
-//                     position: absolute;
-//                     top: -55px;
-//                     right: -10px;
-//                     background: rgba(0, 0, 0, 0.5);
-//                     border-radius: 50%;
-//                     padding: 1rem;
-//                     border: none;
-//                 }
-
-//                 .video-player {
-//                     width: 100%;
-//                     height: 100%;
-//                     border: none; 
-//                 }
-//             }
-//         }
-
-//         .image-overlay {
-//             position: fixed;
-//             top: 0;
-//             left: 0;
-//             width: 100vw;
-//             height: 100vh;
-//             background-color: rgba(5, 4, 4, 0.923); 
-//             display: flex;
-//             align-items: center;
-//             justify-content: center;
-//             z-index: 9999;
-//             cursor: pointer;
-
-//             .image-container {
-//                 position: relative;
-//                 width: 70vw; 
-//                 height: 80vh;
-//                 display: flex;
-//                 align-items: center;
-//                 justify-content: center;
-
-//                 .close-button-img {
-//                     color: white;
-//                     position: absolute;
-//                     top: -45px;
-//                     right: -10px;
-//                     font-size: 1rem;
-//                     cursor: pointer;
-//                     z-index: 10;
-//                     background: rgba(0, 0, 0, 0.5);
-//                     border-radius: 50%;
-//                     padding: 1rem;
-//                     border: none;
-
-//                 }
-
-//                 .prev-button {
-//                     color: white;
-//                     font-size: 1rem;
-//                     background: rgba(0, 0, 0, 0.5);
-//                     border-radius: 50%;
-//                     padding: 1rem;
-//                     cursor: pointer;
-//                     border: none;
-//                 }
-
-//                 .image-player {
-//                     width: 100%;
-//                     height: 100%;
-//                     object-fit: contain;
-//                 }
-
-//                 .next-button {
-//                     color: white;
-//                     font-size: 1rem;
-//                     background: rgba(0, 0, 0, 0.5);
-//                     border-radius: 50%;
-//                     padding: 1rem;
-//                     cursor: pointer;
-//                     border: none;
-//                 }
-//             }
-//         }
-
-
-
-
-
-
-
-//     }
-
-//     .plot-section {
-//         // border: 1px solid blue;
-//         padding-top: 30px;
-//         display: flex;
-//         justify-content: center;
-//         gap: 40px;
-
-//         .plot-container {
-//             // border: 2px solid red;
-//             width: 70%;
-//             display: flex;
-//             flex-wrap: wrap;
-//             align-content: flex-start !important;
-//             gap: 10px;
-
-//             .plot-title {
-//                 font-size: 1.25em;
-//                 font-weight: 700;
-//             }
-
-//             .plot-descritption {
-//                 // border: 2px solid red;
-//                 color: #919191;
-//                 line-height: 24px;
-//                 text-align: justify;
-
-//             }
-
-//             .uploaded-info {
-//                 .uploaded-info-- {
-//                     color: #919191;
-//                     line-height: 24px;
-//                     text-align: justify;
-
-//                 }
-
-//                 .date-info-- {
-//                     color: #919191;
-//                     line-height: 24px;
-//                 }
-//             }
-
-
-//         }
-
-
-
-
-
-
-//         .director-cast {
-//             // border: 1px solid rgb(255, 166, 0);
-//             display: flex;
-//             flex-direction: column;
-//             width: 30%;
-//             gap: 20px;
-
-
-//             .director-section {
-//                 border-bottom: 1px solid #919191;
-//                 margin-bottom: 20px;
-
-//                 .dirctor-title {
-//                     margin-bottom: 10px;
-
-//                     font-size: 1.25em;
-//                     font-weight: 700;
-//                     display: flex;
-//                 }
-
-//                 .director-info {
-//                     display: flex;
-//                     gap: 10px;
-//                     padding: 3px;
-//                     align-items: center;
-
-//                     .director-img {
-//                         width: 40px;
-//                         height: 40px;
-//                         border-radius: 50%;
-//                         background-color: yellow;
-//                     }
-
-//                     .directror-name {
-//                         color: #919191;
-//                         font-size: .95em;
-//                         font-weight: 700;
-//                     }
-//                 }
-//             }
-
-//             .cast-section {
-
-
-//                 .top-cast-title {
-//                     font-size: 1.25em;
-//                     font-weight: 700;
-//                     display: flex;
-//                     margin-bottom: 10px;
-
-//                 }
-
-//                 .cast-info {
-//                     border-bottom: 1px solid #919191 !important;
-//                     display: flex;
-//                     gap: 10px;
-//                     padding: 3px;
-//                     align-items: center;
-//                     margin-bottom: 10px;
-
-
-//                     .img-cast {
-//                         // border: 2px solid red;
-//                         width: 40px;
-//                         height: 40px;
-//                         border-radius: 50%;
-//                         background-color: yellow;
-//                     }
-
-//                     .cast-name {
-//                         color: #919191;
-//                         font-size: .95em;
-//                         font-weight: 700;
-//                     }
-
-
-
-//                     .cast-name-inmovie {
-//                         font-size: .95em;
-//                         font-weight: 700;
-//                     }
-//                 }
-//             }
-//         }
-//     }
-// }
+
+        .images-container {
+            // border: 1px solid rgb(192, 24, 72);
+
+
+            justify-content: space-around;
+
+            .image-container {
+
+
+                img {
+
+                    width: 320px !important;
+                    height: 256px;
+                    cursor: pointer; // Change cursor to indicate clickable images
+
+                }
+
+                .play-button {
+                    top: 45% !important;
+
+                }
+            }
+
+            img {
+                cursor: pointer;
+                width: 320px !important;
+
+            }
+        }
+
+        .video-overlay {
+
+
+            .video-container {
+
+
+                .close-button {}
+
+                .video-player {}
+            }
+        }
+
+        .image-overlay {
+
+            .image-container {
+
+
+                .close-button-img {}
+
+                .prev-button {}
+
+                .image-player {}
+
+                .next-button {}
+            }
+        }
+
+
+
+
+
+
+
+    }
+}
+
+@media screen and (max-width: 1282px) {
+    .SingleMovie {
+        // border: 2px solid red;
+        // padding: 30px!important;
+        // text-align: center;
+        // width: 80%;
+        // margin: 0 auto;
+
+
+
+
+
+        .MoviePoster {
+            // border: 2px solid rgb(0, 255, 115);
+            // display: flex;
+            // justify-content: center !important;
+            // padding: 30px;
+            // margin-right: auto;
+            // margin-left: auto;
+            // height: auto;
+            // width: 100% !important;
+            // width: fit-content;
+            margin: 0;
+            padding: 0;
+            gap: 10px;
+
+
+            .cover {
+                // border: 2px solid rgb(0, 255, 115);
+
+                // width: 400px;
+                // display: flex;
+                // flex-direction: column;
+                // justify-content: center;
+                // align-items: center;
+
+                .IMG {
+                    // border: 2px solid red;
+                    // border-radius: 4px;
+                    // border: 5px solid;
+
+                }
+
+                .download {
+                    // border: 2px solid rgb(132, 255, 0);
+                    // background-color: #6ac045;
+                    // display: flex;
+                    // justify-content: center;
+                    // align-items: center;
+                    // padding: 10px 90px;
+                    // margin-top: 10px;
+                    // cursor: pointer;
+                    // border-radius: 8px;
+                    // width: 100%;
+                    // gap: 5px;
+                    // font-weight: 700;
+
+                    #ciSavasown {
+                        font-size: 20px;
+                    }
+                }
+
+                .watch_now {
+                    // border: 2px solid rgb(132, 255, 0);
+                    // background-color: #0aad9e;
+                    // display: flex;
+                    // justify-content: center;
+                    // align-items: center;
+                    // padding: 10px 93px;
+                    // margin-top: 10px;
+                    // cursor: pointer;
+                    // border-radius: 8px;
+                    // width: 100%;
+                    // font-weight: 700;
+
+
+                }
+            }
+
+            .MovieDetails {
+                // border: 2px solid rgb(0, 255, 115);
+                // // max-width: 600px;
+                // width: 600px;
+                // height: fit-content;
+
+                // text-align: left;
+                // display: flex;
+                // flex-direction: column;
+
+                h2 {
+                    // border: 2px solid rgb(0, 132, 255);
+                    // // margin: 10px 0;
+                    // margin-bottom: 24px;
+                    // line-height: 42px;
+                    // font-weight: 700;
+                    // width: fit-content;
+                    font-size: 2.0em;
+                }
+
+                .year {
+                    // border: 2px solid rgb(0, 255, 191);
+                    // width: fit-content;
+
+                    // line-height: 24px;
+                    // font-weight: 700;
+                    font-size: 1.0em;
+
+                }
+
+                .genresss {
+                    // border: 2px solid rgb(0, 200, 255);
+                    // width: fit-content;
+
+                    // font-weight: 700;
+                    // margin-bottom: 30px;
+                    font-size: 1.0em;
+
+                }
+
+                .available {
+                    // border: 2px solid green;
+                    // font-style: italic;
+                    // display: flex;
+                    // flex-wrap: wrap;
+                    // gap: 7px;
+                    // margin-bottom: 20px;
+                    // align-items: center;
+
+
+
+                    strong {
+                        // border: 12px solid gray;
+
+                    }
+
+                    .BTN-1 {
+
+                        border-radius: 4px;
+                        font-size: 1em;
+                        padding: 2px;
+                        background-color: rgb(11, 11, 11);
+                        border: 1px solid gray;
+                        color: white;
+                    }
+
+                    .BTN-2 {
+                        border-radius: 4px;
+                        font-size: 1em;
+                        padding: 2px;
+                        background-color: rgb(11, 11, 11);
+                        border: 1px solid gray;
+                        color: white;
+
+                    }
+
+                    .BTN-3 {
+                        border-radius: 4px;
+                        font-size: 1em;
+                        padding: 2px;
+                        background-color: rgb(11, 11, 11);
+                        border: 1px solid gray;
+                        color: white;
+
+                    }
+
+                    .BTN-4 {
+                        border-radius: 4px;
+                        font-size: 1em;
+                        padding: 2px;
+                        background-color: rgb(11, 11, 11);
+                        border: 1px solid gray;
+                        color: white;
+
+                    }
+
+                    .BTN-5 {
+                        border-radius: 4px;
+                        font-size: 1em;
+                        padding: 2px;
+                        background-color: rgb(11, 11, 11);
+                        border: 1px solid gray;
+                        color: white;
+
+                    }
+
+
+                }
+
+                .download-sub {
+                    // border: 2px solid rgb(0, 255, 183) !important;
+                    // display: flex;
+                    // border-radius: 4px;
+                    // font-size: 1em;
+                    // padding: 5px 12px;
+                    // align-items: center;
+                    // width: fit-content;
+                    // margin-bottom: 20px;
+                    // gap: 3px;
+                    // padding: 3px;
+                    // background-color: rgb(11, 11, 11);
+                    // border: 1px solid gray;
+                    // color: white;
+
+                    .BtnC_cisav {
+                        color: #6ac045;
+                        font-size: 20px;
+                    }
+                }
+
+            }
+
+            .like_count {
+                // border: 2px solid black;
+                // display: flex;
+                // gap: 54px;
+                // margin-bottom: 15px;
+                // width: fit-content;
+
+
+                .heart-icon {
+                    // border: 2px solid black;
+                    // width: fit-content;
+                    // margin-bottom: 5px;
+                    font-size: 1.5em;
+
+                }
+
+                .like_count_count {
+                    // border: 2px solid black;
+                    font-size: 1.07em;
+                    // font-weight: 700;
+                }
+            }
+
+            .review {
+                // border: 2px solid greenyellow;
+                // margin-bottom: 15px;
+
+                // display: flex !important;
+                // gap: 50px;
+                // width: fit-content;
+
+                img {
+                    // border: 2px solid red;
+                    width: 1.5em !important;
+
+                }
+
+                .reviw_ {
+                    // border: 2px solid red;
+
+                }
+
+                p {
+                    // border: 2px solid gray;
+                    // font-weight: 700;
+                    font-size: 1.07em;
+                }
+
+            }
+
+            .audience {
+                // border: 2px solid gray;
+
+                // display: flex !important;
+                // margin-bottom: 15px;
+
+                // gap: 50px;
+                // width: fit-content;
+
+                img {
+                    width: 1.5em !important;
+
+                }
+
+                .audience_ {
+                    // border: 2px solid red;
+
+                }
+
+                p {
+                    font-size: 1.07em;
+                    // font-weight: 700;
+                }
+
+            }
+
+            .imdh {
+                // border: 2px solid blue;
+                display: flex !important;
+                margin-bottom: 15px;
+                align-items: center;
+                gap: 27px;
+                width: fit-content;
+
+
+                img {
+                    // border: 2px solid blue;
+
+                    width: 2.9em !important;
+
+                }
+
+                p {
+                    // border: 2px solid gray;
+                    font-size: 1.07em;
+                    font-weight: 700;
+
+                }
+            }
+
+            .similar_movie {
+                // border: 2px solid rgb(0, 255, 115);
+                // width: 30%;
+                // text-align: left;
+                // height: fit-content;
+
+
+
+
+                p {
+                    // border: 2px solid red;
+                    // font-weight: 700;
+                    // text-align: left;
+                    // margin-bottom: 5px;
+                    // width: fit-content;
+                    font-size: 19px;
+                }
+
+                .same_four_movies {
+                    // border: 2px solid rgb(166, 255, 0);
+                    // // display: flex;
+                    // // flex-wrap: wrap;
+                    gap: 20px;
+                    width: 280px;
+
+                    img {
+                        // border-radius: 4px;
+                        // border: 5px solid;
+                        // cursor: pointer;
+                        // text-align: center;
+                        width: 120px;
+                        height: 160px;
+                    }
+
+                }
+
+            }
+
+        }
+
+
+
+        .moviegenres {
+            // border: 2px solid rgb(255, 0, 170);
+
+            margin-left: 0px;
+            margin-right: 0px;
+            margin-top: 30px;
+
+            .vpn-warning {
+
+                background-color: #101010;
+                border: 5px solid #00FF00;
+                padding: 20px;
+                border-radius: 5px;
+                text-align: center;
+                margin-bottom: 20px;
+
+
+
+                p {
+                    color: white;
+                    margin: 0 0 10px 0;
+
+                    span {
+                        color: #FFFF00;
+                    }
+                }
+
+                .vpn-button {
+                    background-color: #00FF00;
+                    color: #000;
+                    border: none;
+                    padding: 10px 20px;
+                    border-radius: 3px;
+                    cursor: pointer;
+                }
+            }
+        }
+
+
+        .movie-trailer {
+            // border: 1px solid blue;
+
+
+            // align-items: center;
+            // height: 300px;
+
+            .images-container {
+                // border: 1px solid rgb(192, 24, 72);
+                // display: flex;
+                // height: 300px;
+                // justify-content: space-between;
+
+
+                .image-container {
+
+                    // position: relative;
+
+                    img {
+
+                        width: auto 0 !important;
+                        // height: 256px;
+                        // cursor: pointer; 
+
+                    }
+
+                    .play-button {
+                        // position: absolute;
+                        top: 45%;
+                        // left: 50%;
+                        // transform: translate(-50%, -50%);
+                        // font-size: 3rem;
+                        // color: white;
+                        // background: rgba(0, 0, 0, 0.5);
+                        // border: none;
+                        // border-radius: 50%;
+                        // padding: 1rem;
+                        // cursor: pointer;
+                        // z-index: 10;
+                    }
+                }
+
+                img {
+                    // cursor: pointer;
+                    // height: 256px;
+                    width: auto 0 !important;
+                }
+            }
+
+            .video-overlay {
+                // position: fixed;
+                // top: 0;
+                // left: 0;
+                // width: 100vw; 
+                // height: 100vh; 
+                // background-color: rgba(5, 4, 4, 0.923); 
+                // display: flex;
+                // align-items: center;
+                // justify-content: center;
+                // z-index: 9999;
+                // cursor: pointer; 
+
+                .video-container {
+                    position: relative;
+                    width: 45vw; // Medium size for the video
+                    height: 50vh;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+
+                    .close-button {
+                        color: white;
+                        position: absolute;
+                        top: -55px;
+                        right: -10px;
+                        background: rgba(0, 0, 0, 0.5);
+                        border-radius: 50%;
+                        padding: 1rem;
+                        border: none;
+                    }
+
+                    .video-player {
+                        width: 100%;
+                        height: 100%;
+                        border: none; // Remove any borders for a clean look
+                    }
+                }
+            }
+
+            .image-overlay {
+                // position: fixed;
+                // top: 0;
+                // left: 0;
+                // width: 100vw;
+                // height: 100vh;
+                // background-color: rgba(5, 4, 4, 0.923); 
+                // display: flex;
+                // align-items: center;
+                // justify-content: center;
+                // z-index: 9999;
+                // cursor: pointer;
+
+
+                .image-container {
+                    position: relative;
+                    width: 70vw; // Medium size for the video
+                    height: 80vh;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+
+                    .close-button-img {
+                        color: white;
+                        position: absolute;
+                        top: -45px;
+                        right: -10px;
+                        font-size: 1rem;
+                        cursor: pointer;
+                        z-index: 10;
+                        background: rgba(0, 0, 0, 0.5);
+                        border-radius: 50%;
+                        padding: 1rem;
+                        border: none;
+
+                    }
+
+                    .prev-button {
+                        color: white;
+                        font-size: 1rem;
+                        background: rgba(0, 0, 0, 0.5);
+                        border-radius: 50%;
+                        padding: 1rem;
+                        cursor: pointer;
+                        border: none;
+                    }
+
+                    .image-player {
+                        width: 100%;
+                        height: 100%;
+                        object-fit: contain;
+                        /* Preserve aspect ratio */
+                    }
+
+                    .next-button {
+                        color: white;
+                        font-size: 1rem;
+                        background: rgba(0, 0, 0, 0.5);
+                        border-radius: 50%;
+                        padding: 1rem;
+                        cursor: pointer;
+                        border: none;
+                    }
+                }
+            }
+
+
+
+
+
+
+
+        }
+
+        .plot-section {
+            // border: 1px solid blue;
+            // padding-top: 30px;
+            // display: flex;
+            // justify-content: center;
+            // gap: 40px;
+
+            .plot-container {
+                // border: 2px solid red;
+                // width: 70%;
+                // display: flex;
+                // flex-direction: column;
+
+
+                .plot-title {
+                    // border: 2px solid red;
+                    // width: fit-content;
+                    // font-size: 1.25em;
+                    // font-weight: 700;
+                }
+
+                .plot-descritption {
+                    // border: 2px solid red;
+                    // width: fit-content;
+                    // color: #919191;
+                    // line-height: 24px;
+                    // text-align: justify;
+                    font-size: 0.9em;
+
+
+                }
+
+                .uploaded-info {
+                    // border: 2px solid red;
+                    // width: fit-content;
+
+
+                    .uploaded-info-- {
+                        // border: 2px solid red;
+                        // width: fit-content;
+
+                        // color: #919191;
+                        // line-height: 24px;
+                        // text-align: justify;
+
+                    }
+
+                    .date-info-- {
+                        // border: 2px solid red;
+                        // width: fit-content;
+
+                        // color: #919191;
+                        // line-height: 24px;
+                    }
+                }
+
+
+            }
+
+
+
+
+
+
+            .director-cast {
+                // border: 1px solid rgb(255, 166, 0);
+                // display: flex;
+                // flex-direction: column;
+                // width: 30%;
+                // gap: 20px;
+
+
+                .director-section {
+                    // border-bottom: 1px solid #919191;
+                    margin-bottom: 5px;
+
+                    // top: 10px;
+                    .dirctor-title {
+                        // border: 1px solid rgb(255, 166, 0);
+
+                        // margin-bottom: 10px;
+
+                        // font-size: 1.25em;
+                        // font-weight: 700;
+                        // display: flex;
+                    }
+
+                    .director-info {
+                        // border: 1px solid rgb(255, 166, 0);
+
+                        // display: flex;
+                        // gap: 10px;
+                        // padding: 3px;
+                        // align-items: center;
+
+
+                        .director-img {
+                            // width: 40px;
+                            // height: 40px;
+                            // border-radius: 50%;
+                            // background-color: yellow;
+                        }
+
+                        .directror-name {
+                            // color: #919191;
+                            // font-size: .95em;
+                            // font-weight: 700;
+                        }
+                    }
+                }
+
+                .cast-section {
+                    // border: 1px solid rgb(255, 166, 0);
+                    margin-top: -25px;
+
+                    .top-cast-title {
+                        // border: 1px solid rgb(255, 166, 0);
+
+                        // font-size: 1.25em;
+                        // font-weight: 700;
+                        // display: flex;
+                        // margin-bottom: 10px;
+
+                    }
+
+                    .cast-info {
+                        // border-bottom: 1px solid #919191 !important;
+                        // display: flex;
+                        // gap: 10px;
+                        // padding: 3px;
+                        // align-items: center;
+                        // margin-bottom: 10px;
+
+
+
+
+                        .img-cast {
+                            // width: 40px;
+                            // height: 40px;
+                            // border-radius: 50%;
+                            // background-color: yellow;
+                        }
+
+                        .cast-name {
+                            // border: 2px solid red;
+                            // color: #919191;
+                            // font-weight: 700;
+                            // width: 100%;
+                            font-size: .75em;
+
+                        }
+
+
+
+                        .cast-name-inmovie {
+                            // border: 2px solid red;
+
+                            width: 150%;
+                            font-weight: 400;
+                            font-size: .65em;
+
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+@media screen and (max-width: 1200px) {
+    .movie-trailer {
+        // border: 1px solid blue;
+
+
+
+        .images-container {
+            // border: 1px solid rgb(192, 24, 72);
+
+
+            justify-content: space-around;
+
+            .image-container {
+
+
+                img {
+
+                    width: 250px !important;
+                    height: 256px;
+                    cursor: pointer; // Change cursor to indicate clickable images
+
+                }
+
+                .play-button {
+                    top: 45% !important;
+
+                }
+            }
+
+            img {
+                cursor: pointer;
+                width: 250px !important;
+
+            }
+        }
+
+        .video-overlay {
+
+
+            .video-container {
+
+
+                .close-button {}
+
+                .video-player {}
+            }
+        }
+
+        .image-overlay {
+
+            .image-container {
+
+
+                .close-button-img {}
+
+                .prev-button {}
+
+                .image-player {}
+
+                .next-button {}
+            }
+        }
+
+
+
+
+
+
+
+    }
+}
+
+
+
+@media screen and (max-width: 1000px) {
+
+    .SingleMovie {
+        // border: 2px solid red;
+        // padding: 30px!important;
+        // text-align: center;
+        // width: 80%;
+        // margin: 0 auto;
+        padding-top: 30px !important;
+        padding: 0;
+
+
+
+
+
+
+        .MoviePoster {
+            // border: 2px solid rgb(0, 255, 115);
+            // display: flex;
+            // justify-content: center !important;
+            // padding: 30px;
+            // margin-right: auto;
+            // margin-left: auto;
+            // height: auto;
+            // width: 100% !important;
+            // width: fit-content;
+            // margin: 0;
+            // padding: 0;
+            gap: 10px;
+
+
+            .cover {
+                // border: 2px solid rgb(0, 255, 115);
+
+                width: 250px !important;
+                // display: flex;
+                // flex-direction: column;
+                // justify-content: center;
+                // align-items: center;
+
+                .IMG {
+                    // border: 2px solid red;
+                    // border-radius: 4px;
+                    // border: 5px solid;
+
+                }
+
+                .download {
+                    // border: 2px solid rgb(132, 255, 0);
+                    // background-color: #6ac045;
+                    // display: flex;
+                    // justify-content: center;
+                    // align-items: center;
+                    // padding: 10px 90px;
+                    // margin-top: 10px;
+                    // cursor: pointer;
+                    // border-radius: 8px;
+                    // width: 100%;
+                    // gap: 5px;
+                    // font-weight: 700;
+
+                    #ciSavasown {
+                        font-size: 20px;
+
+                    }
+                }
+
+                .watch_now {
+                    // border: 2px solid rgb(132, 255, 0);
+                    // background-color: #0aad9e;
+                    // display: flex;
+                    // justify-content: center;
+                    // align-items: center;
+                    padding: 10px 3px;
+                    // margin-top: 10px;
+                    // cursor: pointer;
+                    // border-radius: 8px;
+                    // width: 100%;
+                    // font-weight: 700;
+
+
+                }
+            }
+
+            .MovieDetails {
+                // border: 2px solid rgb(0, 255, 115);
+                // // max-width: 600px;
+                // width: 600px;
+                // height: fit-content;
+
+                // text-align: left;
+                // display: flex;
+                // flex-direction: column;
+
+                h2 {
+                    // border: 2px solid rgb(0, 132, 255);
+                    // // margin: 10px 0;
+                    // margin-bottom: 24px;
+                    // line-height: 42px;
+                    // font-weight: 700;
+                    // width: fit-content;
+                    font-size: 2.0em;
+                }
+
+                .year {
+                    // border: 2px solid rgb(0, 255, 191);
+                    // width: fit-content;
+
+                    // line-height: 24px;
+                    // font-weight: 700;
+                    font-size: 1.0em;
+
+                }
+
+                .genresss {
+                    // border: 2px solid rgb(0, 200, 255);
+                    // width: fit-content;
+
+                    // font-weight: 700;
+                    // margin-bottom: 30px;
+                    font-size: 1.0em;
+
+                }
+
+                .available {
+                    // border: 2px solid green;
+                    // font-style: italic;
+                    // display: flex;
+                    // flex-wrap: wrap;
+                    // gap: 7px;
+                    // margin-bottom: 20px;
+                    // align-items: center;
+
+
+
+                    strong {
+                        // border: 12px solid gray;
+
+                    }
+
+                    .BTN-1 {
+
+                        font-size: 0.9em;
+                        // border-radius: 4px;
+                        // padding: 2px;
+                        // background-color: rgb(11, 11, 11);
+                        // border: 1px solid gray;
+                        // color: white;
+                    }
+
+                    .BTN-2 {
+                        font-size: 0.9em;
+                        // border-radius: 4px;
+                        // padding: 2px;
+                        // background-color: rgb(11, 11, 11);
+                        // border: 1px solid gray;
+                        // color: white;
+
+                    }
+
+                    .BTN-3 {
+                        font-size: 0.9em;
+                        // border-radius: 4px;
+                        // padding: 2px;
+                        // background-color: rgb(11, 11, 11);
+                        // border: 1px solid gray;
+                        // color: white;
+
+                    }
+
+                    .BTN-4 {
+                        font-size: 0.9em;
+                        // border-radius: 4px;
+                        // padding: 2px;
+                        // background-color: rgb(11, 11, 11);
+                        // border: 1px solid gray;
+                        // color: white;
+
+                    }
+
+                    .BTN-5 {
+                        font-size: 0.9em;
+                        // border-radius: 4px;
+                        // padding: 2px;
+                        // background-color: rgb(11, 11, 11);
+                        // border: 1px solid gray;
+                        // color: white;
+
+                    }
+
+
+                }
+
+                .download-sub {
+                    // border: 2px solid rgb(0, 255, 183) !important;
+                    // display: flex;
+                    // border-radius: 4px;
+                    // font-size: 1em;
+                    padding: 3px 10px;
+                    // align-items: center;
+                    // width: fit-content;
+                    // margin-bottom: 20px;
+                    // gap: 3px;
+                    // padding: 3px;
+                    // background-color: rgb(11, 11, 11);
+                    // border: 1px solid gray;
+                    // color: white;
+
+                    .BtnC_cisav {
+                        // color: #6ac045;
+                        font-size: 18px;
+                    }
+                }
+
+            }
+
+            .like_count {
+                // border: 2px solid black;
+                // display: flex;
+                // gap: 54px;
+                // margin-bottom: 15px;
+                // width: fit-content;
+
+
+                .heart-icon {
+                    // border: 2px solid black;
+                    // width: fit-content;
+                    // margin-bottom: 5px;
+                    font-size: 1.5em;
+
+                }
+
+                .like_count_count {
+                    // border: 2px solid black;
+                    font-size: 1.07em;
+                    // font-weight: 700;
+                }
+            }
+
+            .review {
+                // border: 2px solid greenyellow;
+                // margin-bottom: 15px;
+
+                // display: flex !important;
+                // gap: 50px;
+                // width: fit-content;
+
+                img {
+                    // border: 2px solid red;
+                    width: 1.5em !important;
+
+                }
+
+                .reviw_ {
+                    // border: 2px solid red;
+
+                }
+
+                p {
+                    // border: 2px solid gray;
+                    // font-weight: 700;
+                    font-size: 1.07em;
+                }
+
+            }
+
+            .audience {
+                // border: 2px solid gray;
+
+                // display: flex !important;
+                // margin-bottom: 15px;
+
+                // gap: 50px;
+                // width: fit-content;
+
+                img {
+                    width: 1.5em !important;
+
+                }
+
+                .audience_ {
+                    // border: 2px solid red;
+
+                }
+
+                p {
+                    font-size: 1.07em;
+                    // font-weight: 700;
+                }
+
+            }
+
+            .imdh {
+                // border: 2px solid blue;
+                display: flex !important;
+                margin-bottom: 15px;
+                align-items: center;
+                gap: 27px;
+                width: fit-content;
+
+
+                img {
+                    // border: 2px solid blue;
+
+                    width: 2.9em !important;
+
+                }
+
+                p {
+                    // border: 2px solid gray;
+                    font-size: 1.07em;
+                    font-weight: 700;
+
+                }
+            }
+
+            .similar_movie {
+                // border: 2px solid rgb(0, 255, 115);
+                // width: 30%;
+                // text-align: left;
+                // height: fit-content;
+
+
+
+
+                p {
+                    // border: 2px solid red;
+                    // font-weight: 700;
+                    // text-align: left;
+                    // margin-bottom: 5px;
+                    // width: fit-content;
+                    // font-size: 19px;
+                }
+
+                .same_four_movies {
+                    // border: 2px solid rgb(166, 255, 0);
+                    // // display: flex;
+                    // // flex-wrap: wrap;
+                    gap: 10px;
+                    width: 200px;
+
+                    img {
+                        // border-radius: 4px;
+                        // border: 5px solid;
+                        // cursor: pointer;
+                        // text-align: center;
+                        width: 90px;
+                        height: 140px;
+                    }
+
+                }
+
+            }
+
+        }
+
+
+
+        .moviegenres {
+            // border: 2px solid rgb(255, 0, 170);
+
+            // margin-left: 0px;
+            // margin-right: 0px;
+            // margin-top: 30px;
+
+            .vpn-warning {
+
+                background-color: #101010;
+                border: 5px solid #00FF00;
+                padding: 20px;
+                border-radius: 5px;
+                text-align: center;
+                margin-bottom: 20px;
+
+
+
+                p {
+                    color: white;
+                    margin: 0 0 10px 0;
+
+                    span {
+                        color: #FFFF00;
+                    }
+                }
+
+                .vpn-button {
+                    background-color: #00FF00;
+                    color: #000;
+                    border: none;
+                    padding: 10px 20px;
+                    border-radius: 3px;
+                    cursor: pointer;
+                }
+            }
+        }
+
+
+        .movie-trailer {
+            // border: 1px solid blue;
+            display: none;
+        }
+
+        .plot-section {
+            // border: 1px solid blue;
+            // padding-top: 30px;
+            // display: flex;
+            // justify-content: center;
+            // gap: 40px;
+
+            .plot-container {
+                // border: 2px solid red;
+                // width: 70%;
+                // display: flex;
+                // flex-direction: column;
+
+
+                .plot-title {
+                    // border: 2px solid red;
+                    // width: fit-content;
+                    // font-size: 1.25em;
+                    // font-weight: 700;
+                }
+
+                .plot-descritption {
+                    // border: 2px solid red;
+                    // width: fit-content;
+                    // color: #919191;
+                    // line-height: 24px;
+                    // text-align: justify;
+                    font-size: 0.9em;
+
+
+                }
+
+                .uploaded-info {
+                    // border: 2px solid red;
+                    // width: fit-content;
+
+
+                    .uploaded-info-- {
+                        // border: 2px solid red;
+                        // width: fit-content;
+
+                        // color: #919191;
+                        // line-height: 24px;
+                        // text-align: justify;
+
+                    }
+
+                    .date-info-- {
+                        // border: 2px solid red;
+                        // width: fit-content;
+
+                        // color: #919191;
+                        // line-height: 24px;
+                    }
+                }
+
+
+            }
+
+
+
+
+
+
+            .director-cast {
+                // border: 1px solid rgb(255, 166, 0);
+                // display: flex;
+                // flex-direction: column;
+                // width: 30%;
+                // gap: 20px;
+
+
+                .director-section {
+                    // border-bottom: 1px solid #919191;
+                    margin-bottom: 5px;
+
+                    // top: 10px;
+                    .dirctor-title {
+                        // border: 1px solid rgb(255, 166, 0);
+
+                        // margin-bottom: 10px;
+
+                        // font-size: 1.25em;
+                        // font-weight: 700;
+                        // display: flex;
+                    }
+
+                    .director-info {
+                        // border: 1px solid rgb(255, 166, 0);
+
+                        // display: flex;
+                        // gap: 10px;
+                        // padding: 3px;
+                        // align-items: center;
+
+
+                        .director-img {
+                            // width: 40px;
+                            // height: 40px;
+                            // border-radius: 50%;
+                            // background-color: yellow;
+                        }
+
+                        .directror-name {
+                            // color: #919191;
+                            // font-size: .95em;
+                            // font-weight: 700;
+                        }
+                    }
+                }
+
+                .cast-section {
+                    // border: 1px solid rgb(255, 166, 0);
+                    margin-top: -25px;
+
+                    .top-cast-title {
+                        // border: 1px solid rgb(255, 166, 0);
+
+                        // font-size: 1.25em;
+                        // font-weight: 700;
+                        // display: flex;
+                        // margin-bottom: 10px;
+
+                    }
+
+                    .cast-info {
+                        // border-bottom: 1px solid #919191 !important;
+                        // display: flex;
+                        // gap: 10px;
+                        // padding: 3px;
+                        // align-items: center;
+                        // margin-bottom: 10px;
+
+
+
+
+                        .img-cast {
+                            // width: 40px;
+                            // height: 40px;
+                            // border-radius: 50%;
+                            // background-color: yellow;
+                        }
+
+                        .cast-name {
+                            // border: 2px solid red;
+                            // color: #919191;
+                            // font-weight: 700;
+                            // width: 100%;
+                            font-size: .75em;
+
+                        }
+
+
+
+                        .cast-name-inmovie {
+                            // border: 2px solid red;
+
+                            width: 150%;
+                            font-weight: 400;
+                            font-size: .65em;
+
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+
+}
+
+@media screen and (max-width: 900px) {
+    .SingleMovie {
+        // border: 2px solid red;
+        // padding: 30px!important;
+        // text-align: center;
+        // width: 80%;
+        // margin: 0 auto;
+        padding-top: 60px !important;
+        // padding: 0;
+
+
+
+
+
+
+        .MoviePoster {
+            // border: 2px solid rgb(0, 255, 115);
+            // display: flex;
+            // justify-content: center !important;
+            // padding: 30px;
+            // margin-right: auto;
+            // margin-left: auto;
+            // height: auto;
+            // width: 100% !important;
+            // width: fit-content;
+            // margin: 0;
+            // padding: 0;
+            gap: 20px;
+            flex-direction: column;
+            align-items: center;
+
+            .cover {
+                // border: 2px solid rgb(0, 255, 115);
+
+                // width: 550px!important;
+                // display: flex;
+                // flex-direction: column;
+                // justify-content: center;
+                // align-items: center;
+
+                .IMG {
+                    // border: 2px solid red;
+                    // border-radius: 4px;
+                    // border: 5px solid;
+                    width: auto !important;
+
+                }
+
+                .download {
+                    // border: 2px solid rgb(132, 255, 0);
+                    // background-color: #6ac045;
+                    // display: flex;
+                    // justify-content: center;
+                    // align-items: center;
+                    // padding: 10px 90px;
+                    // margin-top: 10px;
+                    // cursor: pointer;
+                    // border-radius: 8px;
+                    // width: 100%;
+                    // gap: 5px;
+                    // font-weight: 700;
+                    display: none;
+
+                    #ciSavasown {}
+                }
+
+                .watch_now {
+                    // border: 2px solid rgb(132, 255, 0);
+                    // background-color: #0aad9e;
+                    // display: flex;
+                    // justify-content: center;
+                    // align-items: center;
+                    padding: 10px 3px;
+                    // margin-top: 10px;
+                    // cursor: pointer;
+                    // border-radius: 8px;
+                    // width: 100%;
+                    // font-weight: 700;
+
+
+                }
+            }
+
+            .MovieDetails {
+                // border: 2px solid rgb(0, 255, 115);
+                // // max-width: 600px;
+                // width: 600px;
+                // height: fit-content;
+
+                // text-align: left;
+                // display: flex;
+                // flex-direction: column;
+                width: fit-content;
+
+                h2 {
+                    // border: 2px solid rgb(0, 132, 255);
+                    // // margin: 10px 0;
+                    // margin-bottom: 24px;
+                    // line-height: 42px;
+                    // font-weight: 700;
+                    // width: fit-content;
+                    font-size: 2.0em;
+                }
+
+                .year {
+                    // border: 2px solid rgb(0, 255, 191);
+                    // width: fit-content;
+
+                    // line-height: 24px;
+                    // font-weight: 700;
+                    font-size: 1.0em;
+
+                }
+
+                .genresss {
+                    // border: 2px solid rgb(0, 200, 255);
+                    // width: fit-content;
+
+                    // font-weight: 700;
+                    // margin-bottom: 30px;
+                    font-size: 1.0em;
+
+                }
+
+                .available {
+                    // border: 2px solid green;
+                    // font-style: italic;
+                    // display: flex;
+                    // flex-wrap: wrap;
+                    // gap: 7px;
+                    // margin-bottom: 20px;
+                    // align-items: center;
+                    flex-direction: column;
+                    width: fit-content;
+
+
+                    strong {
+                        // border: 12px solid gray;
+                        display: none;
+                    }
+
+                    .BTN-1 {
+
+                        font-size: 0.9em;
+                        // border-radius: 4px;
+                        // padding: 2px;
+                        // background-color: rgb(11, 11, 11);
+                        // border: 1px solid gray;
+                        // color: white;
+                    }
+
+                    .BTN-2 {
+                        font-size: 0.9em;
+                        // border-radius: 4px;
+                        // padding: 2px;
+                        // background-color: rgb(11, 11, 11);
+                        // border: 1px solid gray;
+                        // color: white;
+
+                    }
+
+                    .BTN-3 {
+                        font-size: 0.9em;
+                        // border-radius: 4px;
+                        // padding: 2px;
+                        // background-color: rgb(11, 11, 11);
+                        // border: 1px solid gray;
+                        // color: white;
+
+                    }
+
+                    .BTN-4 {
+                        font-size: 0.9em;
+                        // border-radius: 4px;
+                        // padding: 2px;
+                        // background-color: rgb(11, 11, 11);
+                        // border: 1px solid gray;
+                        // color: white;
+
+                    }
+
+                    .BTN-5 {
+                        font-size: 0.9em;
+                        // border-radius: 4px;
+                        // padding: 2px;
+                        // background-color: rgb(11, 11, 11);
+                        // border: 1px solid gray;
+                        // color: white;
+
+                    }
+
+
+                }
+
+                .download-sub {
+                    display: none;
+
+
+                }
+
+            }
+
+            .like_count {
+                // border: 2px solid black;
+                // display: flex;
+                // gap: 54px;
+                // margin-bottom: 15px;
+                // width: fit-content;
+
+
+                .heart-icon {
+                    // border: 2px solid black;
+                    // width: fit-content;
+                    // margin-bottom: 5px;
+                    font-size: 1.5em;
+
+                }
+
+                .like_count_count {
+                    // border: 2px solid black;
+                    font-size: 1.07em;
+                    // font-weight: 700;
+                }
+            }
+
+            .review {
+                // border: 2px solid greenyellow;
+                // margin-bottom: 15px;
+
+                // display: flex !important;
+                // gap: 50px;
+                // width: fit-content;
+
+                img {
+                    // border: 2px solid red;
+                    width: 1.5em !important;
+
+                }
+
+                .reviw_ {
+                    // border: 2px solid red;
+
+                }
+
+                p {
+                    // border: 2px solid gray;
+                    // font-weight: 700;
+                    font-size: 1.07em;
+                }
+
+            }
+
+            .audience {
+                // border: 2px solid gray;
+
+                // display: flex !important;
+                // margin-bottom: 15px;
+
+                // gap: 50px;
+                // width: fit-content;
+
+                img {
+                    width: 1.5em !important;
+
+                }
+
+                .audience_ {
+                    // border: 2px solid red;
+
+                }
+
+                p {
+                    font-size: 1.07em;
+                    // font-weight: 700;
+                }
+
+            }
+
+            .imdh {
+                // border: 2px solid blue;
+                display: flex !important;
+                margin-bottom: 15px;
+                align-items: center;
+                gap: 27px;
+                width: fit-content;
+
+
+                img {
+                    // border: 2px solid blue;
+
+                    width: 2.9em !important;
+
+                }
+
+                p {
+                    // border: 2px solid gray;
+                    font-size: 1.07em;
+                    font-weight: 700;
+
+                }
+            }
+
+            .similar_movie {
+                // border: 2px solid rgb(0, 255, 115);
+
+                display: none;
+
+
+
+
+            }
+
+        }
+
+
+
+        .moviegenres {
+            // border: 2px solid rgb(255, 0, 170);
+
+            // margin-left: 0px;
+            // margin-right: 0px;
+            // margin-top: 30px;
+
+            .vpn-warning {
+
+                background-color: #101010;
+                border: 5px solid #00FF00;
+                padding: 20px;
+                border-radius: 5px;
+                text-align: center;
+                margin-bottom: 20px;
+
+
+
+                p {
+                    color: white;
+                    margin: 0 0 10px 0;
+
+                    span {
+                        color: #FFFF00;
+                    }
+                }
+
+                .vpn-button {
+                    background-color: #00FF00;
+                    color: #000;
+                    border: none;
+                    padding: 10px 20px;
+                    border-radius: 3px;
+                    cursor: pointer;
+                }
+            }
+        }
+
+
+        .movie-trailer {
+            // border: 1px solid blue;
+            display: none;
+        }
+
+        .plot-section {
+            // border: 1px solid blue;
+            // padding-top: 30px;
+            // display: flex;
+            // justify-content: center;
+            // gap: 40px;
+            flex-direction: column;
+
+            .plot-container {
+                // border: 2px solid red;
+                // width: 70%;
+                // display: flex;
+                // flex-direction: column;
+                width: 100%;
+
+
+
+                .plot-title {
+                    // border: 2px solid red;
+                    // width: fit-content;
+                    // font-size: 1.25em;
+                    // font-weight: 700;
+                }
+
+                .plot-descritption {
+                    // border: 2px solid red;
+                    // width: fit-content;
+                    // color: #919191;
+                    // line-height: 24px;
+                    // text-align: justify;
+                    font-size: 0.9em;
+
+
+                }
+
+                .uploaded-info {
+                    // border: 2px solid red;
+                    // width: fit-content;
+
+
+                    .uploaded-info-- {
+                        // border: 2px solid red;
+                        // width: fit-content;
+
+                        // color: #919191;
+                        // line-height: 24px;
+                        // text-align: justify;
+
+                    }
+
+                    .date-info-- {
+                        // border: 2px solid red;
+                        // width: fit-content;
+
+                        // color: #919191;
+                        // line-height: 24px;
+                    }
+                }
+
+
+            }
+
+
+
+
+
+
+            .director-cast {
+                // border: 1px solid rgb(255, 166, 0);
+                // display: flex;
+                // flex-direction: column;
+                // width: 30%;
+                // gap: 20px;
+                width: 100%;
+
+
+
+                .director-section {
+                    // border-bottom: 1px solid #919191;
+                    margin-bottom: 5px;
+
+                    // top: 10px;
+                    .dirctor-title {
+                        // border: 1px solid rgb(255, 166, 0);
+
+                        // margin-bottom: 10px;
+
+                        // font-size: 1.25em;
+                        // font-weight: 700;
+                        // display: flex;
+                    }
+
+                    .director-info {
+                        // border: 1px solid rgb(255, 166, 0);
+
+                        // display: flex;
+                        // gap: 10px;
+                        // padding: 3px;
+                        // align-items: center;
+
+
+                        .director-img {
+                            // width: 40px;
+                            // height: 40px;
+                            // border-radius: 50%;
+                            // background-color: yellow;
+                        }
+
+                        .directror-name {
+                            // color: #919191;
+                            // font-size: .95em;
+                            // font-weight: 700;
+                        }
+                    }
+                }
+
+                .cast-section {
+                    // border: 1px solid rgb(255, 166, 0);
+                    margin-top: 0px;
+
+                    .top-cast-title {
+                        // border: 1px solid rgb(255, 166, 0);
+
+                        // font-size: 1.25em;
+                        // font-weight: 700;
+                        // display: flex;
+                        // margin-bottom: 10px;
+
+                    }
+
+                    .cast-info {
+                        // border: 1px solid #ba2a2a !important;
+                        // display: flex;
+                        // gap: 10px;
+                        // padding: 3px;
+                        // align-items: center;
+                        // margin-bottom: 10px;
+                        gap: 15px;
+
+
+
+
+                        .img-cast {
+                            // width: 40px;
+                            // height: 40px;
+                            // border-radius: 50%;
+                            // background-color: yellow;
+                        }
+
+                        .cast-name {
+                            // border: 2px solid red;
+                            // color: #919191;
+                            // font-weight: 700;
+                            // width: 100%;
+                            font-size: 1.0em;
+                            width: auto;
+
+
+                        }
+
+
+
+                        .cast-name-inmovie {
+                            // border: 2px solid red;
+
+                            width: auto;
+                            font-weight: 400;
+                            font-size: 1.0em;
+
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+}
+
+// @media screen and (max-width: 780px) {}
+
+// @media screen and (max-width: 565px) {}
+
+// @media screen and (max-width: 403px) {}
