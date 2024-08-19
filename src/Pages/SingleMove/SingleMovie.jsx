@@ -5,7 +5,7 @@ import { Link, useParams } from 'react-router-dom';
 import { CiSaveDown2 } from "react-icons/ci";
 import { FaHeart, FaPlay, FaTimes, FaArrowLeft, FaArrowRight } from "react-icons/fa";
 import { Box,useColorModeValue } from '@chakra-ui/react';
-// import WebTorrent from 'webtorrent';
+// import TorrentPlayer from '../../Components/TorrentPlayer/TorrentPlayer';
 
 
 function SingleMovie() {
@@ -16,6 +16,8 @@ function SingleMovie() {
   const [isVideoVisible, setIsVideoVisible] = useState(false);
   const [selectedImage, setSelectedImage] = useState(null); // State for selected image
   const [imageIndex, setImageIndex] = useState(0); // State for current image index
+  const [isTorrentPlayerVisible, setIsTorrentPlayerVisible] = useState(false); // Added state
+  const torrentId = movie?.torrentUrl; // Use optional chaining to handle null movie
 
   const { id } = useParams();
 
@@ -87,26 +89,28 @@ const handlePrevImage = () => {
 
 
 
-const watchMovie = () => {
-  const trailerUrl = `https://www.youtube.com/watch?v=${movie.yt_trailer_code}`;
-  window.open(trailerUrl, '_blank')
+// const watchMovie = () => {
+//   const trailerUrl = `https://www.youtube.com/watch?v=${movie.yt_trailer_code}`;
+//   window.open(trailerUrl, '_blank')
+// };
+
+// const downloadMovie = () => {
+//   if (movie.torrents && movie.torrents.length > 0) {
+//     const downloadUrl = movie.torrents[0].url; 
+//     const link = document.createElement('a');
+//     link.href = downloadUrl;
+//     link.download = `${movie.title_long}.torrent`; 
+//     document.body.appendChild(link);
+//     link.click();
+//     document.body.removeChild(link);
+//   } else {
+//     alert("No download links available.");
+//   }
+// };
+
+const handleWatchNowClick = () => {
+  setIsTorrentPlayerVisible(true);
 };
-
-const downloadMovie = () => {
-  if (movie.torrents && movie.torrents.length > 0) {
-    const downloadUrl = movie.torrents[0].url; 
-    const link = document.createElement('a');
-    link.href = downloadUrl;
-    link.download = `${movie.title_long}.torrent`; 
-    document.body.appendChild(link);
-    link.click();
-    document.body.removeChild(link);
-  } else {
-    alert("No download links available.");
-  }
-};
-
-
 
 
   return (
@@ -114,9 +118,11 @@ const downloadMovie = () => {
       <div className='MoviePoster'>
         <div className='cover'>
           <img className='IMG' src={movie.large_cover_image} alt={movie.title} />
-          <button className='download'  onClick={downloadMovie}
+          <button className='download' 
+          //  onClick={downloadMovie}
            ><CiSaveDown2 id='ciSavasown'   />Download</button>
-          <button className='watch_now' onClick={watchMovie}
+          <button className='watch_now'
+           onClick={handleWatchNowClick}
           >Watch Now</button>
         </div>
         <div className="MovieDetails">
@@ -265,7 +271,15 @@ const downloadMovie = () => {
 </div>
 
 
-            
+            {/* Conditionally render TorrentPlayer */}
+      {/* {isTorrentPlayerVisible && (
+        <div className="torrent-player-overlay">
+          <button className="close-torrent-player" onClick={() => setIsTorrentPlayerVisible(false)}>
+            <FaTimes />
+          </button>
+          <TorrentPlayer torrentId={torrentId} />
+        </div>
+      )} */}
 
           
        </Box>

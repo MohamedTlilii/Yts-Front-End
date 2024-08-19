@@ -2,10 +2,11 @@ import React, {  useEffect, useState } from 'react';
 import axios from 'axios';
 import { Box, Spinner,  useColorModeValue,
 } from '@chakra-ui/react';
-import { FaStar } from 'react-icons/fa';
+import { FaStar,FaHeart } from 'react-icons/fa';
 import { Link } from 'react-router-dom';
 import "./HeroRow.scss";
 import { IoDownload } from "react-icons/io5";
+import { Button } from 'semantic-ui-react';
 
 function HeroRow() {
   const bgColor = useColorModeValue('white', 'black');
@@ -15,6 +16,7 @@ function HeroRow() {
   const [movies, setMovies] = useState([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
+  // const [favorites, setFavorites] = useState(new Set());
 
   useEffect(() => {
     const fetchMovies = async () => {
@@ -44,6 +46,28 @@ function HeroRow() {
     fetchMovies();
   }, []);
 
+
+  // const handleFavorite = async (movieId) => {
+  //   try {
+  //     if (favorites.has(movieId)) {
+  //       // Remove from favorites
+  //       await axios.delete(`http://localhost:5000/api/favorites/${movieId}`); // Adjust endpoint if necessary
+  //       setFavorites(prevFavorites => {
+  //         const newFavorites = new Set(prevFavorites);
+  //         newFavorites.delete(movieId);
+  //         return newFavorites;
+  //       });
+  //     } else {
+  //       // Add to favorites
+  //       await axios.post('http://localhost:5000/api/favorites/addFav', { user: 'currentUserId', movie: movieId });
+  //       setFavorites(prevFavorites => new Set(prevFavorites).add(movieId));
+  //     }
+  //   } catch (error) {
+  //     console.error('Error handling favorite:', error);
+  //   }
+  // };
+
+
   const truncateTitle = (title, maxLength) => {
     return title.length <= maxLength ? title : title.slice(0, maxLength) + '...';
   };
@@ -61,6 +85,14 @@ function HeroRow() {
               <FaStar className='faster'  />
               <h2>{movie.rating}/10</h2>
               <h4>{movie.genres ? movie.genres.join(" ") : "No genres available"}</h4>
+              
+              {/* <Button onClick={() => handleFavorite(movie.id)} variant='link'>
+                  <FaHeart
+                    className="heart-icon"
+                    style={{ color: favorites.has(movie.id) ? 'red' : 'white' }}
+                  />
+                </Button> */}
+
               <Link to={`/singlemovie/${movie.id}`}  style={{ color: color }}>
                 <button>View Details</button>
               </Link>
