@@ -28,7 +28,7 @@ function Profil() {
     "https://yts-back-end.onrender.com/api/user/GetInformation",
     token
   );
-  // console.log(data);
+  console.log(data);
   // Check if data is defined before attempting to access properties
   const profileImageUrl = data?.imageUrl || '';
   const profileUserName = data?.userName || 'User';

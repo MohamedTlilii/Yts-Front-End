@@ -16,7 +16,10 @@ function HeroRow() {
   const [movies, setMovies] = useState([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
-  // const [favorites, setFavorites] = useState(new Set());
+  const [favorites, setFavorites] = useState({}); // State to track favorite status
+
+  const userId = localStorage.getItem('id'); 
+
 
   useEffect(() => {
     const fetchMovies = async () => {
@@ -47,26 +50,58 @@ function HeroRow() {
   }, []);
 
 
-  // const handleFavorite = async (movieId) => {
-  //   try {
-  //     if (favorites.has(movieId)) {
-  //       // Remove from favorites
-  //       await axios.delete(`http://localhost:5000/api/favorites/${movieId}`); // Adjust endpoint if necessary
-  //       setFavorites(prevFavorites => {
-  //         const newFavorites = new Set(prevFavorites);
-  //         newFavorites.delete(movieId);
-  //         return newFavorites;
-  //       });
-  //     } else {
-  //       // Add to favorites
-  //       await axios.post('http://localhost:5000/api/favorites/addFav', { user: 'currentUserId', movie: movieId });
-  //       setFavorites(prevFavorites => new Set(prevFavorites).add(movieId));
-  //     }
-  //   } catch (error) {
-  //     console.error('Error handling favorite:', error);
-  //   }
-  // };
+  // 
+  const addFavorite = async (movie) => {
+    const movieData = {
+      movieId: movie.id,
+      title: movie.title,
+      large_cover_image: movie.large_cover_image
+    };
+  
+    try {
+      const response = await axios.post(`http://localhost:5000/api/user/addFavorite/${userId}`, {
+        movie: movieData
+      });
+  
+      if (response.data.status) {
+        console.log('Movie added to favorites:', response.data.message);
+        setFavorites(prevFavs => ({ ...prevFavs, [movie.id]: true }));
+      } else {
+        console.log(response.data.message);
+      }
+    } catch (error) {
+      console.error('Error adding to favorites:', error.response ? error.response.data : error.message);
+    }
+  };
+  
+  
+  // 
+  const removeFavorite = async (movie) => {
+    try {
+      const response = await axios.delete(`http://localhost:5000/api/user/removeFavorite/${userId}/${movie.id}`);
+      
+      if (response.data.status) {
+        console.log('Movie removed from favorites:', response.data.message);
+        setFavorites(prevFavs => ({ ...prevFavs, [movie.id]: false }));
+      } else {
+        console.log(response.data.message);
+      }
+    } catch (error) {
+      console.error('Error removing from favorites:', error.response ? error.response.data : error.message);
+    }
+  };
+  
+  // 
 
+  const handleFavoriteToggle = (movie) => {
+    if (favorites[movie.id]) {
+      removeFavorite(movie);
+    } else {
+      addFavorite(movie);
+    }
+  };
+  
+// 
 
   const truncateTitle = (title, maxLength) => {
     return title.length <= maxLength ? title : title.slice(0, maxLength) + '...';
@@ -86,12 +121,20 @@ function HeroRow() {
               <h2>{movie.rating}/10</h2>
               <h4>{movie.genres ? movie.genres.join(" ") : "No genres available"}</h4>
               
-              {/* <Button onClick={() => handleFavorite(movie.id)} variant='link'>
+              {/* <Button 
+              onClick={() => handleFavoriteToggle(movie)}
+              >
                   <FaHeart
                     className="heart-icon"
-                    style={{ color: favorites.has(movie.id) ? 'red' : 'white' }}
+                    color={movie.isFavorite ? 'black' : 'white'}
                   />
                 </Button> */}
+
+ {/* Conditional rendering based on favorite status */}
+ <Button onClick={() => handleFavoriteToggle(movie)}>
+                  <FaHeart className="heart-icon" color={favorites[movie.id] ? 'black' : 'white'} />
+                </Button>
+
 
               <Link to={`/singlemovie/${movie.id}`}  style={{ color: color }}>
                 <button>View Details</button>

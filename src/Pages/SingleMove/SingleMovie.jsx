@@ -5,7 +5,7 @@ import { Link, useParams } from 'react-router-dom';
 import { CiSaveDown2 } from "react-icons/ci";
 import { FaHeart, FaPlay, FaTimes, FaArrowLeft, FaArrowRight } from "react-icons/fa";
 import { Box,useColorModeValue } from '@chakra-ui/react';
-// import TorrentPlayer from '../../Components/TorrentPlayer/TorrentPlayer';
+import TorrentPlayer from '../../Components/TorrentPlayer/TorrentPlayer';
 
 
 function SingleMovie() {
@@ -17,7 +17,7 @@ function SingleMovie() {
   const [selectedImage, setSelectedImage] = useState(null); // State for selected image
   const [imageIndex, setImageIndex] = useState(0); // State for current image index
   const [isTorrentPlayerVisible, setIsTorrentPlayerVisible] = useState(false); // Added state
-  const torrentId = movie?.torrentUrl; // Use optional chaining to handle null movie
+  const [ hash , setHash ] = useState(null) // Use optional chaining to handle null movie
 
   const { id } = useParams();
 
@@ -27,6 +27,7 @@ function SingleMovie() {
         const response = await axios.get(`https://yts.mx/api/v2/movie_details.json?movie_id=${id}&with_images=true&with_cast=true`);
         console.log('movie details:', response.data.data.movie);
         setMovie(response.data.data.movie);
+        setHash(response.data.data.movie.torrents[0].url)
       } catch (error) {
         console.error('Error fetching movie:', error);
       }
@@ -45,6 +46,11 @@ function SingleMovie() {
     fetchMovie();
     fetchSuggestions();
   }, [id]);
+
+
+  useEffect(() => {
+    // console.log('hash:', hash)
+  },[hash])
 
   if (!movie) {
     return <div>Loading...</div>;
@@ -89,24 +95,7 @@ const handlePrevImage = () => {
 
 
 
-// const watchMovie = () => {
-//   const trailerUrl = `https://www.youtube.com/watch?v=${movie.yt_trailer_code}`;
-//   window.open(trailerUrl, '_blank')
-// };
 
-// const downloadMovie = () => {
-//   if (movie.torrents && movie.torrents.length > 0) {
-//     const downloadUrl = movie.torrents[0].url; 
-//     const link = document.createElement('a');
-//     link.href = downloadUrl;
-//     link.download = `${movie.title_long}.torrent`; 
-//     document.body.appendChild(link);
-//     link.click();
-//     document.body.removeChild(link);
-//   } else {
-//     alert("No download links available.");
-//   }
-// };
 
 const handleWatchNowClick = () => {
   setIsTorrentPlayerVisible(true);
@@ -271,15 +260,14 @@ const handleWatchNowClick = () => {
 </div>
 
 
-            {/* Conditionally render TorrentPlayer */}
-      {/* {isTorrentPlayerVisible && (
+       {isTorrentPlayerVisible && (
         <div className="torrent-player-overlay">
           <button className="close-torrent-player" onClick={() => setIsTorrentPlayerVisible(false)}>
             <FaTimes />
           </button>
-          <TorrentPlayer torrentId={torrentId} />
+          <TorrentPlayer url={hash} />
         </div>
-      )} */}
+      )} 
 
           
        </Box>
