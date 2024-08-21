@@ -59,10 +59,8 @@ function HeroRow() {
     };
   
     try {
-      const response = await axios.post(`http://localhost:5000/api/user/addFavorite/${userId}`, {
-        movie: movieData
-      });
-  
+      const response = await axios.post(`http://localhost:5000/api/favorites/addFavorite/${userId}`, movieData);
+      console.log(response.data);
       if (response.data.status) {
         console.log('Movie added to favorites:', response.data.message);
         setFavorites(prevFavs => ({ ...prevFavs, [movie.id]: true }));
@@ -75,11 +73,11 @@ function HeroRow() {
   };
   
   
+  
   // 
   const removeFavorite = async (movie) => {
     try {
-      const response = await axios.delete(`http://localhost:5000/api/user/removeFavorite/${userId}/${movie.id}`);
-      
+      const response = await axios.delete(`http://localhost:5000/api/favorites/removeFavorite/${userId}/${movie.id}`);
       if (response.data.status) {
         console.log('Movie removed from favorites:', response.data.message);
         setFavorites(prevFavs => ({ ...prevFavs, [movie.id]: false }));
@@ -90,6 +88,7 @@ function HeroRow() {
       console.error('Error removing from favorites:', error.response ? error.response.data : error.message);
     }
   };
+  
   
   // 
 
