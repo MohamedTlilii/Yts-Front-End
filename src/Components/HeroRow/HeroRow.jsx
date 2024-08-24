@@ -52,31 +52,32 @@ function HeroRow() {
 
 
   // Function to add a movie to favorites
-const addFavorite = async (movie) => {
-  const movieData = {
-    movieId: movie.id,
-    title: movie.title,
-    large_cover_image: movie.large_cover_image
-  };
+  const addFavorite = async (movie) => {
 
-  try {
-    // Make the POST request
-    const response = await axios.post('http://localhost:5000/api/favorite/addFavorite', movieData);
-    // Handle success
-    console.log('Response:', response.data.message);
-    setFavorites(prevFavs => ({ ...prevFavs, [movie.id]: true }));
-  } catch (error) {
-    // Handle error
-    console.error('Error adding to favorites:', error.message);
-    if (error.response) {
-      console.error('Error details:', error.response.data);
-    } else if (error.request) {
-      console.error('No response received:', error.request);
-    } else {
-      console.error('Error setting up request:', error.message);
-    }
-  }
-};
+    const movieData = {
+      movieId: movie.id,
+      title: movie.title,
+      large_cover_image: movie.large_cover_image
+    };
+  
+    axios.post('http://localhost:5000/api/favorite/addFavorite', movieData)
+      .then((res) => {
+        console.log('Favorite added successfully:', res.data);
+
+        // Update the local state to reflect the favorite status
+        setFavorites((prevFavorites) => ({
+          ...prevFavorites,
+          [movie.id]: true, // Mark this movie as favorited
+        }));
+      })
+      .catch((error) => {
+        console.error('Error adding favorite:', error);
+        console.log('Failed to add favorite, please try again later.' , error);
+
+      });
+  };
+  
+  
 
   // Function to remove a movie from favorites
   const removeFavorite = async (movie) => {
@@ -130,7 +131,7 @@ const addFavorite = async (movie) => {
                 </Button> */}
 
  {/* Conditional rendering based on favorite status */}
- <Button onClick={() => handleFavoriteToggle(movie)}>
+ <Button onClick={() => addFavorite(movie)}>
                   <FaHeart className="heart-icon" color={favorites[movie.id] ? 'black' : 'white'} />
                 </Button>
 
