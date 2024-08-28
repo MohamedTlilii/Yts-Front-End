@@ -3,7 +3,8 @@ import React, { useEffect, useState } from 'react'
 import { Box, Spinner,  useColorModeValue,
 } from '@chakra-ui/react';import { Link } from 'react-router-dom';
 import axios from 'axios';
-import { FaStar } from 'react-icons/fa';
+import { FaHeart, FaStar } from 'react-icons/fa';
+import { Button } from 'semantic-ui-react';
 
 
 
@@ -14,6 +15,9 @@ function HeroUpcoming() {
 
   const bgColor = useColorModeValue('white', 'black');
   const color = useColorModeValue('black', 'white');
+  const [favorites, setFavorites] = useState({}); 
+
+  const userId = localStorage.getItem('id'); 
 
   useEffect(() => {
     const fetchMovies = async () => {
@@ -42,24 +46,63 @@ function HeroUpcoming() {
 
     fetchMovies();
   }, []);
+
+
+// Function to add a movie to favorites
+const addFavorite = async (movie) => {
+
+  const movieData = {
+    movieId: movie.id,
+    title: movie.title,
+    large_cover_image: movie.large_cover_image
+  };
+
+  axios.post(`https://yts-back-end.onrender.com/api/favorite/addFavorite/${userId}`, movieData)
+    .then((res) => {
+      console.log('Favorite added successfully:', res.data);
+
+      setFavorites((prevFavorites) => ({
+        ...prevFavorites,
+        [movie.id]: true, 
+      }));
+    })
+    .catch((error) => {
+      console.error('Error adding favorite:', error);
+      console.log('Failed to add favorite, please try again later.' , error);
+
+    });
+};
+
+
+
+// Function to remove a movie from favorites
+const removeFavorite = async (movie) => {
+  try {
+    const response = await axios.delete(`https://yts-back-end.onrender.com/api/favorite/removeFavorite/${userId}/${movie.id}`);
+    if (response.data.status) {
+      setFavorites(prevFavs => ({ ...prevFavs, [movie.id]: false }));
+      console.log('Movie removed from favorites:', response.data.message);
+    } else {
+      console.log(response.data.message);
+    }
+  } catch (error) {
+    console.error('Error removing from favorites:', error.response ? error.response.data : error.message);
+  }
+};
+
+// Handle toggling of favorite status
+const handleFavoriteToggle = (movie) => {
+  if (favorites[movie.id]) {
+    removeFavorite(movie);
+  } else {
+    addFavorite(movie);
+  }
+};
+
   const truncateTitle = (title, maxLength) => {
     return title.length <= maxLength ? title : title.slice(0, maxLength) + '...';
   };
-  // if (loading) {
-  //   return (
-  //     <Box className='hero-latest-movies'>
-  //       <Spinner  size='xl' className="loading-css" />
-  //     </Box>
-  //   );
-  // }
-
-  // if (error) {
-  //   return (
-  //     <Box className='hero-latest-movies'>
-  //       <Text color="red.500">{error}</Text>
-  //     </Box>
-  //   );
-  // }
+  
   return (
     <Box className='hero-upcoming-container'bg={bgColor} color={color} >
       <Box className='hero-upcoming-tittle'>
@@ -79,6 +122,12 @@ function HeroUpcoming() {
             <FaStar className='faster'  />
             <h2>{movie.rating}/10</h2>
             <h4>{movie.genres ? movie.genres.join(" ") : "No genres available"}</h4>
+           
+            {/* Conditional rendering based on favorite status */}
+ <Button onClick={() => handleFavoriteToggle(movie)}>
+                  <FaHeart className="heart-icon" color={favorites[movie.id] ? 'red' : 'white'} />
+                </Button>
+           
             <Link to={`/singlemovie/${movie.id}`}style={{ color: color }}>
               <button>View Details</button>
             </Link>

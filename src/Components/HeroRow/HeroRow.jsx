@@ -7,7 +7,7 @@ import { Link } from 'react-router-dom';
 import "./HeroRow.scss";
 import { IoDownload } from "react-icons/io5";
 import { Button } from 'semantic-ui-react';
-import { urlFav } from "../../utils/url";
+// import { urlFav } from "../../utils/url";
 
 function HeroRow() {
   const bgColor = useColorModeValue('white', 'black');
@@ -15,6 +15,8 @@ function HeroRow() {
 
 
   const [movies, setMovies] = useState([]);
+  console.log(movies);
+
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
   const [favorites, setFavorites] = useState({}); 
@@ -57,17 +59,19 @@ function HeroRow() {
     const movieData = {
       movieId: movie.id,
       title: movie.title,
-      large_cover_image: movie.large_cover_image
+      large_cover_image: movie.large_cover_image,
+      rating: movie.rating, // Add this line
+    genres: movie.genres, // Add this line
+      
     };
   
-    axios.post('http://localhost:5000/api/favorite/addFavorite', movieData)
+    axios.post(`https://yts-back-end.onrender.com/api/favorite/addFavorite/${userId}`, movieData)
       .then((res) => {
         console.log('Favorite added successfully:', res.data);
 
-        // Update the local state to reflect the favorite status
         setFavorites((prevFavorites) => ({
           ...prevFavorites,
-          [movie.id]: true, // Mark this movie as favorited
+          [movie.id]: true, 
         }));
       })
       .catch((error) => {
@@ -82,7 +86,7 @@ function HeroRow() {
   // Function to remove a movie from favorites
   const removeFavorite = async (movie) => {
     try {
-      const response = await axios.delete(`${urlFav}/removeFavorite/${userId}/${movie.id}`);
+      const response = await axios.delete(`https://yts-back-end.onrender.com/api/favorite/removeFavorite/${userId}/${movie.id}`);
       if (response.data.status) {
         setFavorites(prevFavs => ({ ...prevFavs, [movie.id]: false }));
         console.log('Movie removed from favorites:', response.data.message);
@@ -121,18 +125,11 @@ function HeroRow() {
               <h2>{movie.rating}/10</h2>
               <h4>{movie.genres ? movie.genres.join(" ") : "No genres available"}</h4>
               
-              {/* <Button 
-              onClick={() => handleFavoriteToggle(movie)}
-              >
-                  <FaHeart
-                    className="heart-icon"
-                    color={movie.isFavorite ? 'black' : 'white'}
-                  />
-                </Button> */}
+              
 
  {/* Conditional rendering based on favorite status */}
- <Button onClick={() => addFavorite(movie)}>
-                  <FaHeart className="heart-icon" color={favorites[movie.id] ? 'black' : 'white'} />
+ <Button onClick={() => handleFavoriteToggle(movie)}>
+                  <FaHeart className="heart-icon" color={favorites[movie.id] ? 'red' : 'white'} />
                 </Button>
 
 

@@ -11,6 +11,8 @@ import UserRoute from './Routes/UserRoute';
 import RequestPasswordReset from './Pages/RequestPasswordReset/RequestPasswordReset';
 import Profil from './Pages/Profil/Profil';
 import 'react-toastify/dist/ReactToastify.css';
+import TestToast from './Components/Toast/Toast';
+import { ToastContainer } from 'react-toastify';
 // import TestToast from './Components/Toast/Toast';
 // import UserResetPasswordTokenRoute from './Routes/UserResetPasswordTokenRoute';
 
@@ -45,8 +47,8 @@ function App() {
       </Routes>
 
       {/* ToastContainer should be outside of Routes to ensure it's available globally */}
-      {/* <ToastContainer /> */}
-      {/* <TestToast /> */}
+      <ToastContainer />
+          
 
     </>
   );
