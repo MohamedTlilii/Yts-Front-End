@@ -15,7 +15,7 @@ function HeroRow() {
 
 
   const [movies, setMovies] = useState([]);
-  console.log(movies);
+  // console.log(movies);
 
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);

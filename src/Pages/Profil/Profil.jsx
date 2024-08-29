@@ -6,7 +6,9 @@ import axios from "axios";
 import { url } from "../../utils/url";
 import { useFetch } from "../../utils/useFetch";
 import { toast, ToastContainer } from 'react-toastify';
-import TestToast from '../../Components/Toast/Toast';
+// import TestToast from '../../Components/Toast/Toast';
+import { FaStar } from 'react-icons/fa';
+import { Link } from 'react-router-dom';
 
 function Profil() {
   
@@ -19,7 +21,7 @@ function Profil() {
   const [loadingP, setLoadingP] = useState(false);
   const [initialUserData, setInitialUserData] = useState({});
   const [favoriteMovies, setFavoriteMovies] = useState([]); // State to store favorite movies
-
+// console.log(favoriteMovies);
   let token = localStorage.getItem("token");
   const userId = localStorage.getItem('id'); 
 
@@ -130,7 +132,9 @@ function Profil() {
      
     }
   };
-
+  const truncateTitle = (title, maxLength) => {
+    return title.length <= maxLength ? title : title.slice(0, maxLength) + '...';
+  };
   return (
     <>
       <Box className="profil-container" bgColor={bgColor} color={color}>
@@ -142,7 +146,6 @@ function Profil() {
             Edit Information
           </Button>
         </Box>
-
         <Box className="favorites-section">
           <Text className="section-title">
             <MdFavoriteBorder  className='favvvv' />
@@ -150,21 +153,33 @@ function Profil() {
           </Text>
           <Box className="movies-container">
           {favoriteMovies.map((movie) => (
-              <Box className="movie-item" key={movie._id}>
-                <Image src={movie.large_cover_image} alt={movie.title} className="movie-poster" />
-                <Text className="movie-title">{movie.title}</Text>
-                <IconButton className='iconbtntnt'
-                  icon={<MdDelete />}
-                  aria-label="Remove from favorites"
-                  onClick={() => handleUnfavoriteMovie(movie.movieId)}
-                />
+             <Box className="movie-item" key={movie._id}>
+             <div className='movie-image-container'>
+               <Image src={movie.large_cover_image} alt={movie.title} className="movie-poster" />
+               <div className='movie-details-hover'>
+                 <FaStar className='faster' />
+                 <h2>{movie.rating}/10</h2>
+                 <h4>{movie.genres ? movie.genres.join(" ") : "No genres available"}</h4>
+                 <IconButton className='iconbtntnt'
+                   icon={<MdDelete />}
+                   aria-label="Remove from favorites"
+                   onClick={() => handleUnfavoriteMovie(movie.movieId)}/>
+                 <Link to={`/singlemovie/${movie.movieId}`} style={{ color: color }}>
+                   <button>View Details</button>
+                 </Link>
+               </div>
+             </div>
+             <div className='movie-details'>
+             <Link to={`/singlemovie/${movie.movieId}`} style={{ color: color }}>
+  <Box><h3>{truncateTitle(movie.title, 15)}</h3></Box>
+</Link>
 
-              </Box>
+             </div>
+           </Box>
             ))}
           </Box>
         </Box>
       </Box>
-
       <Modal isOpen={isOpen} onClose={onClose} bgColor={bgColor} color={color}>
         <ModalOverlay />
         <ModalContent>

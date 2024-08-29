@@ -131,7 +131,10 @@ function Trending() {
       const movieData = {
         movieId: movie.id,
         title: movie.title,
-        large_cover_image: movie.large_cover_image
+        large_cover_image: movie.large_cover_image,
+        rating: movie.rating, // Add this line
+      genres: movie.genres, // Add this line
+        
       };
     
       axios.post(`https://yts-back-end.onrender.com/api/favorite/addFavorite/${userId}`, movieData)
