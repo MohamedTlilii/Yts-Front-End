@@ -9,6 +9,7 @@ import { toast, ToastContainer } from 'react-toastify';
 // import TestToast from '../../Components/Toast/Toast';
 import { FaStar } from 'react-icons/fa';
 import { Link } from 'react-router-dom';
+import { FaTrash } from "react-icons/fa";
 
 function Profil() {
   
@@ -142,9 +143,9 @@ function Profil() {
           <Image src={profileImageUrl} alt="Profile Avatar" className="profile-avatar" />
           <Text className="profile-name">{profileUserName}</Text>
           <Text className="profile-email">{profileEmail}</Text>
-          <Button className="edit-button" colorScheme="teal" onClick={onOpen}>
+          <button className="edit-button" colorScheme="teal" onClick={onOpen}>
             Edit Information
-          </Button>
+          </button>
         </Box>
         <Box className="favorites-section">
           <Text className="section-title">
@@ -160,12 +161,12 @@ function Profil() {
                  <FaStar className='faster' />
                  <h2>{movie.rating}/10</h2>
                  <h4>{movie.genres ? movie.genres.join(" ") : "No genres available"}</h4>
-                 <IconButton className='iconbtntnt'
-                   icon={<MdDelete />}
-                   aria-label="Remove from favorites"
-                   onClick={() => handleUnfavoriteMovie(movie.movieId)}/>
+                 <button className='iconbtntnt' onClick={() => handleUnfavoriteMovie(movie.movieId)}>
+                  <FaTrash className='mdbtn'/>
+                  
+                   </button>
                  <Link to={`/singlemovie/${movie.movieId}`} style={{ color: color }}>
-                   <button>View Details</button>
+                   <button className='view-details'>View Details</button>
                  </Link>
                </div>
              </div>
@@ -185,7 +186,7 @@ function Profil() {
         <ModalContent>
           <ModalCloseButton />
           <ModalBody>
-            <Box className="modal-content">
+            <Box className="modal-content" bgColor={bgColor} color={color}>
               <h2>Update Information</h2>
               <FormControl className='chakra-form-control-username'>
                 <FormLabel className='chakra-form-label-username' htmlFor="userName">Username</FormLabel>

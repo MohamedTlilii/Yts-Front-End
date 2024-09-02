@@ -51,9 +51,15 @@
 
     .edit-button {
       // border: 2px solid red;
+      background-color: #6ac045;
 
       margin-top: 10px;
+      border-radius: 4px;
+      padding: 10px;
     }
+
+
+    
   }
 
 
@@ -62,7 +68,6 @@
     border: 1px solid gray;
 
     width: 65%;
-    // background-color: #fff;
     padding: 20px;
     border-radius: 8px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
@@ -124,7 +129,7 @@
 
 
         //   width: 1390px!important;
-        height: 350px;
+        height: 300px;
         border-radius: 8px;
         margin-bottom: 10px;
         // border: 3px solid rgba(255, 255, 255, 0.2);
@@ -171,11 +176,23 @@
 
       h4 {}
 
-      .heart-icon {
+      .iconbtntnt {
         // border: 1px solid red;
+        // padding-left: -10px!important;
+        // background-color: #6ac045;
+        // padding: 5px 5px;
+        border-radius: 4px;
+
+      }
+      .mdbtn {
+        // border: 1px solid red;
+        // font-size: 10px;
+        color: red;
+
+
       }
 
-      button {
+      .view-details  {
         background-color: #6ac045;
         padding: 5px 10px;
         margin-top: 10px;
@@ -318,4 +335,2363 @@
 
   }
 
+}
+// border: 1px solid red ;
+@media screen and (max-width: 1200px) {
+  .profil-container {
+    // border: 2px solid rgb(136, 255, 0);
+  
+    // display: flex;
+    // justify-content: space-between;
+    // padding: 20px;
+    // height: 100vh;
+    // margin: 0 auto;
+  
+  
+    .profile-section {
+      // border: 1px solid gray;
+  
+      // width: 30%;
+      // height: fit-content;
+      // padding: 20px;
+      // border-radius: 8px;
+      // box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      // text-align: center;
+      // display: flex;
+      // flex-direction: column;
+      // align-items: center;
+  
+      .profile-avatar {
+        // border: 1px solid gray;
+  
+        // width: 120px;
+        // height: 120px;
+        // border-radius: 50%;
+        // object-fit: cover;
+        // margin-bottom: 10px;
+      }
+  
+      .profile-name {
+        // border: 2px solid rgb(230, 0, 255);
+        
+        // font-size: 1.5em;
+        // font-weight: bold;
+        // margin-bottom: 5px;
+      }
+  
+      .profile-email {
+        // border: 2px solid rgb(255, 0, 0);
+  
+        // color: #666;
+        // margin-bottom: 15px;
+      }
+  
+      .edit-button {
+        // border: 2px solid red;
+  
+        // margin-top: 10px;
+      }
+  
+  
+      
+    }
+  
+  
+  
+    .favorites-section {
+      // border: 1px solid gray;
+  
+      // width: 65%;
+      // padding: 20px;
+      // border-radius: 8px;
+      // box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      // max-height: auto;
+      // /* Set a maximum height to enable scrolling */
+      // overflow-y: auto;
+      // /* Enable vertical scrolling */
+      // overflow-x: hidden;
+  
+      // /* Hide horizontal scrolling if not needed */
+      .section-title {
+        // border: 2px solid red;
+  
+        // font-size: 1.5em;
+        // font-weight: bold;
+        // margin-bottom: 20px;
+        // display: flex;
+        // gap: 10px;
+        // align-items: center;
+  
+        .favvvv {
+          // border: 2px solid red;
+          // color: red;
+        }
+  
+        h2 {
+          // border: 2px solid red;
+  
+        }
+      }
+  
+      .movies-container {
+                  // border: 2px solid red;
+
+        // display: flex;
+        // justify-content: center;
+        // align-items: center;
+        // flex-wrap: wrap;
+        // gap: 20px;
+        // padding: 40px;
+        // width: auto 0px !important;
+  
+        .movie-item {
+          
+          // border: 2px solid red;
+          // position: relative;
+          width: 140px;
+          // height: 370px;
+          // height: auto 0px;
+          // text-align: center;
+          // border-radius: 8px;
+          // overflow: hidden;
+          // transition: transform 0.3s ease;
+  
+        }
+  
+        .movie-image-container {
+          // border: 2px solid red;
+
+          // position: relative;
+        }
+  
+        .movie-poster {
+          
+          // border: 5px solid;
+  
+  
+          height: 230px;
+          // border-radius: 8px;
+          // margin-bottom: 10px;
+          // transition: opacity 0.5s ease;
+  
+        }
+  
+        .movie-details-hover {
+          
+          // opacity: 1;
+        }
+  
+        .movie-details-hover {
+          // border: 5px solid rgb(128, 255, 0);
+  
+          // position: absolute;
+          // top: 0;
+          // left: 0;
+          // width: 100%;
+          // height: 100%;
+          // display: flex;
+          // flex-direction: column;
+          // gap: 15px;
+          // align-items: center;
+          // justify-content: center;
+          // opacity: 0;
+          // transition: opacity 0.5s ease;
+          // background-color: rgba(0, 0, 0, 0.8);
+          // color: white;
+          // padding: 10px;
+          // border-radius: 8px;
+          // z-index: 1;
+        }
+  
+        .faster {
+          
+          // color: #6ac045;
+          margin-bottom: 0px;
+  
+        }
+  
+        h2 {
+          // border: 1px solid red;
+          // color: black!important;
+          font-size: 13px;
+        }
+
+        h4 {
+          font-size: 13px; 
+        }
+
+        .iconbtntnt {
+          // border: 1px solid red;
+        //   color: red;
+        // border-radius: 50%;
+        font-size: 15px;
+        }
+        .mdbtn {
+
+        }
+
+        .view-details {
+          // background-color: #6ac045;
+          // padding: 5px 10px;
+          // margin-top: 10px;
+          // cursor: pointer;
+          // color: white;
+          // border: none;
+          // border-radius: 4px;
+          font-size: 10px; 
+        }
+  
+        .movie-item:hover .movie-poster {
+          // opacity: 0.3;
+        }
+  
+        .movie-item:hover .movie-details-hover {
+          // opacity: 1;
+        }
+  
+        .movie-details {
+  
+          // border: 2px solid red;
+          h3 {
+            // color: rgb(94, 94, 249);
+            font-size: 13px;
+          }
+  
+        }
+  
+  
+      }
+    }
+  
+    // #toastttttt {
+    //   display: none;
+    // }
+  
+  
+  
+  
+  
+  
+  
+  }
+  
+  .modal-content {
+    // border: 2px solid red ;
+    // padding: 20px;
+  
+    h2 {
+      // border: 2px solid red;
+      // margin-bottom: 10px;
+      // font-size: 19px;
+      // font-weight: 700;
+    }
+  
+    .chakra-form-control-username {
+      // border: 2px solid red!important;
+  
+      // margin-bottom: 1rem;
+  
+      .chakra-form-label-username {
+        //   border: 2px solid rgb(0, 4, 255)!important;
+        // font-weight: bold;
+      }
+  
+      .chakra-input-username {
+        // border: 2px solid rgb(171, 11, 147)!important;
+  
+        // border: 1px solid #ccc;
+        // border-radius: 4px;
+      }
+    }
+  
+    .chakra-form-control-email {
+      // border: 2px solid red!important;
+  
+      // margin-bottom: 1rem;
+  
+      .chakra-form-label-email {
+        //   border: 2px solid rgb(0, 4, 255)!important;
+        // font-weight: bold;
+      }
+  
+      .chakra-input-email {
+        // border: 2px solid rgb(171, 11, 147)!important;
+  
+        // border: 1px solid #ccc;
+        // border-radius: 4px;
+      }
+    }
+  
+    .btn-info {
+  // border: 2px solid red;
+  //     margin-bottom: 7px;
+    }
+  
+    // .chakra-form-control-password {
+    //     // border: 2px solid red!important;
+  
+    //   margin-bottom: 1rem;
+  
+    //   .chakra-form-label-password {
+    //     //   border: 2px solid rgb(0, 4, 255)!important;
+    //     font-weight: bold;
+    //   }
+  
+    //   .chakra-input-password {
+    //     // border: 2px solid rgb(171, 11, 147)!important;
+  
+    //     border: 1px solid #ccc;
+    //     border-radius: 4px;
+    //   }
+    //   .chakra-password-toggle {
+    //             // border: 2px solid rgb(171, 11, 147)!important;
+  
+    //   }
+    // }
+  
+    .chakra-form-control-imageUrl {
+      // border: 2px solid red!important;
+  
+      // margin-bottom: 1rem;
+  
+      .chakra-form-label-imageUrl {
+        //   border: 2px solid rgb(0, 4, 255)!important;
+        // font-weight: bold;
+      }
+  
+      .chakra-input-imageUrl {
+        // border: 2px solid rgb(171, 11, 147)!important;
+  
+        // border: 1px solid #ccc;
+        // border-radius: 4px;
+        // padding: 3px;
+      }
+  
+      .btn-imgurl {
+        // border: 2px solid red;
+        // margin-top: 17px;
+  
+      }
+  
+    }
+  
+  }
+
+}
+
+@media screen and (max-width: 900px) {
+  .profil-container {
+    // border: 2px solid rgb(136, 255, 0);
+  
+    // display: flex;
+    // justify-content: space-between;
+    // padding: 20px;
+    // height: 100vh;
+    // margin: 0 auto;
+  
+  
+    .profile-section {
+      // border: 1px solid gray;
+  
+      // width: 30%;
+      // height: fit-content;
+      // padding: 20px;
+      // border-radius: 8px;
+      // box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      // text-align: center;
+      // display: flex;
+      // flex-direction: column;
+      // align-items: center;
+  
+      .profile-avatar {
+        // border: 1px solid gray;
+  
+        // width: 120px;
+        // height: 120px;
+        // border-radius: 50%;
+        // object-fit: cover;
+        // margin-bottom: 10px;
+      }
+  
+      .profile-name {
+        // border: 2px solid rgb(230, 0, 255);
+        
+        font-size: 1.0em;
+        // font-weight: bold;
+        // margin-bottom: 5px;
+      }
+  
+      .profile-email {
+        // border: 2px solid rgb(255, 0, 0);
+        font-size: 0.8em;
+
+        // color: #666;
+        // margin-bottom: 15px;
+      }
+  
+      .edit-button {
+        // border: 2px solid red;
+        font-size: 0.7em;
+padding: 8px ;
+        // margin-top: 10px;
+      }
+  
+  
+      
+    }
+  
+  
+  
+    .favorites-section {
+      // border: 1px solid gray;
+  
+      // width: 65%;
+      // padding: 20px;
+      // border-radius: 8px;
+      // box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      // max-height: auto;
+      // /* Set a maximum height to enable scrolling */
+      // overflow-y: auto;
+      // /* Enable vertical scrolling */
+      // overflow-x: hidden;
+  
+      // /* Hide horizontal scrolling if not needed */
+      .section-title {
+        // border: 2px solid red;
+  
+        // font-size: 1.5em;
+        // font-weight: bold;
+        // margin-bottom: 20px;
+        // display: flex;
+        // gap: 10px;
+        // align-items: center;
+  
+        .favvvv {
+          // border: 2px solid red;
+          // color: red;
+        }
+  
+        h2 {
+          // border: 2px solid red;
+  
+        }
+      }
+  
+      .movies-container {
+                  // border: 2px solid red;
+
+        // display: flex;
+        // justify-content: center;
+        // align-items: center;
+        // flex-wrap: wrap;
+        // gap: 20px;
+        // padding: 40px;
+        // width: auto 0px !important;
+  
+        .movie-item {
+          // border: 2px solid red;
+          // position: relative;
+          width: 140px;
+          height: 265px;
+          // height: auto 0px;
+          // text-align: center;
+          // border-radius: 8px;
+          // overflow: hidden;
+          // transition: transform 0.3s ease;
+  
+        }
+  
+        .movie-image-container {
+          // border: 2px solid red;
+
+          // position: relative;
+        }
+  
+        .movie-poster {
+          // border: 5px solid;
+            // border: 2px solid red;
+
+  
+          height: 230px;
+          // border-radius: 8px;
+          // margin-bottom: 10px;
+          // transition: opacity 0.5s ease;
+  
+        }
+  
+        .movie-details-hover {
+          // opacity: 1;
+        }
+  
+        .movie-details-hover {
+          // border: 5px solid rgb(128, 255, 0);
+  
+          // position: absolute;
+          // top: 0;
+          // left: 0;
+          // width: 100%;
+          // height: 100%;
+          // display: flex;
+          // flex-direction: column;
+          // gap: 15px;
+          // align-items: center;
+          // justify-content: center;
+          // opacity: 0;
+          // transition: opacity 0.5s ease;
+          // background-color: rgba(0, 0, 0, 0.8);
+          // color: white;
+          // padding: 10px;
+          // border-radius: 8px;
+          // z-index: 1;
+        }
+  
+        .faster {
+          // color: #6ac045;
+          margin-bottom: 0px;
+  
+        }
+  
+        h2 {
+          // border: 1px solid red;
+          // color: black!important;
+          font-size: 13px;
+        }
+
+        h4 {
+          font-size: 13px; 
+        }
+.iconbtntnt {
+
+}
+        .mdbtn {
+
+        }
+
+        .view-details {
+          // background-color: #6ac045;
+          // padding: 5px 10px;
+          // margin-top: 10px;
+          // cursor: pointer;
+          // color: white;
+          // border: none;
+          // border-radius: 4px;
+          font-size: 10px; 
+        }
+  
+        .movie-item:hover .movie-poster {
+          // opacity: 0.3;
+        }
+  
+        .movie-item:hover .movie-details-hover {
+          // opacity: 1;
+        }
+  
+        .movie-details {
+  
+          // border: 2px solid red;
+          h3 {
+            // color: rgb(94, 94, 249);
+            font-size: 13px;
+          }
+  
+        }
+  
+  
+      }
+    }
+  
+    // #toastttttt {
+    //   display: none;
+    // }
+  
+  
+  
+  
+  
+  
+  
+  }
+  
+  .modal-content {
+    // border: 2px solid red ;
+    // padding: 20px;
+  
+    h2 {
+      // border: 2px solid red;
+      // margin-bottom: 10px;
+      // font-size: 19px;
+      // font-weight: 700;
+    }
+  
+    .chakra-form-control-username {
+      // border: 2px solid red!important;
+  
+      // margin-bottom: 1rem;
+  
+      .chakra-form-label-username {
+        //   border: 2px solid rgb(0, 4, 255)!important;
+        // font-weight: bold;
+      }
+  
+      .chakra-input-username {
+        // border: 2px solid rgb(171, 11, 147)!important;
+  
+        // border: 1px solid #ccc;
+        // border-radius: 4px;
+      }
+    }
+  
+    .chakra-form-control-email {
+      // border: 2px solid red!important;
+  
+      // margin-bottom: 1rem;
+  
+      .chakra-form-label-email {
+        //   border: 2px solid rgb(0, 4, 255)!important;
+        // font-weight: bold;
+      }
+  
+      .chakra-input-email {
+        // border: 2px solid rgb(171, 11, 147)!important;
+  
+        // border: 1px solid #ccc;
+        // border-radius: 4px;
+      }
+    }
+  
+    .btn-info {
+  // border: 2px solid red;
+  //     margin-bottom: 7px;
+    }
+  
+    // .chakra-form-control-password {
+    //     // border: 2px solid red!important;
+  
+    //   margin-bottom: 1rem;
+  
+    //   .chakra-form-label-password {
+    //     //   border: 2px solid rgb(0, 4, 255)!important;
+    //     font-weight: bold;
+    //   }
+  
+    //   .chakra-input-password {
+    //     // border: 2px solid rgb(171, 11, 147)!important;
+  
+    //     border: 1px solid #ccc;
+    //     border-radius: 4px;
+    //   }
+    //   .chakra-password-toggle {
+    //             // border: 2px solid rgb(171, 11, 147)!important;
+  
+    //   }
+    // }
+  
+    .chakra-form-control-imageUrl {
+      // border: 2px solid red!important;
+  
+      // margin-bottom: 1rem;
+  
+      .chakra-form-label-imageUrl {
+        //   border: 2px solid rgb(0, 4, 255)!important;
+        // font-weight: bold;
+      }
+  
+      .chakra-input-imageUrl {
+        // border: 2px solid rgb(171, 11, 147)!important;
+  
+        // border: 1px solid #ccc;
+        // border-radius: 4px;
+        // padding: 3px;
+      }
+  
+      .btn-imgurl {
+        // border: 2px solid red;
+        // margin-top: 17px;
+  
+      }
+  
+    }
+  
+  }
+
+}
+
+@media screen and (max-width: 780px) {
+  .profil-container {
+    // border: 2px solid rgb(136, 255, 0);
+  
+    // display: flex;
+    // justify-content: space-between;
+    // padding: 20px;
+    // height: 100vh;
+    // margin: 0 auto;
+  
+  
+    .profile-section {
+      // border: 1px solid gray;
+  
+      // width: 30%;
+      // height: fit-content;
+      // padding: 20px;
+      // border-radius: 8px;
+      // box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      // text-align: center;
+      // display: flex;
+      // flex-direction: column;
+      // align-items: center;
+  
+      .profile-avatar {
+        // border: 1px solid gray;
+  
+        // width: 120px;
+        // height: 120px;
+        // border-radius: 50%;
+        // object-fit: cover;
+        // margin-bottom: 10px;
+      }
+  
+      .profile-name {
+        // border: 2px solid rgb(230, 0, 255);
+        
+        font-size: 1.0em;
+        // font-weight: bold;
+        // margin-bottom: 5px;
+      }
+  
+      .profile-email {
+        // border: 2px solid rgb(255, 0, 0);
+        font-size: 0.8em;
+
+        // color: #666;
+        // margin-bottom: 15px;
+      }
+  
+      .edit-button {
+        // border: 2px solid red;
+        font-size: 0.7em;
+padding: 8px ;
+        // margin-top: 10px;
+      }
+  
+  
+      
+    }
+  
+  
+  
+    .favorites-section {
+      // border: 1px solid gray;
+  
+      // width: 65%;
+      // padding: 20px;
+      // border-radius: 8px;
+      // box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      // max-height: auto;
+      // /* Set a maximum height to enable scrolling */
+      // overflow-y: auto;
+      // /* Enable vertical scrolling */
+      // overflow-x: hidden;
+  
+      // /* Hide horizontal scrolling if not needed */
+      .section-title {
+        // border: 2px solid red;
+  
+        // font-size: 1.5em;
+        // font-weight: bold;
+        // margin-bottom: 20px;
+        // display: flex;
+        // gap: 10px;
+        // align-items: center;
+  padding: 10px;
+        .favvvv {
+          // border: 2px solid red;
+          // color: red;
+        }
+  
+        h2 {
+          // border: 2px solid red;
+  
+        }
+      }
+  
+      .movies-container {
+                  // border: 2px solid red;
+
+        // display: flex;
+        // justify-content: center;
+        // align-items: center;
+        // flex-wrap: wrap;
+        // gap: 20px;
+        // padding: 40px;
+        // width: auto 0px !important;
+  
+        .movie-item {
+          // border: 2px solid red;
+          // position: relative;
+          width: 140px;
+          height: 265px;
+          // height: auto 0px;
+          // text-align: center;
+          // border-radius: 8px;
+          // overflow: hidden;
+          // transition: transform 0.3s ease;
+  
+        }
+  
+        .movie-image-container {
+          // border: 2px solid red;
+
+          // position: relative;
+        }
+  
+        .movie-poster {
+          // border: 5px solid;
+            // border: 2px solid red;
+
+  
+          height: 230px;
+          // border-radius: 8px;
+          // margin-bottom: 10px;
+          // transition: opacity 0.5s ease;
+  
+        }
+  
+        .movie-details-hover {
+          // opacity: 1;
+        }
+  
+        .movie-details-hover {
+          // border: 5px solid rgb(128, 255, 0);
+  
+          // position: absolute;
+          // top: 0;
+          // left: 0;
+          // width: 100%;
+          // height: 100%;
+          // display: flex;
+          // flex-direction: column;
+          // gap: 15px;
+          // align-items: center;
+          // justify-content: center;
+          // opacity: 0;
+          // transition: opacity 0.5s ease;
+          // background-color: rgba(0, 0, 0, 0.8);
+          // color: white;
+          // padding: 10px;
+          // border-radius: 8px;
+          // z-index: 1;
+        }
+  
+        .faster {
+          // color: #6ac045;
+          margin-bottom: 0px;
+  
+        }
+  
+        h2 {
+          // border: 1px solid red;
+          // color: black!important;
+          font-size: 13px;
+        }
+
+        h4 {
+          font-size: 13px; 
+        }
+.iconbtntnt {
+
+}
+        .mdbtn {
+
+        }
+
+        .view-details {
+          // background-color: #6ac045;
+          // padding: 5px 10px;
+          // margin-top: 10px;
+          // cursor: pointer;
+          // color: white;
+          // border: none;
+          // border-radius: 4px;
+          font-size: 10px; 
+        }
+  
+        .movie-item:hover .movie-poster {
+          // opacity: 0.3;
+        }
+  
+        .movie-item:hover .movie-details-hover {
+          // opacity: 1;
+        }
+  
+        .movie-details {
+  
+          // border: 2px solid red;
+          h3 {
+            // color: rgb(94, 94, 249);
+            font-size: 13px;
+          }
+  
+        }
+  
+  
+      }
+    }
+  
+    // #toastttttt {
+    //   display: none;
+    // }
+  
+  
+  
+  
+  
+  
+  
+  }
+  
+  .modal-content {
+    // border: 2px solid red ;
+    // padding: 20px;
+  
+    h2 {
+      // border: 2px solid red;
+      // margin-bottom: 10px;
+      // font-size: 19px;
+      // font-weight: 700;
+    }
+  
+    .chakra-form-control-username {
+      // border: 2px solid red!important;
+  
+      // margin-bottom: 1rem;
+  
+      .chakra-form-label-username {
+        //   border: 2px solid rgb(0, 4, 255)!important;
+        // font-weight: bold;
+      }
+  
+      .chakra-input-username {
+        // border: 2px solid rgb(171, 11, 147)!important;
+  
+        // border: 1px solid #ccc;
+        // border-radius: 4px;
+      }
+    }
+  
+    .chakra-form-control-email {
+      // border: 2px solid red!important;
+  
+      // margin-bottom: 1rem;
+  
+      .chakra-form-label-email {
+        //   border: 2px solid rgb(0, 4, 255)!important;
+        // font-weight: bold;
+      }
+  
+      .chakra-input-email {
+        // border: 2px solid rgb(171, 11, 147)!important;
+  
+        // border: 1px solid #ccc;
+        // border-radius: 4px;
+      }
+    }
+  
+    .btn-info {
+  // border: 2px solid red;
+  //     margin-bottom: 7px;
+    }
+  
+    // .chakra-form-control-password {
+    //     // border: 2px solid red!important;
+  
+    //   margin-bottom: 1rem;
+  
+    //   .chakra-form-label-password {
+    //     //   border: 2px solid rgb(0, 4, 255)!important;
+    //     font-weight: bold;
+    //   }
+  
+    //   .chakra-input-password {
+    //     // border: 2px solid rgb(171, 11, 147)!important;
+  
+    //     border: 1px solid #ccc;
+    //     border-radius: 4px;
+    //   }
+    //   .chakra-password-toggle {
+    //             // border: 2px solid rgb(171, 11, 147)!important;
+  
+    //   }
+    // }
+  
+    .chakra-form-control-imageUrl {
+      // border: 2px solid red!important;
+  
+      // margin-bottom: 1rem;
+  
+      .chakra-form-label-imageUrl {
+        //   border: 2px solid rgb(0, 4, 255)!important;
+        // font-weight: bold;
+      }
+  
+      .chakra-input-imageUrl {
+        // border: 2px solid rgb(171, 11, 147)!important;
+  
+        // border: 1px solid #ccc;
+        // border-radius: 4px;
+        // padding: 3px;
+      }
+  
+      .btn-imgurl {
+        // border: 2px solid red;
+        // margin-top: 17px;
+  
+      }
+  
+    }
+  
+  }
+}
+
+@media screen and (max-width: 660px) {
+  .profil-container {
+    // border: 2px solid rgb(136, 255, 0);
+  
+    // display: flex;
+    // justify-content: space-between;
+    // padding: 20px;
+    // height: 100vh;
+    // margin: 0 auto;
+  
+  
+    .profile-section {
+      // border: 1px solid gray;
+  
+      // width: 30%;
+      // height: fit-content;
+      // padding: 20px;
+      // border-radius: 8px;
+      // box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      // text-align: center;
+      // display: flex;
+      // flex-direction: column;
+      // align-items: center;
+  
+      .profile-avatar {
+        // border: 1px solid gray;
+  
+        width: 100px;
+        height: 100px;
+        // border-radius: 50%;
+        // object-fit: cover;
+        // margin-bottom: 10px;
+      }
+  
+      .profile-name {
+        // border: 2px solid rgb(230, 0, 255);
+        
+        font-size: 0.9em;
+        // font-weight: bold;
+        // margin-bottom: 5px;
+      }
+  
+      .profile-email {
+        // border: 2px solid rgb(255, 0, 0);
+        font-size: 0.7em;
+
+        // color: #666;
+        // margin-bottom: 15px;
+      }
+  
+      .edit-button {
+        // border: 2px solid red;
+        font-size: 0.6em;
+padding: 8px ;
+        // margin-top: 10px;
+      }
+  
+  
+      
+    }
+  
+  
+  
+    .favorites-section {
+      // border: 1px solid gray;
+  
+      // width: 65%;
+      // padding: 20px;
+      // border-radius: 8px;
+      // box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      // max-height: auto;
+      // /* Set a maximum height to enable scrolling */
+      // overflow-y: auto;
+      // /* Enable vertical scrolling */
+      // overflow-x: hidden;
+  
+      // /* Hide horizontal scrolling if not needed */
+      .section-title {
+        // border: 2px solid red;
+  
+        // font-size: 1.5em;
+        // font-weight: bold;
+        // margin-bottom: 20px;
+        // display: flex;
+        // gap: 10px;
+        // align-items: center;
+  padding: 10px;
+        .favvvv {
+          // border: 2px solid red;
+          // color: red;
+        }
+  
+        h2 {
+          // border: 2px solid red;
+  
+        }
+      }
+  
+      .movies-container {
+                  // border: 2px solid red;
+
+        // display: flex;
+        // justify-content: center;
+        // align-items: center;
+        // flex-wrap: wrap;
+        // gap: 20px;
+        // padding: 40px;
+        // width: auto 0px !important;
+  
+        .movie-item {
+          // border: 2px solid red;
+          // position: relative;
+          width: 140px;
+          height: 265px;
+          // height: auto 0px;
+          // text-align: center;
+          // border-radius: 8px;
+          // overflow: hidden;
+          // transition: transform 0.3s ease;
+  
+        }
+  
+        .movie-image-container {
+          // border: 2px solid red;
+
+          // position: relative;
+        }
+  
+        .movie-poster {
+          // border: 5px solid;
+            // border: 2px solid red;
+
+  
+          height: 230px;
+          // border-radius: 8px;
+          // margin-bottom: 10px;
+          // transition: opacity 0.5s ease;
+  
+        }
+  
+        .movie-details-hover {
+          // opacity: 1;
+        }
+  
+        .movie-details-hover {
+          // border: 5px solid rgb(128, 255, 0);
+  
+          // position: absolute;
+          // top: 0;
+          // left: 0;
+          // width: 100%;
+          // height: 100%;
+          // display: flex;
+          // flex-direction: column;
+          // gap: 15px;
+          // align-items: center;
+          // justify-content: center;
+          // opacity: 0;
+          // transition: opacity 0.5s ease;
+          // background-color: rgba(0, 0, 0, 0.8);
+          // color: white;
+          // padding: 10px;
+          // border-radius: 8px;
+          // z-index: 1;
+        }
+  
+        .faster {
+          // color: #6ac045;
+          margin-bottom: 0px;
+  
+        }
+  
+        h2 {
+          // border: 1px solid red;
+          // color: black!important;
+          font-size: 13px;
+        }
+
+        h4 {
+          font-size: 13px; 
+        }
+.iconbtntnt {
+
+}
+        .mdbtn {
+
+        }
+
+        .view-details {
+          // background-color: #6ac045;
+          // padding: 5px 10px;
+          // margin-top: 10px;
+          // cursor: pointer;
+          // color: white;
+          // border: none;
+          // border-radius: 4px;
+          font-size: 10px; 
+        }
+  
+        .movie-item:hover .movie-poster {
+          // opacity: 0.3;
+        }
+  
+        .movie-item:hover .movie-details-hover {
+          // opacity: 1;
+        }
+  
+        .movie-details {
+  
+          // border: 2px solid red;
+          h3 {
+            // color: rgb(94, 94, 249);
+            font-size: 13px;
+          }
+  
+        }
+  
+  
+      }
+    }
+  
+    // #toastttttt {
+    //   display: none;
+    // }
+  
+  
+  
+  
+  
+  
+  
+  }
+  
+  .modal-content {
+    // border: 2px solid red ;
+    // padding: 20px;
+  
+    h2 {
+      // border: 2px solid red;
+      // margin-bottom: 10px;
+      // font-size: 19px;
+      // font-weight: 700;
+    }
+  
+    .chakra-form-control-username {
+      // border: 2px solid red!important;
+  
+      // margin-bottom: 1rem;
+  
+      .chakra-form-label-username {
+        //   border: 2px solid rgb(0, 4, 255)!important;
+        // font-weight: bold;
+      }
+  
+      .chakra-input-username {
+        // border: 2px solid rgb(171, 11, 147)!important;
+  
+        // border: 1px solid #ccc;
+        // border-radius: 4px;
+      }
+    }
+  
+    .chakra-form-control-email {
+      // border: 2px solid red!important;
+  
+      // margin-bottom: 1rem;
+  
+      .chakra-form-label-email {
+        //   border: 2px solid rgb(0, 4, 255)!important;
+        // font-weight: bold;
+      }
+  
+      .chakra-input-email {
+        // border: 2px solid rgb(171, 11, 147)!important;
+  
+        // border: 1px solid #ccc;
+        // border-radius: 4px;
+      }
+    }
+  
+    .btn-info {
+  // border: 2px solid red;
+  //     margin-bottom: 7px;
+    }
+  
+    // .chakra-form-control-password {
+    //     // border: 2px solid red!important;
+  
+    //   margin-bottom: 1rem;
+  
+    //   .chakra-form-label-password {
+    //     //   border: 2px solid rgb(0, 4, 255)!important;
+    //     font-weight: bold;
+    //   }
+  
+    //   .chakra-input-password {
+    //     // border: 2px solid rgb(171, 11, 147)!important;
+  
+    //     border: 1px solid #ccc;
+    //     border-radius: 4px;
+    //   }
+    //   .chakra-password-toggle {
+    //             // border: 2px solid rgb(171, 11, 147)!important;
+  
+    //   }
+    // }
+  
+    .chakra-form-control-imageUrl {
+      // border: 2px solid red!important;
+  
+      // margin-bottom: 1rem;
+  
+      .chakra-form-label-imageUrl {
+        //   border: 2px solid rgb(0, 4, 255)!important;
+        // font-weight: bold;
+      }
+  
+      .chakra-input-imageUrl {
+        // border: 2px solid rgb(171, 11, 147)!important;
+  
+        // border: 1px solid #ccc;
+        // border-radius: 4px;
+        // padding: 3px;
+      }
+  
+      .btn-imgurl {
+        // border: 2px solid red;
+        // margin-top: 17px;
+  
+      }
+  
+    }
+  
+  }
+}
+
+@media screen and (max-width: 570px) {
+  .profil-container {
+    // border: 2px solid rgb(136, 255, 0);
+  
+    // display: flex;
+    // justify-content: space-between;
+    // padding: 20px;
+    // height: 100vh;
+    // margin: 0 auto;
+  
+  
+    .profile-section {
+      // border: 1px solid gray;
+  
+      // width: 30%;
+      // height: fit-content;
+      // padding: 20px;
+      // border-radius: 8px;
+      // box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      // text-align: center;
+      // display: flex;
+      // flex-direction: column;
+      // align-items: center;
+  
+      .profile-avatar {
+        // border: 1px solid gray;
+  
+        width: 100px;
+        height: 100px;
+        // border-radius: 50%;
+        // object-fit: cover;
+        // margin-bottom: 10px;
+      }
+  
+      .profile-name {
+        // border: 2px solid rgb(230, 0, 255);
+        
+        font-size: 0.7em;
+        // font-weight: bold;
+        // margin-bottom: 5px;
+      }
+  
+      .profile-email {
+        // border: 2px solid rgb(255, 0, 0);
+        font-size: 0.6em;
+
+        // color: #666;
+        // margin-bottom: 15px;
+      }
+  
+      .edit-button {
+        // border: 2px solid red;
+        font-size: 0.5em;
+// padding: -8px ;
+        
+      }
+  
+  
+      
+    }
+  
+  
+  
+    .favorites-section {
+      // border: 1px solid gray;
+  
+      // width: 65%;
+      // padding: 20px;
+      // border-radius: 8px;
+      // box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      // max-height: auto;
+      // /* Set a maximum height to enable scrolling */
+      // overflow-y: auto;
+      // /* Enable vertical scrolling */
+      // overflow-x: hidden;
+  
+      // /* Hide horizontal scrolling if not needed */
+      .section-title {
+        // border: 2px solid red;
+  
+        // font-size: 1.5em;
+        // font-weight: bold;
+        // margin-bottom: 20px;
+        // display: flex;
+        // gap: 10px;
+        // align-items: center;
+  padding: 10px;
+        .favvvv {
+          // border: 2px solid red;
+          // color: red;
+        }
+  
+        h2 {
+          // border: 2px solid red;
+  
+        }
+      }
+  
+      .movies-container {
+                  // border: 2px solid red;
+
+        // display: flex;
+        // justify-content: center;
+        // align-items: center;
+        // flex-wrap: wrap;
+        // gap: 20px;
+        // padding: 40px;
+        // width: auto 0px !important;
+  
+        .movie-item {
+          // border: 2px solid red;
+          // position: relative;
+          width: 140px;
+          height: 265px;
+          // height: auto 0px;
+          // text-align: center;
+          // border-radius: 8px;
+          // overflow: hidden;
+          // transition: transform 0.3s ease;
+  
+        }
+  
+        .movie-image-container {
+          // border: 2px solid red;
+
+          // position: relative;
+        }
+  
+        .movie-poster {
+          // border: 5px solid;
+            // border: 2px solid red;
+
+  
+          height: 230px;
+          // border-radius: 8px;
+          // margin-bottom: 10px;
+          // transition: opacity 0.5s ease;
+  
+        }
+  
+        .movie-details-hover {
+          // opacity: 1;
+        }
+  
+        .movie-details-hover {
+          // border: 5px solid rgb(128, 255, 0);
+  
+          // position: absolute;
+          // top: 0;
+          // left: 0;
+          // width: 100%;
+          // height: 100%;
+          // display: flex;
+          // flex-direction: column;
+          // gap: 15px;
+          // align-items: center;
+          // justify-content: center;
+          // opacity: 0;
+          // transition: opacity 0.5s ease;
+          // background-color: rgba(0, 0, 0, 0.8);
+          // color: white;
+          // padding: 10px;
+          // border-radius: 8px;
+          // z-index: 1;
+        }
+  
+        .faster {
+          // color: #6ac045;
+          margin-bottom: 0px;
+  
+        }
+  
+        h2 {
+          // border: 1px solid red;
+          // color: black!important;
+          font-size: 13px;
+        }
+
+        h4 {
+          font-size: 13px; 
+        }
+.iconbtntnt {
+
+}
+        .mdbtn {
+
+        }
+
+        .view-details {
+          // background-color: #6ac045;
+          // padding: 5px 10px;
+          // margin-top: 10px;
+          // cursor: pointer;
+          // color: white;
+          // border: none;
+          // border-radius: 4px;
+          font-size: 10px; 
+        }
+  
+        .movie-item:hover .movie-poster {
+          // opacity: 0.3;
+        }
+  
+        .movie-item:hover .movie-details-hover {
+          // opacity: 1;
+        }
+  
+        .movie-details {
+  
+          // border: 2px solid red;
+          h3 {
+            // color: rgb(94, 94, 249);
+            font-size: 13px;
+          }
+  
+        }
+  
+  
+      }
+    }
+  
+    // #toastttttt {
+    //   display: none;
+    // }
+  
+  
+  
+  
+  
+  
+  
+  }
+  
+  .modal-content {
+    // border: 2px solid red ;
+    // padding: 20px;
+  
+    h2 {
+      // border: 2px solid red;
+      // margin-bottom: 10px;
+      // font-size: 19px;
+      // font-weight: 700;
+    }
+  
+    .chakra-form-control-username {
+      // border: 2px solid red!important;
+  
+      // margin-bottom: 1rem;
+  
+      .chakra-form-label-username {
+        //   border: 2px solid rgb(0, 4, 255)!important;
+        // font-weight: bold;
+      }
+  
+      .chakra-input-username {
+        // border: 2px solid rgb(171, 11, 147)!important;
+  
+        // border: 1px solid #ccc;
+        // border-radius: 4px;
+      }
+    }
+  
+    .chakra-form-control-email {
+      // border: 2px solid red!important;
+  
+      // margin-bottom: 1rem;
+  
+      .chakra-form-label-email {
+        //   border: 2px solid rgb(0, 4, 255)!important;
+        // font-weight: bold;
+      }
+  
+      .chakra-input-email {
+        // border: 2px solid rgb(171, 11, 147)!important;
+  
+        // border: 1px solid #ccc;
+        // border-radius: 4px;
+      }
+    }
+  
+    .btn-info {
+  // border: 2px solid red;
+  //     margin-bottom: 7px;
+    }
+  
+    // .chakra-form-control-password {
+    //     // border: 2px solid red!important;
+  
+    //   margin-bottom: 1rem;
+  
+    //   .chakra-form-label-password {
+    //     //   border: 2px solid rgb(0, 4, 255)!important;
+    //     font-weight: bold;
+    //   }
+  
+    //   .chakra-input-password {
+    //     // border: 2px solid rgb(171, 11, 147)!important;
+  
+    //     border: 1px solid #ccc;
+    //     border-radius: 4px;
+    //   }
+    //   .chakra-password-toggle {
+    //             // border: 2px solid rgb(171, 11, 147)!important;
+  
+    //   }
+    // }
+  
+    .chakra-form-control-imageUrl {
+      // border: 2px solid red!important;
+  
+      // margin-bottom: 1rem;
+  
+      .chakra-form-label-imageUrl {
+        //   border: 2px solid rgb(0, 4, 255)!important;
+        // font-weight: bold;
+      }
+  
+      .chakra-input-imageUrl {
+        // border: 2px solid rgb(171, 11, 147)!important;
+  
+        // border: 1px solid #ccc;
+        // border-radius: 4px;
+        // padding: 3px;
+      }
+  
+      .btn-imgurl {
+        // border: 2px solid red;
+        // margin-top: 17px;
+  
+      }
+  
+    }
+  
+  }
+}
+@media screen and (max-width: 493px) {
+  .profil-container {
+    // border: 2px solid rgb(136, 255, 0);
+  
+    // display: flex;
+    // justify-content: space-between;
+    // padding: 20px;
+    // height: 100vh;
+    // margin: 0 auto;
+  
+  
+    .profile-section {
+      // border: 1px solid gray;
+  
+      // width: 30%;
+      // height: fit-content;
+      // padding: 20px;
+      // border-radius: 8px;
+      // box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      // text-align: center;
+      // display: flex;
+      // flex-direction: column;
+      // align-items: center;
+  
+      .profile-avatar {
+        // border: 1px solid gray;
+  
+        width: 80px;
+        height: 80px;
+        // border-radius: 50%;
+        // object-fit: cover;
+        // margin-bottom: 10px;
+      }
+  
+      .profile-name {
+        // border: 2px solid rgb(230, 0, 255);
+        
+        font-size: 0.6em;
+        // font-weight: bold;
+        // margin-bottom: 5px;
+      }
+  
+      .profile-email {
+        // border: 2px solid rgb(255, 0, 0);
+        font-size: 0.5em;
+
+        // color: #666;
+        // margin-bottom: 15px;
+      }
+  
+      .edit-button {
+        // border: 2px solid red;
+        // font-size: 0.4em;
+// padding: 0px 0px 2px 0px ;
+
+        
+      }
+  
+  
+      
+    }
+  
+  
+  
+    .favorites-section {
+      // border: 1px solid gray;
+  
+      // width: 65%;
+      // padding: 20px;
+      // border-radius: 8px;
+      // box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      // max-height: auto;
+      // /* Set a maximum height to enable scrolling */
+      // overflow-y: auto;
+      // /* Enable vertical scrolling */
+      // overflow-x: hidden;
+  
+      // /* Hide horizontal scrolling if not needed */
+      .section-title {
+        // border: 2px solid red;
+  
+        font-size: 1.0em;
+        // font-weight: bold;
+        // margin-bottom: 20px;
+        // display: flex;
+        // gap: 10px;
+        // align-items: center;
+  padding: 10px;
+        .favvvv {
+          // border: 2px solid red;
+          // color: red;
+        }
+  
+        h2 {
+          // border: 2px solid red;
+  
+        }
+      }
+  
+      .movies-container {
+                  // border: 2px solid red;
+
+        // display: flex;
+        // justify-content: center;
+        // align-items: center;
+        // flex-wrap: wrap;
+        // gap: 20px;
+        // padding: 40px;
+        // width: auto 0px !important;
+  
+        .movie-item {
+          // border: 2px solid red;
+          // position: relative;
+          width: 140px;
+          height: 265px;
+          // height: auto 0px;
+          // text-align: center;
+          // border-radius: 8px;
+          // overflow: hidden;
+          // transition: transform 0.3s ease;
+  
+        }
+  
+        .movie-image-container {
+          // border: 2px solid red;
+
+          // position: relative;
+        }
+  
+        .movie-poster {
+          // border: 5px solid;
+            // border: 2px solid red;
+
+  
+          height: 230px;
+          // border-radius: 8px;
+          // margin-bottom: 10px;
+          // transition: opacity 0.5s ease;
+  
+        }
+  
+        .movie-details-hover {
+          // opacity: 1;
+        }
+  
+        .movie-details-hover {
+          // border: 5px solid rgb(128, 255, 0);
+  
+          // position: absolute;
+          // top: 0;
+          // left: 0;
+          // width: 100%;
+          // height: 100%;
+          // display: flex;
+          // flex-direction: column;
+          // gap: 15px;
+          // align-items: center;
+          // justify-content: center;
+          // opacity: 0;
+          // transition: opacity 0.5s ease;
+          // background-color: rgba(0, 0, 0, 0.8);
+          // color: white;
+          // padding: 10px;
+          // border-radius: 8px;
+          // z-index: 1;
+        }
+  
+        .faster {
+          // color: #6ac045;
+          margin-bottom: 0px;
+  
+        }
+  
+        h2 {
+          // border: 1px solid red;
+          // color: black!important;
+          font-size: 13px;
+        }
+
+        h4 {
+          font-size: 13px; 
+        }
+.iconbtntnt {
+
+}
+        .mdbtn {
+
+        }
+
+        .view-details {
+          // background-color: #6ac045;
+          // padding: 5px 10px;
+          // margin-top: 10px;
+          // cursor: pointer;
+          // color: white;
+          // border: none;
+          // border-radius: 4px;
+          font-size: 10px; 
+        }
+  
+        .movie-item:hover .movie-poster {
+          // opacity: 0.3;
+        }
+  
+        .movie-item:hover .movie-details-hover {
+          // opacity: 1;
+        }
+  
+        .movie-details {
+  
+          // border: 2px solid red;
+          h3 {
+            // color: rgb(94, 94, 249);
+            font-size: 13px;
+          }
+  
+        }
+  
+  
+      }
+    }
+  
+    // #toastttttt {
+    //   display: none;
+    // }
+  
+  
+  
+  
+  
+  
+  
+  }
+  
+  .modal-content {
+    // border: 2px solid red ;
+    // padding: 20px;
+  
+    h2 {
+      // border: 2px solid red;
+      // margin-bottom: 10px;
+      // font-size: 19px;
+      // font-weight: 700;
+    }
+  
+    .chakra-form-control-username {
+      // border: 2px solid red!important;
+  
+      // margin-bottom: 1rem;
+  
+      .chakra-form-label-username {
+        //   border: 2px solid rgb(0, 4, 255)!important;
+        // font-weight: bold;
+      }
+  
+      .chakra-input-username {
+        // border: 2px solid rgb(171, 11, 147)!important;
+  
+        // border: 1px solid #ccc;
+        // border-radius: 4px;
+      }
+    }
+  
+    .chakra-form-control-email {
+      // border: 2px solid red!important;
+  
+      // margin-bottom: 1rem;
+  
+      .chakra-form-label-email {
+        //   border: 2px solid rgb(0, 4, 255)!important;
+        // font-weight: bold;
+      }
+  
+      .chakra-input-email {
+        // border: 2px solid rgb(171, 11, 147)!important;
+  
+        // border: 1px solid #ccc;
+        // border-radius: 4px;
+      }
+    }
+  
+    .btn-info {
+  // border: 2px solid red;
+  //     margin-bottom: 7px;
+    }
+  
+    // .chakra-form-control-password {
+    //     // border: 2px solid red!important;
+  
+    //   margin-bottom: 1rem;
+  
+    //   .chakra-form-label-password {
+    //     //   border: 2px solid rgb(0, 4, 255)!important;
+    //     font-weight: bold;
+    //   }
+  
+    //   .chakra-input-password {
+    //     // border: 2px solid rgb(171, 11, 147)!important;
+  
+    //     border: 1px solid #ccc;
+    //     border-radius: 4px;
+    //   }
+    //   .chakra-password-toggle {
+    //             // border: 2px solid rgb(171, 11, 147)!important;
+  
+    //   }
+    // }
+  
+    .chakra-form-control-imageUrl {
+      // border: 2px solid red!important;
+  
+      // margin-bottom: 1rem;
+  
+      .chakra-form-label-imageUrl {
+        //   border: 2px solid rgb(0, 4, 255)!important;
+        // font-weight: bold;
+      }
+  
+      .chakra-input-imageUrl {
+        // border: 2px solid rgb(171, 11, 147)!important;
+  
+        // border: 1px solid #ccc;
+        // border-radius: 4px;
+        // padding: 3px;
+      }
+  
+      .btn-imgurl {
+        // border: 2px solid red;
+        // margin-top: 17px;
+  
+      }
+  
+    }
+  
+  }
+}
+@media screen and (max-width: 430px) {
+  .profil-container {
+    // border: 2px solid rgb(136, 255, 0);
+  
+    // display: flex;
+    // justify-content: space-between;
+    // padding: 20px;
+    // height: 100vh;
+    // margin: 0 auto;
+  
+  
+    .profile-section {
+      // border: 1px solid gray;
+  
+      // width: 30%;
+      // height: fit-content;
+      // padding: 20px;
+      // border-radius: 8px;
+      // box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      // text-align: center;
+      // display: flex;
+      // flex-direction: column;
+      // align-items: center;
+  
+      .profile-avatar {
+        // border: 1px solid gray;
+  
+        width: 50px;
+        height: 50px;
+        // border-radius: 50%;
+        // object-fit: cover;
+        // margin-bottom: 10px;
+      }
+  
+      .profile-name {
+        // border: 2px solid rgb(230, 0, 255);
+        
+        font-size: 0.6em;
+        // font-weight: bold;
+        // margin-bottom: 5px;
+      }
+  
+      .profile-email {
+        // border: 2px solid rgb(255, 0, 0);
+        font-size: 0.5em;
+
+        // color: #666;
+        // margin-bottom: 15px;
+      }
+  
+      .edit-button {
+        // border: 2px solid red;
+ padding: 5px;
+
+        
+      }
+  
+  
+      
+    }
+  
+  
+  
+    .favorites-section {
+      // border: 1px solid gray;
+  
+      // width: 65%;
+      // padding: 20px;
+      // border-radius: 8px;
+      // box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      // max-height: auto;
+      // /* Set a maximum height to enable scrolling */
+      // overflow-y: auto;
+      // /* Enable vertical scrolling */
+      // overflow-x: hidden;
+  
+      // /* Hide horizontal scrolling if not needed */
+      .section-title {
+        // border: 2px solid red;
+  
+        font-size: 1.0em;
+        // font-weight: bold;
+        // margin-bottom: 20px;
+        // display: flex;
+        // gap: 10px;
+        // align-items: center;
+  padding: 10px;
+        .favvvv {
+          // border: 2px solid red;
+          // color: red;
+        }
+  
+        h2 {
+          // border: 2px solid red;
+  
+        }
+      }
+  
+      .movies-container {
+                  // border: 2px solid red;
+
+        // display: flex;
+        // justify-content: center;
+        // align-items: center;
+        // flex-wrap: wrap;
+        // gap: 20px;
+        padding: 0px;
+        // width: auto 0px !important;
+  
+        .movie-item {
+          // border: 2px solid red;
+          // position: relative;
+          width: 120px;
+          height: 180px;
+          // height: auto 0px;
+          // text-align: center;
+          // border-radius: 8px;
+          // overflow: hidden;
+          // transition: transform 0.3s ease;
+  
+        }
+  
+        .movie-image-container {
+          // border: 2px solid red;
+
+          // position: relative;
+        }
+  
+        .movie-poster {
+          // border: 5px solid;
+            // border: 2px solid red;
+
+  
+          height: 180px;
+          // border-radius: 8px;
+          // margin-bottom: 10px;
+          // transition: opacity 0.5s ease;
+  
+        }
+  
+        .movie-details-hover {
+          // opacity: 1;
+        }
+  
+        .movie-details-hover {
+          // border: 5px solid rgb(128, 255, 0);
+  
+          // position: absolute;
+          // top: 0;
+          // left: 0;
+          // width: 100%;
+          // height: 100%;
+          // display: flex;
+          // flex-direction: column;
+          // gap: 15px;
+          // align-items: center;
+          // justify-content: center;
+          // opacity: 0;
+          // transition: opacity 0.5s ease;
+          // background-color: rgba(0, 0, 0, 0.8);
+          // color: white;
+          // padding: 10px;
+          // border-radius: 8px;
+          // z-index: 1;
+        }
+  
+        .faster {
+          // color: #6ac045;
+          margin-top: -30px!important;
+  
+        }
+  
+        h2 {
+          // border: 1px solid red;
+          // color: black!important;
+          font-size: 13px;
+        }
+
+        h4 {
+          font-size: 13px; 
+        }
+.iconbtntnt {
+
+}
+        .mdbtn {
+
+        }
+
+        .view-details {
+          // background-color: #6ac045;
+          // padding: 5px 10px;
+          // margin-top: 10px;
+          // cursor: pointer;
+          // color: white;
+          // border: none;
+          // border-radius: 4px;
+          font-size: 10px; 
+        }
+  
+        .movie-item:hover .movie-poster {
+          // opacity: 0.3;
+        }
+  
+        .movie-item:hover .movie-details-hover {
+          // opacity: 1;
+        }
+  
+        .movie-details {
+  
+          // border: 2px solid red;
+          h3 {
+            // color: rgb(94, 94, 249);
+            font-size: 13px;
+            display: none;
+          }
+  
+        }
+  
+  
+      }
+    }
+  
+    // #toastttttt {
+    //   display: none;
+    // }
+  
+  
+  
+  
+  
+  
+  
+  }
+  
+  .modal-content {
+    // border: 2px solid red ;
+    // padding: 20px;
+  
+    h2 {
+      // border: 2px solid red;
+      // margin-bottom: 10px;
+      // font-size: 19px;
+      // font-weight: 700;
+    }
+  
+    .chakra-form-control-username {
+      // border: 2px solid red!important;
+  
+      // margin-bottom: 1rem;
+  
+      .chakra-form-label-username {
+        //   border: 2px solid rgb(0, 4, 255)!important;
+        // font-weight: bold;
+      }
+  
+      .chakra-input-username {
+        // border: 2px solid rgb(171, 11, 147)!important;
+  
+        // border: 1px solid #ccc;
+        // border-radius: 4px;
+      }
+    }
+  
+    .chakra-form-control-email {
+      // border: 2px solid red!important;
+  
+      // margin-bottom: 1rem;
+  
+      .chakra-form-label-email {
+        //   border: 2px solid rgb(0, 4, 255)!important;
+        // font-weight: bold;
+      }
+  
+      .chakra-input-email {
+        // border: 2px solid rgb(171, 11, 147)!important;
+  
+        // border: 1px solid #ccc;
+        // border-radius: 4px;
+      }
+    }
+  
+    .btn-info {
+  // border: 2px solid red;
+  //     margin-bottom: 7px;
+    }
+  
+    // .chakra-form-control-password {
+    //     // border: 2px solid red!important;
+  
+    //   margin-bottom: 1rem;
+  
+    //   .chakra-form-label-password {
+    //     //   border: 2px solid rgb(0, 4, 255)!important;
+    //     font-weight: bold;
+    //   }
+  
+    //   .chakra-input-password {
+    //     // border: 2px solid rgb(171, 11, 147)!important;
+  
+    //     border: 1px solid #ccc;
+    //     border-radius: 4px;
+    //   }
+    //   .chakra-password-toggle {
+    //             // border: 2px solid rgb(171, 11, 147)!important;
+  
+    //   }
+    // }
+  
+    .chakra-form-control-imageUrl {
+      // border: 2px solid red!important;
+  
+      // margin-bottom: 1rem;
+  
+      .chakra-form-label-imageUrl {
+        //   border: 2px solid rgb(0, 4, 255)!important;
+        // font-weight: bold;
+      }
+  
+      .chakra-input-imageUrl {
+        // border: 2px solid rgb(171, 11, 147)!important;
+  
+        // border: 1px solid #ccc;
+        // border-radius: 4px;
+        // padding: 3px;
+      }
+  
+      .btn-imgurl {
+        // border: 2px solid red;
+        // margin-top: 17px;
+  
+      }
+  
+    }
+  
+  }
 }
